@@ -32,6 +32,8 @@
 
 \usepackage[dvipsnames]{xcolor}
 
+\usepackage{enumitem}
+\renewcommand\labelitemi{---}
 
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy and Anshuman Pandey}
@@ -182,8 +184,7 @@ Another such systems of note is the one for volumes,
 \xleftarrow{10}\underset{\mathclap{\substack{1~\text{gur}\\1~\text{\emph{kurrum}}}}}{\text{\xsuxfont 𒀸}}}_{\text{\xsuxfont 𒄥}}
 \xleftarrow{\quad5\quad}\underset{\mathclap{\substack{1~\text{bariga}\\1~\text{\emph{parsiktum}}}}}{\text{\xsuxfont 𒁹}}
 \xleftarrow{\quad6\quad}\underset{\mathclap{\substack{1~\text{ban₂}\\1~\text{\emph{sūtum}}}}}{\text{\xsuxfont 𒑏}}
-\xleftarrow{\ 10\ }\underset{\mathclap{\substack{1~\text{sila₃}\\1~\text{\emph{qûm}}\\1~\text{l}}}}{\text{\xsuxfont 𒁹𒋡}}
-\xleftarrow{\ 60\ }\underset{\mathclap{\substack{1~\text{giŋ₄}\\1~\text{\emph{šiqlum}}}}}{\text{\xsuxfont 𒁹𒂆}}\text,
+\xleftarrow{\ 10\ }\underset{\mathclap{\substack{1~\text{sila₃}\\1~\text{\emph{qûm}}\\1~\text{l}}}}{\text{\xsuxfont 𒁹𒋡}}\text,
 \tag{C}
 \label{systemC}
 \end{equation}
@@ -192,36 +193,43 @@ and {\xsuxfont 𒑔}, and those for bariga are {\xsuxfont 𒁹}, {\xsuxfont 𒑖
 ordinary {\xsuxfont 𒈫} and {\xsuxfont 𒐈} otherwise used with {\xsuxfont 𒁹}-numerals).
 Note that while it is used only with volumes in excess of one gur, the sign GUR {\xsuxfont 𒄥} is written after the whole expression,
 after the overt unit sign {\xsuxfont 𒋡} if present, and after the word for ``grain'' if present, as in {\xsuxfont 𒐢𒐝𒌋𒐂𒑑𒐋𒋡𒊺𒄥}
-($3554$~gur $3$~ban₂ $6$~sila₃ of grain\footnote{From \href{https://cdli.mpiwg-berlin.mpg.de/artifacts/309594}{P309594}}.).
-Observe that while large number of gur follow system \ref{systemSOB},
+($3554$~gur $3$~ban₂ $6$~sila₃ of grain\footnote{From \href{https://cdli.mpiwg-berlin.mpg.de/artifacts/309594}{P309594}.}).
+Observe that while large number of gur follow\footnote{A larger unit, the guru₇ (\emph{karûm}, grain heap), is sometimes used instead, with {\xsuxfont 𒀸𒄦}={\xsuxfont 𒊹𒄥} ($1~\text{\emph{karûm}}=3600~\text{kurrū}$).} system \ref{systemSOB},
 the use of horizontal (AŠ) numerals for the gur disambiguates with the vertical bariga,
 as {\xsuxfont 𒌋𒁹𒄥} would be $10$~gur $1$~bariga, and {\xsuxfont 𒌋𒀸𒄥} would be $11$~gur;
 again even with some overt units, most of the numerals are tied to the metrology.
 
 This intertwining of units and numerals explains the large number of already-encoded numeral series:
-\begin{itemize}
+\begin{itemize}[nosep]
 \item {\xsuxfont 𒁹}–{\xsuxfont 𒑆} used in \ref{systemSOB} and the SPVS as well as with overt units;
 \item {\xsuxfont 𒌋}–{\xsuxfont 𒐔} used in \ref{systemGOB}, of which {\xsuxfont 𒌋}–{\xsuxfont 𒐐} are also used in \ref{systemSOB} and the SPVS as well as with overt units;
 \item {\xsuxfont 𒐕}–{\xsuxfont 𒐝} used in \ref{systemSOB} and the SPVS;
-\item {\xsuxfont 𒀸}–{\xsuxfont 𒐇} used in TODO;
+\item {\xsuxfont 𒀸}–{\xsuxfont 𒐇} used in \ref{systemC} as well as in the weight system;
 \item {\xsuxfont 𒑏}, {\xsuxfont 𒑐}, {\xsuxfont 𒑑}, {\xsuxfont 𒑒}, {\xsuxfont 𒑔} used in TODO;
 \item {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, {\xsuxfont 𒐉} used in \ref{systemC}—note the overlap with {\xsuxfont 𒁹}–{\xsuxfont 𒑆};
-\item {\xsuxfont 𒑘} and 	{\xsuxfont 𒑙} used in TODO;
+\item {\xsuxfont 𒑘} and 	{\xsuxfont 𒑙} used in \ref{systemGOB}.
 \end{itemize}
-Note that these distinctions are needed even though they are not always represented in transliteration;
-the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
+%Note that these distinctions are needed even though they are not always represented in transliteration;
+%the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
 
-\section{Compatibility with transliteration}
-\label{transliteration}
+\section{The case for unification}
 
-\section{Non-numeric usage and the ŠAR₂ problem}
+\section{Early metrology}
+
+\section{Non-numeric usage}
 \epigraph{
 {\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 𒅗𒁉 𒐋𒀀𒀭 𒐕𒀀𒀭 𒁀𒁺 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
 {\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
 {The beginning of the scribal art is a single wedge. That one has six pronunciations; it also stands for `sixty'. Do you know its reading?}}{Examenstext A}
 
-\section{Stacking patterns}
+\subsection{The ŠAR₂ problem}
 
-\section{}
+\section{Compatibility with transliteration}
+\label{transliteration}
+
+\section{Characters not included in this proposal}
+\subsection{Missing numerals}
+ED {\xsuxfont 𒐴 𒑏𒑐𒑑𒑒𒑔}
+\subsection{Stacking patterns}
 
 \end{document}
