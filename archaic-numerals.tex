@@ -12,6 +12,7 @@
 \newfontfamily\xsuxfont{NotoSansCuneiform-egg.ttf}
 \newfontfamily\obfont{Santakku.ttf}
 \newfontfamily\nafont{Assurbanipal.ttf}
+\newfontfamily\nbfont{Esagil.ttf}
 \newfontfamily\hantfont{NotoSerifTC-Regular.ttf}
 
 
@@ -47,7 +48,7 @@
 \setmathfont[Scale=MatchLowercase, math-style=ISO]{Cambria Math}
 
 \usepackage[colorlinks,allcolors=Periwinkle]{hyperref}
-\usepackage[backend=biber,firstinits=true,maxnames=100,style=alphabetic,maxalphanames=4,doi=true,isbn=false,url=false,eprint=true,labelalpha=true]{biblatex}
+\usepackage[backend=biber,firstinits=true,maxnames=100,style=alphabetic,maxalphanames=4,doi=true,url=false,eprint=true,labelalpha=true]{biblatex}
 \bibliography{bibliography}
 
 % Allow breaking in numbers and after lower and upper case letters in bibliography
@@ -63,6 +64,8 @@
 
 \AtEveryBibitem{\clearlist{language}}  % TODO(egg): Why are we doing this?
 
+\newcommand\UTCdoc[1]{\href{https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?#1}{#1}}
+
 \DeclareFieldFormat{doi}{%
   \newline
   \mkbibacro{DOI}\addcolon\space
@@ -75,12 +78,25 @@
     \ifhyperref
       {\href{http://www.cnki.com.cn/Article/CJFDTOTAL-#1.htm}{\nolinkurl{#1}}}
       {\nolinkurl{#1}}}
+\DeclareFieldFormat{eprint:utc}{%
+  \newline
+  \mkbibacro{UTC}\addcolon\space
+    \ifhyperref
+      {\UTCdoc{#1}}
+      {\nolinkurl{#1}}}
 \DeclareFieldFormat{eprint}{%
   \newline
   eprint\addcolon\space
     \ifhyperref
       {\href{#1}{\nolinkurl{#1}}}
       {\nolinkurl{#1}}}
+\DeclareFieldFormat{isbn}{%
+  \newline
+  \mkbibacro{ISBN}\addcolon\space#1}
+      
+\newcommand{\idest}{\emph{i.e.}}
+\newcommand{\exempligratia}{\emph{e.g.}}
+\newcommand{\sequentes}{\emph{sqq.}}
 
 \usepackage{epigraph}
 \renewcommand{\epigraphsize}{\footnotesize\itshape}
@@ -96,8 +112,6 @@
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
 
-\newcommand\UTCdoc[1]{\href{https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?#1}{#1}}
-
 \begin{document}
 
 \maketitle
@@ -108,11 +122,13 @@
 
 \section{Background}
 
+[TODO(egg): Restructure this. The internal references are all garbled.]
+
 The Unicode Standard includes some cuneiform numbers: {\xsuxfont 𒁹}–{\xsuxfont 𒑆} 1–9(diš) and {\xsuxfont 𒀸}–{\xsuxfont 𒐇} 1–9(aš), {\xsuxfont 𒌋}–{\xsuxfont 𒐐} 1–5(u), {\xsuxfont 𒐕}–{\xsuxfont 𒐝} 1–9(ŋeš₂), {\xsuxfont 𒐞}–{\xsuxfont 𒐢} 1–5(ŋešʾu), etc., used in the Sumero-Akkadian Cuneiform script (ISO 15924:
 Xsux, Script property value long name: Cuneiform).
 
 In the investigation that led to their encoding in Unicode Version 5.0, it was thought appropriate to unify these with the earlier curviform numerals {\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.,
-see \UTCdoc{L2/04-099}.
+see \cite{L2/04-099}.
 While the curviform numerals sometimes co-occur with the cuneiform ones,
 this was analysed as a stylistic distinction which should not be encoded in plain text.
 It has now become apparent that a distinction needs to be made for the adequate representation
@@ -152,8 +168,8 @@ I want to write tablets: the tablet of 1 \emph{gur} of barley to
 In order to explain why TODO:$n$ more numerals are needed,
 it is useful to first recall why we have so many kinds of cuneiform numerals already.
 
-As is well known\footnote{See, \emph{e.g.}, \emph{The Unicode Standard}, Version 16.0, Section 22.3.3 \emph{Non-Decimal Radix Systems},
-\emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/\#G42894}{Cuneiform Numerals}''.}
+As is well known\footnote{See, \exempligratia, \cite[Section 22.3.3 ``Non-Decimal Radix Systems'',
+\emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/\#G42894}{Cuneiform Numerals}'']{Unicode16}.}
 a sexagesimal place value system (SPVS) was used in Meso\-potamia from the late third millenium onwards.
 One should bear in mind, however, that other systems were used;
 the SPVS was primarily used in calculations,
@@ -188,7 +204,7 @@ and {\xsuxfont 𒎙𒑄𒐏𒑆} in the sexagesimal place value system.
 The discrete counting system was not the only non-positional system in use in the Ur III and Old Babylonian periods; different systems were in use depending on what was being counted or measured.
 For instance, field areas were measured using the following system, where for the named
 units we have provided the name of the unit in transliterated Sumerian, normalized Old Babylonian Akkadian,
-and the approximate metric equivalent:
+and the approximate metric equivalent \cites[378]{Friberg2007}{Robson2019}:
 \begin{equation}
 \text{\xsuxfont 𒐬}
 \xleftarrow{10}\text{\xsuxfont 𒊹}
@@ -208,7 +224,7 @@ with $1~\text{\emph{mūšarum}}$ ($36~\text{m}^2$) written {\xsuxfont 𒁹𒊬},
 then sexigesimally subdivided in $60~\text{\xsuxfont{𒂆}}$ (shekels).
 For areas greater than $3600~\text{\emph{būrū}}$,
 the {\xsuxfont 𒊹}- and {\xsuxfont 𒐬}-numerals are reused with a suffix {\xsuxfont 𒃲} (gal, Sumerian: big),
-as follows: \[
+as follows \cites[\pno 295 with notes b and c]{Robson2008}[378]{Friberg2007}{Robson2019}: \[
 \underbrace{\text{\xsuxfont 𒐬𒃲}
 \xleftarrow{10}\text{\xsuxfont 𒊹𒃲}
 \xleftarrow{6}\text{\xsuxfont 𒐬}
@@ -222,12 +238,11 @@ as follows: \[
 \xleftarrow{2,5}\underbrace{\text{\xsuxfont 𒌋}
 \xleftarrow{10}\text{\xsuxfont 𒁹}}_{\text{\footnotesize\xsuxfont 𒊬}}
 \xleftarrow{6}\underbrace{\text{\xsuxfont 𒌋}
-\xleftarrow{10}\text{\xsuxfont 𒁹}}_{\text{\footnotesize\xsuxfont 𒂆}}\text,
-\]
-see \cites[\pno 295 with notes b and c]{Robson2008}[378]{Friberg2007}{Robson2019}.},
+\xleftarrow{10}\text{\xsuxfont 𒁹}}_{\text{\footnotesize\xsuxfont 𒂆}}\text.
+\]},
 this system does not use any symbols separate from the numerals
 for the individual units (\emph{ubûm}, \emph{ikûm}, \emph{eblum}, and \emph{būrum}).
-The whole numeric expression for the area would be followed by the sign {\xsuxfont 𒃷}
+As mentioned in \cite{Robson2019}, the whole numeric expression for the area would be followed by the sign {\xsuxfont 𒃷}
 functioning as punctuation, but the numerals are tied to the metrology; thus
 a surface of $5~\text{\emph{būrū}}$ $1~\text{\emph{eblum}}$ $4~\text{\emph{ikû}}$ ($100~\text{\emph{ikû}}$, $36~\text{ha}$) would be written\footnote{As in the surface of the field of {\xsuxfont 𒀀𒅗𒋡𒆠} (Apisal) reported on \href{https://cdli.mpiwg-berlin.mpg.de/artifacts/102305/reader/99066}{P102305} r. 1.}
 {\xsuxfont 𒐐𒑘𒐂𒃷}. Contrast this with systems
@@ -239,7 +254,7 @@ in the area system, but to three hundred and sixty times {\xsuxfont 𒌋} in the
 
 Another such system of note is the one for capacities\footnote{Used
 for volumes of grain, but also oil, dairy products, beer, etc., as well as to express the capacity of boats;
-volumes of earthworks instead use \ref{systemGOB} based on a height of one cubit, see\cites[488]{Powell1987}[294]{Robson2008}{Robson2019}.} \cites[376]{Friberg2007}{Robson2019},
+volumes of earthworks instead use system \ref{systemGOB} based on a height of one cubit, see\cites[488]{Powell1987}[294]{Robson2008}{Robson2019}.} \cites[376]{Friberg2007}{Robson2019},
 \begin{equation}
 \underbrace{
 %\text{(as in \ref{systemSOB})}
@@ -255,11 +270,27 @@ volumes of earthworks instead use \ref{systemGOB} based on a height of one cubit
 where the numerals for ban₂ are {\xsuxfont 𒑏}, {\xsuxfont 𒑐}, {\xsuxfont 𒑑}, {\xsuxfont 𒑒},
 and {\xsuxfont 𒑔}, and those for bariga are {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, and {\xsuxfont 𒐉} (contrast
 ordinary {\xsuxfont 𒈫} and {\xsuxfont 𒐈} otherwise used with {\xsuxfont 𒁹}-numerals).
-Note that while it is used only with volumes in excess of one gur, the sign GUR {\xsuxfont 𒄥} is written after the whole expression,
-after the overt unit sign {\xsuxfont 𒋡} if present, and after the word for ``grain'' if present, as in {\xsuxfont \textcolor{BrickRed}{𒐢𒐝𒌋𒐂}\textcolor{Orange}{𒑑}\textcolor{Dandelion}{𒐋}𒋡\textcolor{ForestGreen}{𒊺}𒄥}
-(\textcolor{BrickRed}{$3554$}~gur \textcolor{Orange}{$3$}~ban₂ \textcolor{Dandelion}{$6$}~sila₃ of \textcolor{ForestGreen}{grain}\footnote{From \href{https://cdli.mpiwg-berlin.mpg.de/artifacts/309594}{P309594}.}), see \cites[\pno 585 with notes (b) and (f)]{Huehnergard2011}.
-Observe that while large numbers of gur follow\footnote{A larger unit, the guru₇ (\emph{karûm}, grain heap), is sometimes used instead, with {\xsuxfont 𒀸𒄦}={\xsuxfont 𒊹𒄥} ($1~\text{\emph{karûm}}=3600~\text{kurrū}$). See \cites[415]{Friberg2007}{Robson2019}.} system \ref{systemSOB},
-the use of horizontal (AŠ) numerals for the gur disambiguates with the vertical bariga,
+
+As described in \cite[\pno 585 with notes (b) and (f)]{Huehnergard2011},
+the sign GUR {\xsuxfont 𒄥}, while it is used only with volumes in excess of one gur,
+is written after the whole expression,
+after the overt unit sign {\xsuxfont 𒋡} if present, and after the word for ``grain'' if present, as in
+\[\begin{matrix}
+\text{\xsuxfont 𒐢𒐝𒌋𒐂}&
+\text{\xsuxfont 𒑑}&
+\text{\xsuxfont 𒐋}&
+\text{\xsuxfont 𒋡}&
+\text{\xsuxfont 𒊺}&
+\text{{\xsuxfont 𒄥}\footnotemark}\\
+3554~\text{gur}&
+3~\text{ban₂}&
+6&\text{sila₃}&
+\text{ of grain.}
+\end{matrix}\]
+\footnotetext{From \href{https://cdli.mpiwg-berlin.mpg.de/artifacts/309594}{P309594}.}
+Observe that while large numbers of gur follow\footnote{A larger unit, the guru₇ (\emph{karûm}, grain heap), is sometimes used instead, with {\xsuxfont 𒀸𒄦}={\xsuxfont 𒊹𒄥} ($1~\text{\emph{karûm}}=3600~\text{kurrū}$). See \cites[415]{Friberg2007}{Robson2019}.}
+system \ref{systemSOB},
+the use of horizontal (AŠ) numerals for the gur disambiguates from the vertical bariga,
 as {\xsuxfont 𒌋𒁹𒄥} would be $10$~gur $1$~bariga, and {\xsuxfont 𒌋𒀸𒄥} would be $11$~gur;
 again even with some overt units, most of the numerals are tied to the metrology.
 
@@ -276,26 +307,69 @@ This intertwining of units and numerals explains the large number of already-enc
 %Note that these distinctions are needed even though they are not always represented in transliteration;
 %the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
 
-\section{Arguments for curviform-cuneiform unification}
+\section{Arguments for curviform–cuneiform unification}
+As outlined in, \exempligratia, \cite{UTR56}, the cuneiform encoding model is diachronic;
+each character may have wildly different glyphs depending on time period and region.
+For instance, the sign IM
+may resemble {\cuneiformComposite 𒅎} in texts from Early Dynastic IIIa Šuruppag as in the character code
+charts,
+{\cuneiformComposite 𒉎} later in the third millenium\footnote{Merging with U+1224E {\xsuxfont 𒉎} NI₂.},
+{\obfont 𒅎} in Old Babylonian cursive,
+{\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+1214E \textsc{cuneiform sign im}.
 
+This encoding model allows for the interoperable representation of editions
+of diachronic reference works such as sign lists\footnote{Notably the online edition of \cite{Borger2010} in \cite[Signs]{eBL}, as well as
+\cite{OSL}.}
+and dictionaries\footnote{Notably the online edition of \cite{Schramm2010} in \cite[Dictionary]{eBL},
+as well as \cite{ePSD2}.},
+and of composite texts\footnote{For example, there are Neo-Assyrian and Neo-Babylonian
+copies parts of the laws of {\xsuxfont 𒄩𒄠𒈬𒊏𒁉}, as well as Old Babylonian copies in both archaizing
+and cursive styles. Some sections are known only from those copies. See \cite[110\psqq]{Oelsner2022}.}.
+By being compatible with similarly diachronic transliteration practice
+(that is, by avoiding distinctions finer than those made in transliteration),
+the encoding model also allows for automated conversion of transliterated
+corpora to cuneiform,
+which has proven useful as a processing step in analyses such as
+\cites{Romach24}{JauhiainenJauhiainen24}\footnote{Attendees
+may recall the summary given on the third day of UTC \#180, as recorded in the minutes \cite{L2/24-159}.
+Other readers may refer to \cite[242,148]{RAI69Abstracts}.}.
+The diachronic approach is also useful for pedagogical applications\footnote{For instance,
+Old Babylonian grammar may be taught in the Neo-Assyrian script, as in \cite{Caplice2002}.}.
+
+In this context, the argument was made in \cite{L2/04-099} as part of ongoing work on the cuneiform
+encoding\footnote{At that time scoped to the répertoire of the Ur III period and later, see \cite[1]{L2/03-162},
+although many disunifications, such as $\text{\xsuxfont 𒅎}\ne\text{\xsuxfont 𒉎}$, were informed by Early Dynastic distinctions.}
+that the curviform numerals, which occasionally appear in the Ur III period
+and are used heavily in the Early Dynastic period,
+were a stylistic distinction unifiable with the cuneiform digits, and that
+an archaizing Ur III font or an Early Dynastic font could have curviform glyphs for
+the appropriate characters; some co-occurrence was known and acknowledged,
+but considered to be styling rather than plain text.
+
+Indeed, some metrological systems from the Early Dynastic period match the
+ones previously mentioned.
+In particular, the discrete counting system used in the Early Dynastic period
+(and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
+\cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
 \begin{equation}
 \text{\curviform \oneŠarʾuC}
 \xleftarrow{10}\text{\oneŠarTwoC}
 \xleftarrow{6}\text{\curviform \oneŊešʾuC}
 \xleftarrow{10}\text{\curviform \oneŊešTwoC}
 \xleftarrow{6}{\text{\curviform \oneUC}}
-\xleftarrow{10}{\text{\curviform \oneAšC}}
+\xleftarrow{10}{\text{\curviform \oneAšC}}\text.
 \tag{S}
 \label{systemS}
 \end{equation}
-
+Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
+\cites[378]{Friberg2007}{Gombert2016}:
 \begin{equation}
 \text{\curviform \oneŠarʾuC}
 \xleftarrow{10}\text{\oneŠarTwoC}
 \xleftarrow{6}\text{\curviform \oneBurʾuC}
 \xleftarrow{10}{\text{\curviform \oneUC}}
 \xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
-\xleftarrow{6}\text{\curviform \oneAšC}
+\xleftarrow{6}\text{\curviform \oneAšC}\text,
 \tag{G\textsubscript{ED IIIb}}
 \label{systemGED}
 \end{equation}
