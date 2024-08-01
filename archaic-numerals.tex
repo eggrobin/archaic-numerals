@@ -127,10 +127,7 @@
 The Unicode Standard includes some cuneiform numbers: {\xsuxfont 𒁹}–{\xsuxfont 𒑆} 1–9(diš) and {\xsuxfont 𒀸}–{\xsuxfont 𒐇} 1–9(aš), {\xsuxfont 𒌋}–{\xsuxfont 𒐐} 1–5(u), {\xsuxfont 𒐕}–{\xsuxfont 𒐝} 1–9(ŋeš₂), {\xsuxfont 𒐞}–{\xsuxfont 𒐢} 1–5(ŋešʾu), etc., used in the Sumero-Akkadian Cuneiform script (ISO 15924:
 Xsux, Script property value long name: Cuneiform).
 
-In the investigation that led to their encoding in Unicode Version 5.0, it was thought appropriate to unify these with the earlier curviform numerals {\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.,
-see \cite{L2/04-099}.
-While the curviform numerals sometimes co-occur with the cuneiform ones,
-this was analysed as a stylistic distinction which should not be encoded in plain text.
+In the investigation that led to their encoding in Unicode Version 5.0, it was thought appropriate to unify these with the earlier curviform numerals {\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.
 It has now become apparent that a distinction needs to be made for the adequate representation
 of Early Dynastic (ED) texts and scholarship pertaining to them.
 
@@ -270,7 +267,6 @@ volumes of earthworks instead use system \ref{systemGOB} based on a height of on
 where the numerals for ban₂ are {\xsuxfont 𒑏}, {\xsuxfont 𒑐}, {\xsuxfont 𒑑}, {\xsuxfont 𒑒},
 and {\xsuxfont 𒑔}, and those for bariga are {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, and {\xsuxfont 𒐉} (contrast
 ordinary {\xsuxfont 𒈫} and {\xsuxfont 𒐈} otherwise used with {\xsuxfont 𒁹}-numerals).
-
 As described in \cite[\pno 585 with notes (b) and (f)]{Huehnergard2011},
 the sign GUR {\xsuxfont 𒄥}, while it is used only with volumes in excess of one gur,
 is written after the whole expression,
@@ -292,7 +288,10 @@ Observe that while large numbers of gur follow\footnote{A larger unit, the guru�
 system \ref{systemSOB},
 the use of horizontal (AŠ) numerals for the gur disambiguates from the vertical bariga,
 as {\xsuxfont 𒌋𒁹𒄥} would be $10$~gur $1$~bariga, and {\xsuxfont 𒌋𒀸𒄥} would be $11$~gur;
-again even with some overt units, most of the numerals are tied to the metrology.
+again even with some overt units, most of the numerals
+that participate in a metrological system have an interpretation
+dependent on that system. To quote \cite[78]{Robson2008}:
+``The SPVS temporarily changed the status of numbers from properties of real-world objects to independent entities that could be manipulated without regard to […] metrological system. […] Once the calculation was done, the result was expressed in the most appropriate metrological units and thus re-entered the natural world as a concrete quantity.''
 
 This intertwining of units and numerals explains the large number of already-encoded numeral series:
 \begin{itemize}[nosep]
@@ -331,7 +330,7 @@ the encoding model also allows for automated conversion of transliterated
 corpora to cuneiform,
 which has proven useful as a processing step in analyses such as
 \cites{Romach24}{JauhiainenJauhiainen24}\footnote{Attendees
-may recall the summary given on the third day of UTC \#180, as recorded in the minutes \cite{L2/24-159}.
+may recall the summary given on the third day of UTC \#180, as recorded in \cite{L2/24-159}.
 Other readers may refer to \cite[242,148]{RAI69Abstracts}.}.
 The diachronic approach is also useful for pedagogical applications\footnote{For instance,
 Old Babylonian grammar may be taught in the Neo-Assyrian script, as in \cite{Caplice2002}.}.
@@ -373,6 +372,13 @@ Likewise the area system used in the Early Dynastic IIIb period mirrors system \
 \tag{G\textsubscript{ED IIIb}}
 \label{systemGED}
 \end{equation}
+
+TODO(egg): words
+
+Note that in \cite{Romach24} [TODO(egg): Cite the GitHub repository],
+as in many other such analyses, numbers are removed as an early step
+in processing; these therefore would not benefit from diachrony in
+the encoding of numeric expressions.
 
 \section{Problems with unification: Early metrology}
 
