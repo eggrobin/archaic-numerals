@@ -60,5 +60,7 @@
         "tectonic"
       ]
     }
-  ]
+  ],
+  "latex-workshop.bibtex-format.trailingComma": true,
+  "latex-workshop.bibtex-fields.sort.enabled": true
 }
