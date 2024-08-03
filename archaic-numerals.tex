@@ -38,6 +38,7 @@
 \newcommand\oneBurʾuC{\symbol{"E593}}
 \newcommand\oneBarigaC{\symbol{"E599}}
 \newcommand\oneEšeThreeC{\symbol{"E5A3}}
+\newcommand\oneDišC{\symbol{"E59E}}
 
 \newfontfamily\cuneiformComposite{CuneiformComposite.ttf}
 \newcommand\oneŠarTwoC{{\cuneiformComposite 𒊹}}
@@ -46,6 +47,7 @@
 
 \usepackage{unicode-math}
 \setmathfont[Scale=MatchLowercase, math-style=ISO]{Cambria Math}
+\setmathfontface\unifrak{UnifrakturMaguntia.ttf}[Scale=MatchUppercase]
 
 \usepackage[colorlinks,allcolors=Periwinkle]{hyperref}
 \usepackage[backend=biber,firstinits=true,maxnames=100,style=alphabetic,maxalphanames=4,doi=true,url=false,eprint=true,labelalpha=true,dateusetime=true]{biblatex}
@@ -181,7 +183,7 @@ The Script\_Extensions property assignments in section~\ref{properties} reflect 
 
 \section{Rationale for curviform--cuneiform disunification}
 \label{disunificationRationale}
-
+TODO(egg): blurb.
 
 \subsection{The cuneiform encoding model}
 As outlined in, \exempligratia, \cite{UTR56}, the cuneiform encoding model is diachronic;
@@ -218,62 +220,85 @@ that the curviform numerals, which occasionally appear in the Ur III period
 and are used heavily in the Early Dynastic period,
 were a stylistic distinction unifiable with the cuneiform digits, and that
 an archaizing Ur III font or an Early Dynastic font could have curviform glyphs for
-the appropriate characters; some co-occurrence was known and acknowledged,
-but considered to be styling rather than plain text.
+the appropriate characters.
+
+\subsubsection{P020054}
+Some co-occurrence of curviform and cuneiform digits was known and acknowledged.
+\cite[3]{L2/04-099} cites \cite[62]{NissenDamerowEnglund2007}, which is a copy of \cite{P020054},
+an Early Dynastic IIIb administrative tablet from Ŋirsu.
+The excerpt cited, lines 1--3 of column 1 of the obverse, is as follows:
+\begin{quote}
+\begin{tabular}{l l l l l l l}
+\xsuxfont 𒐕\footnotemark& \xsuxfont 𒌋 & \xsuxfont 𒈦&\xsuxfont 𒑍&\xsuxfont 𒄀&\xsuxfont 𒍑&\xsuxfont 𒁲\\
+$1$(ŊEŠ₂) & $1$(U) & $1/2$(DIŠ) & $5$(DIŠ \emph{tenû}) & gi & us₂ & sa₂\\
+\multicolumn{3}{c}{$7.5$ (ropes)} & $5$ & reed & side & equal
+\end{tabular}\\
+\footnotetext{As noted in \cite[466]{Powell1987}, this sign has a very short ``tail'' in this period,
+so that it is wider than it is tall, and can at first look like a large \text{𒀸} in copies.
+The photos in CDLI clearly show that this is in fact a vertical wedge.}
+\begin{tabular}{l l l l l}
+\xsuxfont 𒌍\footnotemark& \xsuxfont 𒑎 &\xsuxfont 𒄀&\xsuxfont 𒊕&\xsuxfont 𒁲\\
+$3$(U) & $6$(DIŠ \emph{tenû}) & gi & saŋ & sa₂\\
+$3$(ropes) & $6$ & reed & front & equal
+\end{tabular}\\
+\footnotetext{Note that ED IIIb {\xsuxfont 𒌋} numerals have a somewhat
+different appearance from those of the Ur III period used here;
+the sign {\xsuxfont 𒌍} here looks more like Ur III {\xsuxfont 𒆳}.}
+\begin{tabular}{l l l l l}
+\xsuxfont 𒃷𒁉&
+\curviform\oneUC&
+\curviform\oneEšeThreeC&
+\curviform\oneAšC&
+\curviform\oneDišC\\
+ašag-bi&1(BUR₃ᶜ)&1(EŠE₃ᶜ)&1(IKUᶜ)&1/2(IKUᶜ)\\
+this field&
+&
+&
+&
+\end{tabular}\\\begin{flushright}
+\begin{tabular}{l}
+\xsuxfont 𒓺𒋛𒂵𒄰\\
+tugₓ(LAK483)-si-ga-kam\footnotemark\\
+deep ploughing
+\end{tabular}
+\end{flushright}
+\footnotetext{Transliteration after \cite[8]{Lecompte2020}.}
+\end{quote}
+The argument made in \cite{L2/04-099} is that this is comparable to a stylistic distinction such as\footnote{We
+have taken the liberty of adjusting the analogy in \cite[4]{L2/04-099}
+to use measures approximately equal to those in \cite{P020054},
+instead of a field of five by twenty-five metres.}
+\begin{quote}
+$465$ metres, equal lengths\\
+$198$ metres, equal widths\\
+this field: $\unifrak{9,18}$ hectares, deeply ploughed
+\end{quote}
+where the numerals have the same structure (\cite{L2/04-099} contrasts this the different structures
+of ASCII digits and roman numerals).
+That document further claims that ``the number signs do not normally carry in their individual signs the
+meaning of what they are used to measure'', and that curviform and cuneiform numerals ``are not normally mixed together
+in a single numerical expression''. It therefore comes to the conclusion that the use of curviform
+numerals should be seen as a formatting distinction, rather than one that should be represented in plain text.
+
 Although they had been part of the preliminary proposal \cite{L2/03-393R},
-they were therefore removed from \cite{L2/04-036} and \cite{L2/04-189}, which both state that
-``The distinction between curved numerals and their cuneiform descendants
+the curviform numerals were therefore removed from \cite{L2/04-036} and \cite{L2/04-189},
+which both state that ``The distinction between curved numerals and their cuneiform descendants
 is treated as glyphic for the purposes of the present proposal;
 this issue will need to be revisited in subsequent encoding phases.''
 
-Indeed, some metrological systems from the Early Dynastic period match the
-ones previously mentioned.
-In particular, the discrete counting system used in the Early Dynastic period
-(and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
-\cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
-\begin{equation}
-\text{\curviform \oneŠarʾuC}
-\xleftarrow{10}\text{\oneŠarTwoC}
-\xleftarrow{6}\text{\curviform \oneŊešʾuC}
-\xleftarrow{10}\text{\curviform \oneŊešTwoC}
-\xleftarrow{6}{\text{\curviform \oneUC}}
-\xleftarrow{10}{\text{\curviform \oneAšC}}\text.
-\tag{S}
-\label{systemS}
-\end{equation}
-Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
-\cites[72]{Deimel1922}[63]{NissenDamerowEnglund2007}[378]{Friberg2007}{Gombert2016}:
-\begin{equation}
-\text{\curviform \oneŠarʾuC}
-\xleftarrow{10}\text{\oneŠarTwoC}
-\xleftarrow{6}\text{\curviform \oneBurʾuC}
-\xleftarrow{10}{\text{\curviform \oneUC}}
-\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
-\xleftarrow{6}\text{\curviform \oneAšC}\text,
-\tag{G\textsubscript{ED IIIb}}
-\label{systemGED}
-\end{equation}
-
-The reader will have noticed that in system \ref{systemS}, the vertical
-{\xsuxfont 𒁹} from \ref{systemSOB} becomes a horizontal {\curviform \oneAšC}.
-This is noted in \cite[4]{L2/04-099}.
-It is however far from the only case of such a reallocation of function.
-The earlier form of System G was \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
-\begin{equation}
-\text{\oneŠarTwoC}
-\xleftarrow{6}\text{\curviform \oneŠarʾuC}
-\xleftarrow{10}{\text{\curviform \oneUC}}
-\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
-\xleftarrow{6}\text{\curviform \oneAšC}\text,
-\tag{G}
-\label{systemG}
-\end{equation}
-Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\curviform \oneŠarʾuC} changes meaning from $10 \text{\curviform \oneUC}$ in system \ref{systemG} to $10 \text{\curviform \oneUC}$ in system \ref{systemGED}.
-System \ref{systemG} is used in the Uruk period, but also
-in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003}, whereas \ref{systemGED} is the ``area 1'' system).
+The time has come to revisit this issue.
+As we will see in section~\ref{metrology},
+numerals can only be interpreted in the context of what they measure \idest,
+as part of a metrological system.
+In section~\ref{earlyMetrology} we will see that in some periods,
+the distinction between curviform and cuneiform numerals is commonly used
+to distinguish metrological systems.
+In addition, we will show that some metrological systems
+commonly mix curviform and cuneiform
+in single numerical expressions.
 
 \subsection{Metrology}
-\label{metrologies}
+\label{metrology}
 \epigraph{{\obfont 𒁾 𒊬𒊑𒉈 𒂵𒁺} \\ {\obfont 𒁾 𒀸 𒊺 𒄥𒋫 𒍠 {\nafont 𒐞} 𒄥𒂠} \\ {\obfont 𒁾 𒁹 𒂆𒋫 𒍠 𒆬 𒌋 𒈠𒈾𒂠} \\
 I want to write tablets: the tablet of 1 \emph{gur} of barley to
 600 \emph{gur}; the tablet of 1 shekel of silver to 10 minas […]}{Edubbaʾa D}
@@ -428,6 +453,57 @@ This intertwining of units and numerals explains the large number of already-enc
 %the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
 
 \subsection{Early metrology}
+\label{earlyMetrology}
+
+[TODO(egg):The prose needs to be rewritten]
+
+Indeed, some metrological systems from the Early Dynastic period match the
+ones previously mentioned.
+In particular, the discrete counting system used in the Early Dynastic period
+(and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
+\cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
+\begin{equation}
+\text{\curviform \oneŠarʾuC}
+\xleftarrow{10}\text{\oneŠarTwoC}
+\xleftarrow{6}\text{\curviform \oneŊešʾuC}
+\xleftarrow{10}\text{\curviform \oneŊešTwoC}
+\xleftarrow{6}{\text{\curviform \oneUC}}
+\xleftarrow{10}{\text{\curviform \oneAšC}}\text.
+\tag{S}
+\label{systemS}
+\end{equation}
+Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
+\cites[72]{Deimel1922}[63]{NissenDamerowEnglund2007}[378]{Friberg2007}{Gombert2016}:
+\begin{equation}
+\text{\curviform \oneŠarʾuC}
+\xleftarrow{10}\text{\oneŠarTwoC}
+\xleftarrow{6}\text{\curviform \oneBurʾuC}
+\xleftarrow{10}{\text{\curviform \oneUC}}
+\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
+\xleftarrow{6}\text{\curviform \oneAšC}\text,
+\tag{G\textsubscript{ED IIIb}}
+\label{systemGED}
+\end{equation}
+
+The reader will have noticed that in system \ref{systemS}, the vertical
+{\xsuxfont 𒁹} from \ref{systemSOB} becomes a horizontal {\curviform \oneAšC}.
+This is noted in \cite[4]{L2/04-099}.
+It is however far from the only case of such a reallocation of function.
+The earlier form of System G was \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
+\begin{equation}
+\text{\oneŠarTwoC}
+\xleftarrow{6}\text{\curviform \oneŠarʾuC}
+\xleftarrow{10}{\text{\curviform \oneUC}}
+\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
+\xleftarrow{6}\text{\curviform \oneAšC}\text,
+\tag{G}
+\label{systemG}
+\end{equation}
+Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\curviform \oneŠarʾuC} changes meaning from $10 \text{\curviform \oneUC}$ in system \ref{systemG} to $10 \text{\curviform \oneUC}$ in system \ref{systemGED}.
+System \ref{systemG} is used in the Uruk period, but also
+in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003}, whereas \ref{systemGED} is the ``area 1'' system).
+
+
 \subsubsection{Use in modern publications}
 \subsection{Non-numeric usage}
 \epigraph{
