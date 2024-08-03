@@ -109,6 +109,8 @@
 \usepackage{enumitem}
 \renewcommand\labelitemi{---}
 
+\usepackage[style=iso]{datetime2}
+
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
 
@@ -120,34 +122,33 @@
 
 \section{Summary}
 
-\section{Background}
+This document proposes encoding some numerals used in the Uruk and Early Dynastic periods in conjunction
+with the Sumero-Akkadian cuneiform script\footnote{ISO 15924: Xsux, Script property value long name: Cuneiform; encoded since Unicode Version 5.0.}
+and the proto-cuneiform script\footnote{ISO 15924: Pcun, not yet encoded.}.
 
-[TODO(egg): Restructure this. The internal references are all garbled.]
-
-The Unicode Standard includes some cuneiform numbers: {\xsuxfont 𒁹}–{\xsuxfont 𒑆} 1–9(diš) and {\xsuxfont 𒀸}–{\xsuxfont 𒐇} 1–9(aš), {\xsuxfont 𒌋}–{\xsuxfont 𒐐} 1–5(u), {\xsuxfont 𒐕}–{\xsuxfont 𒐝} 1–9(ŋeš₂), {\xsuxfont 𒐞}–{\xsuxfont 𒐢} 1–5(ŋešʾu), etc., used in the Sumero-Akkadian Cuneiform script (ISO 15924:
-Xsux, Script property value long name: Cuneiform).
-
-In the investigation that led to their encoding in Unicode Version 5.0, it was thought appropriate to unify these with the earlier curviform numerals {\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.
-It has now become apparent that a distinction needs to be made for the adequate representation
-of Early Dynastic (ED) texts and scholarship pertaining to them.
-
-In addition, these numerals will be needed for the representation of proto-cuneiform
-texts from the earlier archaic period.
-The non-numeric signs of proto-cuneiform  (ISO 15924: Pcun) will be the subject of a separate proposal;
+The non-numeric signs of proto-cuneiform will be the subject of a separate proposal;
 we need only note here that the divergence between the approaches to character identity
 in modern scholarship requires that proto-cuneiform be disunified from cuneiform:
 proto-cuneiform is effectively treated as an undeciphered script.
 In contrast, the cuneiform encoding model is semantic,
 requiring an understanding of the text to correctly encode it.
 
-The use of the curviform numeric signs is however understood,
-as we will discuss in Section \ref{metrologies};
-further, the conventions used for archaic numerals are also used when
-discussing ED numerals, see Section \ref{transliteration}.
-As a result, the same numerals can be used when encoding archaic and ED texts,
-and in order to avoid issues ambiguities in representation when converting from
-transliteration, these should be unified.
-The overall picture of unifications and disunifications would be as follows:
+However, the \emph{numerals} used in proto-cuneiform should be unified with
+ones used in the Early Dynastic period, for the reasons set forth in
+section~\ref{unificationRationale}.
+The proposed curviform numerals\footnote{{\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.}
+should however \emph{not} be unified with
+the already-encoded cuneiform numerals\footnote{{\xsuxfont 𒀸}–{\xsuxfont 𒐇} 1–9(aš),
+{\xsuxfont 𒌋}–{\xsuxfont 𒐐} 1–5(u),
+{\xsuxfont 𒐕}–{\xsuxfont 𒐝} 1–9(ŋeš₂),
+{\xsuxfont 𒐞}–{\xsuxfont 𒐢} 1–5(ŋešʾu), etc.}.
+Since the encoding proposals for the cuneiform script
+twenty years ago provisionally considered the curviform numerals
+to be glyph variants of the cuneiform numerals,
+a detailed rationale is provided in section~\ref{disunificationRationale},
+including compatibility considerations in section \ref{compatibility}.
+
+The overall picture of unifications and disunifications over time is as follows:
 \begin{center}
 \begin{tabular}{| l | l | l | l |} \hline
                   & Uruk III \& earlier & ED – Ur III  & OB \& later \\\hline
@@ -156,14 +157,119 @@ Numbers           & This proposal & \parbox[t]{3cm}{This proposal\\+ Existing Xs
 \end{tabular}
 \end{center}
 
-\section{Metrologies}
+\section{Proposed changes to the Standard}
+\subsection{New characters}
+\subsection{Properties}
+\subsection{Names list}
+\subsection{Core specification}
+
+\section{Rationale for curviform--cuneiform disunification}
+\label{disunificationRationale}
+
+
+\subsection{The cuneiform encoding model}
+As outlined in, \exempligratia, \cite{UTR56}, the cuneiform encoding model is diachronic;
+each character may have wildly different glyphs depending on time period and region.
+For instance, the sign IM
+may resemble {\cuneiformComposite 𒅎} in texts from Early Dynastic IIIa Šuruppag as in the character code
+charts,
+{\cuneiformComposite 𒉎} later in the third millenium\footnote{Merging with U+1224E {\xsuxfont 𒉎} NI₂.},
+{\obfont 𒅎} in Old Babylonian cursive,
+{\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+1214E \textsc{cuneiform sign im}.
+
+This encoding model allows for the interoperable representation of editions
+of diachronic reference works such as sign lists\footnote{Notably \cite{OSL} and the online edition of \cite{Borger2010} in \cite[Signs]{eBL}.}
+and dictionaries\footnote{Notably \cite{ePSD2} and the online edition of \cite{Schramm2010} in \cite[Dictionary]{eBL}.},
+and of composite texts\footnote{For example, there are Neo-Assyrian and Neo-Babylonian
+copies parts of the laws of {\xsuxfont 𒄩𒄠𒈬𒊏𒁉}, as well as Old Babylonian copies in both archaizing
+and cursive styles. Some sections are known only from those copies. See \cite[110\psqq]{Oelsner2022}.}.
+By being compatible with similarly diachronic transliteration practice
+(that is, by avoiding distinctions finer than those made in transliteration),
+the encoding model also allows for automated conversion of transliterated
+corpora to cuneiform,
+which has proven useful as a processing step in analyses such as
+\cites{Romach24}{JauhiainenJauhiainen24}\footnote{Attendees
+may recall the summary given on the third day of UTC \#180, as recorded in \cite{L2/24-159}.
+Other readers may refer to \cite[242,148]{RAI69Abstracts}.}.
+The diachronic approach is also useful for pedagogical applications\footnote{For instance,
+Old Babylonian grammar may be taught in the Neo-Assyrian script, as in \cite{Caplice2002}.}.
+
+\subsection{Arguments for curviform–cuneiform unification}
+
+[TODO(egg): Present the argument from L2/04-099 detail, including the artifact cited.]
+
+In this context, the argument was made in \cite{L2/04-099} as part of ongoing work on the cuneiform
+encoding\footnote{At that time scoped to the répertoire of the Ur III period and later, see \cite[1]{L2/03-162},
+although many disunifications, such as $\text{\xsuxfont 𒅎}\ne\text{\xsuxfont 𒉎}$, were informed by Early Dynastic distinctions.}
+that the curviform numerals, which occasionally appear in the Ur III period
+and are used heavily in the Early Dynastic period,
+were a stylistic distinction unifiable with the cuneiform digits, and that
+an archaizing Ur III font or an Early Dynastic font could have curviform glyphs for
+the appropriate characters; some co-occurrence was known and acknowledged,
+but considered to be styling rather than plain text.
+Although they had been part of the preliminary proposal \cite{L2/03-393R},
+they were therefore removed from \cite{L2/04-036} and \cite{L2/04-189}, which both state that
+``The distinction between curved numerals and their cuneiform descendants
+is treated as glyphic for the purposes of the present proposal;
+this issue will need to be revisited in subsequent encoding phases.''
+
+Indeed, some metrological systems from the Early Dynastic period match the
+ones previously mentioned.
+In particular, the discrete counting system used in the Early Dynastic period
+(and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
+\cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
+\begin{equation}
+\text{\curviform \oneŠarʾuC}
+\xleftarrow{10}\text{\oneŠarTwoC}
+\xleftarrow{6}\text{\curviform \oneŊešʾuC}
+\xleftarrow{10}\text{\curviform \oneŊešTwoC}
+\xleftarrow{6}{\text{\curviform \oneUC}}
+\xleftarrow{10}{\text{\curviform \oneAšC}}\text.
+\tag{S}
+\label{systemS}
+\end{equation}
+Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
+\cites[72]{Deimel1922}[63]{NissenDamerowEnglund2007}[378]{Friberg2007}{Gombert2016}:
+\begin{equation}
+\text{\curviform \oneŠarʾuC}
+\xleftarrow{10}\text{\oneŠarTwoC}
+\xleftarrow{6}\text{\curviform \oneBurʾuC}
+\xleftarrow{10}{\text{\curviform \oneUC}}
+\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
+\xleftarrow{6}\text{\curviform \oneAšC}\text,
+\tag{G\textsubscript{ED IIIb}}
+\label{systemGED}
+\end{equation}
+
+The reader will have noticed that in system \ref{systemS}, the vertical
+{\xsuxfont 𒁹} from \ref{systemSOB} becomes a horizontal {\curviform \oneAšC}.
+This is noted in \cite[4]{L2/04-099}.
+It is however far from the only case of such a reallocation of function.
+The earlier form of System G was \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
+\begin{equation}
+\text{\oneŠarTwoC}
+\xleftarrow{6}\text{\curviform \oneŠarʾuC}
+\xleftarrow{10}{\text{\curviform \oneUC}}
+\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
+\xleftarrow{6}\text{\curviform \oneAšC}\text,
+\tag{G}
+\label{systemG}
+\end{equation}
+Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\curviform \oneŠarʾuC} changes meaning from $10 \text{\curviform \oneUC}$ in system \ref{systemG} to $10 \text{\curviform \oneUC}$ in system \ref{systemGED}.
+System \ref{systemG} is used in the Uruk period, but also
+in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003}, whereas \ref{systemGED} is the ``area 1'' system).
+
+\subsection{Metrology}
 \label{metrologies}
 \epigraph{{\obfont 𒁾 𒊬𒊑𒉈 𒂵𒁺} \\ {\obfont 𒁾 𒀸 𒊺 𒄥𒋫 𒍠 {\nafont 𒐞} 𒄥𒂠} \\ {\obfont 𒁾 𒁹 𒂆𒋫 𒍠 𒆬 𒌋 𒈠𒈾𒂠} \\
 I want to write tablets: the tablet of 1 \emph{gur} of barley to
 600 \emph{gur}; the tablet of 1 shekel of silver to 10 minas […]}{Edubbaʾa D}
 
-In order to explain why TODO:$n$ more numerals are needed,
-it is useful to first recall why we have so many kinds of cuneiform numerals already.
+Before diving into the usage of the curviform numerals
+in the Early Dynastic period to explain the constrast
+with curviform numerals, it is useful to understand
+the usage of the already-encoded characters in the
+Ur III and Old Babylonian periods.
 
 As is well known\footnote{See, \exempligratia, \cite[Section 22.3.3 ``Non-Decimal Radix Systems'',
 \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/\#G42894}{Cuneiform Numerals}'']{Unicode16}.}
@@ -303,100 +409,20 @@ This intertwining of units and numerals explains the large number of already-enc
 \item {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, {\xsuxfont 𒐉} used in \ref{systemC}—note the overlap with {\xsuxfont 𒁹}–{\xsuxfont 𒑆};
 \item {\xsuxfont 𒑘} and 	{\xsuxfont 𒑙} used in \ref{systemGOB}.
 \end{itemize}
+
+\subsubsection{Fractions}
 %Note that these distinctions are needed even though they are not always represented in transliteration;
 %the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
 
-\section{Arguments for curviform–cuneiform unification}
-As outlined in, \exempligratia, \cite{UTR56}, the cuneiform encoding model is diachronic;
-each character may have wildly different glyphs depending on time period and region.
-For instance, the sign IM
-may resemble {\cuneiformComposite 𒅎} in texts from Early Dynastic IIIa Šuruppag as in the character code
-charts,
-{\cuneiformComposite 𒉎} later in the third millenium\footnote{Merging with U+1224E {\xsuxfont 𒉎} NI₂.},
-{\obfont 𒅎} in Old Babylonian cursive,
-{\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+1214E \textsc{cuneiform sign im}.
+\subsection{Problems with unification: Early metrology}
 
-This encoding model allows for the interoperable representation of editions
-of diachronic reference works such as sign lists\footnote{Notably the online edition of \cite{Borger2010} in \cite[Signs]{eBL}, as well as
-\cite{OSL}.}
-and dictionaries\footnote{Notably the online edition of \cite{Schramm2010} in \cite[Dictionary]{eBL},
-as well as \cite{ePSD2}.},
-and of composite texts\footnote{For example, there are Neo-Assyrian and Neo-Babylonian
-copies parts of the laws of {\xsuxfont 𒄩𒄠𒈬𒊏𒁉}, as well as Old Babylonian copies in both archaizing
-and cursive styles. Some sections are known only from those copies. See \cite[110\psqq]{Oelsner2022}.}.
-By being compatible with similarly diachronic transliteration practice
-(that is, by avoiding distinctions finer than those made in transliteration),
-the encoding model also allows for automated conversion of transliterated
-corpora to cuneiform,
-which has proven useful as a processing step in analyses such as
-\cites{Romach24}{JauhiainenJauhiainen24}\footnote{Attendees
-may recall the summary given on the third day of UTC \#180, as recorded in \cite{L2/24-159}.
-Other readers may refer to \cite[242,148]{RAI69Abstracts}.}.
-The diachronic approach is also useful for pedagogical applications\footnote{For instance,
-Old Babylonian grammar may be taught in the Neo-Assyrian script, as in \cite{Caplice2002}.}.
+\subsection{Problems with unification: Non-numeric usage}
+\epigraph{
+{\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 𒅗𒁉 𒐋𒀀𒀭 𒐕𒀀𒀭 𒁀𒁺 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
+{\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
+{The beginning of the scribal art is a single wedge. That one has six pronunciations; it also stands for `sixty'. Do you know its reading?}}{Examenstext A}
 
-In this context, the argument was made in \cite{L2/04-099} as part of ongoing work on the cuneiform
-encoding\footnote{At that time scoped to the répertoire of the Ur III period and later, see \cite[1]{L2/03-162},
-although many disunifications, such as $\text{\xsuxfont 𒅎}\ne\text{\xsuxfont 𒉎}$, were informed by Early Dynastic distinctions.}
-that the curviform numerals, which occasionally appear in the Ur III period
-and are used heavily in the Early Dynastic period,
-were a stylistic distinction unifiable with the cuneiform digits, and that
-an archaizing Ur III font or an Early Dynastic font could have curviform glyphs for
-the appropriate characters; some co-occurrence was known and acknowledged,
-but considered to be styling rather than plain text.
-Although they had been part of the preliminary proposal \cite{L2/03-393R},
-they were therefore removed from \cite{L2/04-036} and \cite{L2/04-189}, which both state that
-``The distinction between curved numerals and their cuneiform descendants
-is treated as glyphic for the purposes of the present proposal;
-this issue will need to be revisited in subsequent encoding phases.''
-
-Indeed, some metrological systems from the Early Dynastic period match the
-ones previously mentioned.
-In particular, the discrete counting system used in the Early Dynastic period
-(and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
-\cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
-\begin{equation}
-\text{\curviform \oneŠarʾuC}
-\xleftarrow{10}\text{\oneŠarTwoC}
-\xleftarrow{6}\text{\curviform \oneŊešʾuC}
-\xleftarrow{10}\text{\curviform \oneŊešTwoC}
-\xleftarrow{6}{\text{\curviform \oneUC}}
-\xleftarrow{10}{\text{\curviform \oneAšC}}\text.
-\tag{S}
-\label{systemS}
-\end{equation}
-Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
-\cites[72]{Deimel1922}[63]{NissenDamerowEnglund2007}[378]{Friberg2007}{Gombert2016}:
-\begin{equation}
-\text{\curviform \oneŠarʾuC}
-\xleftarrow{10}\text{\oneŠarTwoC}
-\xleftarrow{6}\text{\curviform \oneBurʾuC}
-\xleftarrow{10}{\text{\curviform \oneUC}}
-\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
-\xleftarrow{6}\text{\curviform \oneAšC}\text,
-\tag{G\textsubscript{ED IIIb}}
-\label{systemGED}
-\end{equation}
-
-The reader will have noticed that in system \ref{systemS}, the vertical
-{\xsuxfont 𒁹} from \ref{systemSOB} becomes a horizontal {\curviform \oneAšC}.
-This is noted in \cite[4]{L2/04-099}.
-It is however far from the only case of such a reallocation of function.
-The earlier form of System G was \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
-\begin{equation}
-\text{\oneŠarTwoC}
-\xleftarrow{6}\text{\curviform \oneŠarʾuC}
-\xleftarrow{10}{\text{\curviform \oneUC}}
-\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
-\xleftarrow{6}\text{\curviform \oneAšC}\text,
-\tag{G}
-\label{systemG}
-\end{equation}
-Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\curviform \oneŠarʾuC} changes meaning from $10 \text{\curviform \oneUC}$ in system \ref{systemG} to $10 \text{\curviform \oneUC}$ in system \ref{systemGED}.
-System \ref{systemG} is used in the Uruk period, but also
-in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003}, whereas \ref{systemGED} is the ``area 1'' system).
-
-\section{Limited benefits of diachronic encoding for numerals}
+\subsection{Limited benefits of diachronic encoding for numerals}
 
 [Composite texts dating back to the period where curved numerals are in use
 tend to be limited to lexical texts, which do not usually have numbers.
@@ -418,21 +444,21 @@ as in many other such analyses, numbers are removed as an early step
 in processing; these therefore would not benefit from diachrony in
 the encoding of numeric expressions.
 
-\section{Problems with unification: Early metrology}
+\subsubsection{Compatibility with transliteration}
 
-\section{Problems with unification: Non-numeric usage}
-\epigraph{
-{\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 𒅗𒁉 𒐋𒀀𒀭 𒐕𒀀𒀭 𒁀𒁺 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
-{\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
-{The beginning of the scribal art is a single wedge. That one has six pronunciations; it also stands for `sixty'. Do you know its reading?}}{Examenstext A}
+\subsection{Compatibility considerations}
+\label{compatibility}
 
-\subsection{The case of ŠAR₂}
-
-\section{Compatibility with transliteration}
-\label{transliteration}
+\subsubsection{The case of ŠAR₂}
 
 
-\section{The necessity of ED–Uruk numeral identification}
+\section{Rationale for ED–Uruk numeral unification}
+\label{unificationRationale}
+
+\section{Considerations on individual numeral series}
+
+[TODO Document to the extent possible the metrological systems in which each sign is used.
+Note the disunification of N9 and N10 from 4(ban₂@c) and 5(ban₂@c).]
 
 \section{Characters not included in this proposal}
 \subsection{Missing numerals}
