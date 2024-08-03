@@ -96,7 +96,8 @@
       
 \newcommand{\idest}{\emph{i.e.}}
 \newcommand{\exempligratia}{\emph{e.g.}}
-\newcommand{\sequentes}{\emph{sqq.}}
+
+\usepackage{multirow}
 
 \usepackage{epigraph}
 \renewcommand{\epigraphsize}{\footnotesize\itshape}
@@ -110,6 +111,9 @@
 \renewcommand\labelitemi{---}
 
 \usepackage[style=iso]{datetime2}
+
+\hyphenation{cunei-form}
+\usepackage{microtype}
 
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
@@ -137,7 +141,7 @@ requiring an understanding of the text to correctly encode it.
 However, the \emph{numerals} used in proto-cuneiform should be unified with
 ones used in the Early Dynastic period, for the reasons set forth in
 section~\ref{unificationRationale}.
-The proposed curviform numerals\footnote{{\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.}
+The proposed ``curved'', or ``curviform'', numerals\footnote{{\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.}
 should however \emph{not} be unified with
 the already-encoded cuneiform numerals\footnote{{\xsuxfont 𒀸}–{\xsuxfont 𒐇} 1–9(aš),
 {\xsuxfont 𒌋}–{\xsuxfont 𒐐} 1–5(u),
@@ -149,21 +153,31 @@ to be glyph variants of the cuneiform numerals,
 a detailed rationale is provided in section~\ref{disunificationRationale},
 including compatibility considerations in section \ref{compatibility}.
 
-The overall picture of unifications and disunifications over time is as follows:
+The overall picture of unifications and disunifications over time is illustrated in table~\ref{tableUnificationsDisunifications}.
+The Script\_Extensions property assignments in section~\ref{properties} reflect the overlap.
+
+[TODO(egg): Mention the other sections here too.]
+
+\begin{table}
 \begin{center}
-\begin{tabular}{| l | l | l | l |} \hline
-                  & Uruk III \& earlier & ED – Ur III  & OB \& later \\\hline
-Non-numeric signs & Future Pcun   & \multicolumn{2}{|c|}{Existing Xsux} \\\hline
-Numbers           & This proposal & \parbox[t]{3cm}{This proposal\\+ Existing Xsux} & Existing Xsux\\\hline
+\begin{tabular}{ l | l | l | l |} \cline{2-4}
+                                                & Uruk III \& earlier & ED – Ur III                         & OB \& later    \\\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{Numerals}} & \multicolumn{2}{|c|}{This proposal}                       &                \\\cline{2-4}
+\multicolumn{1}{|c|}{}                          &                     & \multicolumn{2}{|c|}{\multirow{2}{*}{Existing Xsux}} \\\cline{1-2}
+\multicolumn{1}{|c|}{Non-numeric signs}         & Future Pcun         & \multicolumn{2}{|c|}{}                               \\\hline
 \end{tabular}
+\caption{Usage of existing, proposed, and future characters across functions and time periods.}
 \end{center}
+\label{tableUnificationsDisunifications}
+\end{table}
 
 \section{Proposed changes to the Standard}
 \label{proposal}
-\subsection{New characters}
+\subsection{Summary of proposed characters}
 \subsection{Properties}
-\subsection{Names list}
-\subsection{Core specification}
+\label{properties}
+\subsection{Character names list}
+\subsection{Core specification text}
 
 \section{Rationale for curviform--cuneiform disunification}
 \label{disunificationRationale}
@@ -197,10 +211,7 @@ The diachronic approach is also useful for pedagogical applications\footnote{For
 Old Babylonian grammar may be taught in the Neo-Assyrian script, as in \cite{Caplice2002}.}.
 
 \subsection{Arguments for curviform–cuneiform unification}
-
-[TODO(egg): Present the argument from L2/04-099 detail, including the artifact cited.]
-
-In this context, the argument was made in \cite{L2/04-099} as part of ongoing work on the cuneiform
+In this context, the argument was made in \cite{L2/04-099}, as part of discussion of the cuneiform
 encoding\footnote{At that time scoped to the répertoire of the Ur III period and later, see \cite[1]{L2/03-162},
 although many disunifications, such as $\text{\xsuxfont 𒅎}\ne\text{\xsuxfont 𒉎}$, were informed by Early Dynastic distinctions.}
 that the curviform numerals, which occasionally appear in the Ur III period
@@ -269,7 +280,7 @@ I want to write tablets: the tablet of 1 \emph{gur} of barley to
 
 Before diving into the usage of the curviform numerals
 in the Early Dynastic period to explain the constrast
-with curviform numerals, it is useful to understand
+with cuneiform numerals, it is useful to understand
 the usage of the already-encoded characters in the
 Ur III and Old Babylonian periods.
 
@@ -416,9 +427,9 @@ This intertwining of units and numerals explains the large number of already-enc
 %Note that these distinctions are needed even though they are not always represented in transliteration;
 %the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
 
-\subsection{Problems with unification: Early metrology}
-\subsubsection{Scholarly publications}
-\subsection{Problems with unification: Non-numeric usage}
+\subsection{Early metrology}
+\subsubsection{Use in modern publications}
+\subsection{Non-numeric usage}
 \epigraph{
 {\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 𒅗𒁉 𒐋𒀀𒀭 𒐕𒀀𒀭 𒁀𒁺 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
 {\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
