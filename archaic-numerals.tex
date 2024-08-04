@@ -80,11 +80,17 @@
     \ifhyperref
       {\href{http://www.cnki.com.cn/Article/CJFDTOTAL-#1.htm}{\nolinkurl{#1}}}
       {\nolinkurl{#1}}}
-\DeclareFieldFormat{eprint:utc}{%
+      \DeclareFieldFormat{eprint:utc}{%
+        \newline
+        \mkbibacro{UTC}\addcolon\space
+          \ifhyperref
+            {\UTCdoc{#1}}
+            {\nolinkurl{#1}}}
+\DeclareFieldFormat{eprint:cdli}{%
   \newline
-  \mkbibacro{UTC}\addcolon\space
+  \mkbibacro{CDLI}\addcolon\space
     \ifhyperref
-      {\UTCdoc{#1}}
+      {\href{https://cdli.ucla.edu/#1}{\nolinkurl{#1}}}
       {\nolinkurl{#1}}}
 \DeclareFieldFormat{eprint}{%
   \newline
@@ -225,7 +231,7 @@ an archaizing Ur III font or an Early Dynastic font could have curviform glyphs 
 the appropriate characters.
 
 Some co-occurrence of curviform and cuneiform digits was known and acknowledged.
-\cite[3]{L2/04-099} cites \cite[62]{NissenDamerowEnglund2007}, which is a copy of \cite{P020054},
+\cite[3]{L2/04-099} cites \cite[62]{NissenDamerowEnglund1993}, which is a copy of \cite{P020054},
 an Early Dynastic IIIb administrative tablet from Ŋirsu.
 The excerpt cited, lines 1--3 of column 1 of the obverse, is as follows:
 \begin{quote}
@@ -490,7 +496,7 @@ Two more units appear occasionally \cites[459]{Powell1987}[118]{Friberg2007}{Rob
   \xleftarrow{30}\text{\xsuxfont 𒁹𒍑}
   \xleftarrow{6}\underset{\substack{\text{eše₂}\\\text{\emph{ašlum}}\\\text{rope}\\60~\text{m}}}{\text{\xsuxfont 𒁹𒂠}}
   \xleftarrow{10}{\text{\xsuxfont 𒁹𒃻}}
-  \xleftarrow{2}\underset{\substack{\text{gi}\\\text{\emph{qânum}}\\\text{reed}\\1,5~\text{m}}}{\text{\xsuxfont 𒁹𒄀}}
+  \xleftarrow{2}\underset{\substack{\text{gi}\\\text{\emph{qânum}}\\\text{reed}\\3~\text{m}}}{\text{\xsuxfont 𒁹𒄀}}
   \xleftarrow{6}{\text{\xsuxfont 𒁹𒌑}}
   \xleftarrow{30}{\text{\xsuxfont 𒁹𒋗𒋛}}\text.
   \tag{$\bar{L}_{\text{Ur III/OB}}$}
@@ -520,7 +526,7 @@ In particular, the discrete counting system used in the Early Dynastic period
 \label{systemS}
 \end{equation}
 Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
-\cites[72]{Deimel1922}[63]{NissenDamerowEnglund2007}[378]{Friberg2007}{Gombert2016}:
+\cites[72]{Deimel1922}[63]{NissenDamerowEnglund1993}[378]{Friberg2007}{Gombert2016}:
 \begin{equation}
 \text{\curviform \oneŠarʾuC}
 \xleftarrow{10}\text{\oneŠarTwoC}
@@ -547,7 +553,8 @@ The earlier form of System G was \cites[141,165]{DamerowEnglund1987}[378]{Friber
 \end{equation}
 Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\curviform \oneŠarʾuC} changes meaning from $10 \text{\curviform \oneUC}$ in system \ref{systemG} to $10 \text{\curviform \oneUC}$ in system \ref{systemGED}.
 System \ref{systemG} is used in the Uruk period, but also
-in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003}, whereas \ref{systemGED} is the ``area 1'' system).
+in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003},
+whereas \ref{systemGED} is the ``area 1'' system).
 
 The length system Early Dynastic IIIb of the state of Lagaš is of particular interest.
 As described in \cites[466]{Powell1987}[289\psq]{Lecompte2020}, lengths are expressed in rods,
@@ -560,13 +567,35 @@ Effectively, this yields the following factor diagram:
 \begin{equation}
   \text{\xsuxfont 𒐕}
   \xleftarrow{6}\underset{\substack{\text{eše₂}\\\text{\emph{ašlum}}\\\text{rope}\\60~\text{m}}}{\text{\xsuxfont 𒌋}}
-  \xleftarrow{2}{\text{\xsuxfont 𒈦}}
-  \xleftarrow{10}\underset{\substack{\text{gi}\\\text{\emph{qânum}}\\\text{reed}\\1,5~\text{m}}}{\text{\xsuxfont 𒀹𒄀}}\text.
+  \xleftarrow{2}\text{\xsuxfont 𒈦}
+  \xleftarrow{10}\underset{\substack{\text{gi}\\\text{\emph{qânum}}\\\text{reed}\\3~\text{m}}}{\text{\xsuxfont 𒀹𒄀}}\text.
   \tag{$L_{\text{ED IIIb}}$}
   \label{systemLED}
 \end{equation}
-This is the system that was used to express the sides of the field discussed in
-section~\ref{oldArgumentsForUnification}.
+This is the system that was used to express the sides of the field in
+\cite{P020054} discussed in section~\ref{oldArgumentsForUnification}.
+In that tablet and others from the same period, such as the ones, areas are expressed in
+system \ref{systemGED}, with curviform numerals\footnote{TODO(egg):
+Note the handful of late Urukagina tablets that start to have cuneiform areas.};
+in the absence of overt units,
+the use of curviform or cuneiform numerals therefore disambiguates
+a numeric expression between an area and a length,
+and therefore the interpretation of its
+numerals between systems \ref{systemGED} and \ref{systemLED}.
+The sign GAN₂ {\xsuxfont 𒃷},
+which would also disambiguate the interpretation as an area,
+is sometimes used after areas in ED IIIb Lagaš, but not systematically;
+in particular the area of the first field in \cite{P020054} does not use this suffix.
+See \cite{Lecompte2020} for many examples with and without {\xsuxfont 𒃷}.
+
+\cites[466]{Powell1987} notes that reeds ``are regularly written with the normal,
+cuneiform end of the stylus. Higher units are usually written with the reversed
+(round) end of the stylus.''
+Powell does not elaborate on the specifics of this mixed use of numerals, but
+a cursory search in CDLI finds many occurrences:
+[cite VS 14, 100, 130, 74, VS25, 83...
+Just search the downloaded ATF pile for \verb|@c.*disz@t\) gi |]
+From these we can draw the following factor diagram:
 
 \subsubsection{Use in modern publications}
 \subsection{Non-numeric usage}
