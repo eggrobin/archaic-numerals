@@ -186,6 +186,7 @@ The Script\_Extensions property assignments in section~\ref{properties} reflect 
 TODO(egg): blurb.
 
 \subsection{The cuneiform encoding model}
+\label{xsuxModel}
 As outlined in, \exempligratia, \cite{UTR56}, the cuneiform encoding model is diachronic;
 each character may have wildly different glyphs depending on time period and region.
 For instance, the sign IM
@@ -242,8 +243,8 @@ $3$(U) & $6$(DIŠ \emph{tenû}) & gi & saŋ & sa₂\\
 $3$(ropes) & $6$ & reed & front & equal
 \end{tabular}\\
 \footnotetext{Note that ED IIIb {\xsuxfont 𒌋} numerals have a somewhat
-different appearance from those of the Ur III period used here;
-the sign {\xsuxfont 𒌍} here looks more like Ur III {\xsuxfont 𒆳}.}
+different appearance from those of the Ur III period used in this transcription;
+the sign {\xsuxfont 𒌍} in \cite{L2/04-099} looks more like Ur III {\xsuxfont 𒆳}.}
 \begin{tabular}{l l l l l}
 \xsuxfont 𒃷𒁉&
 \curviform\oneUC&
@@ -276,8 +277,18 @@ where the numerals have the same structure (\cite{L2/04-099} contrasts this to t
 of ASCII digits and roman numerals).
 That document further claims that ``the number signs do not normally carry in their individual signs the
 meaning of what they are used to measure'', and that curviform and cuneiform numerals ``are not normally mixed together
-in a single numerical expression''. It therefore comes to the conclusion that the use of curviform
-numerals should be seen as a formatting distinction, rather than one that should be represented in plain text.
+in a single numerical expression''.
+In addition, \cite[4]{L2/04-099} points out that the cuneiform numeric signs are descended from
+the curviform ones (this is undisputed),
+and claims there is only a small re-allocation of the function of signs
+(from {\curviform \oneAšC}- to {\xsuxfont 𒁹}-numerals).
+It therefore comes to the conclusion that the use of curviform
+numerals should be seen as a formatting distinction,
+rather than one that should be represented in plain text,
+and insists that the encoding should capture the lineal
+historical descent of those signs, presumably to take
+advantage of the benefits of diachronic encoding described
+in section~\ref{xsuxModel}.
 
 Although they had been part of the preliminary proposal \cite{L2/03-393R},
 the curviform numerals were therefore removed from \cite{L2/04-036} and \cite{L2/04-189},
@@ -289,12 +300,12 @@ The time has come to revisit this issue.
 As we will see in section~\ref{metrology},
 numerals can only be interpreted in the context of what they measure \idest,
 as part of a metrological system.
-In section~\ref{earlyMetrology} we will see that in some periods,
-the distinction between curviform and cuneiform numerals is commonly used
-to distinguish metrological systems.
-In addition, we will show that some metrological systems
-commonly mix curviform and cuneiform
-in single numerical expressions.
+In section~\ref{earlyMetrology} we will see that in some periods:
+\begin{itemize}[nosep]
+  \item the functions and use of the numerals vary beyond the mere {\curviform \oneAšC}/{\xsuxfont 𒁹} switch;
+  \item the contrast between curviform and cuneiform numerals is commonly used to distinguish metrological systems;
+  \item some metrological systems commonly mix curviform and cuneiform in single numerical expressions.
+\end{itemize}
 
 \subsection{Metrology}
 \label{metrology}
@@ -325,7 +336,8 @@ tens {\xsuxfont 𒌋}–{\xsuxfont 𒐐}, sixties {\xsuxfont 𒐕}–{\xsuxfont 
 than the units), six hundreds {\xsuxfont 𒐞}–{\xsuxfont 𒐢},
 three thousand six hundreds {\xsuxfont 𒊹}–{\xsuxfont 𒐫}, and thirty-six thousands
  {\xsuxfont 𒐬}–{\xsuxfont 𒐱}.
- 
+
+ \subsubsection{The discrete counting system} 
 The relations between the values of the signs in the cuneiform discrete counting system
 may be summarized by the following factor diagram\footnote{These diagrams,
 which have become standard in discussions of Mesopotamian metrology, originate with \cite[10]{Friberg1978},
@@ -341,6 +353,7 @@ For example, the number $1729=((\textcolor{BrickRed}{2}\times 10 + \textcolor{Da
 would be written {\xsuxfont \textcolor{BrickRed}{𒐟}\textcolor{Dandelion}{𒐜}\textcolor{NavyBlue}{𒐏}\textcolor{Orchid}{𒑄}} in the discrete counting system,
 and {\xsuxfont 𒎙𒑄𒐏𒑆} in the sexagesimal place value system.
 
+\subsubsection{The area system}
 The discrete counting system was not the only non-positional system in use in the Ur III and Old Babylonian periods; different systems were in use depending on what was being counted or measured.
 For instance, field areas were measured using the following system, where for the named
 units we have provided the name of the unit in transliterated Sumerian, normalized Old Babylonian Akkadian,
@@ -392,6 +405,7 @@ Note also that the same signs are shared between multiple systems,
 with different relations; the ŠAR₂ sign {\xsuxfont 𒊹} is equal to sixty times the U sign {\xsuxfont 𒌋}
 in the area system, but to three hundred and sixty times {\xsuxfont 𒌋} in the discrete counting system.
 
+\subsubsection{The capacity system}
 Another such system of note is the one for capacities\footnote{Used
 for volumes of grain, but also oil, dairy products, beer, etc., as well as to express the capacity of boats;
 volumes of earthworks instead use system \ref{systemGOB} based on a height of one cubit, see\cites[488]{Powell1987}[294]{Robson2008}{Robson2019}.} \cites[376]{Friberg2007}{Robson2019},
@@ -447,16 +461,36 @@ This intertwining of units and numerals explains the large number of already-enc
 \item {\xsuxfont 𒑘} and 	{\xsuxfont 𒑙} used in \ref{systemGOB}.
 \end{itemize}
 
+\subsubsection{The length system}
+In the Ur III and Old Babylonian periods, lengths are expressed using overt units counted with
+{\xsuxfont 𒁹}-  and {\xsuxfont 𒌋}-numerals with their system \ref{systemSOB} values\footnote{Adjacent
+units are no more than a factor of $60$ apart, so higher numerals such as {\xsuxfont 𒐞} or {\xsuxfont 𒊹} are not
+used.}.
+Since it does not have any unusual numerals,
+this system would not in itself be of much relevance to character encoding,
+but we present it here as background for
+its Early Dynastic counterpart presented in section~\ref{earlyMetrology}
+\cites[459]{Powell1987}[118]{Friberg2007}{Robson2019}:
+\begin{equation}
+  \text{\xsuxfont 𒐕𒆜𒁍}
+  \xleftarrow{30}\text{\xsuxfont 𒁹𒍑}
+  \xleftarrow{6}\text{\xsuxfont 𒁹𒂠}
+  \xleftarrow{10}{\text{\xsuxfont 𒁹𒃻}}
+  \xleftarrow{2}{\text{\xsuxfont 𒁹𒄀}}
+  \xleftarrow{6}{\text{\xsuxfont 𒁹𒌑}}
+  \xleftarrow{30}{\text{\xsuxfont 𒁹𒋗𒋛}}\text.
+  \tag{L\textsubscript{Ur III/OB}}
+  \label{systemLOB}
+\end{equation}
+
 \subsubsection{Fractions}
-%Note that these distinctions are needed even though they are not always represented in transliteration;
-%the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
+TODO
+Note the existence of a name for $\text{\xsuxfont 𒈦𒂠}=\text{\xsuxfont 𒐊𒃻}$, cite Robson p. 294 and 2022.
 
 \subsection{Early metrology}
 \label{earlyMetrology}
 
-[TODO(egg):The prose needs to be rewritten]
-
-Indeed, some metrological systems from the Early Dynastic period match the
+At first sight, the metrological systems from the Early Dynastic period match the
 ones previously mentioned.
 In particular, the discrete counting system used in the Early Dynastic period
 (and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
@@ -511,6 +545,7 @@ in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003}, wher
 {The beginning of the scribal art is a single wedge. That one has six pronunciations; it also stands for `sixty'. Do you know its reading?}}{Examenstext A}
 
 \subsection{Limited benefits of diachronic encoding for numerals}
+\label{limitedBenefitsOfDiachrony}
 
 [Composite texts dating back to the period where curved numerals are in use
 tend to be limited to lexical texts, which do not usually have numbers.
@@ -533,6 +568,7 @@ in processing; these therefore would not benefit from diachrony in
 the encoding of numeric expressions.
 
 \subsubsection{Compatibility with transliteration}
+%the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4, \cite[295]{Robson2008}.
 
 \subsection{Compatibility considerations}
 \label{compatibility}
