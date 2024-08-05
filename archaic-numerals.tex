@@ -285,7 +285,7 @@ where the numerals have the same structure (\cite{L2/04-099} contrasts this to t
 of ASCII digits and roman numerals).
 That document further claims that ``the number signs do not normally carry in their individual signs the
 meaning of what they are used to measure'', and that curviform and cuneiform numerals ``are not normally mixed together
-in a single numerical expression''.
+in a single numerical expression'', noting the exceptions of \cites{P232278}{P232280}.
 In addition, \cite[4]{L2/04-099} points out that the cuneiform numeric signs are descended from
 the curviform ones (this is undisputed),
 and claims there is only a small re-allocation of the function of signs
@@ -485,13 +485,14 @@ its Early Dynastic counterpart presented in section~\ref{earlyMetrology}.
 Metrological tables use the following units \cites[118]{Friberg2007}{Robson2019}:
 \begin{equation}
   \underset{\substack{\text{danna}\\\text{\emph{bērum}}\\\text{league}\\10,8~\text{km}}}{\text{\xsuxfont 𒁹𒆜𒁍}}
-  \xleftarrow{60}\underset{\substack{\text{UŠ\footnote{TODO}}\\\\\text{cable}\\360~\text{m}}}{\text{\xsuxfont 𒁹𒍑}}
+  \xleftarrow{60}\underset{\substack{\text{UŠ\footnotemark}\\\\\text{cable}\\360~\text{m}}}{\text{\xsuxfont 𒁹𒍑}}
   \xleftarrow{10}\underset{\substack{\text{nindan}\\\text{\emph{nindanum}}\\\text{rod}\\6~\text{m}}}{\text{\xsuxfont 𒁹𒃻}}
   \xleftarrow{12}\underset{\substack{\text{kuš₃}\\\text{\emph{ammatum}}\\\text{cubit}\\50~\text{cm}}}{\text{\xsuxfont 𒁹𒌑}}
   \xleftarrow{30}\underset{\substack{\text{šu-si}\\\text{\emph{ubānum}}\\\text{finger}\\17~\text{mm}}}{\text{\xsuxfont 𒁹𒋗𒋛}}\text.
   \tag{$L_{\text{Ur III/OB}}$}
   \label{systemLOB}
 \end{equation}
+\footnotetext{TODO}
 Two more units appear occasionally \cites[459]{Powell1987}[118]{Friberg2007}{Robson2019}:
 \begin{equation}
   \text{\xsuxfont 𒁹𒆜𒁍}
@@ -568,9 +569,9 @@ and then in reeds, \emph{with} the sign {\xsuxfont 𒄀}.
 Effectively, this yields the following factor diagram:
 \begin{equation}
   \text{\xsuxfont 𒐕}
-  \xleftarrow{6}\underset{\substack{\text{eše₂}\\\text{\emph{ašlum}}\\\text{rope}\\60~\text{m}}}{\text{\xsuxfont 𒌋}}
-  \xleftarrow{2}\text{\xsuxfont 𒈦}
-  \xleftarrow{10}\underset{\substack{\text{gi}\\\text{\emph{qânum}}\\\text{reed}\\3~\text{m}}}{\text{\xsuxfont 𒀹𒄀}}\text.
+  \xleftarrow{\quad6\quad}\underset{\mathclap{\substack{1~\text{eše₂}=10~\text{nindan}\\1~\text{rope}=10~\text{rods}\\60~\text{m}}}}{\text{\xsuxfont 𒌋}}
+  \xleftarrow{\quad2\quad}\text{\xsuxfont 𒈦}
+  \xleftarrow{10}\underset{\substack{\text{gi}\\\text{reed}\\3~\text{m}}}{\text{\xsuxfont 𒀹𒄀}}\text.
   \tag{$L_{\text{ED IIIb}}$}
   \label{systemLED}
 \end{equation}
@@ -579,7 +580,9 @@ This is the system that was used to express the sides of the field in
 In that tablet and others from the same period, such as the ones, areas are expressed in
 system \ref{systemGED}, with curviform numerals\footnote{TODO(egg):
 Note the handful of late Urukagina tablets that start to have cuneiform areas.};
-in the absence of overt units,
+in the absence of overt units, such as when dealing with length that are
+integer multiples of a half-rope\footnote{This is the case of the sides of the
+field in \cite[obv.~ii~2--3]{P020054}.},
 the use of curviform or cuneiform numerals therefore disambiguates
 a numeric expression between an area and a length,
 and therefore the interpretation of its
@@ -597,7 +600,34 @@ Powell does not elaborate on the specifics of this mixed use of numerals, but
 a cursory search in CDLI finds many occurrences:
 [cite VS 14, 100, 130, 74, VS25, 83...
 Just search the downloaded ATF pile for \verb|@c.*disz@t\) gi |]
-From these we can draw the following factor diagram:
+These expressions use an
+explicit sign {\xsuxfont 𒃻𒁺} (counted in multiples of ten) or
+{\xsuxfont 𒂠}.
+This notation—but not its use of curviform numerals—is
+remarked on in \cite[\pno 290 with note 27]{Lecompte2020},
+which cites several of the instances listed above.
+It seems to be typical of texts about dykes.
+These match the following factor diagrams:
+\begin{equation}
+  \underbrace{\text{\curviform\oneAšC}
+  \xleftarrow{2}\text{\curviform \oneBarigaC}}_{\text{\xsuxfont 𒂠}}
+  \xleftarrow{10}\text{\xsuxfont 𒀹𒄀}\text.
+  \tag{$L'_{\text{ED IIIb}}$}
+  \label{systemLpED}
+\end{equation}
+\begin{equation}
+  \underbrace{
+  \text{\curviform \oneŊešʾuC}
+  \xleftarrow{10}\text{\curviform \oneŊešTwoC}
+  \xleftarrow{6}\text{\curviform\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}
+  \xleftarrow{2}\text{\curviform \oneBarigaC\xsuxfont 𒂠\footnotemark}
+  \xleftarrow{10}\text{\xsuxfont 𒀹𒄀}\text.
+  \tag{$L''_{\text{ED IIIb}}$}
+  \label{systemLppED}
+\end{equation}
+\footnotetext{TODO(egg): Note that one unit may be omitted if the other is present}
+Lengths of Early Dynastic IIIb dykes from Ŋirsu are far from the
+only numeric expressions that mix curviform and cuneiform numerals:
 
 \subsubsection{Use in modern publications}
 \subsection{Non-numeric usage}
