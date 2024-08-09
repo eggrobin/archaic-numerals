@@ -30,8 +30,24 @@
 \newcommand\oneNtwentyTwo{\symbol{"1259A}}
 
 \newfontfamily\curviform{curviform.ttf}
-\newcommand\oneAšC{\symbol{"E55D}}
+\newcommand\oneAšC{\symbol{"E55D}} % 𒀸
+\newcommand\twoAšC{\symbol{"E55E}} % 𒐀
+\newcommand\threeAšC{\symbol{"E55F}} % 𒐁
+\newcommand\fourAšC{\symbol{"E562}} % 𒐂
+\newcommand\fiveAšC{\symbol{"E563}} % 𒐃
+\newcommand\sixAšC{\symbol{"E564}} % 𒐄
+\newcommand\sevenAšC{\symbol{"E565}} % 𒐅
+\newcommand\eightAšC{\symbol{"E566}} % 𒐆
+\newcommand\nineAšC{\symbol{"E567}} % 𒐇
 \newcommand\oneUC{\symbol{"E568}}
+\newcommand\twoUC{\symbol{"E569}}
+\newcommand\threeUC{\symbol{"E56B}}
+\newcommand\fourUC{\symbol{"E56D}}
+\newcommand\fiveUC{\symbol{"E56E}}
+\newcommand\sixUC{\symbol{"E56F}}
+\newcommand\sevenUC{\symbol{"E570}}
+\newcommand\eightUC{\symbol{"E571}}
+\newcommand\nineUC{\symbol{"E572}}
 \newcommand\oneŊešTwoC{\symbol{"E573}}
 \newcommand\oneŊešʾuC{\symbol{"E57E}}
 \newcommand\oneŠarʾuC{\symbol{"E58D}}
@@ -627,15 +643,28 @@ These match the following factor diagrams:
 \end{equation}
 \footnotetext{TODO(egg): Note that one unit may be omitted if the other is present}
 Lengths of Early Dynastic IIIb dykes from Ŋirsu are far from the
-only numeric expressions that mix curviform and cuneiform numerals:
-[TODO(egg):Eblaite capacities \cite{P240964} TODO(egg): There are ŋeš₂ gubar]
+only numeric expressions that mix curviform and cuneiform numerals.
+The following are attestated capacity measures from Ebla\footnote{This list was compiled by searching EbDA for co-occurrences of {\xsuxfont 𒀭𒍝} an-zamₓ with a larger unit on the same line;
+only tablets with photographs in EbDA were considered,
+as the transliterations there do not distinguish curviform from cuneiform numerals;
+only one attestation per tablet is listed.}:
+\begin{itemize}[nosep]
+  \item \cite{EbDATODO} {} % 1 ba-ri₂-zu 3 an-zamᵪ http://ebda.cnr.it/tablet/view/1350#59630
+  \item \cite{EbDATODO} {\curviform\oneAšC\xsuxfont 𒁀𒌷𒍪𒐈𒀭𒍝}% http://ebda.cnr.it/tablet/view/1378#61605 1 ba-ri₂-zu 3 an-zamᵪ
+  \item \cite[r.1,3]{EbDA1379} {\curviform\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\curviform\oneAšC\xsuxfont 𒃻𒌋𒊕𒈫𒈦𒀭𒍝}% #61615 20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ
+\end{itemize}
+
+[TODO(egg):Eblaite capacities \cite{P240964}
+TODO(egg): There are ŋeš₂ gubar
+TODO(egg): the diš are unusual in P240964, compare http://ebda.cnr.it/tablet/view/1379]
 \begin{equation}
   \underbrace{
   \text{\curviform \oneAšC\xsuxfont 𒇷}
   \xleftarrow{10}\text{\curviform \oneAšC\xsuxfont 𒈪}
   \xleftarrow{10}\text{\curviform \oneUC}
-  \xleftarrow{10}\text{\curviform\oneDišC}}_{\text{\xsuxfont 𒄘𒁇}}
-  \xleftarrow{10}\text{\xsuxfont 𒁹𒋙𒃻}
+  \xleftarrow{10}\text{\curviform\oneAšC}
+  \xleftarrow{2}\text{\curviform\oneDišC}}_{\text{\xsuxfont 𒄘𒁇}}
+  \xleftarrow{5}\text{\xsuxfont 𒁹𒋙𒃻}
   \xleftarrow{6}\text{\xsuxfont 𒁹𒀭𒍝}
   \tag{$C_{\text{Ebla}}$}
   \label{systemLppED}
