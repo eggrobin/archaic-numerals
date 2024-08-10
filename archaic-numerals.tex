@@ -49,6 +49,14 @@
 \newcommand\eightUC{\symbol{"E571}}
 \newcommand\nineUC{\symbol{"E572}}
 \newcommand\oneŊešTwoC{\symbol{"E573}}
+\newcommand\twoŊešTwoC{\symbol{"E574}}
+\newcommand\threeŊešTwoC{\symbol{"E575}}
+\newcommand\fourŊešTwoC{\symbol{"E578}}
+\newcommand\fiveŊešTwoC{\symbol{"E579}}
+\newcommand\sixŊešTwoC{\symbol{"E57A}}
+\newcommand\sevenŊešTwoC{\symbol{"E57B}}
+\newcommand\eightŊešTwoC{\symbol{"E57C}}
+\newcommand\nineŊešTwoC{\symbol{"E57D}}
 \newcommand\oneŊešʾuC{\symbol{"E57E}}
 \newcommand\oneŠarʾuC{\symbol{"E58D}}
 \newcommand\oneBurʾuC{\symbol{"E593}}
@@ -644,30 +652,62 @@ These match the following factor diagrams:
 \footnotetext{TODO(egg): Note that one unit may be omitted if the other is present}
 Lengths of Early Dynastic IIIb dykes from Ŋirsu are far from the
 only numeric expressions that mix curviform and cuneiform numerals.
-The following are attestated capacity measures from Ebla\footnote{This list was compiled by searching EbDA for co-occurrences of {\xsuxfont 𒀭𒍝} an-zamₓ with a larger unit on the same line;
-only tablets with photographs in EbDA were considered,
-as the transliterations there do not distinguish curviform from cuneiform numerals;
-only one attestation per tablet is listed.}:
+
+The capacity system in Ebla uses the following units\footnote{TODO mention the other one citing Chambon and the footnote in Archi}:
+\begin{equation}
+  \underset{\text{gu₂-bar}}{\text{\xsuxfont 𒄘𒁇}}
+  \xleftarrow{2}\underset{\text{ba-ri₂-zu}}{\text{\xsuxfont 𒁀𒌷𒍪}}
+  \xleftarrow{\frac{5}{2}}\underset{\text{ŋin₄}}{\text{\xsuxfont 𒂆}}
+  \xleftarrow{4}\underset{\text{niŋ₂-sagšu}}{\text{\xsuxfont 𒃻𒌋𒊕}}
+  \xleftarrow{6}\underset{\text{an-zamₓ(ZA)}}{\text{\xsuxfont 𒀭𒍝}}
+  \tag{$C_{\text{Ebla}}$}
+  \label{systemCEbla}
+\end{equation}
+TODO liquid capacities use sila apparently.
+% TODO maybe add a footnote on 1 niŋ₂-sagšu = 1 sila = 1 l.
+
+The {\xsuxfont 𒄘𒁇} and {\xsuxfont 𒁀𒌷𒍪} are generally counted using curviform numerals,
+whereas the smaller units are generally counted using cuneiform {\xsuxfont 𒁹} numerals.
+Indeed, a search for co-occurrences of {\xsuxfont 𒀭𒍝} with either of {\xsuxfont 𒄘𒁇} or {\xsuxfont 𒁀𒌷𒍪}
+yields the following expressions\footnote{We cite here only one expression per tablet;
+most tablets contain several expressions mixing 
+in all cases the shape and orientation of the numerals was checked on the photo on EbDA.}:
 \begin{itemize}[nosep]
-  \item \cite{EbDATODO} {} % 1 ba-ri₂-zu 3 an-zamᵪ http://ebda.cnr.it/tablet/view/1350#59630
-  \item \cite{EbDATODO} {\curviform\oneAšC\xsuxfont 𒁀𒌷𒍪𒐈𒀭𒍝}% http://ebda.cnr.it/tablet/view/1378#61605 1 ba-ri₂-zu 3 an-zamᵪ
-  \item \cite[r.1,3]{EbDA1379} {\curviform\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\curviform\oneAšC\xsuxfont 𒃻𒌋𒊕𒈫𒈦𒀭𒍝}% #61615 20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ
+  \item % v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 http://ebda.cnr.it/tablet/view/1324#58045
+  \item \cite{EbDATODO} {} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ http://ebda.cnr.it/tablet/view/1350#59630
+  \item % AN.ŠE₃.GU₂ 30 še bar! 1 še ba-ri₂-zu₂ 5 nig₂-sagšu ARET 09 0044 http://ebda.cnr.it/tablet/view/1358#60317
+  \item  % 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050 http://ebda.cnr.it/tablet/view/1364#60805
+  \item % v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057 http://ebda.cnr.it/tablet/view/1371#61227
+  \item \cite{EbDATODO} {\curviform\oneAšC\xsuxfont 𒁀𒌷𒍪𒐈𒀭𒍝}% ARET 09 0064 http://ebda.cnr.it/tablet/view/1378#61605 1 ba-ri₂-zu 3 an-zamᵪ
+  \item % r.3,3	1 ba-ri₂-zu 8 nig₂-sagšu ninda ARET 09 0064 http://ebda.cnr.it/tablet/view/1378#61586
+  \item \cite[r.1,3]{EbDA1379} % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
+  \item \cite{EbDA1381} % ARET 09 0067 http://ebda.cnr.it/tablet/view/1381 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
+  \item {\curviform\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\curviform\xsuxfont 𒁹𒃻𒌋𒊕𒈫𒈦𒀭𒍝} % ARET 09 0068 http://ebda.cnr.it/tablet/view/1382#62088 20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
+  \item % 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % 9 69 http://ebda.cnr.it/tablet/view/1383#62337
+  \item % r.1,1	[10 l]a₂-1 gu₂-bar 2 nig₂-sagšu % 9 111 http://ebda.cnr.it/tablet/view/1425#64157
+  \item % r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 http://ebda.cnr.it/tablet/view/1415#63792
+  \item % http://ebda.cnr.it/tablet/view/3173#154945 EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
+  \item % http://ebda.cnr.it/tablet/view/3183#155340 EST 60 = RA 083, 001, fig. 1
+  \item \cite[o. iii 2]{P240964} {\curviform\sixAšC\xsuxfont 𒇷\curviform\sixŊešTwoC\oneDišC\xsuxfont 𒄘𒁇\rotatebox[origin=c]{270}{\curviform\twoAšC}\xsuxfont 𒋙𒃻𒈫𒀭𒍝} [TODO comment or stick it in its own paragraph] % EbDA http://ebda.cnr.it/tablet/view/3184#155353, EST 061.
 \end{itemize}
+
+Note that higher numbers of {\text{\xsuxfont 𒄘𒁇}} are expressed in hundreds, as is typical in Ebla %http://ebda.cnr.it/tablet/view/1324#58017
 
 [TODO(egg):Eblaite capacities \cite{P240964}
 TODO(egg): There are ŋeš₂ gubar
-TODO(egg): the diš are unusual in P240964, compare http://ebda.cnr.it/tablet/view/1379]
+TODO(egg): the diš are unusual in P240964]
 \begin{equation}
   \underbrace{
   \text{\curviform \oneAšC\xsuxfont 𒇷}
   \xleftarrow{10}\text{\curviform \oneAšC\xsuxfont 𒈪}
-  \xleftarrow{10}\text{\curviform \oneUC}
+  \xleftarrow{\frac{5}{3}}\text{\curviform \oneŊešTwoC}
+  \xleftarrow{6}\text{\curviform \oneUC}
   \xleftarrow{10}\text{\curviform\oneAšC}
   \xleftarrow{2}\text{\curviform\oneDišC}}_{\text{\xsuxfont 𒄘𒁇}}
   \xleftarrow{5}\text{\xsuxfont 𒁹𒋙𒃻}
   \xleftarrow{6}\text{\xsuxfont 𒁹𒀭𒍝}
   \tag{$C_{\text{Ebla}}$}
-  \label{systemLppED}
+  \label{systemCEbla}
 \end{equation}
 
 \subsubsection{Use in modern publications}
@@ -676,6 +716,8 @@ TODO(egg): the diš are unusual in P240964, compare http://ebda.cnr.it/tablet/vi
 {\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 𒅗𒁉 𒐋𒀀𒀭 𒐕𒀀𒀭 𒁀𒁺 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
 {\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
 {The beginning of the scribal art is a single wedge. That one has six pronunciations; it also stands for `sixty'. Do you know its reading?}}{Examenstext A}
+
+[TODO(egg): In a footnote, comment on the {\xsuxfont 𒃻𒌋𒊕} situation.]
 
 \subsection{Limited benefits of diachronic encoding for numerals}
 \label{limitedBenefitsOfDiachrony}
