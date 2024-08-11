@@ -116,6 +116,12 @@
     \ifhyperref
       {\href{https://cdli.ucla.edu/#1}{\nolinkurl{#1}}}
       {\nolinkurl{#1}}}
+      \DeclareFieldFormat{eprint:ebda}{%
+        \newline
+        EbDA\addcolon\space
+          \ifhyperref
+            {\href{http://ebda.cnr.it/tablet/view/#1}{\nolinkurl{#1}}}
+            {\nolinkurl{#1}}}
 \DeclareFieldFormat{eprint}{%
   \newline
   eprint\addcolon\space
@@ -684,7 +690,7 @@ so we were not able to rely on them in this specific case.}
 \begin{enumerate}[nosep]
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1324\#58045}{\verso~4, 9}]{P240532} {\curviform\oneAšC\xsuxfont 𒊺 𒁀𒊑𒅗\footnote{ba-ri₂-zu₂, a variant spelling.}𒐊𒃻𒌋𒊕}% v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1350\#59630}{\verso~1, 1}]{P240548} {\curviform\oneAšC\xsuxfont 𒁀𒊑𒍪 𒐈𒀭𒍡} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7, 9}]{P240655} {\curviform\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇.}}𒐊𒃻𒌋𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7, 9}]{P240655} {\curviform\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇}.}𒐊𒃻𒌋𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1364\#60805}{\verso~4, 3}]{P240579} {\curviform\fiveAšC\oneDišC\xsuxfont 𒄘𒁇 𒈫𒃻𒌋𒊕}% 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2, 2}]{P240675} {\curviform\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒌋𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3, 1}]{P240609} {\curviform\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
