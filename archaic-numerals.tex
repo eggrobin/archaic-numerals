@@ -1,9 +1,10 @@
 \documentclass[10pt, a4paper, twoside]{article}
 \usepackage{fontspec}
 \setmainfont[
+  BoldFont=CambriaB,
   Mapping=tex-text, 
-  Numbers={OldStyle}, 
-  Ligatures={CommonOff}, 
+  Numbers={OldStyle, Proportional}, 
+  Ligatures={TeX, Common}, 
   SmallCapsFeatures={Letters=SmallCaps},
   %Contextuals=WordFinal,
             ]{Cambria}
@@ -156,7 +157,7 @@
 \usepackage[style=iso]{datetime2}
 
 \hyphenation{cunei-form}
-\usepackage{microtype}
+\usepackage[expansion=false]{microtype}
 
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
