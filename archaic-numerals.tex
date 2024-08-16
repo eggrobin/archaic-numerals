@@ -170,6 +170,10 @@
 
 \hyphenation{cunei-form}
 \usepackage{microtype}
+\usepackage{tikz-cd}
+\tikzcdset{
+arrow style=math font,
+}
 
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
@@ -671,25 +675,19 @@ This notation—but not its use of curviform numerals—is
 remarked on in \cite[\pno~290 with note 27]{Lecompte2020},
 which cites several of the instances listed above.
 It seems to be typical of texts about dykes.
-These match the following factor diagrams:
-\begin{equation}
-  \underbrace{\text{\curviform\oneAšC}
-  \xleftarrow{2}\text{\curviform \oneBanTwoC}}_{\text{\xsuxfont 𒂠}}
-  \xleftarrow{10}\text{\xsuxfont 𒀹𒄀}
-  \xleftarrow{6}\text{\xsuxfont 𒌑𒀹}
-  \xleftarrow{3}\text{\xsuxfont 𒋗𒆕𒀀𒀹}\text.
-  \tag{$L'_{\text{ED IIIb}}$}
-  \label{systemLpED}
-\end{equation}
+These match the following factor diagram:
 \begin{equation}
   \underbrace{
   \text{\curviform \oneŊešʾuC}
   \xleftarrow{10}\text{\curviform \oneŊešTwoC}
-  \xleftarrow{6}\text{\curviform\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}
-  \xleftarrow{2}\text{\curviform \oneBanTwoC\xsuxfont 𒂠\footnotemark}
-  \xleftarrow{10}\text{\xsuxfont 𒀹𒄀}\text.
-  \tag{$L''_{\text{ED IIIb}}$}
-  \label{systemLppED}
+  \xleftarrow{6}\text{\curviform\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}=
+  \underbrace{\text{\curviform\oneAšC}
+  \xleftarrow{2}\text{\curviform \oneBanTwoC}}_{\text{\xsuxfont 𒂠\footnotemark}}
+  \xleftarrow{10} \text{\xsuxfont 𒀹𒄀}
+  \xleftarrow{6}\text{\xsuxfont 𒌑𒀹}
+  \xleftarrow{3}\text{\xsuxfont 𒋗𒆕𒀀𒀹}
+  \tag{$L'_{\text{ED IIIb}}$}
+  \label{systemLpED}
 \end{equation}
 \footnotetext{TODO(egg): Note that one unit may be omitted if the other is present}
 
@@ -757,14 +755,17 @@ as is typical in Ebla \cite[33]{Archi2015},
 ($100+60+30+5=195$~{\xsuxfont 𒄘𒁇} of grain). %1 mi-at 60-30-5 še gu₂-bar
 These expressions match the following factor diagram:
 \begin{equation}
-  \underbrace{\text{\curviform \oneAšC\xsuxfont 𒈪𒀜}
+\begin{tikzcd}[column sep=small]
+  \smash{\underbrace{\text{\curviform \oneAšC\xsuxfont 𒈪𒀜}
   \xleftarrow{\frac{5}{3}}\text{\curviform \oneŊešTwoC}
   \xleftarrow{6}\text{\curviform \oneUC}
   \xleftarrow{10}\text{\curviform\oneAšC}
-  \xleftarrow{2}\text{\curviform\oneDišC}}_{\text{\xsuxfont 𒄘𒁇}}=\text{\curviform\oneAšC\xsuxfont 𒁀𒊑𒍪}
-  \xleftarrow{\frac{5}{2}}\text{\xsuxfont 𒁹𒂆}
-  \xleftarrow{4}\text{\xsuxfont 𒁹𒃻𒋙𒊕}
-  \xleftarrow{6}\text{\xsuxfont 𒁹𒀭𒍡}
+  \xleftarrow{2}\text{\curviform\oneDišC}}_{\text{\xsuxfont 𒄘𒁇}}}=\text{\curviform\oneAšC\xsuxfont 𒁀𒊑𒍪}
+  &&
+  \arrow[ll, "10"]\arrow[ld, "4", start anchor={south west}]\text{\xsuxfont 𒁹𒃻𒋙𒊕}
+  \xleftarrow{6}\text{\xsuxfont 𒁹𒀭𒍡}\\
+  &\arrow[lu, "\frac{5}{2}", end anchor={south east}]\text{\xsuxfont 𒁹𒂆}
+\end{tikzcd}
   \tag{$C_{\text{Ebla}}$}
   \label{systemCEbla}
 \end{equation}
