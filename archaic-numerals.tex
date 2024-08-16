@@ -2,7 +2,6 @@
 \usepackage{fontspec}
 \setmainfont[
   BoldFont=CambriaB,
-  Mapping=tex-text, 
   Numbers={OldStyle, Proportional}, 
   Ligatures={TeX, Common}, 
   SmallCapsFeatures={Letters=SmallCaps},
@@ -119,12 +118,24 @@
     \ifhyperref
       {\href{https://cdli.ucla.edu/#1}{\nolinkurl{#1}}}
       {\nolinkurl{#1}}}
-      \DeclareFieldFormat{eprint:ebda}{%
-        \newline
-        Eb\textsc{da}\addcolon\space
-          \ifhyperref
-            {\href{http://ebda.cnr.it/tablet/view/#1}{\nolinkurl{#1}}}
-            {\nolinkurl{#1}}}
+\DeclareFieldFormat{eprint:ebda}{%
+  \newline
+  Eb\textsc{da}\addcolon\space
+    \ifhyperref
+      {\href{http://ebda.cnr.it/tablet/view/#1}{\nolinkurl{#1}}}
+      {\nolinkurl{#1}}}
+\DeclareFieldFormat{eprint:oracc}{%
+  \newline
+  \mkbibacro{ORACC}\addcolon\space
+    \ifhyperref
+      {\href{http://oracc.org/#1}{\nolinkurl{#1}}}
+      {\nolinkurl{#1}}}
+\DeclareFieldFormat{eprint:louvre}{%
+  \newline
+  Louvre Collections\addcolon\space
+    \ifhyperref
+      {\href{https://collections.louvre.fr/#1}{\nolinkurl{#1}}}
+      {\nolinkurl{#1}}}
 \DeclareFieldFormat{eprint}{%
   \newline
   eprint\addcolon\space
@@ -644,10 +655,13 @@ curviform numerals followed by some number of reeds counted in (\emph{tenû})
 cuneiform numerals currently finds 125 occurrences
 across 47 tablets.}, such as:
 \begin{itemize}[nosep] % TODO(egg): Check the photos while adding them to the bibliography.
-  \item \cite[\obverse~1, 4]{P221305} {\curviform\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
-  \item \cite[\reverse~1, 1]{P221305} {\curviform\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
+  \item \cite[\obverse~1, 4]{P221305}\footnote{CDLI only has a copy, but a photo may be found in
+  \cite[82]{Lecompte2012}. On that photo the {\xsuxfont 𒋗𒆕𒀀𒑊} is not visible.
+  Lecompte notes that the copy is faithful;
+  indeed another {\xsuxfont 𒋗𒆕𒀀𒑊} can be seen both on the copy and the photo on \obverse~2, 2.} {\curviform\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
+%  \item \cite[\reverse~1, 1]{P221305} {\curviform\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
   \item \cite[\reverse~2, 1]{P020129} {\curviform\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\curviform\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
-  \item \cite[\reverse~5, 1]{P221291} {\curviform\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
+  \item \cite[\reverse~5, 1]{P221291}\footnote{From copy.} {\curviform\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
   \item \cite[\reverse~2, 1]{P221266} {\curviform\oneAšC\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
 \end{itemize}
 These expressions use an
@@ -807,7 +821,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
   \caption[TODO]{TODO \cite[59]{Chambon2012}\label{chambon59}\footnotemark}
   \end{center}
 \end{figure}
-\footnotetext{TODO(egg): On the order cite TSS 188, Friberg2007 p. 148 and any of the usual suspects on the haphazard order of signs in early texts.}
+\footnotetext{TODO(egg): On the order cite TSS 188, Friberg2007 p. 148 and any of the usual suspects on the haphazard order of signs in early texts; contrast P274845, P241764.}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-61.png}
@@ -838,7 +852,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{gori-163.png}
-  \caption{Transliteration in \cite[163]{Gori2023} of \cite[\href{https://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} incorporating untransliterated numerals.\label{GoriTransliteration}}
+  \caption{Transliteration in \cite[163]{Gori2023} of \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} incorporating untransliterated numerals.\label{GoriTransliteration}}
   \end{center}
 \end{figure}
 
