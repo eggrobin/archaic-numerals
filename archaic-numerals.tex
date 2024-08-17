@@ -68,6 +68,18 @@
 \newfontfamily\cuneiformComposite{CuneiformComposite.ttf}
 \newcommand\oneŠarTwoC{{\cuneiformComposite 𒊹}}
 
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz-cd}
+\usetikzlibrary{babel}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=british]{english}
+\setotherlanguages{greek,german,russian,french}
+% We use the english/american quote style, i.e., outer double quotes and inner
+% single quotes, but british typographic rules (punctuation after the quotation
+% marks).
+\usepackage[style=english/american]{csquotes}
+
 \usepackage{mathtools}
 
 \usepackage{unicode-math}
@@ -77,6 +89,20 @@
 \usepackage[colorlinks,allcolors=Periwinkle]{hyperref}
 \usepackage[backend=biber,giveninits=true,maxnames=100,style=alphabetic,maxalphanames=4,doi=true,url=false,eprint=true,labelalpha=true,dateusetime=true]{biblatex}
 \addbibresource{bibliography.bib}
+\DeclareSourcemap{
+  \maps{
+    \map{
+      \step[fieldsource=keywords, match=\regexp{unicode}, final]
+      \step[fieldsource=eprint, final]
+      \step[fieldset=shorthand, origfieldval]
+    }
+    \map{
+      \pertype{artwork}
+      \step[fieldsource=eprint, final]
+      \step[fieldset=shorthand, origfieldval]
+    }
+  }
+}
 
 % Allow breaking in numbers and after lower and upper case letters in bibliography
 % URLs, see https://tex.stackexchange.com/a/134281.
@@ -98,44 +124,43 @@
   \newline
   \mkbibacro{DOI}\addcolon\space
     \ifhyperref
-      {\href{https://doi.org/#1}{\nolinkurl{#1}}}
-      {\nolinkurl{#1}}}
+      {\href{https://doi.org/#1}{#1}}
+      {#1}}
 \DeclareFieldFormat{eprint:cnki}{%
   \newline
   \mkbibacro{CNKI}\addcolon\space
     \ifhyperref
-      {\href{http://www.cnki.com.cn/Article/CJFDTOTAL-#1.htm}{\nolinkurl{#1}}}
-      {\nolinkurl{#1}}}
+      {\href{http://www.cnki.com.cn/Article/CJFDTOTAL-#1.htm}{#1}}
+      {#1}}
       \DeclareFieldFormat{eprint:utc}{%
         \newline
         \mkbibacro{UTC}\addcolon\space
           \ifhyperref
             {\UTCdoc{#1}}
-            {\nolinkurl{#1}}}
+            {#1}}
 \DeclareFieldFormat{eprint:cdli}{%
   \newline
   \mkbibacro{CDLI}\addcolon\space
     \ifhyperref
-      {\href{https://cdli.ucla.edu/#1}{\nolinkurl{#1}}}
-      {\nolinkurl{#1}}}
+      {\href{https://cdli.ucla.edu/#1}{#1}}
+      {#1}}
 \DeclareFieldFormat{eprint:ebda}{%
   \newline
   Eb\textsc{da}\addcolon\space
     \ifhyperref
-      {\href{http://ebda.cnr.it/tablet/view/#1}{\nolinkurl{#1}}}
-      {\nolinkurl{#1}}}
+      {\href{http://ebda.cnr.it/tablet/view/#1}{#1}}
+      {#1}}
 \DeclareFieldFormat{eprint:oracc}{%
   \newline
   \mkbibacro{ORACC}\addcolon\space
     \ifhyperref
-      {\href{http://oracc.org/#1}{\nolinkurl{#1}}}
-      {\nolinkurl{#1}}}
+      {\href{http://oracc.org/#1}{#1}}
+      {#1}}
 \DeclareFieldFormat{eprint:louvre}{%
-  \newline
   Louvre Collections\addcolon\space
     \ifhyperref
-      {\href{https://collections.louvre.fr/#1}{\nolinkurl{#1}}}
-      {\nolinkurl{#1}}}
+      {\href{https://collections.louvre.fr/#1}{#1}}
+      {#1}}
 \DeclareFieldFormat{eprint}{%
   \newline
   eprint\addcolon\space
@@ -161,8 +186,6 @@
 \setlength\epigraphrule{0pt}
 \epigraphnoindent
 
-\usepackage[dvipsnames]{xcolor}
-
 \usepackage{enumitem}
 \renewcommand\labelitemi{---}
 
@@ -170,7 +193,6 @@
 
 \hyphenation{cunei-form}
 \usepackage{microtype}
-\usepackage{tikz-cd}
 \tikzcdset{
 arrow style=math font,
 }
@@ -675,7 +697,7 @@ This notation—but not its use of curviform numerals—is
 remarked on in \cite[\pno~290 with note 27]{Lecompte2020},
 which cites several of the instances listed above.
 It seems to be typical of texts about dykes.
-These match the following factor diagram:
+These\footnote{TODO Cite also DP 568, the one with {\curviform \oneŊešTwoC} and {\curviform\oneAšC}{\xsuxfont 𒂠} even though it has no reeds.} match the following factor diagram:
 \begin{equation}
   \underbrace{
   \text{\curviform \oneŊešʾuC}
@@ -909,6 +931,8 @@ TODO cite \cite[39]{Molina2014}
  The proposed character is to be used for 1(šar₂ᶜ).
  1(šar₂) does not exist back when non-numeric šar₂ is curviform, so it works out.]
 
+\subsection{Conclusions}
+
 \section{Rationale for ED–Uruk numeral unification}
 \label{unificationRationale}
 
@@ -927,9 +951,12 @@ Note the disunification of N9 and N10 from 4(ban₂@c) and 5(ban₂@c).]
 Rotated bits:
 https://cdli.mpiwg-berlin.mpg.de/artifacts/101087
 
-\section{Acknowledgements}
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
 
 TODO(egg): Something about the Vanséveren fonts
-
-\printbibliography
+\printbibheading[heading=bibintoc]
+\printbibliography[heading=subbibintoc,title={Artefacts},type=artwork]
+\printbibliography[heading=subbibintoc,title={Unicode documents},nottype=artwork,keyword=unicode]
+\printbibliography[heading=subbibintoc,title={Other documents},nottype=artwork,notkeyword=unicode]
 \end{document}
