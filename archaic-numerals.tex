@@ -8,13 +8,23 @@
   %Contextuals=WordFinal,
             ]{Cambria}
 \setmonofont[Scale=MatchLowercase]{Consolas}
-
+ 
+\usepackage[dvipsnames]{xcolor}
+\usepackage{accsupp}
+\newfontfamily\cuneiformComposite{CuneiformComposite.ttf}
 \newfontfamily\xsuxfont{NotoSansCuneiform-egg.ttf}
 \newfontfamily\obfont{Santakku.ttf}
 \newfontfamily\nafont{Assurbanipal.ttf}
 \newfontfamily\nbfont{Esagil.ttf}
 \newfontfamily\hantfont{NotoSerifTC-Regular.ttf}
+%\usepackage{arabluatex}
 
+\newfontfamily\arabicfont[Script=Arabic]{ScheherazadeNew-Regular.ttf}
+%\newcommand{\textarabic}[1]{%\BeginAccSupp{method=pdfstringdef,unicode,ActualText={#1}}%
+%\bgroup\textdir TRT%
+%\arabfont #1%
+%\egroup%\EndAccSupp{}
+%}
 
 \newfontfamily\anshufont{Uni12580ProtoCuneiformChartFont.ttf}
 \newcommand\oneNone{\symbol{"12580}}
@@ -65,16 +75,15 @@
 \newcommand\oneDišC{\symbol{"E59E}}
 \newcommand\fourDišC{\symbol{"E5A2}}
 
-\newfontfamily\cuneiformComposite{CuneiformComposite.ttf}
 \newcommand\oneŠarTwoC{{\cuneiformComposite 𒊹}}
 
-\usepackage[dvipsnames]{xcolor}
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
 
 \usepackage{polyglossia}
 \setdefaultlanguage[variant=british]{english}
-\setotherlanguages{greek,german,russian,french}
+\setotherlanguages{greek,german,russian,french,arabic}
+\usepackage{luabidi}
 % We use the english/american quote style, i.e., outer double quotes and inner
 % single quotes, but british typographic rules (punctuation after the quotation
 % marks).
@@ -188,11 +197,12 @@
 
 \usepackage{enumitem}
 \renewcommand\labelitemi{---}
+\renewcommand\labelitemii{---}
 
 \usepackage[style=iso]{datetime2}
 
 \hyphenation{cunei-form}
-\usepackage{microtype}
+%\usepackage{microtype}
 \tikzcdset{
 arrow style=math font,
 }
@@ -390,7 +400,7 @@ In section~\ref{earlyMetrology} we will see that in some periods:
   \item some metrological systems commonly mix curviform and cuneiform in single numerical expressions.
 \end{itemize}
 
-\subsection{Metrology}
+\subsection{A primer on classic Ur III and Old Babylonian metrologies}
 \label{metrology}
 \epigraph{{\obfont 𒁾 𒊬𒊑𒉈 𒂵𒁺} \\ {\obfont 𒁾 𒀸 𒊺 𒄥𒋫 𒍠 {\nafont 𒐞} 𒄥𒂠} \\ {\obfont 𒁾 𒁹 𒂆𒋫 𒍠 𒆬 𒌋 𒈠𒈾𒂠} \\
 I want to write tablets: the tablet of 1 \emph{gur} of barley to
@@ -402,7 +412,7 @@ with cuneiform numerals, it is useful to understand
 the usage of the already-encoded characters in the
 Ur III and Old Babylonian periods.
 
-As is well known\footnote{See, \exempligratia, \cite[Section 22.3.3 ``Non-Decimal Radix Systems'',
+As is well known\footnote{See, \exempligratia, \cite[§22.3.3,
 \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/\#G42894}{Cuneiform Numerals}'']{Unicode16}.}
 a sexagesimal place value system (SPVS) was used in Meso\-potamia from the late third millenium onwards.
 One should bear in mind, however, that other systems were used;
@@ -585,7 +595,7 @@ see \cites[463\psq]{Powell1987}.
 \subsubsection{Fractions}
 TODO
 
-\subsection{Early metrology}
+\subsection{Curviform numerals in early metrologies}
 \label{earlyMetrology}
 
 At first sight, the metrological systems from the Early Dynastic period match the
@@ -883,7 +893,48 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
 \epigraph{
 {\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 𒅗𒁉 𒐋𒀀𒀭 𒐕𒀀𒀭 𒁀𒁺 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
 {\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
-{The beginning of the scribal art is a single wedge. That one has six pronunciations; it also stands for `sixty'\footnote{TODO note the {\xsuxfont𒐕𒁹} merger.}. Do you know its reading?}}{Examenstext A}
+{The beginning of the scribal art is a single wedge.
+That one has six pronunciations;
+it also stands for `sixty'\footnotemark. Do you know its reading?\footnotemark}}{Examenstext A}
+\addtocounter{footnote}{-1}
+\footnotetext{The reader
+will recall that ŋeš₂ is written {\xsuxfont 𒐕}, with a larger wedge than {\xsuxfont 𒁹};
+however, these signs have merged by the Old Babylonian period when the first witnesses of
+Examenstext A are attested.}
+\stepcounter{footnote}
+\footnotetext{
+Besides ŋeš₂, a look at \cite{OSL} shows that the values
+diš, ge₃, makkaš, saŋtak₄, and tal₄ are attested both in
+\cite{ePSD2} and in lexical lists.
+The sign is also used for the Akkadian word \emph{ana} in the Neo-Assyrian period.}
+
+Many of the cuneiform numerals are used with a logographic or phonetic value.
+For example, the sign {\xsuxfont 𒀸} has, \emph{inter alia}, the values \emph{aš} and \emph{rum}.
+While the horizontal numerals are most frequently written
+written {\curviform\oneAšC} in the Early Dynastic period\footnote{A
+CDLI search for \texttt{"(asz@c)"} finds 3296 ED texts,
+while a search for \texttt{"(asz)"} finds 81 ED texts,
+of which 46 also contain \texttt{"(asz@c)"}.},
+such non-numeric usage is almost always written
+{\xsuxfont 𒀸}, for instance:
+\begin{itemize}[nosep]
+  \item in personal names in administrative texts,
+  such as the following, which all contain {\curviform\oneAšC} numerals:\begin{itemize}[nosep]
+  \item {\xsuxfont 𒀸𒊕} in
+  \cites[\reverse~1, 5]{P010424}[\obverse~1, 5]{P010458}[\obverse~2, 5′]{P010459}
+  from ED IIIa \textarabic{أبو صلابيخ},
+  \item {\xsuxfont 𒀸𒉌} in \cite[\obverse~2, 5]{P010960} from ED IIIa Šuruppag,
+  \item {\xsuxfont 𒀸𒁯𒌦𒄷} in \cite[\obverse~7, 18]{P010964} from ED IIIa Šuruppag,
+  \item {\xsuxfont 𒆷𒈠𒀸𒁯} in \cite[\obverse~4, 3]{P251641} from ED IIIb Adab,
+  \item {\xsuxfont 𒅤𒊭𒀸𒁯𒈨} in \cite[\reverse~2, 3]{P252866} from ED IIIb Adab,
+  \item {\xsuxfont 𒈗𒋗𒀸𒉌} in \cite[\reverse~2, 4]{P298637} from ED IIIb Umma;
+  \end{itemize}
+  \item in the Sumerian word {\xsuxfont 𒌑𒀸} u₂-rum, ``property'' in ED IIIb Ŋirsu administrative texts which contain
+    {\curviform\oneAšC} numerals, such as
+    \cites[\obverse~2, 3]{P020006}[\reverse~1, 2]{P020008}[\reverse~1, 2]{P020018}[\obverse~1, 4]{P020024}[\obverse~3, 1]{P020030};
+  \item in the divine name {\xsuxfont 𒀭𒎏𒉾𒀸𒁇} in the lexical texts \cites[TODO]{P010570}[\obverse~3, 6]{P010572},
+    where the entries are prefixed with {\curviform\oneAšC}.
+\end{itemize}
 
 \subsection{Limited benefits of diachronic encoding for numerals}
 \label{limitedBenefitsOfDiachrony}
@@ -916,6 +967,20 @@ TODO cite \cite[39]{Molina2014}
 
 \subsection{Compatibility considerations}
 \label{compatibility}
+A disunification twenty years after the fact,
+affecting all numerals, would ordinarily be a serious
+compatibility issue.
+Fortunately, with one exception discussed below,
+we are not aware of any font using curviform glyphs for the
+already-encoded numerals.
+In fact we are not aware of any font designed for a style earlier than Old Babylonian,
+except for fonts mimicking the representative glyphs from the code charts,
+which are primarily Ur III, but sometimes earlier or later,
+as described in \cite[\href{https://www.unicode.org/reports/tr56/\#Representative_Glyphs}{§2.4}]{UTR56}.
+The lack of dedicated Ur III fonts may be explainable by the chart-like fonts\footnote{Most
+prominently Noto Sans Cuneiform, a system font on both Windows—as part of Segoe UI Historic—and macOS.} being good enough;
+the lack of Early Dynastic fonts, by the aforementioned issues with numeral identification
+making the representation of any text with numerals intractable.
 
 \subsubsection{The case of ŠAR₂}
 [TODO explain why this isn’t a problem, effectively
@@ -930,6 +995,8 @@ TODO cite \cite[39]{Molina2014}
  where it looks like (TODO: the proposed character).
  The proposed character is to be used for 1(šar₂ᶜ).
  1(šar₂) does not exist back when non-numeric šar₂ is curviform, so it works out.]
+
+ [TODO Mention P222243]
 
 \subsection{Conclusions}
 
