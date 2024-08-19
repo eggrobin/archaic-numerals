@@ -9,10 +9,12 @@
   %Contextuals=WordFinal,
             ]{Cambria}
 \setmonofont[Scale=MatchLowercase]{Consolas}
- 
+\newcommand{\textcsc}[1]{{\addfontfeature{Letters=UppercaseSmallCaps}#1}}
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage{accsupp}
 \newfontfamily\cuneiformComposite{CuneiformComposite.ttf}
+\newfontfamily\originalNoto{NotoSansCuneiform-UN-Swapped.ttf}
 \newfontfamily\xsuxfont{NotoSansCuneiform-egg.ttf}
 \newfontfamily\obfont{Santakku.ttf}
 \newfontfamily\nafont{Assurbanipal.ttf}
@@ -76,7 +78,7 @@
 \newcommand\oneDišC{\symbol{"E59E}}
 \newcommand\fourDišC{\symbol{"E5A2}}
 
-\newcommand\oneŠarTwoC{{\cuneiformComposite 𒊹}}
+\newcommand\oneŠarTwoC{{\originalNoto 𒊹}}
 
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
@@ -284,9 +286,9 @@ For instance, the sign IM
 may resemble {\cuneiformComposite 𒅎} in texts from Early Dynastic IIIa Šuruppag as in the character code
 charts,
 {\cuneiformComposite 𒉎} % TODO(egg): Do something clever so the underlying text is 𒅎.
-later in the third millenium\footnote{Merging with U+1224E {\xsuxfont 𒉎} NI₂.},
+later in the third millenium\footnote{Merging with U+\textcsc{1224E} {\xsuxfont 𒉎} NI₂.},
 {\obfont 𒅎} in Old Babylonian cursive,
-{\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+1214E \textsc{cuneiform sign im}.
+{\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+\textcsc{1214E} \textsc{cuneiform sign im}.
 
 This encoding model allows for the interoperable representation of editions
 of diachronic reference works such as sign lists\footnote{Notably \cite{OSL} and the online edition of \cite{Borger2010} in \cite[Signs]{eBL}.}
@@ -1033,25 +1035,69 @@ except for fonts mimicking the representative glyphs from the code charts,
 which are primarily Ur III, but sometimes earlier or later,
 as described in \cite[\href{https://www.unicode.org/reports/tr56/\#Representative_Glyphs}{§2.4}]{UTR56}.
 The lack of dedicated Ur III fonts may be explainable by the chart-like fonts\footnote{Most
-prominently Noto Sans Cuneiform, a system font on both Windows—as part of Segoe UI Historic—and macOS.} being good enough;
+prominently Noto Sans Cuneiform, a system font on both Windows—as part of Segoe UI Historic—and macOS.}
+being good enough for most purposes;
 the lack of Early Dynastic fonts, by the aforementioned issues with numeral unification
 making the representation of any text with numerals intractable.
 
-\subsubsection{The case of ŠAR₂}
-[TODO explain why this isn’t a problem, effectively
- anyone who needs to cuneify 1(šar₂ᶜ) will also need
- to cuneify some of the numerals proposed here and
- will therefore not be using Unicode cuneiform.]
-[TODO U+122B9 \textsc{CUNEIFORM SIGN SHAR2}
- represents both 1(šar₂) and non-numeric šar₂;
- it looks like {\xsuxfont 𒊹} (so, like {\xsuxfont 𒄭})
- in all but lexical texts from Ebla and Šuruppag (and
- the archaizing vulture stele, where note that the scribe slipped into his modern ways once),
- where it looks like (TODO: the proposed character).
- The proposed character is to be used for 1(šar₂ᶜ).
- 1(šar₂) does not exist back when non-numeric šar₂ is curviform, so it works out.]
+\subsubsection{The case of ŠAR₂}\label{šar₂}
+The character U+\textcsc{122B9} {\cuneiformComposite 𒊹} \textsc{cuneiform sign shar2}
+has a circular reference glyph.
 
- \label{šar₂} [TODO Mention P222243]
+In most texts from the Early Dynastic IIIb and Old Akkadian period\footnote{For example, in personal names:\begin{itemize}
+%\item \cite[\reverse~5, 3]{P010263}, ED IIIa literary; % NOTE(egg): Lisman reads that ḫe, so let’s not go there.
+\item {\xsuxfont 𒂗𒆠𒊹𒊏} in \cite[\reverse~1, 2]{P020019} from ED IIIb Ŋirsu;
+\item {\xsuxfont 𒂄𒈨𒊹𒊏𒁺} in \cite[\obverse~2, 9]{P020182}, also from ED IIIb Ŋirsu; 
+\item {\xsuxfont 𒊩𒀭𒊹} in \cite[\obverse~3, 3]{P222186} from ED IIIb Umma;
+\item {\xsuxfont 𒌨𒀭𒀀𒊹} in \cite[\obverse~16]{P235312} from Old Akkadian Umma.
+\end{itemize}},
+a contrast between non-numeric šar₂ written {\xsuxfont 𒊹}
+and numeric $1$(šar₂ᶜ) written \oneŠarTwoC{} can be observed,
+similar to the contrast between {\xsuxfont 𒀸} and {\curviform \oneAšC}
+previously discussed in discussed in section~\ref{non-numeric}.
+However, in lexical lists from Šuruppag and Ebla,
+as well as in the \emph{\textfrench{Stèle des vautours}},
+non-numeric šar₂ is curviform:\begin{itemize}
+  \item {\originalNoto 𒀭𒂗𒆠𒊹} and {\originalNoto 𒀭𒂗𒊹𒉡𒄄} in \cite[\obverse~10, 10 \& 11]{P010566};
+  \item {\originalNoto 𒊹𒄈} and {\originalNoto 𒀭𒊹𒄈} in \cite[\reverse~3, 16 \& 17]{P010576};
+  \item {\originalNoto 𒊹𒊏𒈾} in \cite[\obverse~17, 9; 18, 11; 22, 12]{P222399}\footnote{Note
+  however {\xsuxfont 𒀭𒉌} ⸢{\xsuxfont 𒊹}⸣{\xsuxfont 𒊏} on \cite[\obverse~6, 17]{P222399}.
+  Curviform non-numeric šar₂ is clearly archaizing in ED IIIb Ŋirsu;
+  one might suppose that the scribe slipped into their modern ways here.}.
+\end{itemize}
+
+It \emph{would} be disruptive to the diachronic representation of text
+if non-numeric šar₂ were to have two different representations.
+The character U+\textcsc{122B9} \textsc{cuneiform sign shar2} should therefore be used
+in those cases, with its curviform glyph {\cuneiformComposite 𒊹},
+identical to the glyph of (TODO: the proposed character).
+Since the archaizing style of texts wherein non-numeric šar₂ is curviform
+solidly predates the transition from \oneŠarTwoC{} to {\xsuxfont 𒊹}
+in the relevant metrological systems, there is no need to represent
+a {\xsuxfont 𒊹}-\oneŠarTwoC contrast,
+so these characters can have the same glyph.
+
+Since cuneiform U+\textcsc{122B9} \textsc{cuneiform sign shar2}
+effectively merges with U+\textcsc{1212D} {\cuneiformComposite 𒄭} \textsc{cuneiform sign hi},
+the reference glyph should remain the same so that the contrast
+between reference glyphs remains clear; see
+\cite[\href{https://www.unicode.org/reports/tr56/\#Representative_Glyphs}{§2.4}]{UTR56}.
+Since system fonts follow the reference glyphs,
+and since extant specialist fonts target styles where U+\textcsc{122B9} is unambiguously cuneiform,
+there are no compatibility issues.
+
+Note that in rare cases, such as \cite[\obverse~2, 7]{P222243} from ED IIIa Adab,
+non-numeric {\xsuxfont 𒀸} (here with the value rum) is written {\curviform\oneAšC}.
+It is out of scope for this proposal to decide whether
+such occurrences should be treated as anomalous spellings and encoded as
+(TODO: the proposed characters) or as stylistic distinctions and encoded as
+U+\textcsc{12038} \textsc{cuneiform sign ash} with a curviform glyph.
+in practice this would often be determined by the transliteration from which
+the cuneiform text is generated; it is noteworthy that as of this writing,
+the CDLI transliteration (\texttt{UR2-1(aš@c)}) and the ePSD2 one (uru₈\textsuperscript*{rum})
+of this word disagree on that aspect.
+Since {\xsuxfont 𒀸} has a cuneiform reference glyph,
+this does not pose any compatibility concerns.
 
 \subsection{Conclusions}
 
