@@ -96,7 +96,7 @@
 
 \usepackage{unicode-math}
 \setmathfont[Scale=MatchLowercase, math-style=ISO]{Cambria Math}
-\setmathfontface\unifrak{UnifrakturMaguntia.ttf}[Scale=MatchUppercase]
+\setmathfontface\unifrak{UnifrakturMaguntia.ttf}[Scale=MatchLowercase]
 
 \usepackage[colorlinks,allcolors=Periwinkle]{hyperref}
 \usepackage[backend=biber,giveninits=true,maxnames=100,style=alphabetic,maxalphanames=4,doi=true,url=false,eprint=true,labelalpha=true,dateusetime=true]{biblatex}
@@ -194,7 +194,7 @@
 
 \usepackage{epigraph}
 \renewcommand{\epigraphsize}{\footnotesize\itshape}
-\setlength\epigraphwidth{9cm}
+%\setlength\epigraphwidth{9cm}
 \setlength\epigraphrule{0pt}
 \epigraphnoindent
 
@@ -359,7 +359,7 @@ tugₓ(LAK483)-si-ga-kam\footnotemark\\
 deep ploughing
 \end{tabular}
 \end{flushright}
-\footnotetext{Transliteration after \cite[8]{Lecompte2020}.}
+\footnotetext{Transliteration after \cite[325]{Lecompte2020}.}
 \end{quote}
 The argument made in \cite[4]{L2/04-099} is that this is comparable to a stylistic distinction such as\footnote{We
 have taken the liberty of adjusting the analogy to use measures approximately equal to those in \cite{P020054},
@@ -678,7 +678,7 @@ the use of curviform or cuneiform numerals therefore disambiguates
 a numeric expression between an area and a length,
 and therefore the interpretation of its
 numerals between systems \ref{systemGED} and \ref{systemLED}.
-The sign GAN₂ {\xsuxfont 𒃷},
+The sign {\xsuxfont 𒃷},
 which would also disambiguate the interpretation as an area,
 is sometimes used after areas in ED IIIb Lagaš, but not systematically;
 in particular the area of the first field in \cite{P020054} does not use this suffix.
@@ -816,14 +816,14 @@ A remarkable example of that is found in Figure~\ref{GoriTransliteration}.
 The partial\footnote{The untransliterated text would be {\curviform \fourAšC\xsuxfont 𒂍𒁕𒌝𒌆𒑊\curviform\fourDišC\xsuxfont 𒀀𒋢\curviform \fourAšC\xsuxfont 𒔻𒌆𒊷𒁯}; note the atomically encoded $\text{ib₂}\times3\text{\xsuxfont 𒁹}=\text{\xsuxfont 𒌈}\times\text{\xsuxfont 𒐈}=\text{\xsuxfont 𒔻}$.} transliteration ``$4\text{\curviform \oneAšC}$
 \emph{ʾa₃-da-um} $4\text{\curviform\oneDišC}$ \emph{aktum}
 $4\text{\curviform \oneAšC}$
-ib₂\textsuperscript{tu₉}×$3\text{\xsuxfont 𒁹}$ sa₆ gunu₃''
+ib₂\textsuperscript*{tu₉}×$3\text{\xsuxfont 𒁹}$ sa₆ gunu₃''
 is used to illustrate a discussion of the interpretation of
 the contrast between {\curviform \oneAšC} and {\curviform \oneDišC} numerals.
 More conventional transliterations\footnote{TODO cite the EbDA one.} might omit the numeral shapes entirely, \exempligratia,
-$4$ \emph{ʾa₃-da-um} $4$ \emph{aktum} $4$ ib₂\textsuperscript{tu₉}×$3$ sa₆ gunu₃,
+$4$ \emph{ʾa₃-da-um} $4$ \emph{aktum} $4$ ib₂\textsuperscript*{tu₉}×$3$ sa₆ gunu₃,
 which would obviously be inadequate in this context.
 There are transliteration conventions that are more explicit about numeral shape, \exempligratia,
-$4(\text{ašᶜ})$ \emph{ʾa₃-da-um} $4(\text{dišᶜ})$ \emph{aktum} $4(\text{ašᶜ})$ ib₂\textsuperscript{tu₉}×$3(\text{diš})$ sa₆ gunu₃,
+$4(\text{ašᶜ})$ \emph{ʾa₃-da-um} $4(\text{dišᶜ})$ \emph{aktum} $4(\text{ašᶜ})$ ib₂\textsuperscript*{tu₉}×$3(\text{diš})$ sa₆ gunu₃,
 but the result would be less readable.
 See Section~\ref{transliteration} for a discussion of transliteration conventions for numerals.
 
@@ -898,7 +898,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
 {\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
 {The beginning of the scribal art is a single wedge.
 That one has six pronunciations;
-it also stands for `sixty'\footnotemark. Do you know its reading?\footnotemark}}{Examenstext A}
+it also stands for `sixty'\footnotemark. Do you know its reading\footnotemark?}}{Examenstext A}
 \addtocounter{footnote}{-1}
 \footnotetext{The reader
 will recall that ŋeš₂ is written {\xsuxfont 𒐕}, with a larger wedge than {\xsuxfont 𒁹};
@@ -1016,12 +1016,6 @@ In the case of analyses such as
 it is interesting to note that numeric expressions are removed prior
 to the conversion of the corpus to Unicode cuneiform for further analysis.
 
-\subsubsection{Compatibility with transliteration}
-\label{transliteration}
-%the area {\xsuxfont 𒐐𒑘𒐂𒃷} could be transliterated as 5.1.4,
-TODO words \cite[295]{Robson2008}
-TODO cite \cite[39]{Molina2014}
-
 \subsection{Compatibility considerations}
 \label{compatibility}
 A disunification twenty years after the fact,
@@ -1061,10 +1055,12 @@ as well as in the \emph{\textfrench{Stèle des vautours}},
 non-numeric šar₂ is curviform:\begin{itemize}[nosep]
   \item {\originalNoto 𒀭𒂗𒆠𒊹} and {\originalNoto 𒀭𒂗𒊹𒉡𒄄} in \cite[\obverse~10, 10 \& 11]{P010566};
   \item {\originalNoto 𒊹𒄈} and {\originalNoto 𒀭𒊹𒄈} in \cite[\reverse~3, 16 \& 17]{P010576};
+  \item {\originalNoto 𒊹𒄷} \cite[\href{https://oracc.museum.upenn.edu/dcclt/P240986.44}{\obverse~3, 3}]{P240986};
   \item {\originalNoto 𒊹𒊏𒈾} in \cite[\obverse~17, 9; 18, 11; 22, 12]{P222399}\footnote{Note
   however {\xsuxfont 𒀭𒉌 𒊹𒊏} on \cite[\obverse~6, 17]{P222399}.
   Curviform non-numeric šar₂ is clearly archaizing in ED IIIb Ŋirsu;
-  one might suppose that the scribe slipped into their modern ways here.}.
+  one might suppose that the scribe slipped into their modern ways here.
+  TODO add a photo.}.
 \end{itemize}
 
 It \emph{would} be disruptive to the diachronic representation of text
@@ -1080,7 +1076,7 @@ so these characters can have the same glyph.
 
 Since cuneiform U+\textcsc{122B9} \textsc{cuneiform sign shar2}
 effectively merges with U+\textcsc{1212D} {\cuneiformComposite 𒄭} \textsc{cuneiform sign hi},
-the reference glyph should remain the same so that the contrast
+the reference glyph should remain as it is, \idest, curviform, so that the contrast
 between reference glyphs remains clear; see
 \cite[\href{https://www.unicode.org/reports/tr56/\#Representative_Glyphs}{§2.4}]{UTR56}.
 Since system fonts follow the reference glyphs,
@@ -1100,12 +1096,98 @@ of this word disagree on that aspect.
 Since {\xsuxfont 𒀸} has a cuneiform reference glyph,
 this does not pose any compatibility concerns.
 
-\subsection{Conclusions}
+\subsubsection{Transliteration}
+\label{transliteration}
+An important feature of the encoding is that, in order to
+support input and bulk conversion of transliterated corpora to
+Unicode cuneiform, it should not represent distinctions that are finer
+than those recorded in typical transliterations; 
+thus, while some older forms of BIL₂ can be described as
+{\cuneiformComposite 𒉈}×{\cuneiformComposite 𒆜}
+NE×KASKAL or {\cuneiformComposite 𒉈}×{\cuneiformComposite 𒉽}
+NE×PAP\footnote{As on \cite{P249253}.},
+they are typically all transliterated bil₂,
+and therefore are all represented by the character U+\textcsc{1224B} {\cuneiformComposite 𒉋}
+\textcsc{CUNEIFORM SIGN NE SHESHIG}, its name notwithstanting,
+as described in \cite[\href{https://www.unicode.org/reports/tr56/\#Sign_Names}{§2.5}]{UTR56}.
 
+The situation is more complicated for numbers.
+Many transliterations do not represent the type of numeral used,
+instead interpreting the whole numeric expression and transcribing
+it with delimiters or units as needed to disambiguate.
+For instance, {\xsuxfont 𒐕𒌍𒐃𒄥} from \cite[\reverse~21]{P305639}
+may be transliterated as $95$~gur, as in \volcite{2}[62]{Feuerherm2004}.
+The numerals may also be transliterated separately,
+but solely by their values in terms of the overt unit,
+as in EbDA transliterations:
+the aforementioned {\curviform\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}
+from \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P240533}
+is transliterated ``$20$-$1$-$1/2$~\emph{gu}₂-\emph{bar} $7$~nig₂-sagšu $2$-$1/2$~an-zamₓ\footnote{As
+of this writing, EbDA actually has an-zamᵪ, with U+\textcsc{1D6A}
+\textcsc{GREEK SUBSCRIPT SMALL LETTER CHI}.} \emph{za}'', reading both
+{\curviform \oneDišC} and {\xsuxfont 𒈦} as $1/2$,
+but not distinguishing them.
+
+In particular, these transliterations do not differentiate between
+{\xsuxfont 𒀸} and {\xsuxfont 𒁹} numerals, nor between
+{\curviform\oneAšC} and {\curviform\oneDišC} numerals.
+For instance, the aforementioned
+{\curviform \fourAšC~\xsuxfont 𒂍𒁕𒌝𒌆𒑊 \curviform\fourDišC~\xsuxfont 𒀀𒋢 \curviform\fourAšC~\xsuxfont 𒔻
+𒌆 𒊷𒁯}
+from \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} is
+transliterated ``$4$~\emph{ʾa}₃-\emph{da}-\emph{um}\textsuperscript*{tug₂}-II $4$~aktum\textsuperscript*{tug₂} $4$~ib₂-III gun₃ sa₆ \textsuperscript*{tug₂}''
+in EbDA, with no distinction between the {\curviform \fourAšC} and {\curviform\fourDišC}.
+Since {\xsuxfont 𒀸} and {\xsuxfont 𒁹} numerals are separately encoded,
+the numeric expressions in such transliterations cannot be transformed
+into Unicode cuneiform without additional context, regardless of
+curviform--cuneiform unification.
+
+In metrological systems such as systems~\ref{systemGOB} and~\ref{systemC}
+where some units are indicated by the type of numeral
+rather than an overt unit sign, it is common practice to add the unit in parentheses
+in transliteration; for instance, {\xsuxfont 𒑘𒐃𒀹𒃷𒑂𒊬} from \cite[\obverse~1]{P386847}
+is transliterated ``$1$(eše₃) $5\text{½}$~iku\footnote{TODO say something about this reading} $7$~sar'' in \volcite{2}[176]{Feuerherm2004},
+and {\xsuxfont 𒑗𒑐𒑂𒈦𒋡} from \cite[\obverse~12]{P307255}
+is transliterated ``$1$(n\footnote{TODO comment on nigida.}) $2$(b) $7~\text{½}$~sila₃'' in \volcite{2}[151]{Feuerherm2004}.
+
+This practice has been generalized to systematically indicate numeral shape;
+this is in particular the case in CDLI,
+where the transliterations of some the above examples are
+``$1$(gesz2) $3$(u) $5$(asz) gur'' for {\xsuxfont 𒐕𒌍𒐃𒄥},
+``$1$(esze3) $5$(iku) $1/2$(iku) GAN2 $7$(disz) sar'' for {\xsuxfont 𒑘𒐃𒀹𒃷𒑂𒊬},
+and ``$3$(barig) $2$(ban2) $7$(disz) $1/2$(disz) sila3'' for {\xsuxfont 𒑗𒑐𒑂𒈦𒋡}.
+CDLI and ePSD2 both distinguish curviform from cuneiform numerals in
+transliteration: the length
+{\curviform\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\curviform\oneBanTwoC\xsuxfont 𒑌𒄀}
+from \cite[\reverse~2, 1]{P020129} is transliterated
+``$6$(gesz2@c) $3$(u@c) \{ninda\}nindax(DU) $1/2$(asz@c) $4$(disz@t) gi''
+in CDLI, and ``$6$(geš₂ᶜ) $3$(uᶜ) \textsuperscript*{ninda}nindaₓ(DU) $1/2$(ašᶜ) $4$(dišᵗ) gi''
+in ePSD2.
+Another example is \cite[39]{Molina2014}, which uses $1a$ for {\xsuxfont 𒀸},
+$1d$ for {\xsuxfont 𒁹}, $1ac$ for {\curviform \oneAšC}, $1dc$ or $\text{½}dc$ for {\curviform \oneDišC}
+depending on reading, etc.
+The literature on the Uruk and Early Dynastic I--II periods uses
+a different set of transliteration conventions that also
+disambiguate numeral shapes,
+as will be discussed in section~\ref{unificationRationale}.
+
+While there exist transliterations that distinguish {\xsuxfont 𒀸} from {\xsuxfont 𒁹}
+but not {\curviform \fourAšC} from {\xsuxfont 𒀸}, such as the ones used in \cite{DCCMT},
+the trend, especially in more recent works in third millenium studies, seems to be to
+represent numeral shape; for example, \cite{Maiocchi2024} gave an example of
+the input syntax used by the new ``Urban Economy Begins'' project as
+``$10+5\text{c}(\text{GUR})+2(\text{BARIGA})+1(\text{BAN2})$'' for
+{\curviform\oneUC\fiveAšC\xsuxfont 𒑖𒑏}, with a c
+indicating that the GUR numerals are curviform (with the parenthetical
+GUR indicating that these are {\curviform\oneAšC} rather than {\curviform\oneDišC} numerals).
+
+\subsection{Conclusions}
+TODO words
 Mention something about potential for confusion in character identity.
 
 \section{Rationale for ED–Uruk numeral unification}
 \label{unificationRationale}
+TODO mention the bariga silliness in the CDLI transliteration of Gori's paper.
 
 \section{Considerations on individual numeral series}
 
