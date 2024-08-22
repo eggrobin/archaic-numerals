@@ -29,6 +29,7 @@
 %\egroup%\EndAccSupp{}
 %}
 
+\newfontfamily\proposalfont{Archaic-Cuneiform-Numerals.ttf}
 \newfontfamily\anshufont{Uni12580ProtoCuneiformChartFont.ttf}
 \newcommand\oneNone{\symbol{"12580}}
 \newcommand\nineNone{\symbol{"126CB}}
@@ -43,15 +44,24 @@
 \newcommand\oneNtwentyTwo{\symbol{"1259A}}
 
 \newfontfamily\curviform{curviform.ttf}
-\newcommand\oneAšC{\symbol{"E55D}} % 𒀸
-\newcommand\twoAšC{\symbol{"E55E}} % 𒐀
-\newcommand\threeAšC{\symbol{"E55F}} % 𒐁
-\newcommand\fourAšC{\symbol{"E562}} % 𒐂
-\newcommand\fiveAšC{\symbol{"E563}} % 𒐃
-\newcommand\sixAšC{\symbol{"E564}} % 𒐄
-\newcommand\sevenAšC{\symbol{"E565}} % 𒐅
-\newcommand\eightAšC{\symbol{"E566}} % 𒐆
-\newcommand\nineAšC{\symbol{"E567}} % 𒐇
+\newcommand\oneAšC{{\proposalfont\symbol{"12550}}} % 𒀸
+\newcommand\twoAšC{{\proposalfont\symbol{"12551}}} % 𒐀
+\newcommand\threeAšC{{\proposalfont\symbol{"12552}}} % 𒐁
+\newcommand\fourAšC{{\proposalfont\symbol{"12553}}} % 𒐂
+\newcommand\fiveAšC{{\proposalfont\symbol{"12554}}} % 𒐃
+\newcommand\sixAšC{{\proposalfont\symbol{"12555}}} % 𒐄
+\newcommand\sevenAšC{{\proposalfont\symbol{"12556}}} % 𒐅
+\newcommand\eightAšC{{\proposalfont\symbol{"12557}}} % 𒐆
+\newcommand\nineAšC{{\proposalfont\symbol{"12558}}} % 𒐇
+\newcommand\oneDišC{{\proposalfont\symbol{"12559}}}
+\newcommand\twoDišC{{\proposalfont\symbol{"1255A}}}
+\newcommand\threeDišC{{\proposalfont\symbol{"1255B}}}
+\newcommand\fourDišC{{\proposalfont\symbol{"1255C}}}
+\newcommand\fiveDišC{{\proposalfont\symbol{"1255D}}}
+\newcommand\sixDišC{{\proposalfont\symbol{"1255E}}}
+\newcommand\sevenDišC{{\proposalfont\symbol{"1255F}}}
+\newcommand\eightDišC{{\proposalfont\symbol{"12560}}}
+\newcommand\nineDišC{{\proposalfont\symbol{"12561}}}
 \newcommand\oneUC{\symbol{"E568}}
 \newcommand\twoUC{\symbol{"E569}}
 \newcommand\threeUC{\symbol{"E56B}}
@@ -75,8 +85,8 @@
 \newcommand\oneBurʾuC{\symbol{"E593}}
 \newcommand\oneBanTwoC{\symbol{"E599}}
 \newcommand\oneEšeThreeC{\symbol{"E5A3}}
-\newcommand\oneDišC{\symbol{"E59E}}
-\newcommand\fourDišC{\symbol{"E5A2}}
+%\newcommand\oneDišC{\symbol{"E59E}}
+%\newcommand\fourDišC{\symbol{"E5A2}}
 
 \newcommand\oneŠarTwoC{{\originalNoto 𒊹}}
 
@@ -274,8 +284,8 @@ The Script\_Extensions property assignments in section~\ref{properties} reflect 
 % they are ordered roughly according to their function in various metrological systems,
 % so as to facilitate annotation and readability in the character names list.
 % \begin{itemize}[nosep]
-%   \item U+\textcsc{12550}--U+\textcsc{12558} {\curviform\oneAšC}--{\curviform\nineAšC} \textcsc{CUNEIFORM NUMERIC SIGN ONE N01--CUNEIFORM NUMERIC SIGN NINE N01}
-%   \item U+\textcsc{1257D}--U+\textcsc{12585} {\curviform\oneDišC}--{TODO} \textcsc{CUNEIFORM NUMERIC SIGN ONE N08--CUNEIFORM NUMERIC SIGN NINE N08}
+%   \item U+\textcsc{12550}--U+\textcsc{12558} \oneAšC--\nineAšC \textcsc{CUNEIFORM NUMERIC SIGN ONE N01--CUNEIFORM NUMERIC SIGN NINE N01}
+%   \item U+\textcsc{1257D}--U+\textcsc{12585} \oneDišC--{TODO} \textcsc{CUNEIFORM NUMERIC SIGN ONE N08--CUNEIFORM NUMERIC SIGN NINE N08}
 %   \item U+\textcsc{1258B}--U+\textcsc{12583} {\curviform\oneUC}--{\curviform\nineUC} \textcsc{CUNEIFORM NUMERIC SIGN ONE N14}--\textcsc{CUNEIFORM NUMERIC SIGN NINE N14}
 %   \item U+\textcsc{12559}--U+\textcsc{12561} {TODO}--{TODO} \textcsc{CUNEIFORM NUMERIC SIGN ONE N02--CUNEIFORM NUMERIC SIGN NINE N02}
 %   \item U+\textcsc{12562}--U+\textcsc{12566} {TODO}--{TODO} \textcsc{CUNEIFORM NUMERIC SIGN ONE N03--CUNEIFORM NUMERIC SIGN FIVE N03}
@@ -364,8 +374,8 @@ the sign {\xsuxfont 𒌍} in \cite{P020054} looks more like Ur III {\xsuxfont �
 \xsuxfont 𒃷𒁉&
 \curviform\oneUC&
 \curviform\oneEšeThreeC&
-\curviform\oneAšC&
-\curviform\oneDišC\\
+\oneAšC&
+\oneDišC\\
 ašag-bi&1(BUR₃ᶜ)&1(EŠE₃ᶜ)&1(IKUᶜ)&1/2(IKUᶜ)\\
 this field&
 &
@@ -396,7 +406,7 @@ in a single numerical expression'', noting the exceptions of \cites{P232278}{P23
 In addition, \cite[4]{L2/04-099} points out that the cuneiform numeric signs are descended from
 the curviform ones (this is undisputed),
 and claims there is only a small re-allocation of the function of signs
-(from {\curviform \oneAšC} to {\xsuxfont 𒁹} numerals).
+(from \oneAšC{} to {\xsuxfont 𒁹} numerals).
 It therefore comes to the conclusion that the use of curviform
 numerals should be seen as a formatting distinction,
 rather than one that should be represented in plain text,
@@ -417,7 +427,7 @@ numerals can only be interpreted in the context of what they measure \idest,
 as part of a metrological system.
 In section~\ref{earlyMetrology} we will see that in some periods:
 \begin{itemize}[nosep]
-  \item the functions and use of the numerals vary beyond the mere {\curviform \oneAšC}/{\xsuxfont 𒁹} switch;
+  \item the functions and use of the numerals vary beyond the mere \oneAšC/{\xsuxfont 𒁹} switch;
   \item the contrast between curviform and cuneiform numerals is commonly used to distinguish metrological systems;
   \item some metrological systems commonly mix curviform and cuneiform in single numerical expressions.
 \end{itemize}
@@ -448,9 +458,9 @@ This reflects the origin of the sexagesimal place value system;
 it derives from a \emph{non-positional} system, hereafter the \emph{cuneiform discrete counting system} \ref{systemSOB},
 which had different signs for the units {\xsuxfont 𒁹}–{\xsuxfont 𒑆},
 tens {\xsuxfont 𒌋}–{\xsuxfont 𒐐}, sixties {\xsuxfont 𒐕}–{\xsuxfont 𒐝} (with larger wedges
-than the units), six hundreds {\xsuxfont 𒐞}–{\xsuxfont 𒐢},
-three thousand six hundreds {\xsuxfont 𒊹}–{\xsuxfont 𒐫}, and thirty-six thousands
- {\xsuxfont 𒐬}–{\xsuxfont 𒐱}.
+than the units), multiples of six hundred {\xsuxfont 𒐞}–{\xsuxfont 𒐢},
+multiples of three thousand six hundreds {\xsuxfont 𒊹}–\vphantom{\scalebox{0.8}{\xsuxfont 𒐫}}\smash{\xsuxfont 𒐫}, and
+multiples of thirty-six thousand {\xsuxfont 𒐬}–\vphantom{\scalebox{0.8}{\xsuxfont 𒐱}}\smash{\xsuxfont 𒐱}.
 
  \subsubsection{The discrete counting system} 
 The relations between the values of the signs in the cuneiform discrete counting system
@@ -631,7 +641,7 @@ In particular, the discrete counting system used in the Early Dynastic period
 \xleftarrow{6}\text{\curviform \oneŊešʾuC}
 \xleftarrow{10}\text{\curviform \oneŊešTwoC}
 \xleftarrow{6}{\text{\curviform \oneUC}}
-\xleftarrow{10}{\text{\curviform \oneAšC}}\text.
+\xleftarrow{10}{\text{\oneAšC}}\text.
 \tag{$S$}
 \label{systemS}
 \end{equation}
@@ -643,13 +653,13 @@ Likewise the area system used in the Early Dynastic IIIb period mirrors system \
 \xleftarrow{6}\text{\curviform \oneBurʾuC}
 \xleftarrow{10}{\text{\curviform \oneUC}}
 \xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
-\xleftarrow{6}\text{\curviform \oneAšC}\text,
+\xleftarrow{6}\text{\oneAšC}\text,
 \tag{$G_{\text{ED IIIb}}$}
 \label{systemGED}
 \end{equation}
 
 As noted in \cite[4]{L2/04-099} (see section~\ref{oldArgumentsForUnification}), the vertical
-{\xsuxfont 𒁹} from \ref{systemSOB} becomes a horizontal {\curviform \oneAšC} in system \ref{systemS}.
+{\xsuxfont 𒁹} from \ref{systemSOB} becomes a horizontal {\oneAšC} in system \ref{systemS}.
 It is however far from the only case of such a reallocation of function.
 The earlier form of System G was \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
 \begin{equation}
@@ -657,7 +667,7 @@ The earlier form of System G was \cites[141,165]{DamerowEnglund1987}[378]{Friber
 \xleftarrow{6}\text{\curviform \oneŠarʾuC}
 \xleftarrow{10}{\text{\curviform \oneUC}}
 \xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
-\xleftarrow{6}\text{\curviform \oneAšC}\text,
+\xleftarrow{6}\text{\oneAšC}\text,
 \tag{$G$}
 \label{systemG}
 \end{equation}
@@ -716,11 +726,11 @@ across 47 tablets.}, such as:
   \item \cite[\obverse~1, 4]{P221305}\footnote{CDLI only has a copy, but a photo may be found in
   \cite[82]{Lecompte2012}. On that photo the {\xsuxfont 𒋗𒆕𒀀𒑊} is not visible.
   Lecompte notes that the copy is faithful;
-  indeed another {\xsuxfont 𒋗𒆕𒀀𒑊} can be seen both on the copy and the photo on \obverse~2, 2.} {\curviform\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
+  indeed another {\xsuxfont 𒋗𒆕𒀀𒑊} can be seen both on the copy and the photo on \obverse~2, 2.} {\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
 %  \item \cite[\reverse~1, 1]{P221305} {\curviform\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
   \item \cite[\reverse~2, 1]{P020129} {\curviform\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\curviform\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
   \item \cite[\reverse~5, 1]{P221291}\footnote{From copy.} {\curviform\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
-  \item \cite[\reverse~2, 1]{P221266} {\curviform\oneAšC\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
+  \item \cite[\reverse~2, 1]{P221266} {\oneAšC\curviform\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
 \end{itemize}
 These expressions use an
 explicit sign {\xsuxfont 𒃻𒁺} (counted in multiples of ten) or
@@ -729,14 +739,14 @@ This notation—but not its use of curviform numerals—is
 remarked on in \cite[\pno~290 with note 27]{Lecompte2020},
 which cites several of the instances listed above.
 It seems to be typical of texts about dykes.
-These\footnote{TODO Cite also DP 568, the one with {\curviform \oneŊešTwoC} and {\curviform\oneAšC}{\xsuxfont 𒂠} even though it has no reeds.}
+These\footnote{TODO Cite also DP 568, the one with {\curviform \oneŊešTwoC} and {\oneAšC}{\xsuxfont 𒂠} even though it has no reeds.}
 can be summarized by the following factor diagram:
 \begin{equation}
   \underbrace{
   \text{\curviform \oneŊešʾuC}
   \xleftarrow{10}\text{\curviform \oneŊešTwoC}
   \xleftarrow{6}\text{\curviform\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}=
-  \underbrace{\text{\curviform\oneAšC}
+  \underbrace{\text{\oneAšC}
   \xleftarrow{2}\text{\curviform \oneBanTwoC}}_{\text{\xsuxfont 𒂠\footnotemark}}
   \xleftarrow{10} \text{\xsuxfont 𒀹𒄀}
   \xleftarrow{6}\text{\xsuxfont 𒌑𒀹}
@@ -762,10 +772,10 @@ The system of grain\footnote{Liquid capacities use a different system \cite[\pno
 At a glance it seems that {\xsuxfont 𒋡} are counted with cuneiform numerals and higher units
 with curviform ones, thus
 \begin{equation*}
-  \underbrace{\text{\curviform \oneAšC\xsuxfont 𒈪𒀜}
+  \underbrace{\text{\oneAšC\xsuxfont 𒈪𒀜}
   \xleftarrow{\frac{5}{3}}\text{\curviform \oneŊešTwoC}
   \xleftarrow{6}\text{\curviform \oneUC}
-  \xleftarrow{10}\text{\curviform\oneAšC}}_{\text{\xsuxfont 𒆷𒄩}}
+  \xleftarrow{10}\text{\oneAšC}}_{\text{\xsuxfont 𒆷𒄩}}
   \xleftarrow{3}\underbrace{\text{\xsuxfont 𒌋}
   \xleftarrow{10}\text{\xsuxfont 𒁹}}_{\text{\xsuxfont 𒋡}}
   \xleftarrow{6}\text{\xsuxfont 𒁹𒀭𒍡}\text,
@@ -790,36 +800,36 @@ Section~\ref{transliteration}, CDLI transliterations indicate numeral shape; how
 as of this writing, they do so incorrectly on the Ebla corpus, claiming that all numerals are curviform,
 so we were not able to rely on them in this specific case.}
 \begin{enumerate}[nosep]
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1324\#58045}{\verso~4, 9}]{P240532} {\curviform\oneAšC\xsuxfont 𒊺 𒁀𒊑𒅗\footnote{ba-ri₂-zu₂, a variant spelling.}𒐊𒃻𒋙𒊕}% v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1350\#59630}{\verso~1, 1}]{P240548} {\curviform\oneAšC\xsuxfont 𒁀𒊑𒍪 𒐈𒀭𒍡} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7, 9}]{P240655} {\curviform\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇}.}𒐊𒃻𒋙𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1364\#60805}{\verso~4, 3}]{P240579} {\curviform\fiveAšC\oneDišC\xsuxfont 𒄘𒁇 𒈫𒃻𒋙𒊕}% 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2, 2}]{P240675} {\curviform\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒋙𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3, 1}]{P240609} {\curviform\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1324\#58045}{\verso~4, 9}]{P240532} {\oneAšC\xsuxfont 𒊺 𒁀𒊑𒅗\footnote{ba-ri₂-zu₂, a variant spelling.}𒐊𒃻𒋙𒊕}% v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1350\#59630}{\verso~1, 1}]{P240548} {\oneAšC\xsuxfont 𒁀𒊑𒍪 𒐈𒀭𒍡} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7, 9}]{P240655} {\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇}.}𒐊𒃻𒋙𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1364\#60805}{\verso~4, 3}]{P240579} {\fiveAšC\oneDišC\xsuxfont 𒄘𒁇 𒈫𒃻𒋙𒊕}% 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2, 2}]{P240675} {\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒋙𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3, 1}]{P240609} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
   %\item % r.3,3	1 ba-ri₂-zu 8 nig₂-sagšu ninda ARET 09 0064 http://ebda.cnr.it/tablet/view/1378#61586
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P240533} {\curviform\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}  % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1381\#61931}{\recto~1, 5}]{P240697} {\curviform\oneAšC\oneDišC\footnote{Note the omitted {\xsuxfont 𒄘𒁇}.}\xsuxfont 𒈫𒂆 𒐈𒀭𒍡}% ARET 09 0067 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1381\#61931}{\recto~1, 5}]{P240697} {\oneAšC\oneDišC\footnote{Note the omitted {\xsuxfont 𒄘𒁇}.}\xsuxfont 𒈫𒂆 𒐈𒀭𒍡}% ARET 09 0067 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1382\#62088}{\recto~6, 2}]{P240653} {\curviform\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\curviform\xsuxfont 𒁹𒃻𒋙𒊕 𒈫𒈦𒀭𒍡} % ARET 09 0068  20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2, 6}]{P240654} {\curviform\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1, 8}]{P240531} {\curviform\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1, 1}]{P241708}\footnote{From CDLI photo.} {\curviform\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1, 1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\curviform\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see Section~\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2, 6}]{P240654} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1, 8}]{P240531} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1, 1}]{P241708}\footnote{From CDLI photo.} {\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1, 1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see Section~\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
 \end{enumerate}
-  %\item \cite[\obverse iii 2]{P240964} {\curviform\sixAšC\xsuxfont 𒇷\curviform\sixŊešTwoC\oneDišC\xsuxfont 𒄘𒁇\rotatebox[origin=c]{270}{\curviform\twoAšC}\xsuxfont 𒋙𒃻𒈫𒀭𒍡} [TODO comment or stick it in its own paragraph] % EbDA http://ebda.cnr.it/tablet/view/3184#155353, EST 061.
+  %\item \cite[\obverse iii 2]{P240964} {\sixAšC\xsuxfont 𒇷\curviform\sixŊešTwoC\oneDišC\xsuxfont 𒄘𒁇\rotatebox[origin=c]{270}{\twoAšC}\xsuxfont 𒋙𒃻𒈫𒀭𒍡} [TODO comment or stick it in its own paragraph] % EbDA http://ebda.cnr.it/tablet/view/3184#155353, EST 061.
 Note that higher numbers of {\text{\xsuxfont 𒄘𒁇}} are expressed in hundreds (\emph{mi-at} {\xsuxfont 𒈪𒀜})
 and then thousands (\emph{li-im} {\xsuxfont 𒇷𒅎}),
 as is typical in Ebla \cite[33]{Archi2015},
 \exempligratia, in \cite[\href{https://ebda.cnr.it/tablet/view/1324\#58019}{\verso~2, 3}]{P240532},
-{\curviform\oneAšC\xsuxfont 𒈪𒀜\curviform\oneŊešTwoC\threeUC\fiveAšC\xsuxfont 𒊺 𒄘𒁇}
+{\oneAšC\xsuxfont 𒈪𒀜\curviform\oneŊešTwoC\threeUC\fiveAšC\xsuxfont 𒊺 𒄘𒁇}
 ($100+60+30+5=195$~{\xsuxfont 𒄘𒁇} of grain). %1 mi-at 60-30-5 še gu₂-bar
 These expressions correspond to the following factor diagram:
 \begin{equation}
 \begin{tikzcd}[column sep=small]
-  \smash{\underbrace{\text{\curviform \oneAšC\xsuxfont 𒈪𒀜}
+  \smash{\underbrace{\text{\oneAšC\xsuxfont 𒈪𒀜}
   \xleftarrow{\frac{5}{3}}\text{\curviform \oneŊešTwoC}
   \xleftarrow{6}\text{\curviform \oneUC}
-  \xleftarrow{10}\text{\curviform\oneAšC}
-  \xleftarrow{2}\text{\curviform\oneDišC}}_{\text{\xsuxfont 𒄘𒁇}}}=\text{\curviform\oneAšC\xsuxfont 𒁀𒊑𒍪}
+  \xleftarrow{10}\text{\oneAšC}
+  \xleftarrow{2}\text{\oneDišC}}_{\text{\xsuxfont 𒄘𒁇}}}=\text{\oneAšC\xsuxfont 𒁀𒊑𒍪}
   &&
   \arrow[ll, "10"]\arrow[ld, "4", start anchor={south west}]\text{\xsuxfont 𒁹𒃻𒋙𒊕}
   \xleftarrow{6}\text{\xsuxfont 𒁹𒀭𒍡}\\
@@ -837,12 +847,12 @@ in those periods, as illustrated in Figures \ref{englund113}--\ref{GoriTranslite
 Since they contrast with the cuneiform numerals, they
 likewise appear contrastively in such publications.
 A remarkable example of that is found in Figure~\ref{GoriTransliteration}.
-The partial\footnote{The untransliterated text would be {\curviform \fourAšC\xsuxfont 𒂍𒁕𒌝𒌆𒑊\curviform\fourDišC\xsuxfont 𒀀𒋢\curviform \fourAšC\xsuxfont 𒔻𒌆𒊷𒁯}; note the atomically encoded $\text{ib₂}\times3\text{\xsuxfont 𒁹}=\text{\xsuxfont 𒌈}\times\text{\xsuxfont 𒐈}=\text{\xsuxfont 𒔻}$.} transliteration ``$4\text{\curviform \oneAšC}$
-\emph{ʾa₃-da-um} $4\text{\curviform\oneDišC}$ \emph{aktum}
-$4\text{\curviform \oneAšC}$
+The partial\footnote{The untransliterated text would be {\fourAšC\xsuxfont 𒂍𒁕𒌝𒌆𒑊\fourDišC\xsuxfont 𒀀𒋢\fourAšC\xsuxfont 𒔻𒌆𒊷𒁯}; note the atomically encoded $\text{ib₂}\times3\text{\xsuxfont 𒁹}=\text{\xsuxfont 𒌈}\times\text{\xsuxfont 𒐈}=\text{\xsuxfont 𒔻}$.} transliteration ``$4\text{\oneAšC}$
+\emph{ʾa₃-da-um} $4\text{\oneDišC}$ \emph{aktum}
+$4\text{\oneAšC}$
 ib₂\textsuperscript*{tu₉}×$3\text{\xsuxfont 𒁹}$ sa₆ gunu₃''
 is used to illustrate a discussion of the interpretation of
-the contrast between {\curviform \oneAšC} and {\curviform \oneDišC} numerals.
+the contrast between {\oneAšC} and {\oneDišC} numerals.
 More conventional transliterations\footnote{TODO cite the EbDA one.} might omit the numeral shapes entirely, \exempligratia,
 $4$ \emph{ʾa₃-da-um} $4$ \emph{aktum} $4$ ib₂\textsuperscript*{tu₉}×$3$ sa₆ gunu₃,
 which would obviously be inadequate in this context.
@@ -913,7 +923,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{gori-162.png}
-  \caption{Discussion of the contrast between {\curviform \oneAšC} and {\curviform \oneDišC} numerals in \cite[162]{Gori2023}.\label{gori162}}
+  \caption{Discussion of the contrast between {\oneAšC} and {\oneDišC} numerals in \cite[162]{Gori2023}.\label{gori162}}
   \end{center}
 \end{figure}
 
@@ -946,7 +956,7 @@ The sign is also used for the Akkadian word \emph{ana} in the Neo-Assyrian perio
 Many of the cuneiform numerals are used with a logographic or phonetic value.
 For example, the sign {\xsuxfont 𒀸} has, \emph{inter alia}, the values aš, rum, and dili.
 While the horizontal numerals are most frequently written
-written {\curviform\oneAšC} in the Early Dynastic period\footnote{A
+written {\oneAšC} in the Early Dynastic period\footnote{A
 CDLI search for \texttt{"(asz@c)"} finds 3296 ED texts,
 while a search for \texttt{"(asz)"} finds 81 ED texts,
 of which 46 also contain \texttt{"(asz@c)"}.},
@@ -954,7 +964,7 @@ such non-numeric usage is almost\footnote{Exceptions are discussed in section~\r
 {\xsuxfont 𒀸}, for instance:
 \begin{itemize}[nosep]
   \item in personal names in administrative texts,
-  such as the following, which all contain {\curviform\oneAšC} numerals:\begin{itemize}[nosep]
+  such as the following, which all contain {\oneAšC} numerals:\begin{itemize}[nosep]
   \item {\xsuxfont 𒀸𒊕} in
   \cites[\reverse~1, 5]{P010424}[\obverse~1, 5]{P010458}[\obverse~2, 5′]{P010459}
   from ED IIIa \smash{\textarabic{أبو صلابيخ}},
@@ -965,24 +975,24 @@ such non-numeric usage is almost\footnote{Exceptions are discussed in section~\r
   \item {\xsuxfont 𒈗𒋗𒀸𒉌} in \cite[\reverse~2, 4]{P298637} from ED IIIb Umma;
   \end{itemize}
   \item in the Sumerian word {\xsuxfont 𒌑𒀸} u₂-rum, ``property'' in ED IIIb Ŋirsu administrative texts which contain
-    {\curviform\oneAšC} numerals, such as
+    {\oneAšC} numerals, such as
     \cites[\obverse~2, 3]{P020006}[\reverse~1, 2]{P020008}[\reverse~1, 2]{P020018}[\obverse~1, 4]{P020024}[\obverse~3, 1]{P020030};
   \item in lexical texts:
   \begin{itemize}[nosep]
     \item in the divine name {\xsuxfont 𒀭𒎏𒉾𒀸𒁇} in the lexical texts \cites[TODO]{P010570}[\obverse~3, 6]{P010572},
-      where the entries are prefixed with {\curviform\oneAšC}.
+      where the entries are prefixed with {\oneAšC}.
     \item in the word {\xsuxfont 𒀸} dili, ``small fish'' in
     \cite[\obverse~2, 5]{P010578}, witness to Early Dynastic Fish,
     \item in the same word with a determinative, {\xsuxfont 𒀸𒄩} dili\textsuperscript*{ku₆},
     in \cite[\obverse~4, 4 \& 6]{P010586},
-    witness to Early Dynastic Food, which starts with {\curviform\oneAšC} numerals.
+    witness to Early Dynastic Food, which starts with {\oneAšC} numerals.
   \end{itemize}
 \end{itemize}
 
-This is a clear contrast between {\xsuxfont 𒀸} and {\curviform\oneAšC} in this period,
+This is a clear contrast between {\xsuxfont 𒀸} and {\oneAšC} in this period,
 and genuine ambiguity can arise if it is lost; for instance, the personal name
 {\xsuxfont 𒀸𒊕} occurs on its own line in the aforementioned administrative texts;
-a line {\curviform\oneAšC\xsuxfont 𒊕} would instead be read as ``one slave''.
+a line {\oneAšC\xsuxfont 𒊕} would instead be read as ``one slave''.
 
 \subsection{Limited benefits of diachronic encoding for numerals}
 \label{limitedBenefitsOfDiachrony}
@@ -996,18 +1006,18 @@ Diachronic reference works such as sign lists and dictionaries tend to not inclu
 or when they do, they treat them separately, and include signs such as {\xsuxfont 𒀸}
 that have both numeric and non-numeric values in both the main list and the section on numbers.
 For instance, \cite[123 \psqq]{Schneider1935} lists all of {\xsuxfont 𒀸}--{\xsuxfont 𒐇} together with
-{\curviform \oneAšC}--{\curviform \nineAšC},
+{\oneAšC}--{\nineAšC},
 while {\xsuxfont 𒀸}, {\xsuxfont 𒐀}, and {\xsuxfont 𒐁}, and only those, appear at the beginning of the sign list,
 since they have non-numeric values\footnote{Non-numeric values of {\xsuxfont 𒀸} were discussed in
 section~\ref{non-numeric};
 {\xsuxfont 𒐀} has the values man₃ and min₅, and is used for the word didli, ``several, various'';
 {\xsuxfont 𒐁} has the value eš₆.}.
-\cite[58]{Catagnoti2013} has the numeric signs {\curviform \oneAšC}, {\xsuxfont 𒀹}, {\xsuxfont 𒁹},
+\cite[58]{Catagnoti2013} has the numeric signs {\oneAšC}, {\xsuxfont 𒀹}, {\xsuxfont 𒁹},
 whereas non-numeric {\xsuxfont 𒀸} is at the beginning of the sign list,
 where its values \emph{aš} and \emph{rum} are listed.
 For signs with both non-numeric and numeric usage, \cite{Deimel1922} writes \emph{\textgerman{s. die Zahlz.}}
 throughout the main list; LAK~1 {\xsuxfont 𒀸} thus reappears at LAK~829 together with
-{\curviform \oneAšC}, {\xsuxfont 𒀹}, and {\xsuxfont 𒁹}.
+{\oneAšC}, {\xsuxfont 𒀹}, and {\xsuxfont 𒁹}.
 One should note \cite{Borger2010}, which has numbers throughout the sign list;
 but that sign list does not show glyphs predating the Old Babylonian period,
 nor does it comprehensively cover the numerals used in the Ur III and Old Babylonian
@@ -1020,13 +1030,13 @@ contain numbers to the extent that administrative texts do.
 Further, there tend to be changes\footnote{TODO comment on the ED witnesses to the instructions of Šuruppag}
 to the text between Early Dynastic
 and later witnesses that prevent a diachronic encoding of such composites.
-For numerals, the switch from {\curviform \oneAšC} to {\xsuxfont 𒁹} numerals prevents
-diachronic encoding even if {\curviform \oneAšC} were unified with {\xsuxfont 𒀸}.
+For numerals, the switch from {\oneAšC} to {\xsuxfont 𒁹} numerals prevents
+diachronic encoding even if {\oneAšC} were unified with {\xsuxfont 𒀸}.
 For instance, the lexical list Early Dynastic Food, already mentioned in section~\ref{non-numeric},
 contains some numbers, and has a witness from the Old Akkadian period covering
 these numbers: \cite[\href{https://oracc.museum.upenn.edu/dcclt/P215653.3}{a~1′--6′}]{P215653};
 however, they are written with {\xsuxfont 𒁹} numerals, whereas they are written with
-{\curviform \oneAšC} numerals in the Early Dynastic witnesses; since {\xsuxfont 𒁹}
+{\oneAšC} numerals in the Early Dynastic witnesses; since {\xsuxfont 𒁹}
 and {\xsuxfont 𒀸} are distinct\footnote{Besides the contrasts in numeric usage
 mentioned in section~\ref{capacity}, these characters are clearly
 not unifiable because of the many contrasts in non-numeric usage between them;
@@ -1034,7 +1044,7 @@ several values of {\xsuxfont 𒀸} which are not shared with {\xsuxfont 𒁹}
 have already been mentioned, but perhaps most striking is the fact that,
 in the Neo-Assyrian period, {\xsuxfont 𒀸} is used for the preposition \emph{ina}, ``in'', and
 {\xsuxfont 𒁹} for the preposition \emph{ana}, ``to''.}
-characters, the {\curviform \oneAšC}-{\xsuxfont 𒀸} unification does not help. 
+characters, the {\oneAšC}-{\xsuxfont 𒀸} unification does not help. 
 
 % Maybe cite https://cdli.mpiwg-berlin.mpg.de/artifacts/522091 OB witness to ED Plants?
 
@@ -1070,7 +1080,7 @@ making the representation of any text with numerals intractable.
 The character U+\textcsc{122B9} {\cuneiformComposite 𒊹} \textsc{cuneiform sign shar2}
 has a circular reference glyph.
 
-In most texts from the Early Dynastic IIIb and Old Akkadian period\footnote{For example, in personal names:\begin{itemize}
+In most texts from the Early Dynastic IIIb and Old Akkadian period\footnote{For example, in personal names:\begin{itemize}[nosep]
 %\item \cite[\reverse~5, 3]{P010263}, ED IIIa literary; % NOTE(egg): Lisman reads that ḫe, so let’s not go there.
 \item {\xsuxfont 𒂗𒆠𒊹𒊏} in \cite[\reverse~1, 2]{P020019} from ED IIIb Ŋirsu;
 \item {\xsuxfont 𒂄𒈨𒊹𒊏𒁺} in \cite[\obverse~2, 9]{P020182}, also from ED IIIb Ŋirsu; 
@@ -1079,7 +1089,7 @@ In most texts from the Early Dynastic IIIb and Old Akkadian period\footnote{For 
 \end{itemize}},
 a contrast between non-numeric šar₂ written {\xsuxfont 𒊹}
 and numeric $1$(šar₂ᶜ) written \oneŠarTwoC{} can be observed,
-similar to the contrast between {\xsuxfont 𒀸} and {\curviform \oneAšC}
+similar to the contrast between {\xsuxfont 𒀸} and {\oneAšC}
 previously discussed in section~\ref{non-numeric}.
 However, in lexical lists from Šuruppag and Ebla\footnote{TODO Mention other ways in which
 these are archaizing},
@@ -1104,7 +1114,8 @@ Since the archaizing style of texts wherein non-numeric šar₂ is curviform
 solidly predates the transition from \oneŠarTwoC{} to {\xsuxfont 𒊹}
 in the relevant metrological systems, there is no need to represent
 a {\xsuxfont 𒊹}-\oneŠarTwoC contrast,
-so these characters can have the same glyph.
+so these characters can have the same glyph in specialist archaizing
+Early Dynastic fonts.
 
 Since cuneiform U+\textcsc{122B9} \textsc{cuneiform sign shar2}
 effectively merges with U+\textcsc{1212D} {\cuneiformComposite 𒄭} \textsc{cuneiform sign hi},
@@ -1116,7 +1127,7 @@ and since extant specialist fonts target styles where U+\textcsc{122B9} is unamb
 there are no compatibility issues.
 
 Note that in rare cases, such as \cite[\obverse~2, 7]{P222243} from ED IIIa Adab,
-non-numeric {\xsuxfont 𒀸} (here with the value rum) is written {\curviform\oneAšC}.
+non-numeric {\xsuxfont 𒀸} (here with the value rum) is written {\oneAšC}.
 It is out of scope for this proposal to decide whether
 such occurrences should be treated as anomalous spellings and encoded as
 (TODO: the proposed characters) or as stylistic distinctions and encoded as
@@ -1157,18 +1168,18 @@ from \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P2405
 is transliterated ``$20$-$1$-$1/2$~\emph{gu}₂-\emph{bar} $7$~nig₂-sagšu $2$-$1/2$~an-zamₓ\footnote{As
 of this writing, EbDA actually has an-zamᵪ, with U+\textcsc{1D6A}
 \textcsc{GREEK SUBSCRIPT SMALL LETTER CHI}.} \emph{za}'', reading both
-{\curviform \oneDišC} and {\xsuxfont 𒈦} as $1/2$,
+\oneDišC{} and {\xsuxfont 𒈦} as $1/2$,
 but not distinguishing them.
 
 In particular, these transliterations do not differentiate between
 {\xsuxfont 𒀸} and {\xsuxfont 𒁹} numerals, nor between
-{\curviform\oneAšC} and {\curviform\oneDišC} numerals.
+\oneAšC{} and \oneDišC{} numerals.
 For instance, the aforementioned
-{\curviform \fourAšC~\xsuxfont 𒂍𒁕𒌝𒌆𒑊 \curviform\fourDišC~\xsuxfont 𒀀𒋢 \curviform\fourAšC~\xsuxfont 𒔻
+{\fourAšC~\xsuxfont 𒂍𒁕𒌝𒌆𒑊 \fourDišC~\xsuxfont 𒀀𒋢 \fourAšC~\xsuxfont 𒔻
 𒌆 𒊷𒁯}
 from \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} is
 transliterated ``$4$~\emph{ʾa}₃-\emph{da}-\emph{um}\textsuperscript*{tug₂}-II $4$~aktum\textsuperscript*{tug₂} $4$~ib₂-III gun₃ sa₆ \textsuperscript*{tug₂}''
-in EbDA, with no distinction between the {\curviform \fourAšC} and {\curviform\fourDišC}.
+in EbDA, with no distinction between the \fourAšC{} and \fourDišC.
 Since {\xsuxfont 𒀸} and {\xsuxfont 𒁹} numerals are separately encoded,
 the numeric expressions in such transliterations cannot be transformed
 into Unicode cuneiform without additional context, regardless of
@@ -1196,7 +1207,7 @@ from \cite[\reverse~2, 1]{P020129} is transliterated
 in CDLI, and ``$6$(geš₂ᶜ) $3$(uᶜ) \textsuperscript*{ninda}nindaₓ(DU) $1/2$(ašᶜ) $4$(dišᵗ) gi''
 in ePSD2.
 Another example is \cite[39]{Molina2014}, which uses $1a$ for {\xsuxfont 𒀸},
-$1d$ for {\xsuxfont 𒁹}, $1ac$ for {\curviform \oneAšC}, $1dc$ or $\text{½}dc$ for {\curviform \oneDišC}
+$1d$ for {\xsuxfont 𒁹}, $1ac$ for \oneAšC, $1dc$ or $\text{½}dc$ for \oneDišC{}
 depending on reading, etc.
 The literature on the Uruk and Early Dynastic I--II periods uses
 a different set of transliteration conventions that also
@@ -1204,14 +1215,14 @@ disambiguate numeral shapes,
 as will be discussed in section~\ref{unificationRationale}.
 
 While there exist transliterations that distinguish {\xsuxfont 𒀸} from {\xsuxfont 𒁹}
-but not {\curviform \fourAšC} from {\xsuxfont 𒀸}, such as the ones used in \cite{DCCMT},
+but not \fourAšC{} from {\xsuxfont 𒀸}, such as the ones used in \cite{DCCMT},
 the trend, especially in more recent works in third millenium studies, seems to be to
 represent numeral shape; for example, \cite{Maiocchi2024} gave an example of
 the input syntax used by the new ``Urban Economy Begins'' project as
 ``$10+5\text{c}(\text{GUR})+2(\text{BARIGA})+1(\text{BAN2})$'' for
 {\curviform\oneUC\fiveAšC\xsuxfont 𒑖𒑏}, with a c
 indicating that the GUR numerals are curviform, and the parenthetical
-GUR indicating that these are {\curviform\oneAšC} rather than {\curviform\oneDišC} numerals.
+GUR indicating that these are \oneAšC{} rather than \oneDišC{} numerals.
 % TODO cite the rant in Englund 2004.
 
 \subsection{Conclusions}
@@ -1228,9 +1239,9 @@ single numeric expressions to systematically use multiple fonts.
 Further, if that contrast is lost in plain-text interchange, the text can
 be misinterpreted:
 {\xsuxfont 𒌍} is a length of three ropes, but {\curviform \threeUC} is an area of three bur₃;
-{\curviform\oneAšC\xsuxfont 𒁹} could be read as one {\xsuxfont 𒄘𒁇} and one {\xsuxfont 𒃻𒋙𒊕},
-where {\curviform\oneAšC\oneDišC} would be one and a half {\xsuxfont 𒄘𒁇};
-{\xsuxfont 𒀸𒊕} is a personal name, but {\curviform\oneAšC\xsuxfont 𒊕} would be ``one slave''.
+{\oneAšC\xsuxfont 𒁹} could be read as one {\xsuxfont 𒄘𒁇} and one {\xsuxfont 𒃻𒋙𒊕},
+where {\oneAšC\oneDišC} would be one and a half {\xsuxfont 𒄘𒁇};
+{\xsuxfont 𒀸𒊕} is a personal name, but {\oneAšC\xsuxfont 𒊕} would be ``one slave''.
 
 At the same time, contrary to most disunifications,
 the separate encoding of curviform numerals poses no serious compatibility issues
