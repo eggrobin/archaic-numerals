@@ -85,14 +85,25 @@
 \newcommand\threeŊešʾuC{{\proposalfont\symbol{"12576}}}
 \newcommand\fourŊešʾuC{{\proposalfont\symbol{"12577}}}
 \newcommand\fiveŊešʾuC{{\proposalfont\symbol{"12578}}}
-\newcommand\oneŠarʾuC{\symbol{"E58D}}
+\newcommand\oneŠarTwoC{{\proposalfont\symbol{"12579}}}
+\newcommand\twoŠarTwoC{{\proposalfont\symbol{"1257A}}}
+\newcommand\threeŠarTwoC{{\proposalfont\symbol{"1257B}}}
+\newcommand\fourŠarTwoC{{\proposalfont\symbol{"1257C}}}
+\newcommand\fiveŠarTwoC{{\proposalfont\symbol{"1257D}}}
+\newcommand\sixŠarTwoC{{\proposalfont\symbol{"1257E}}}
+\newcommand\seveŠarTwoC{{\proposalfont\symbol{"1257F}}}
+\newcommand\eightŠarTwoC{{\proposalfont\symbol{"12580}}}
+\newcommand\nineŠarTwoC{{\proposalfont\symbol{"12581}}}
+\newcommand\oneŠarʾuC{{\proposalfont\symbol{"12582}}}
+\newcommand\twoŠarʾuC{{\proposalfont\symbol{"12583}}}
+\newcommand\threeŠarʾuC{{\proposalfont\symbol{"12584}}}
+\newcommand\fourŠarʾuC{{\proposalfont\symbol{"12585}}}
+\newcommand\fiveŠarʾuC{{\proposalfont\symbol{"12586}}}
 \newcommand\oneBurʾuC{\symbol{"E593}}
 \newcommand\oneBanTwoC{\symbol{"E599}}
 \newcommand\oneEšeThreeC{\symbol{"E5A3}}
 %\newcommand\oneDišC{\symbol{"E59E}}
 %\newcommand\fourDišC{\symbol{"E5A2}}
-
-\newcommand\oneŠarTwoC{{\originalNoto 𒊹}}
 
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
@@ -250,12 +261,25 @@ requiring an understanding of the text to correctly encode it.
 However, the \emph{numerals} used in proto-cuneiform should be unified with
 ones used in the Early Dynastic period, for the reasons set forth in
 section~\ref{unificationRationale}.
-The proposed ``curved'', or ``curviform'', numerals\footnote{{\anshufont \oneNone}–{\anshufont \nineNone} 1–9($\text{ašᶜ}=N_{1}$), {\anshufont \oneNfourteen}–{\anshufont \fiveNfourteen} 1–5($\text{uᶜ}=N_{14}$), {\anshufont \oneNthirtyFour}–{\anshufont \nineNthirtyFour} 1–9($\text{ŋeš₂ᶜ}=N_{34}$), {\anshufont \oneNfortyEight}–{\anshufont \fiveNfortyEight} 1–5($\text{ŋešʾuᶜ}=N_{48}$), etc.}
+The proposed ``curved'', or ``curviform'', numerals\footnote{%
+Impressed into clay using cylindrical styli,
+held either perpendicular to the tablet, yielding
+\oneUC (small cylinder) or
+\oneŠarTwoC{} (large cylinder),
+or at a shallower angle:
+\oneAšC, \oneDišC{} (small cylinder),
+\oneŊešTwoC{} (large cylinder).
+Some numerals are composed of multiple such impressions,
+\exempligratia, \oneŊešʾuC.}
 should however \emph{not} be unified with
-the already-encoded cuneiform numerals\footnote{{\xsuxfont 𒀸}–{\xsuxfont 𒐇} 1–9(aš),
-{\xsuxfont 𒌋}–{\xsuxfont 𒐐} 1–5(u),
-{\xsuxfont 𒐕}–{\xsuxfont 𒐝} 1–9(ŋeš₂),
-{\xsuxfont 𒐞}–{\xsuxfont 𒐢} 1–5(ŋešʾu), etc.}.
+the already-encoded cuneiform numerals\footnote{%
+Impressed into clay using a trihedral stylus:
+{\xsuxfont 𒀸} (stylus held horizontally),
+{\xsuxfont 𒁹} (vertically),
+{\xsuxfont 𒀹} (diagonally)
+{\xsuxfont 𒌋} (diagonally with the stylus along its axis),
+{\xsuxfont 𒐕} (stylus pressed deeper, forming a larger wedge),
+{\xsuxfont 𒐞} (combining {\xsuxfont 𒐕} and {\xsuxfont 𒌋}), etc.}.
 Since the encoding proposals for the cuneiform script
 twenty years ago provisionally considered the curviform numerals
 to be glyph variants of the cuneiform numerals,
@@ -1119,7 +1143,8 @@ It \emph{would} be disruptive to the diachronic representation of text
 if non-numeric šar₂ were to have two different representations.
 The character U+\textcsc{122B9} \textsc{cuneiform sign shar2} should therefore be used
 in those cases, with its curviform glyph {\cuneiformComposite 𒊹},
-identical to the glyph of (TODO: the proposed character).
+identical to the glyph of the proposed U+\textcsc{12579} \oneŠarTwoC{} \textcsc{CUNEIFORM
+NUMERIC SIGN ONE N45}.
 Since the archaizing style of texts wherein non-numeric šar₂ is curviform
 solidly predates the transition from \oneŠarTwoC{} to {\xsuxfont 𒊹}
 in the relevant metrological systems, there is no need to represent
@@ -1139,12 +1164,13 @@ there are no compatibility issues.
 Note that in rare cases, such as \cite[\obverse~2, 7]{P222243} from ED IIIa Adab,
 non-numeric {\xsuxfont 𒀸} (here with the value rum) is written {\oneAšC}.
 It is out of scope for this proposal to decide whether
-such occurrences should be treated as anomalous spellings and encoded as
-(TODO: the proposed characters) or as stylistic distinctions and encoded as
+such occurrences should be treated as anomalous spellings, encoded as
+U+\textcsc{12550} \oneAšC{} \textsc{cuneiform numeric sign one N01},
+or as stylistic distinctions, encoded as
 U+\textcsc{12038} \textsc{cuneiform sign ash} with a curviform glyph.
 in practice this would often be determined by the transliteration from which
 the cuneiform text is generated; it is noteworthy that as of this writing,
-the CDLI transliteration (\texttt{UR2-1(aš@c)}) and the ePSD2 one (uru₈\textsuperscript*{rum})
+the CDLI transliteration (UR2-$1$(aš@c)) and the ePSD2 one (uru₈\textsuperscript*{rum})
 of this word disagree on that aspect.
 Since {\xsuxfont 𒀸} has a cuneiform reference glyph,
 this does not pose any compatibility concerns.
@@ -1198,17 +1224,17 @@ curviform--cuneiform unification.
 In metrological systems such as systems~\ref{systemGOB} and~\ref{systemC}
 where some units are indicated by the type of numeral
 rather than an overt unit sign, it is common practice to add the unit in parentheses
-in transliteration; for instance, {\xsuxfont 𒑘𒐃𒀹𒃷𒑂𒊬} from \cite[\obverse~1]{P386847}
+in transliteration; for instance, {\xsuxfont 𒑘𒐃𒀹𒃷𒐌𒊬} from \cite[\obverse~1]{P386847}
 is transliterated ``$1$(eše₃) $5\text{½}$~iku\footnote{TODO say something about this reading} $7$~sar'' in \volcite{2}[176]{Feuerherm2004},
-and {\xsuxfont 𒑗𒑐𒑂𒈦𒋡} from \cite[\obverse~12]{P307255}
+and {\xsuxfont 𒑗𒑐𒐌𒈦𒋡} from \cite[\obverse~12]{P307255}
 is transliterated ``$1$(n\footnote{TODO comment on nigida.}) $2$(b) $7~\text{½}$~sila₃'' in \volcite{2}[151]{Feuerherm2004}.
 
 This practice has been generalized to systematically indicate numeral shape;
 this is in particular the case in CDLI,
 where the transliterations of some the above examples are
 ``$1$(gesz2) $3$(u) $5$(asz) gur'' for {\xsuxfont 𒐕𒌍𒐃𒄥},
-``$1$(esze3) $5$(iku) $1/2$(iku) GAN2 $7$(disz) sar'' for {\xsuxfont 𒑘𒐃𒀹𒃷𒑂𒊬},
-and ``$3$(barig) $2$(ban2) $7$(disz) $1/2$(disz) sila3'' for {\xsuxfont 𒑗𒑐𒑂𒈦𒋡}.
+``$1$(esze3) $5$(iku) $1/2$(iku) GAN2 $7$(disz) sar'' for {\xsuxfont 𒑘𒐃𒀹𒃷𒐌𒊬},
+and ``$3$(barig) $2$(ban2) $7$(disz) $1/2$(disz) sila3'' for {\xsuxfont 𒑗𒑐𒐌𒈦𒋡}.
 CDLI and ePSD2 both distinguish curviform from cuneiform numerals in
 transliteration: the length
 \vphantom{\scalebox{0.85}{\sixŊešTwoC}}{\smash{\sixŊešTwoC}\threeUC\xsuxfont 𒃻𒁺\curviform\oneBanTwoC\xsuxfont 𒑌𒄀}
@@ -1249,7 +1275,7 @@ is highly inconvenient, as it requires
 single numeric expressions to systematically use multiple fonts.
 Further, if that contrast is lost in plain-text interchange, the text can
 be misinterpreted:
-{\xsuxfont 𒌍} is a length of three ropes, but \threeUC is an area of three bur₃;
+{\xsuxfont 𒌍} is a length of three ropes, but \threeUC{} is an area of three bur₃;
 {\oneAšC\xsuxfont 𒁹} could be read as one {\xsuxfont 𒄘𒁇} and one {\xsuxfont 𒃻𒋙𒊕},
 where {\oneAšC\oneDišC} would be one and a half {\xsuxfont 𒄘𒁇};
 {\xsuxfont 𒀸𒊕} is a personal name, but {\oneAšC\xsuxfont 𒊕} would be ``one slave''.
