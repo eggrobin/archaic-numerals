@@ -203,9 +203,9 @@
 \usepackage{multirow}
 
 \usepackage{epigraph}
-\renewcommand{\epigraphsize}{\footnotesize\itshape}
-%\setlength\epigraphwidth{9cm}
-\setlength\epigraphrule{0pt}
+\renewcommand{\epigraphsize}{\footnotesize}
+\renewcommand{\textflush}{flushepinormal}
+%\setlength\epigraphrule{0pt}
 \epigraphnoindent
 
 \usepackage{enumitem}
@@ -434,9 +434,13 @@ In section~\ref{earlyMetrology} we will see that in some periods:
 
 \subsection{A primer on classic Ur III and Old Babylonian metrologies}
 \label{metrology}
-\epigraph{{\obfont 𒁾 𒊬𒊑𒉈 𒂵𒁺} \\ {\obfont 𒁾 𒀸 𒊺 𒄥𒋫 𒍠 {\nafont 𒐞} 𒄥𒂠} \\ {\obfont 𒁾 𒁹 𒂆𒋫 𒍠 𒆬 𒌋 𒈠𒈾𒂠} \\
+{\settowidth{\epigraphwidth}{\epigraphsize\obfont 𒁾 𒁹 𒂆𒋫 𒍠 𒆬 𒌋 𒈠𒈾𒂠 \hspace{1.5em}}
+\epigraph{
+{\obfont 𒁾 𒊬𒊑𒉈\hfill 𒂵𒁺} \\
+{\obfont 𒁾 𒀸 𒊺 𒄥𒋫 𒍠 \hfill {\nafont 𒐞} 𒄥𒂠} \\
+{\obfont 𒁾 𒁹 𒂆𒋫 𒍠 \hfill 𒆬 \hfill 𒌋 𒈠𒈾𒂠} \\
 I want to write tablets: the tablet of 1 \emph{gur} of barley to
-600 \emph{gur}; the tablet of 1 shekel of silver to 10 minas […]}{Edubbaʾa D}
+600 \emph{gur}; the tablet of 1 shekel of silver to 10 minas […]}{Edubbaʾa D}}
 
 Before diving into the usage of the curviform numerals
 in the Early Dynastic period to explain the constrast
@@ -936,8 +940,11 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
 
 \subsection{Non-numeric usage}\label{non-numeric}
 \epigraph{
-{\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 𒅗𒁉 𒐋𒀀𒀭 𒐕𒀀𒀭 𒁀𒁺 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
-{\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 𒋗𒌋 𒊑𒁶𒋗 𒋀𒅆𒋗 𒋗𒍑 𒄿𒆲 𒉌𒂍𒋢 𒋾𒁲𒂊}\\
+{\nafont 𒊕 𒉆𒁾𒊬 𒁹 𒀸𒁉 \hfill 𒅗𒁉 𒐋𒀀𒀭\\
+    \hspace*{2em} 𒐕𒀀𒀭 𒁀𒁺 \hfill 𒅗 𒌤𒁉 𒄿𒍪𒌋}\\
+{\nafont 𒊑𒌍 𒁾𒊬𒊒𒋾 𒊓𒀭𒋳𒆪 𒅖𒋼 \hfill 𒋗𒌋 \\
+    \hspace*{2em} 𒊑𒁶𒋗 𒋀𒅆𒋗 \hfill 𒁹 𒋗𒅆 𒄿𒆲 \\
+    \hspace*{2em} 𒉌𒂍𒋢 \hfill 𒋾𒁲𒂊}\\
 {The beginning of the scribal art is a single wedge.
 That one has six pronunciations;
 it also stands for `sixty'\footnotemark. Do you know its reading\footnotemark?}}{Examenstext A}
