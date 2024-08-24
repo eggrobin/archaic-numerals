@@ -30,20 +30,7 @@
 %}
 
 \newfontfamily\proposalfont{Archaic-Cuneiform-Numerals.ttf}
-\newfontfamily\anshufont{Uni12580ProtoCuneiformChartFont.ttf}
-\newcommand\oneNone{\symbol{"12580}}
-\newcommand\nineNone{\symbol{"126CB}}
-\newcommand\oneNfourteen{\symbol{"12591}}
-\newcommand\fiveNfourteen{\symbol{"12674}}
-\newcommand\oneNthirtyFour{\symbol{"125BA}}
-\newcommand\nineNthirtyFour{\symbol{"126D8}}
-\newcommand\oneNfortyEight{\symbol{"125D0}}
-\newcommand\fiveNfortyEight{\symbol{"12684}}
-\newcommand\oneNfortyFive{\symbol{"125CA}}
 
-\newcommand\oneNtwentyTwo{\symbol{"1259A}}
-
-\newfontfamily\curviform{curviform.ttf}
 \newcommand\oneAšC{{\proposalfont\symbol{"12550}}} % 𒀸
 \newcommand\twoAšC{{\proposalfont\symbol{"12551}}} % 𒐀
 \newcommand\threeAšC{{\proposalfont\symbol{"12552}}} % 𒐁
@@ -101,9 +88,7 @@
 \newcommand\fiveŠarʾuC{{\proposalfont\symbol{"12586}}}
 \newcommand\oneBurʾuC{{\proposalfont\symbol{"12587}}}
 \newcommand\oneEšeThreeC{{\proposalfont\symbol{"1258C}}}
-\newcommand\oneBanTwoC{\symbol{"E599}}
-%\newcommand\oneDišC{\symbol{"E59E}}
-%\newcommand\fourDišC{\symbol{"E5A2}}
+\newcommand\oneBanTwoC{{\proposalfont\symbol{"1258E}}}
 
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
@@ -219,6 +204,8 @@
 \newcommand{\reverse}{rev.}
 \newcommand{\recto}{\emph{recto}}
 \newcommand{\verso}{\emph{verso}}
+\newcommand{\withnote}{n.}
+\newcommand{\withnotes}{nn.}
 
 \usepackage{multirow}
 
@@ -406,7 +393,7 @@ the sign {\xsuxfont 𒌍} in \cite{P020054} looks more like Ur III {\xsuxfont �
 \begin{tabular}{l l l l l}
 \xsuxfont 𒃷𒁉&
 \oneUC&
-\curviform\oneEšeThreeC&
+\oneEšeThreeC&
 \oneAšC&
 \oneDišC\\
 ašag-bi&1(bur₃ᶜ)&1(eše₃ᶜ)&1(ikuᶜ)&1/2(ikuᶜ)\\
@@ -538,7 +525,7 @@ with $1~\text{\emph{mūšarum}}$ ($36~\text{m}^2$) written {\xsuxfont 𒁹𒊬},
 then sexigesimally subdivided in $60~\text{\xsuxfont{𒂆}}$ (shekels).
 For areas greater than $3600~\text{\emph{būrū}}$,
 the {\xsuxfont 𒊹} and {\xsuxfont 𒐬} numerals are reused with a suffix {\xsuxfont 𒃲} (gal, Sumerian: big),
-as follows \cites[\pno~295 with notes b and c]{Robson2008}[378]{Friberg2007}{Robson2019}: \[
+as follows \cites[\pno~295 \withnote~b and c]{Robson2008}[378]{Friberg2007}{Robson2019}: \[
 \underbrace{\text{\xsuxfont 𒐬𒃲}
 \xleftarrow{10}\text{\xsuxfont 𒊹𒃲}
 \xleftarrow{6}\text{\xsuxfont 𒐬}
@@ -586,7 +573,7 @@ volumes of earthworks instead use system \ref{systemGOB} based on a height of on
 where the numerals for ban₂ are {\xsuxfont 𒑏}, {\xsuxfont 𒑐}, {\xsuxfont 𒑑}, {\xsuxfont 𒑒},
 and {\xsuxfont 𒑔}, and those for bariga are {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, and {\xsuxfont 𒐉} (contrast
 ordinary {\xsuxfont 𒈫} and {\xsuxfont 𒐈} otherwise used with {\xsuxfont 𒁹} numerals).
-As described in \cite[\pno~585 with notes (b) and (f)]{Huehnergard2011},
+As described in \cite[\pno~585 \withnote~(b) and (f)]{Huehnergard2011},
 the sign {\xsuxfont 𒄥} GUR, while it is used only with volumes in excess of one gur,
 is written after the whole expression,
 after the overt unit sign {\xsuxfont 𒋡} if present, and after the word for ``grain'' if present, as in
@@ -673,7 +660,7 @@ In particular, the discrete counting system used in the Early Dynastic period
 (and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
 \cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
 \begin{equation}
-\text{\curviform \oneŠarʾuC}
+\text{\oneŠarʾuC}
 \xleftarrow{10}\text{\oneŠarTwoC}
 \xleftarrow{6}\text{\oneŊešʾuC}
 \xleftarrow{10}\text{\oneŊešTwoC}
@@ -685,11 +672,11 @@ In particular, the discrete counting system used in the Early Dynastic period
 Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
 \cites[72]{LAK}[63]{NissenDamerowEnglund1993}[378]{Friberg2007}{Lecompte2016}:
 \begin{equation}
-\text{\curviform \oneŠarʾuC}
+\text{\oneŠarʾuC}
 \xleftarrow{10}\text{\oneŠarTwoC}
 \xleftarrow{6}\text{\oneBurʾuC}
 \xleftarrow{10}{\text{\oneUC}}
-\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
+\xleftarrow{3}{\text{\oneEšeThreeC}}
 \xleftarrow{6}\text{\oneAšC}\text,
 \tag{$G_{\text{ED IIIb}}$}
 \label{systemGED}
@@ -701,14 +688,14 @@ It is however far from the only case of such a reallocation of function.
 The earlier form of System G is \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
 \begin{equation}
 \text{\oneŠarTwoC}
-\xleftarrow{6}\text{\curviform \oneŠarʾuC}
+\xleftarrow{6}\text{\oneŠarʾuC}
 \xleftarrow{10}{\text{\oneUC}}
-\xleftarrow{3}{\text{\curviform \oneEšeThreeC}}
+\xleftarrow{3}{\text{\oneEšeThreeC}}
 \xleftarrow{6}\text{\oneAšC}\text,
 \tag{$G$}
 \label{systemG}
 \end{equation}
-Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\curviform \oneŠarʾuC} changes meaning from $10 \text{\oneUC}$ in system \ref{systemG} to $600 \text{\oneUC}$ in system \ref{systemGED}.
+Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\oneŠarʾuC} changes meaning from $10 \text{\oneUC}$ in system \ref{systemG} to $600 \text{\oneUC}$ in system \ref{systemGED}.
 System \ref{systemG} is used in the Uruk period, but also
 in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003},
 whereas \ref{systemGED} is the ``area 1'' system).
@@ -753,7 +740,7 @@ See \cite{Lecompte2020} for many examples with and without {\xsuxfont 𒃷}.
 \subsubsection{Dyke lengths in Ŋirsu}
 \cites[466]{Powell1987} notes that reeds ``are regularly written with the normal,
 cuneiform end of the stylus. Higher units are usually written with the reversed
-(round) end of the stylus.'' [TODO(egg): also mention Krebernik 1998 p. 303 with note 686.]
+(round) end of the stylus.'' [TODO(egg): also mention Krebernik 1998 p. 303 \withnote~686.]
 Powell does not elaborate on the specifics of this mixed use of numerals,
 but a cursory search in CDLI finds many occurrences\footnote{A search for
 curviform numerals followed by some number of reeds counted in (\emph{tenû})
@@ -764,16 +751,16 @@ across 47 tablets.}, such as:
   \cite[82]{Lecompte2012}. On that photo the {\xsuxfont 𒋗𒆕𒀀𒑊} is not visible.
   Lecompte notes that the copy is faithful;
   indeed another {\xsuxfont 𒋗𒆕𒀀𒑊} can be seen both on the copy and the photo on \obverse~2, 2.} {\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
-%  \item \cite[\reverse~1, 1]{P221305} {\curviform\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
-  \item \cite[\reverse~2, 1]{P020129} {\curviform\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\curviform\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
-  \item \cite[\reverse~5, 1]{P221291}\footnote{From copy.} {\curviform\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
-  \item \cite[\reverse~2, 1]{P221266} {\oneAšC\curviform\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
+%  \item \cite[\reverse~1, 1]{P221305} {\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
+  \item \cite[\reverse~2, 1]{P020129} {\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
+  \item \cite[\reverse~5, 1]{P221291}\footnote{From copy.} {\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
+  \item \cite[\reverse~2, 1]{P221266} {\oneAšC\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
 \end{itemize}
 These expressions use an
 explicit sign {\xsuxfont 𒃻𒁺} (counted in multiples of ten) or
 {\xsuxfont 𒂠}.
 This notation—but not its use of curviform numerals—is
-remarked on in \cite[\pno~290 with note 27]{Lecompte2020},
+remarked on in \cite[\pno~290 \withnote~27]{Lecompte2020},
 which cites several of the instances listed above.
 It seems to be typical of texts about dykes.
 These\footnote{TODO Cite also DP 568, the one with \oneŊešTwoC{} and \oneAšC{\xsuxfont 𒂠} even though it has no reeds.}
@@ -782,9 +769,9 @@ can be summarized by the following factor diagram:
   \underbrace{
   \text{\oneŊešʾuC}
   \xleftarrow{10}\text{\oneŊešTwoC}
-  \xleftarrow{6}\text{\curviform\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}=
+  \xleftarrow{6}\text{\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}=
   \underbrace{\text{\oneAšC}
-  \xleftarrow{2}\text{\curviform \oneBanTwoC}}_{\text{\xsuxfont 𒂠\footnotemark}}
+  \xleftarrow{2}\text{\oneBanTwoC}}_{\text{\xsuxfont 𒂠\footnotemark}}
   \xleftarrow{10} \text{\xsuxfont 𒀹𒄀}
   \xleftarrow{6}\text{\xsuxfont 𒌑𒀹}
   \xleftarrow{3}\text{\xsuxfont 𒋗𒆕𒀀𒀹}
@@ -801,7 +788,7 @@ TODO note the {\xsuxfont 𒄥𒑊𒌌}.
 Lengths of Early Dynastic IIIb dykes from Ŋirsu are far from the
 only numeric expressions that mix curviform and cuneiform numerals.
 
-The system of grain\footnote{Liquid capacities use a different system \cite[\pno~229 with note 12]{Archi2015}:\begin{equation*}
+The system of grain\footnote{Liquid capacities use a different system \cite[\pno~229 \withnote~12]{Archi2015}:\begin{equation*}
   \underset{\text{la-ḫa}}{\text{\xsuxfont 𒆷𒄩}}
   \xleftarrow{30}\underset{\text{sila₃}}{\text{\xsuxfont 𒋡}}
   \xleftarrow{6}\underset{\text{an-zamₓ}}{\text{\xsuxfont 𒀭𒍡}}\text.
@@ -844,20 +831,20 @@ so we were not able to rely on them in this specific case.}
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2, 2}]{P240675} {\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒋙𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3, 1}]{P240609} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
   %\item % r.3,3	1 ba-ri₂-zu 8 nig₂-sagšu ninda ARET 09 0064 http://ebda.cnr.it/tablet/view/1378#61586
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P240533} {\curviform\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}  % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P240533} {\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}  % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1381\#61931}{\recto~1, 5}]{P240697} {\oneAšC\oneDišC\footnote{Note the omitted {\xsuxfont 𒄘𒁇}.}\xsuxfont 𒈫𒂆 𒐈𒀭𒍡}% ARET 09 0067 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1382\#62088}{\recto~6, 2}]{P240653} {\curviform\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\curviform\xsuxfont 𒁹𒃻𒋙𒊕 𒈫𒈦𒀭𒍡} % ARET 09 0068  20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1382\#62088}{\recto~6, 2}]{P240653} {\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\xsuxfont 𒁹𒃻𒋙𒊕 𒈫𒈦𒀭𒍡} % ARET 09 0068  20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2, 6}]{P240654} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1, 8}]{P240531} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
   \item \cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1, 1}]{P241708}\footnote{From CDLI photo.} {\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
   \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1, 1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see Section~\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
 \end{enumerate}
-  %\item \cite[\obverse iii 2]{P240964} {\sixAšC\xsuxfont 𒇷\curviform\sixŊešTwoC\oneDišC\xsuxfont 𒄘𒁇\rotatebox[origin=c]{270}{\twoAšC}\xsuxfont 𒋙𒃻𒈫𒀭𒍡} [TODO comment or stick it in its own paragraph] % EbDA http://ebda.cnr.it/tablet/view/3184#155353, EST 061.
+  %\item \cite[\obverse iii 2]{P240964} {\sixAšC\xsuxfont 𒇷\sixŊešTwoC\oneDišC\xsuxfont 𒄘𒁇\rotatebox[origin=c]{270}{\twoAšC}\xsuxfont 𒋙𒃻𒈫𒀭𒍡} [TODO comment or stick it in its own paragraph] % EbDA http://ebda.cnr.it/tablet/view/3184#155353, EST 061.
 Note that higher numbers of {\text{\xsuxfont 𒄘𒁇}} are expressed in hundreds (\emph{mi-at} {\xsuxfont 𒈪𒀜})
 and then thousands (\emph{li-im} {\xsuxfont 𒇷𒅎}),
 as is typical in Ebla \cite[33]{Archi2015},
 \exempligratia, in \cite[\href{https://ebda.cnr.it/tablet/view/1324\#58019}{\verso~2, 3}]{P240532},
-{\oneAšC\xsuxfont 𒈪𒀜\curviform\oneŊešTwoC\threeUC\fiveAšC\xsuxfont 𒊺 𒄘𒁇}
+{\oneAšC\xsuxfont 𒈪𒀜\oneŊešTwoC\threeUC\fiveAšC\xsuxfont 𒊺 𒄘𒁇}
 ($100+60+30+5=195$~{\xsuxfont 𒄘𒁇} of grain). %1 mi-at 60-30-5 še gu₂-bar
 These expressions correspond to the following factor diagram:
 \begin{equation}
@@ -1205,7 +1192,7 @@ may be transliterated as $95$~gur, as in \volcite{2}[62]{Feuerherm2004}.
 The numerals may also be transliterated separately,
 but solely by their values in terms of the overt unit,
 as in EbDA transliterations:
-the aforementioned {\curviform\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}
+the aforementioned {\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}
 from \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P240533}
 is transliterated ``$20$-$1$-$1/2$~\emph{gu}₂-\emph{bar} $7$~nig₂-sagšu $2$-$1/2$~an-zamₓ\footnote{As
 of this writing, EbDA actually has an-zamᵪ, with U+\textcsc{1D6A}
@@ -1243,7 +1230,7 @@ where the transliterations of some the above examples are
 and ``$3$(barig) $2$(ban2) $7$(disz) $1/2$(disz) sila3'' for {\xsuxfont 𒑗𒑐𒐌𒈦𒋡}.
 CDLI and ePSD2 both distinguish curviform from cuneiform numerals in
 transliteration: the length
-\vphantom{\scalebox{0.85}{\sixŊešTwoC}}{\smash{\sixŊešTwoC}\threeUC\xsuxfont 𒃻𒁺\curviform\oneBanTwoC\xsuxfont 𒑌𒄀}
+\vphantom{\scalebox{0.85}{\sixŊešTwoC}}{\smash{\sixŊešTwoC}\threeUC\xsuxfont 𒃻𒁺\oneBanTwoC\xsuxfont 𒑌𒄀}
 from \cite[\reverse~2, 1]{P020129} is transliterated
 ``$6$(gesz2@c) $3$(u@c) \{ninda\}nindax(DU) $1/2$(asz@c) $4$(disz@t) gi''
 in CDLI, and ``$6$(geš₂ᶜ) $3$(uᶜ) \textsuperscript*{ninda}nindaₓ(DU) $1/2$(ašᶜ) $4$(dišᵗ) gi''
@@ -1262,7 +1249,7 @@ the trend, especially in more recent works in third millenium studies, seems to 
 represent numeral shape; for example, \cite{Maiocchi2024} gave an example of
 the input syntax used by the new ``Urban Economy Begins'' project as
 ``$10+5\text{c}(\text{GUR})+2(\text{BARIGA})+1(\text{BAN2})$'' for
-{\curviform\oneUC\fiveAšC\xsuxfont 𒑖𒑏}, with a c
+{\oneUC\fiveAšC\xsuxfont 𒑖𒑏}, with a c
 indicating that the GUR numerals are curviform, and the parenthetical
 GUR indicating that these are \oneAšC{} rather than \oneDišC{} numerals.
 % TODO cite the rant in Englund 2004.
