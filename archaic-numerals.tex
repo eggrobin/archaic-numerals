@@ -1298,40 +1298,49 @@ N13 not attested in CDLI
 \subsection{Stacking patterns}
 \label{stackingPatterns}
 The already-encoded numerals in the Cuneiform Numbers and Punctuation block
-distinguish some stacking patterns;
+distinguish some \emph{stacking patterns};
 for instance $9\text{\xsuxfont 𒁹}$ is encoded both as U+\textcsc{12446} {\xsuxfont 𒑆} and
 as U+\textcsc{1240E} {\xsuxfont 𒐎}.
-This is in part due to contrastive usage of stacking patterns;
-besides {\xsuxfont 𒑖} and {\xsuxfont 𒑗} which are characteristic of bariga measures,
+This is in part due to contrastive usage of stacking patterns.
+For instance, besides {\xsuxfont 𒑖} and {\xsuxfont 𒑗} which are characteristic of bariga measures,
 four bariga is written {\xsuxfont 𒐉} even where $4${\xsuxfont 𒁹} is written {\xsuxfont 𒐼}, as in
 \cites[\obverse~2, 3;\reverse~1, 17]{P255010}[\obverse~4;\reverse~5]{P292843}.
-This is also for compatibility with distinctions made in
+Another contrast is that between the stacking patterns used in scratch calculations in the SPVS,
+often {\xsuxfont 𒁹 𒈫 𒐈 𒐼 𒐊 𒐋 𒑂 𒑄 𒑆 𒌋 𒎙 𒌍 𒑩 𒑪}, and results
+in metrological systems,
+typically {\xsuxfont 𒁹 𒈫 𒐈 𒐉 𒐊 𒐋 𒐌 𒐍 𒐎 𒌋 𒎙 𒌍 𒐏 𒐐},
+occasionally co-occurring as in \cites{P142827}{P142357}.
+This separate encoding is also for compatibility with distinctions made in
 reference works and in some non-numeric transliterations;
 for instance, {\xsuxfont 𒐼} is \cite[No.~860]{MZL} and has the value limmu,
 and {\xsuxfont 𒐉} is \cite[No.~852]{MZL} and  has the value limmu₅.
 
-However, there is no such practice when it comes to numeric transliterations\footnote{The Sumerian word
+Numeric\footnote{The Sumerian word
 limmu means ``four'', so limmu and limmu₅ are still numbers. The distinction here is between
 usage in transliterations of phrases such as {\xsuxfont 𒈗 𒀭𒌒𒁕 𒐉𒁀𒆤}
 lugal an-ub-da limmu₅-ba-ke₄ (king of the four quarters) or of names,
-and of numeric expressions such as {\xsuxfont 𒐉𒋡} $4(\text{diš})$ sila₃.}.
-The stacking patterns used in numeric expressions change over time,
-and do not carry any semantics; the typical $4(\text{diš})$ is {\xsuxfont 𒐉} in Ur III,
+and of numeric expressions such as {\xsuxfont 𒐉𒋡} $4(\text{diš})$ sila₃.}
+transliterations occasionally distinguish the stacking patterns {\xsuxfont 𒐼 𒑩 𒑪},
+as in the CDLI transliterations of the aforementioned tablets,
+although this is rare; often $4(\text{diš})$ is {\xsuxfont 𒐉} in Ur III,
 but {\xsuxfont 𒐼} in the Neo-Assyrian period.
 
-Since they are not listed separately in classical sign lists nor
-assigned any different values, the stacking patterns from earlier periods
+However, the stacking patterns from earlier periods
 are not separately encoded; for instance,
 in ED IIIb Ŋirsu, {\xsuxfont 𒎙} $2$(u) often has one {\xsuxfont 𒌋} atop another.
-There is no evidence of a need to encode such variant stacking patterns;
-these distinctions would be incompatible with the state of the art in numeric transliterations,
-% TODO(egg): Including those by Englund
-and are not needed to represent reference works.
-Instead, they should be considered style variants, and an ED IIIb Ŋirsu font should have
+These older stacking patterns do not appear to be contrastive,
+are not marked in transliteration,
+and are not listed separately in sign lists
+nor assigned any different values.
+There is therefore no evidence of a need to encode them;
+instead, they should be considered style variants, and an ED IIIb Ŋirsu font should have
 an appropriate glyph for U+\textcsc{12399} {\xsuxfont 𒎙} \textcsc{CUNEIFORM SIGN U U}.
 
 Likewise, many stacking patterns are attested for the curviform numerals proposed in this document,
-and it is not proposed to separately encode them.
+and it is not proposed to separately encode them;
+these distinctions would be incompatible with the state of the art in numeric transliterations,
+%TODO(egg): Including those by Englund
+and are not needed to represent reference works.
 Idiosyncratic stacking patterns are in fact particularly common in Early Dynastic and earlier tablets,
 as they are structured in rectangular cases rather than lines,
 so that numerals may be laid out across the case in whichever way fits the available space;
