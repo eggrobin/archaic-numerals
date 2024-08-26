@@ -80,9 +80,9 @@
 12578	CUNEIFORM NUMERIC SIGN FIVE N48
 12579	CUNEIFORM NUMERIC SIGN ONE N45
 	= 1 šar₂ curved
-	* 12415 should be used for cuneiform 1 šar₂
-	* 12415 should be used for logographic šar₂, even when curved
-	x 12415 cuneiform numeric sign one shar2
+	* 122B9 should be used for cuneiform 1 šar₂
+	* 122B9 should be used for logographic šar₂, even when curved
+	x 122B9 cuneiform numeric sign one shar2
 1257A	CUNEIFORM NUMERIC SIGN TWO N45
 1257B	CUNEIFORM NUMERIC SIGN THREE N45
 1257C	CUNEIFORM NUMERIC SIGN FOUR N45
