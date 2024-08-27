@@ -1,9 +1,4 @@
 ; charset=UTF-8
-@@@	Meow
-@@@+	Meow?
-	Meow.
-@+		Meow!
-	Meow…
 @@	12550	Archaic Cuneiform Numbers	125A6
 @		Common Numerals
 @+		Used in the discrete counting system and other metrological systems
@@ -82,7 +77,7 @@
 	= 1 šar₂ curved
 	* 122B9 should be used for cuneiform 1 šar₂
 	* 122B9 should be used for logographic šar₂, even when curved
-	x 122B9 cuneiform numeric sign one shar2
+	x 122B9 cuneiform sign shar2
 1257A	CUNEIFORM NUMERIC SIGN TWO N45
 1257B	CUNEIFORM NUMERIC SIGN THREE N45
 1257C	CUNEIFORM NUMERIC SIGN FOUR N45
@@ -94,7 +89,7 @@
 12582	CUNEIFORM NUMERIC SIGN ONE N50
 	= 1 šarʾu curved
 	x 1242C cuneiform numeric sign one sharu
-	* used instead of 1258B in fourth millenium land area systems
+	* used instead of 1258E in fourth millenium land area systems
 	x 12434 cuneiform numeric sign one buru
 12583	CUNEIFORM NUMERIC SIGN TWO N50
 12584	CUNEIFORM NUMERIC SIGN THREE N50
@@ -122,17 +117,16 @@
 12591	CUNEIFORM NUMERIC SIGN FOUR BURU CURVED
 12592	CUNEIFORM NUMERIC SIGN FIVE BURU CURVED
 @		Early Dynastic capacity measures
-@+		Together with N08, N01, N14, N45, and N50
-12593	CUNEIFORM NUMERIC SIGN ONE BAN2
+12593	CUNEIFORM NUMERIC SIGN ONE BAN2 CURVED
 	* 1244F cuneiform numeric sign one ban2
 	= 1/2 aš curved
 	* used for one half in multiple metrological systems
 	x 12226 cuneiform sign mash
-12594	CUNEIFORM NUMERIC SIGN TWO BAN2
-12595	CUNEIFORM NUMERIC SIGN THREE BAN2
-12596	CUNEIFORM NUMERIC SIGN FOUR BAN2
-12597	CUNEIFORM NUMERIC SIGN FIVE BAN2
-@		System S′ Numerals
+12594	CUNEIFORM NUMERIC SIGN TWO BAN2 CURVED
+12595	CUNEIFORM NUMERIC SIGN THREE BAN2 CURVED
+12596	CUNEIFORM NUMERIC SIGN FOUR BAN2 CURVED
+12597	CUNEIFORM NUMERIC SIGN FIVE BAN2 CURVED
+@		Numerals of sexagesimal system S′
 @+		Used to count dead animals
 12598	CUNEIFORM NUMERIC SIGN ONE N02
 12599	CUNEIFORM NUMERIC SIGN TWO N02
