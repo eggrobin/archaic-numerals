@@ -89,6 +89,9 @@
 \newcommand\oneEšeThreeC{{\proposalfont\symbol{"12589}}}
 \newcommand\oneBurʾuC{{\proposalfont\symbol{"1258E}}}
 \newcommand\oneBanTwoC{{\proposalfont\symbol{"12593}}}
+\newcommand\oneNThirtyA{{\proposalfont\symbol{"125C2}}}
+\newcommand\oneNThirtyC{{\proposalfont\symbol{"125C3}}}
+\newcommand\oneNTwentyNineA{{\proposalfont\symbol{"125C9}}}
 
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
@@ -1297,16 +1300,72 @@ encountered in the cuneiform script.
 
 \section{Rationale for ED–Uruk numeral unification}
 \label{unificationRationale}
-TODO mention the bariga silliness in the CDLI transliteration of Gori's paper.
+A complete rationale for disunification between the non-numeric signs used
+in the fourth millenium and the already-encoded cuneiform signs will
+be given in the forthcoming proto-cuneiform encoding proposal.
+The core issue with extending the cuneiform script further back in time
+is that, since 1987, fourth millenium studies have used a different model
+of character identity and associated transliteration conventions,
+with names being given to structurally different glyphs, and no attempt being made
+at assigning phonetic values to them.
 
+This is not a mere classification of glyph variants, as contrastive meanings
+of these systematic variants can often be reconstructed,
+with, \exempligratia, signs KAŠ\textsubscript{a}, KAŠ\textsubscript{b}, and
+KAŠ\textsubscript{c}, depicting filled jars with a spout (a), a handle (c),
+or neither (b), being understood as referring to containers of different substances,
+see \cite[34\psq]{Englund2001}.
+However, not all identified systematic variants are understood, and the general
+approach to character identity is closer to that used for undeciphered or
+partially deciphered script.
+
+As part of the development of these conventions,
+a classification of fourth millenium numeric signs was developed; see \cite{DamerowEnglund1987}.
+This classification assigns to each unit numerals an identifier formed by the letter $N$ with a numeric subscript
+(sometimes with an additional alphabetic subscript):
+$N_1$ is \oneAšC, $N_{14}$ is \oneUC, $N_{34}$ is \oneŊešTwoC, etc.
+Transliterations of numeric expression then use those to identify the type of number used,
+thus $5N_1$ is \fiveAšC, and $5N_{14}$ is \fiveUC.
+
+In contrast with the use of parenthetical unit names,
+this approach does not require interpreting the quantity being counted.
+This is valuable in contexts where the exact meaning of the choice of numeral type
+is not fully understood, as the transliterations can otherwise force a dubious interpretation.
+For instance, the CDLI transliteration of \threeAšC\threeDišC{\xsuxfont 𒌆}  or \sixAšC\sixDišC{} in
+\cite[\reverse~1, 6;2, 2]{P283802} currently uses (barig@c) for the vertical numerals,
+suggesting a capacity measure; but \cite{Gori2023} interprets these instead
+as counting linen textiles.
+As a result, the fourth millenium conventions for numeral transliteration
+are used in Early Dynastic texts, especially those from the ED I--II period,
+even though the Sumerian text uses classical assyriological transliteration conventions.
+
+While the non-numeric signs are treated as undeciphered,
+the metrological systems used in the fourth millenium are well understood,
+as can be seen in \cite[165]{DamerowEnglund1987}.
+As a result, contrary to the non-numeric proto-cuneiform conventions,
+these numeric transliteration conventions are compatible with the classical ones described in
+section~\ref{transliteration}; they are indeed used interchangeably, as in TODO which uses the notation
+TODO in \cite{ePSD2}, but TODO in CDLI.
+Indeed, the numerals are used similarly in Early Dynastic metrological systems,
+and are visually identical.
+
+A disunification of numerals between the third and fourth millenium would
+therefore induce confusion as to which numerals should be used in third millenium
+studies, and would needlessly duplicate the encoding of at least seventy characters;
+by splitting the attestations, these separate encoding proposals would run into additional
+difficulties to supply evidence for encoding.
+
+Note that the structural variants designated by letters in fourth millenium notation have systematically
+been encoded, as they have occasionally be found to carry distinct numeric meaning.
+For instance, \oneNThirtyC{} $N_{30c}$ is listed as a variant of \oneNThirtyA{} $N_{30a}$ in
+\cite[166]{DamerowEnglund1987}, where the numeric value of either in relation to \oneNTwentyNineA{} $N_{29a}$  is still unknown,
+but their values are found in \cite[33]{Englund2004} to be $\text{\oneNThirtyC}=\frac{1}{10}\text{\oneNTwentyNineA}$, whereas
+$\text{\oneNThirtyA}=\frac{1}{6}\text{\oneNTwentyNineA}$.
 \section{Considerations on individual numeral series}
 [TODO Document to the extent possible the metrological systems in which each sign is used.
 Note the disunification of N9 and N10 from 4(ban₂@c) and 5(ban₂@c).]
 
 \section{Characters not included in this proposal}
-\subsection{Glyph variants not reflected in transliteration}
-TODO Comment on the nameless variant glyphs from L2/23-190 and note that they are illustrating
-an even wider glyphic range as shown in \cite{Englund2001}.
 \subsection{The fractions $\frac13$ and $\frac23$}
 % FIXCDLI P271238 o ii 6 is 1/3(asz@c), not @v.
 TODO {\xsuxfont 𒑝}, {\xsuxfont 𒑞}. Note the occasional omission of {\xsuxfont 𒋙},
@@ -1430,6 +1489,10 @@ in both cases preserving the plain text backing.
 %\subsection{Matters for higher-level protocols}
 %Rotated bits:
 %https://cdli.mpiwg-berlin.mpg.de/artifacts/101087
+
+\subsection{Other lyph variants not reflected in transliteration}
+TODO Comment on the nameless variant glyphs from L2/23-190 and note that they are illustrating
+an even wider glyphic range as shown in \cite{Englund2001}.
 
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
