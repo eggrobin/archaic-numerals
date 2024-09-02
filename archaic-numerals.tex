@@ -881,7 +881,7 @@ These expressions correspond to the following factor diagram:
 \label{modernUsage}
 Because of their prevalence in the Uruk and Early Dynastic periods,
 the proposed numerals are widely used in modern publications discussing metrology
-in those periods, as illustrated in Figures \ref{englund113}--\ref{GoriTransliteration}.
+in those periods, as illustrated in Figures \ref{EnglundTwoUC}--\ref{GoriTransliteration}.
 
 Since they contrast with the cuneiform numerals, they
 likewise appear contrastively in such publications.
@@ -902,6 +902,24 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
 
 \begin{figure}
   \begin{center}
+  \includegraphics[width=0.75\textwidth]{friberg-15.png}
+  \caption{TODO \cite[15]{Friberg1978}\label{FribergEquations}}
+  \end{center}
+\end{figure}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{friberg-49.png}
+  \caption{TODO \cite[49]{Friberg1978}\label{FribergFractions}}
+  \end{center}
+\end{figure}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{englund-132.png}
+  \caption{TODO \cite[132]{Englund1988}\label{EnglundTwoUC}}
+  \end{center}
+\end{figure}
+\begin{figure}
+  \begin{center}
   \includegraphics[width=0.75\textwidth]{englund-113.png}
   \caption{TODO \cite[113]{Englund1998}\label{englund113}}
   \end{center}
@@ -918,7 +936,12 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
   \caption{TODO \cite[303]{Krebernik1998}\label{krebernik303}}
   \end{center}
 \end{figure}
-
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{englund-15.png}
+  \caption{TODO \cite[132]{Englund2001}\label{englund15}}
+  \end{center}
+\end{figure}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-6.png}
@@ -1422,24 +1445,36 @@ and are not needed to represent reference works.
 Idiosyncratic stacking patterns are in fact particularly common in Early Dynastic and earlier tablets,
 as they are structured in rectangular cases rather than lines,
 so that numerals may be laid out across the case in whichever way fits the available space;
-this is illustrated in Figure~\ref{twentyTwoOxen}.
-Note that in that figure,
-the numerals need to be considerably enlarged in order to reproduce the layout of the
-tablet: \oneAšC{} has the same height as {\xsuxfont 𒄞}.
+this is illustrated in Figure~\ref{cheese}.
+Note also that the numerals need to be considerably enlarged in order to reproduce the layout of the
+tablets, so that \twoUC{} often spans two lines of cuneiform signs, as shown in Figure~\ref{twentyTwoOxen}.
 This is impractical when these numerals are set in text that
 contrasts them with the larger \oneŊešTwoC{},
 and inconsistent with actual practice when
-typesetting these numerals, as illustrated in section~\ref{modernUsage}:
+typesetting these numerals, as illustrated in Figure~\ref{EnglundTwoUC}:
 reproducing the layout of tablets is not within the scope of plain text.
 % TODO(egg): Consider using the : layout as the default and switching the example to P010018.
 % Or P010588?
 % P010843?
 %P011099, last case is probably best.
 \begin{figure}
+  \newlength{\cheeseWidth}
+  \settowidth{\cheeseWidth}{\rotatebox[origin=c]{270}{\LARGE\twoUC}{\LARGE\oneDišC}{\xsuxfont\scriptsize 𒓻}}
+\begin{center}
+  \parbox{\cheeseWidth}{%
+  \linespread{0}\selectfont{}
+  \smash{\rotatebox[origin=c]{270}{\LARGE\twoUC}{\LARGE\oneDišC}{\xsuxfont \rlap{\raisebox{-0.2em}{\scriptsize 𒓻}}\raisebox{0.5em}{\hspace*{1pt}\small 𒋗}}}\vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\\
+  \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\hfill \smash{\xsuxfont\scriptsize 𒋳}\\
+  \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\hfill \xsuxfont \smash{\raisebox{0.5em}{𒂵}}\smash{\small 𒉌}\hspace*{1pt}}
+  \caption{The layout of case \cites[\reverse~2, 3]{P011099}; the numeral \twoUC{} is rotated to fit the rounded corner of the tablet.}
+  \label{cheese}
+\end{center}
+\end{figure}
+\begin{figure}
 \newlength{\twentyTwoOxenWidth}
 \settowidth{\twentyTwoOxenWidth}{\scalebox{0.5}[1]{\LARGE\twoAšC}{\xsuxfont 𒄞}}
 \begin{center}
-  \rotatebox[origin=c]{270}{\LARGE\twoUC}\parbox{\twentyTwoOxenWidth}{%
+  {\LARGE\twoUC}\parbox{\twentyTwoOxenWidth}{%
   \linespread{0}\selectfont{}\vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\smash{\scalebox{0.5}[1]{\LARGE\twoAšC}\raisebox{2pt}{\xsuxfont 𒄞}}\\
   \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}{\hfill\smash{\xsuxfont 𒈬}\smash{\xsuxfont 𒀹}}}
   \caption{The layout of case \cites[\obverse~1, 1]{P020066}; the numeral \twoUC{} is spread across two lines.
@@ -1485,7 +1520,7 @@ the vertical stacking patterns are impractical.
 Variant stacking patterns, if needed, may be handled
 at a higher level as stylistic distinctions;
 Figure~\ref{9N34StackingPatterns} uses OpenType stylistic alternates,
-and Figure~\ref{twentyTwoOxen} rotates the character \twoUC{},
+and Figure~\ref{cheese} rotates the character \twoUC{},
 in both cases preserving the plain text backing.
 
 % FIXCDLI bad transliteration 4(barig) for 4(ban2) in P286521
@@ -1493,7 +1528,7 @@ in both cases preserving the plain text backing.
 %Rotated bits:
 %https://cdli.mpiwg-berlin.mpg.de/artifacts/101087
 
-\subsection{Other lyph variants not reflected in transliteration}
+\subsection{Other glyph variants not reflected in transliteration}
 TODO Comment on the nameless variant glyphs from L2/23-190 and note that they are illustrating
 an even wider glyphic range as shown in \cite{Englund2001}.
 
