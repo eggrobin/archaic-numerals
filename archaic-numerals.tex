@@ -93,6 +93,8 @@
 \newcommand\oneNThirtyC{{\proposalfont\symbol{"125B0}}}
 \newcommand\oneNTwentyNineA{{\proposalfont\symbol{"125B6}}}
 
+\newcommand{\nhphantom}[1]{\sbox0{#1}\hspace{-\the\wd0}}
+
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
 
@@ -1450,7 +1452,7 @@ reproducing the layout of tablets is not within the scope of plain text.
   \linespread{0}\selectfont{}
   \smash{\rotatebox[origin=c]{270}{\LARGE\twoUC}{\LARGE\oneDišC}{\xsuxfont \rlap{\raisebox{-0.2em}{\scriptsize 𒓻}}\raisebox{0.5em}{\hspace*{1pt}\small 𒋗}}}\vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\\
   \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\hfill \smash{\xsuxfont\scriptsize 𒋳}\\
-  \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\hfill \xsuxfont \smash{\raisebox{0.5em}{𒂵}}\smash{\small 𒉌}\hspace*{1pt}}
+  \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\hfill \xsuxfont \smash{\small 𒉌}\nhphantom{{\small 𒉌}𒂵}\smash{\raisebox{0.5em}{𒂵}}\hphantom{{\small 𒉌}\hspace*{1pt}}}
   \caption{The layout of case \cites[\reverse~2, 3]{P011099}; the numeral \twoUC{} is rotated to fit the rounded corner of the tablet.}
   \label{cheese}
 \end{center}
