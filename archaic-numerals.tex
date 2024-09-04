@@ -306,6 +306,13 @@ including compatibility considerations in section \ref{compatibility}.
 
 The overall picture of unifications and disunifications over time is illustrated in table~\ref{tableUnificationsDisunifications}.
 The Script\_Extensions property assignments in section~\ref{properties} reflect the overlap.
+Many of these numerals are also used in proto-Elamite\footnote{ISO 15924: Pelm, not yet encoded.} texts,
+where they are treated as identical characters in scholarship on proto-Elamite,
+so that they should be unified with the ones proposed in \cite{L2/23-196}.
+However, in the interest of time, we do not provide a detailed rationale for this unification in this document,
+and we are not proposing that the numerals be given the corresponding Script\_Extensions property value for now.
+Neither do we propose encoding any numerals that are solely attested in proto-Elamite texts,
+or well-attested in proto-Elamite texts but insufficiently attested in Uruk.
 
 [TODO(egg): Mention the other sections here too.]
 
@@ -800,8 +807,7 @@ but the unit sign {\xsuxfont 𒃻} is generally omitted; in addition, only tens 
 are used; these are equal to one rope, but the sign {\xsuxfont 𒂠} is not written either.
 Lengths shorter than one rope are expressed in half-ropes
 using the $\frac12$ sign {\xsuxfont 𒈦} (again with no {\xsuxfont 𒂠}),
-and then in reeds, \emph{with} the sign {\xsuxfont 𒄀}.
-Effectively, this yields the following factor diagram:
+and then in reeds, \emph{with} the sign {\xsuxfont 𒄀}, as follows:
 \begin{equation}
   \text{\xsuxfont 𒐕}
   \xleftarrow{\quad6\quad}\underset{\mathclap{\substack{1~\text{eše₂}=10~\text{nindan}\\1~\text{rope}=10~\text{rods}\\60~\text{m}}}}{\text{\xsuxfont 𒌋}}
@@ -810,7 +816,7 @@ Effectively, this yields the following factor diagram:
   \tag{$L_{\text{ED IIIb}}$}
   \label{systemLED}
 \end{equation}%
-\footnotetext{Note that the reeds are counted using \emph{tenû} numerals, {\xsuxfont 𒀹}, {\xsuxfont 𒑊}, {\xsuxfont 𒑋}, etc.}%
+\footnotetext{The reeds are counted using \emph{tenû} numerals, {\xsuxfont 𒀹}, {\xsuxfont 𒑊}, {\xsuxfont 𒑋}, etc.}%
 This is the system that was used to express the sides of the field in
 \cite{P020054} discussed in section~\ref{oldArgumentsForUnification}.
 In that tablet and most others from the same period, such as the ones
@@ -880,9 +886,10 @@ can be summarized by the following factor diagram:
   \tag{$L'_{\text{ED IIIb}}$}
   \label{systemLpED}
 \end{equation}
-\footnotetext{TODO(egg): Note that one unit may be omitted if the other is present}
+\footnotetext{With either unit omitted, as in the examples above, or both, as in
+\cite[\obverse~2, 1]{P020129} {\oneŊešTwoC\oneUC\xsuxfont 𒑋𒄀}.}
 
-\subsubsection{Cheese and wheat in Ŋirsu}
+\subsubsection{Butter, cheese and wheat in Ŋirsu}
 A similar mixture of cuneiform and curviform numerals may be observed with the capacity system;
 indeed, the previously described {\xsuxfont 𒄥𒊕𒅅} system uses {\xsuxfont 𒀹} numerals for {\xsuxfont 𒋡} \cites[43]{Friberg1978}{Lecompte2016}:
 \begin{equation}
@@ -899,23 +906,36 @@ indeed, the previously described {\xsuxfont 𒄥𒊕𒅅} system uses {\xsuxfont
 as in \cites[\reverse~1, 4]{P020016}{P020065}[\obverse~1, 3;\reverse~2, 1]{P020090}[\reverse~3,1]{P020092}[\obverse~1, 2]{P020137} and others,
 where ban₂ counted with \oneBanTwoC{} numerals are followed by sila₃ counted with {\xsuxfont 𒀹} numerals.
 Curviform numerals are also used to count sila₃, but not\footnote{As of this writing,
-the single occurrence of (ban2@c) followed by curviform numerals and sila3 in CDLI,
+the single occurrence of (ban2@c) followed by curviform numerals and sila3 in ED IIIb Ŋirsu transliterations on CDLI,
 4(ban2@c) 3(asz@c) sila3 in \cite[\obverse~4, 7]{P221815}, is incorrect: it should be 4(ban2@c) 3(disz@t) sila3.}
-in combination with larger units. This contrast can be seen in \cite{P220927},
-which counts butter ({\xsuxfont 𒉌}, i₃) in {\xsuxfont 𒂁\sixAšC 𒋡}, {\xsuxfont 𒂁\eightAšC 𒉌𒋡}, and {\xsuxfont 𒂁\oneUC\twoAšC 𒋡}, pots of six, eight, and twelve sila₃,
-themselves counted using the discrete counting system\footnote{Including the fraction {\xsuxfont 𒑞}, and with subtractive notation, \exempligratia,
-{\xsuxfont\twoAšC 𒂁𒇲𒑞} ``two pots (of one sila₃) minus one third (pot)'',
-or in the total, {\xsuxfont\oneUC 𒇲\oneAšC 𒂁\sixAšC 𒋡} ten minus one pots of six sila₃.
-Such subtractive notation is common in most of the metrological systems discussed here; it appears in the ED IIIa period \cite[77]{Robson2008},
-but it presents no complexity for character encoding. The sign {\xsuxfont 𒇲} (lal₂, ``minus'')
-is often ligated with the following numerals, with the subtrahend placed under a sometimes considerably enlarged {\xsuxfont 𒇲},
-similar to the layout of the radical in modern mathematical notation;
-see \cite[\reverse~3,1;2]{P020092}.},
-but counts cheese ({\xsuxfont 𒓻}, gaʾar) using the {\xsuxfont 𒄥𒊕𒅅} capacity system, with {\xsuxfont 𒀹} numerals for the sila₃.
+as part of the {\xsuxfont 𒄥} systems.
+This contrast can be seen in \cite{P220927},
+which measures butter ({\xsuxfont 𒉌}, i₃)
+with a different capacity system, using the {\xsuxfont 𒂁} (dug, ``pot'') of $20$~{\xsuxfont 𒋡},
+with \oneAšC{} and \oneUC{} numerals\footnote{This tablet also uses subtractive notation:
+{\xsuxfont\twoAšC 𒂁𒇲𒑞} ``two pots minus one third (sila₃)'',
+{\xsuxfont\oneUC \rlap{𒇲}\oneAšC 𒂁\sixAšC 𒋡} ``ten minus one pots, six sila₃''.
+Such subtractive notation is common in most of the metrological systems discussed here;
+it appears in the ED IIIa period \cite[77]{Robson2008}.
+We shall not discuss it further, as presents no complexity for character encoding.
+It is noteworthy that the sign {\xsuxfont 𒇲} (lal₂, ``minus'')
+is often ligated with the following numerals,
+with the subtrahend placed under a sometimes considerably enlarged {\xsuxfont 𒇲},
+similar to the layout of the radical in modern mathematical notation,
+see, \exempligratia, \cite[\reverse~3,1;2]{P020092}.} for both the {\xsuxfont 𒂁} and the {\xsuxfont 𒋡}, thus \cite[504\psq]{Powell1987}\begin{equation}
+  \underbrace{\text{\oneUC}
+  \xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒂁}}
+  \xleftarrow{2}\underbrace{\text{\oneUC}
+  \xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒋡}}
+  \xleftarrow{\frac{3}{2}}{\text{\xsuxfont 𒑞}}
+  \xleftarrow{2}{\text{\xsuxfont 𒑝}}\text,
+  \tag{$C_{\text{\xsuxfont 𒂁}}$}
+  \label{systemCdug}
+\end{equation}
+but counts cheese ({\xsuxfont 𒓻}, gaʾar) using the {\xsuxfont 𒄥𒊕𒅅} capacity system, with {\xsuxfont 𒀹} numerals for the {\xsuxfont 𒋡}.
 % FIXCDLI P221815 4(ban2@c) 3(asz@c) sila3 should be 4(ban2@c) 3(disz@t) sila3.
 
-It is not only pots that come in multiple sizes in ED IIIb Ŋirsu, but also {\xsuxfont 𒄥}.
-Another capacity system is the {\xsuxfont 𒄥𒑊𒌌}, the gur of two ul:
+Another capacity system in ED IIIb Ŋirsu is the {\xsuxfont 𒄥𒑊𒌌}, the gur of two ul:
 \begin{equation}
 \underbrace{\text{\oneUC}
 \xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒄥𒑊𒌌}}
@@ -1243,7 +1263,7 @@ these numbers: \cite[\href{https://oracc.museum.upenn.edu/dcclt/P215653.3}{a~1�
 however, they are written with {\xsuxfont 𒁹} numerals, whereas they are written with
 {\oneAšC} numerals in the Early Dynastic witnesses; since {\xsuxfont 𒁹}
 and {\xsuxfont 𒀸} are distinct\footnote{Besides the contrasts in numeric usage
-mentioned in section~\ref{capacity}, these characters are clearly
+mentioned in section~\ref{capacity}, these (already-encoded) characters were clearly
 not unifiable because of the many contrasts in non-numeric usage between them;
 several values of {\xsuxfont 𒀸} which are not shared with {\xsuxfont 𒁹}
 have already been mentioned, but perhaps most striking is the fact that,
@@ -1453,6 +1473,8 @@ be misinterpreted:
 {\oneAšC\xsuxfont 𒁹} could be read as one {\xsuxfont 𒄘𒁇} and one {\xsuxfont 𒃻𒋙𒊕},
 where {\oneAšC\oneDišC} would be one and a half {\xsuxfont 𒄘𒁇};
 {\xsuxfont 𒀸𒊕} is a personal name, but {\oneAšC\xsuxfont 𒊕} would be ``one slave''.
+
+TODO mention the risk of confusion about character identity.
 
 At the same time, contrary to most disunifications,
 the separate encoding of curviform numerals poses no serious compatibility issues
