@@ -86,9 +86,18 @@
 \newcommand\threeŠarʾuC{{\proposalfont\symbol{"12584}}}
 \newcommand\fourŠarʾuC{{\proposalfont\symbol{"12585}}}
 \newcommand\fiveŠarʾuC{{\proposalfont\symbol{"12586}}}
+\newcommand\oneEighthIkuC{{\proposalfont\symbol{"12587}}}
+\newcommand\oneEighthIkuCV{{\proposalfont\symbol{"12588}}}
+\newcommand\oneQuarterIkuC{{\proposalfont\symbol{"12589}}}
+\newcommand\oneQuarterIkuCV{{\proposalfont\symbol{"1258A}}}
+\newcommand\oneHalfIkuCV{{\proposalfont\symbol{"1258B}}}
 \newcommand\oneEšeThreeC{{\proposalfont\symbol{"1258C}}}
 \newcommand\oneBurʾuC{{\proposalfont\symbol{"1258E}}}
 \newcommand\oneBanTwoC{{\proposalfont\symbol{"12593}}}
+\newcommand\twoBanTwoC{{\proposalfont\symbol{"12594}}}
+\newcommand\threeBanTwoC{{\proposalfont\symbol{"12595}}}
+\newcommand\fourBanTwoC{{\proposalfont\symbol{"12596}}}
+\newcommand\fiveBanTwoC{{\proposalfont\symbol{"12597}}}
 \newcommand\oneNThirtyA{{\proposalfont\symbol{"125AF}}}
 \newcommand\oneNThirtyC{{\proposalfont\symbol{"125B0}}}
 \newcommand\oneNTwentyNineA{{\proposalfont\symbol{"125B6}}}
@@ -327,7 +336,14 @@ The Script\_Extensions property assignments in section~\ref{properties} reflect 
 
 \section{Rationale for curviform--cuneiform disunification}
 \label{disunificationRationale}
-TODO(egg): blurb. (Maybe talk about Powell's ink colour analogy here?)
+The numbering systems that use cuneiform numerals are descended from the ones that use curviform numerals,
+and many of the cuneiform signs have clear curviform counterparts across this transition.
+Co-occurrences are sometimes described by analogy to distinctions that are not the realm of plain text,
+as in \cite[215]{Powell1972} ``in the same fashion as we use black and red ink'';
+however, we must bear in mind that such analogies are not made in the context of character encoding discussions.
+In 2004, the curviform numerals were deemed unencodable for the time being; however,
+closer inspection reveals that the distinction functions less like markup than was argued at the time,
+and that the unification is problematic.
 
 \subsection{The cuneiform encoding model}
 \label{xsuxModel}
@@ -337,9 +353,9 @@ For instance, the sign IM
 may resemble {\cuneiformComposite 𒅎} in texts from Early Dynastic IIIa Šuruppag as in the character code
 charts,
 {\cuneiformComposite 𒉎} % TODO(egg): Do something clever so the underlying text is 𒅎.
-later in the third millenium\footnote{Merging with U+\textcsc{1224E} \textcsc{cuneiform sign ni2}.},
+later in the third millenium\footnote{Merging with U+\textcsc{1224E} \textcsc{CUNEIFORM SIGN NI2}.},
 {\obfont 𒅎} in Old Babylonian cursive,
-{\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+\textcsc{1214E} \textsc{cuneiform sign im}.
+{\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+\textcsc{1214E} \textcsc{CUNEIFORM SIGN IM}.
 
 This encoding model allows for the interoperable representation of editions
 of diachronic reference works such as sign lists\footnote{Notably \cite{OSL} and the online edition of \cite{MZL} in \cite[Signs]{eBL}.}
@@ -387,7 +403,7 @@ The photos in CDLI clearly show that this is in fact a vertical wedge.}
 \begin{tabular}{l l l l l}
 \xsuxfont 𒌍\footnotemark& \xsuxfont 𒑎 &\xsuxfont 𒄀&\xsuxfont 𒊕&\xsuxfont 𒁲\\
 $3$(u) & $6$(diš \emph{tenû}) & gi & saŋ & sa₂\\
-$3$(ropes) & $6$ & reed & front & equal
+$3$ (ropes) & $6$ & reed & front & equal
 \end{tabular}\\
 \footnotetext{Note that ED IIIb {\xsuxfont 𒌋} numerals have a somewhat
 different appearance from those of the Ur III period used in this transcription;
@@ -399,17 +415,22 @@ the sign {\xsuxfont 𒌍} in \cite{P020054} looks more like Ur III {\xsuxfont �
 \oneAšC&
 \oneDišC\\
 ašag-bi&1(bur₃ᶜ)&1(eše₃ᶜ)&1(ikuᶜ)&1/2(ikuᶜ)\\
-field-this&
+{\setlength{\tabcolsep}{0em}
+\begin{tabular}{ll}
+  ašag&=bi\\
+  field&=\textcsc{DEM}\footnotemark
+  \end{tabular}}
 &
 &
 &
-\end{tabular}\\\begin{flushright}
-\begin{tabular}{lll}
-\multicolumn{3}{l}{\xsuxfont 𒓺𒋛𒂵𒄰}\\
-\multicolumn{3}{l}{tugₓ(LAK483)-si-ga-kam}\\
-tugsiga&=ak&=am\\
-ploughed&=GEN&=COP
-\end{tabular}
+\end{tabular}\footnotetext{Alternatively: area=\textcsc{POSS.3.SG.NH}, ``its area''.}\\\begin{flushright}
+{\setlength{\tabcolsep}{0em}
+\begin{tabular}{llll}
+\multicolumn{4}{l}{\xsuxfont 𒓺𒋛𒂵𒄰}\\
+\multicolumn{4}{l}{tugₓ(LAK483)-si-ga-kam}\\
+tugsiga&=ak&=am&-∅\\
+ploughed&=\textcsc{GEN}&=\textcsc{COP}&-\textcsc{3.SG.S}
+\end{tabular}}
 \end{flushright}
 \end{quote}
 The argument made in \cite[4]{L2/04-099} is that this is comparable to a stylistic distinction such as\footnote{We
@@ -546,8 +567,11 @@ as follows \cites[\pno~295 \withnote~b and c]{Robson2008}[378]{Friberg2007}{Robs
 this system does not use any symbols separate from the numerals
 for the individual units (\emph{ubûm}, \emph{ikûm}, \emph{eblum}, and \emph{būrum}).
 As mentioned in \cite{Robson2019}, the whole numeric expression for the area would be followed by the sign {\xsuxfont 𒃷}
-functioning as punctuation\footnote{TODO(egg): acknowledge Proust 2020
-  but note that this is irrelevant to encoding concerns}, but the numerals are tied to the metrology; thus
+functioning as punctuation\footnote{This sign is sometimes interpreted as a measurement unit,
+and transliterated iku, see, \exempligratia, \cite[385\psqq]{Proust2020}, or transliterations in
+\cite{Feuerherm2004} discussed in section~\ref{transliteration}.
+Even with this interpretation, the sequence of numerals used, and the interpretation of numerals shared
+with other metrological systems, is specific to system~\ref{systemGOB}.}, but the numerals are tied to the metrology; thus
 a surface of $5~\text{\emph{būr}}$ $1~\text{\emph{ebel}}$ $4~\text{\emph{ikû}}$ ($100~\text{\emph{ikû}}$, $36~\text{ha}$) would be written\footnote{As in the surface of the field of {\xsuxfont 𒀀𒅗𒋡𒆠} (the city of Apisal) reported on \cite[r.~1]{P102305}}
 {\xsuxfont 𒐐𒑘𒐂𒃷}. Contrast this with systems
 where the same numerals are used for different units,
@@ -628,14 +652,15 @@ its Early Dynastic counterpart presented in section~\ref{earlyMetrology}.
 Metrological tables use the following units \cites[118]{Friberg2007}{Robson2019}:
 \begin{equation}
   \underset{\substack{\text{danna}\\\text{\emph{bērum}}\\\text{league}\\10,8~\text{km}}}{\text{\xsuxfont 𒁹𒆜𒁍}}
-  \xleftarrow{60}\underset{\substack{\text{UŠ\footnotemark}\\\\\text{cable}\\360~\text{m}}}{\text{\xsuxfont 𒁹𒍑}}
-  \xleftarrow{10}\underset{\substack{\text{nindan}\\\text{\emph{nindanum}}\\\text{rod}\\6~\text{m}}}{\text{\xsuxfont 𒁹𒃻}}
+  \xleftarrow{30}\underset{\substack{\text{UŠ\footnotemark}\\\text{cable}\\360~\text{m}}}{\text{\xsuxfont 𒁹𒍑}}
+  \xleftarrow{60}\underset{\substack{\text{nindan}\\\text{\emph{nindanum}}\\\text{rod}\\6~\text{m}}}{\text{\xsuxfont 𒁹𒃻}}
   \xleftarrow{12}\underset{\substack{\text{kuš₃}\\\text{\emph{ammatum}}\\\text{cubit}\\50~\text{cm}}}{\text{\xsuxfont 𒁹𒌑}}
   \xleftarrow{30}\underset{\substack{\text{šu-si}\\\text{\emph{ubānum}}\\\text{finger}\\17~\text{mm}}}{\text{\xsuxfont 𒁹𒋗𒋛}}\text.
   \tag{$L_{\text{Ur III/OB}}$}
   \label{systemLOB}
 \end{equation}
-\footnotetext{TODO}
+\footnotetext{As indicated by the capitalization, the reading of this sign is unknown; see \cite[465\psqq]{Powell1987}
+for a discussion of various hypotheses.}
 Two more units appear occasionally \cites[459]{Powell1987}[118]{Friberg2007}{Robson2019}:
 \begin{equation}
   \text{\xsuxfont 𒁹𒆜𒁍}
@@ -651,13 +676,24 @@ Two more units appear occasionally \cites[459]{Powell1987}[118]{Friberg2007}{Rob
 In addition, there are Akkadian names for the half-rope and half-reed,
 see \cites[463\psq]{Powell1987}.
 \subsubsection{Fractions}
-TODO
+Fractions of the \emph{ikîm}, $\text{\xsuxfont 𒀹}=\frac12\text{\xsuxfont 𒀸}$ and
+$\text{\xsuxfont 𒑠}=\frac14\text{\xsuxfont 𒀸}$, have already been encountered.
+In other contexts, the fraction $\frac{1}{2}$ is written {\xsuxfont 𒈦},
+and the fractions $\frac13$ and $\frac23$ are written {\xsuxfont 𒑚} and
+{\xsuxfont 𒑛}.
+The latter two signs are derived from curviform signs
+{\xsuxfont 𒑝} and {\xsuxfont 𒑞}, which are already separately encoded;
+these are in turn derived from the sign {\xsuxfont 𒋙} (ŠU₂),
+whose Early dynastic form resembles {\xsuxfont\addfontfeature{StylisticSet=1} 𒋙},
+and \oneDišC{} numerals; see \cite[113; 134]{Powell1971}.
+The {\xsuxfont 𒋙} is sometimes omitted, as in
+\cites[\href{http://ebda.cnr.it/tablet/view/1328\#58364}{\verso~6, 9}]{P240545}{P221530}{P221531}{P271238}{P274845}.
 
 \subsection{Curviform numerals in early metrologies}
 \label{earlyMetrology}
 
-At first sight, the metrological systems from the Early Dynastic period match the
-ones previously mentioned.
+At first sight, the metrological systems from the Early Dynastic period
+resemble the ones previously mentioned.
 In particular, the discrete counting system used in the Early Dynastic period
 (and earlier in the Uruk period) clearly mirrors system \ref{systemSOB}
 \cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
@@ -671,9 +707,10 @@ In particular, the discrete counting system used in the Early Dynastic period
 \tag{$S$}
 \label{systemS}
 \end{equation}
-Likewise the area system used in the Early Dynastic IIIb period mirrors system \ref{systemGOB}
+Likewise the area system used in the Early Dynastic IIIb period for areas
+of one \emph{ikûm} and greater mirrors system \ref{systemGOB}
 \cites[72]{LAK}[63]{NissenDamerowEnglund1993}[378]{Friberg2007}{Lecompte2016}:
-\begin{equation}
+\begin{equation*}
 \text{\oneŠarʾuC}
 \xleftarrow{10}\text{\oneŠarTwoC}
 \xleftarrow{6}\text{\oneBurʾuC}
@@ -681,12 +718,12 @@ Likewise the area system used in the Early Dynastic IIIb period mirrors system \
 \xleftarrow{3}{\text{\oneEšeThreeC}}
 \xleftarrow{6}\text{\oneAšC}\text,
 \tag{$G_{\text{ED IIIb}}$}
-\label{systemGED}
-\end{equation}
-
-As noted in \cite[4]{L2/04-099} (see section~\ref{oldArgumentsForUnification}), the vertical
-{\xsuxfont 𒁹} from \ref{systemSOB} becomes a horizontal {\oneAšC} in system \ref{systemS}.
-It is however far from the only case of such a reallocation of function.
+\end{equation*}
+with consistent use of the numerals: \oneUC{} corresponds to {\xsuxfont 𒌋},
+\oneŠarTwoC{} to {\xsuxfont 𒊹}, and \oneŠarʾuC{} to {\xsuxfont 𒐬}.
+An exception to this correspondence, noted in \cite[4]{L2/04-099} (see section~\ref{oldArgumentsForUnification}),
+is that the vertical {\xsuxfont 𒁹} from \ref{systemSOB} corresponds to a horizontal {\oneAšC} in system \ref{systemS}.
+This is however far from the only case of such a reallocation of function.
 The earlier form of System G is \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
 \begin{equation}
 \text{\oneŠarTwoC}
@@ -697,11 +734,59 @@ The earlier form of System G is \cites[141,165]{DamerowEnglund1987}[378]{Friberg
 \tag{$G$}
 \label{systemG}
 \end{equation}
-Observe that, as noted in \cites[142]{DamerowEnglund1987}, {\oneŠarʾuC} changes meaning from $10 \text{\oneUC}$ in system \ref{systemG} to $600 \text{\oneUC}$ in system \ref{systemGED}.
+Observe that, as noted in \cites[142]{DamerowEnglund1987},
+{\oneŠarʾuC} changes meaning from $10 \text{\oneUC}$ in system \ref{systemG} to $600 \text{\oneUC}$ in system \ref{systemGED}.
 System \ref{systemG} is used in the Uruk period, but also
 in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003},
 whereas \ref{systemGED} is the ``area 1'' system).
 
+Another example of nontrivial correspondence between cuneiform and curviform numerals
+may be found by comparing the fractions the Early Dynastic IIIb area system\footnote{
+  A variant is $\text{\oneŠarʾuC}
+  \xleftarrow{10}\text{\oneŠarTwoC}
+  \xleftarrow{6}\text{\oneBurʾuC}
+  \xleftarrow{10}{\text{\oneUC}}
+  \xleftarrow{3}{\text{\oneEšeThreeC}}
+  \xleftarrow{6}\text{\oneAšC}
+  \xleftarrow{2}\text{\oneHalfIkuCV}
+  \xleftarrow{2}\text{\oneQuarterIkuCV}
+  \xleftarrow{2}\text{\oneEighthIkuCV}$, see \cite[218]{Powell1972}.
+},
+\begin{equation}
+\text{\oneŠarʾuC}
+\xleftarrow{10}\text{\oneŠarTwoC}
+\xleftarrow{6}\text{\oneBurʾuC}
+\xleftarrow{10}{\text{\oneUC}}
+\xleftarrow{3}{\text{\oneEšeThreeC}}
+\xleftarrow{6}\text{\oneAšC}
+\xleftarrow{2}\text{\oneDišC}
+\xleftarrow{2}\text{\oneQuarterIkuC}
+\xleftarrow{2}\text{\oneEighthIkuC\footnotemark}\text,
+\tag{$G_{\text{ED IIIb}}$}
+\label{systemGED}
+\end{equation}%
+\footnotetext{The cuneiform counterpart is {\xsuxfont 𒑟}.}%
+with the numerals of a contemporaneous capacity system:
+\begin{equation}
+\underbrace{
+\text{\oneŊešʾuC} \xleftarrow{10}\text{\oneŊešTwoC}
+\xleftarrow{6}\text{\oneUC}
+\xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒄥𒊕𒅅}}
+\xleftarrow{4}{\text{\oneDišC}}
+\xleftarrow{6}{\text{\oneBanTwoC}}\text,
+%\xleftarrow{\ 10\ }\underset{\mathclap{\substack{\text{sila₃}\\\text{\emph{qûm}}\\1~\text{l}}}}{\text{\xsuxfont 𒁹𒋡}}\text,
+\tag{$C_{\text{\xsuxfont 𒄥𒊕𒅅}}$}
+\end{equation}
+both described in \cite{Lecompte2016}.
+While the size of the \smash{\xsuxfont 𒄥𒊕𒅅} (gur saŋ ŋal₂) in bariga is different from that of the Old Babylonian {\xsuxfont 𒄥},
+the basic structure of the capacity system is recognizable, with \oneDišC{} corresponding to {\xsuxfont 𒁹} for bariga,
+\oneBanTwoC--\fiveBanTwoC corresponding to {\xsuxfont 𒑏}--{\xsuxfont 𒑔} for ban₂, and the {\xsuxfont 𒄥}
+counted with \oneAšC{} rather than {\xsuxfont 𒀸} numerals.
+However, the half-\emph{ikûm} is counted with the same \oneDišC{} as the bariga,
+whereas it uses a different sign, {\xsuxfont 𒀹}, in the Old Babylonian system.
+As we will see, this is cannot be handled as a split, by giving {\xsuxfont 𒀹}
+the glyph \oneDišC{} in an Early Dynastic IIIb font, as the {\xsuxfont 𒀹} numeral series
+is also in use in that period.
 \subsubsection{Field lengths in Ŋirsu}
 The length system of the Early Dynastic IIIb state of Lagaš is of particular interest.
 As described in \cites[466]{Powell1987}[289\psq]{Lecompte2020}, lengths are expressed in rods,
@@ -718,37 +803,46 @@ Effectively, this yields the following factor diagram:
   \xleftarrow{10}\underset{\substack{\text{gi}\\\text{reed}\\3~\text{m}}}{\text{\xsuxfont 𒀹𒄀\footnotemark}}\text.
   \tag{$L_{\text{ED IIIb}}$}
   \label{systemLED}
-\end{equation}
-\footnotetext{Note that the reeds are counted using \emph{tenû} numerals, {\xsuxfont 𒀹}, {\xsuxfont 𒑊}, {\xsuxfont 𒑋}, etc.}
+\end{equation}%
+\footnotetext{Note that the reeds are counted using \emph{tenû} numerals, {\xsuxfont 𒀹}, {\xsuxfont 𒑊}, {\xsuxfont 𒑋}, etc.}%
 This is the system that was used to express the sides of the field in
 \cite{P020054} discussed in section~\ref{oldArgumentsForUnification}.
-In that tablet and others from the same period, such as the ones
+In that tablet and most others from the same period, such as the ones
 discussed in \cite{Lecompte2020}, areas are expressed in
-system \ref{systemGED}, with curviform numerals\footnote{TODO(egg):
-Note the handful of late Urukagina tablets that start to have cuneiform areas.};
+system \ref{systemGED}, with curviform numerals\footnote{A CDLI search for \texttt{"(bur3)"} ({\xsuxfont 𒌋} numerals used for areas)
+currently returns 15 ED IIIb results, whereas one for \texttt{"(bur3@c)"} (\oneUC{} numerals used for areas) returns 206.
+Further, when dated, the tablets with cuneiform bur₃ are from the reigns of {\xsuxfont 𒌷𒅗𒄀𒈾} (variously transliterated
+iri-inim-gi-na, uru-ka-gi-na, etc.) and
+{\xsuxfont 𒈗𒍠𒄀𒋛} (lugal-zag-ge-si), the last two kings of ED IIIb Lagaš.};
 in the absence of overt units, such as when dealing with length that are
 integer multiples of a half-rope\footnote{This is the case of the sides of the
 field in \cite[\obverse~ii~2--3]{P020054}.},
 the use of curviform or cuneiform numerals therefore disambiguates
 a numeric expression between an area and a length,
-and therefore the interpretation of its
+and thus the interpretation of its
 numerals between systems \ref{systemGED} and \ref{systemLED}.
 The sign {\xsuxfont 𒃷},
 which would also disambiguate the interpretation as an area,
 is sometimes used after areas in ED IIIb Lagaš, but not systematically;
 in particular the area of the first field in \cite{P020054} does not use this suffix.
 See \cite{Lecompte2020} for many examples with and without {\xsuxfont 𒃷}.
+There are other such co-occurrences contrasting between metrological systems;
+for instance, \cite[\pno~303 \withnote~686]{Krebernik1998} mentions
+the use of cuneiform numerals for days and months\footnote{That
+note also mentions a contrast between the use of curviform numerals to count people
+and curviform numerals to count bread alotted to them in \cite{P010876}; such contrasts are more akin
+to styling, and might not, on their own, justify the disunification.}.
 
 \subsubsection{Dyke lengths in Ŋirsu}
 \cites[466]{Powell1987} notes that reeds ``are regularly written with the normal,
 cuneiform end of the stylus. Higher units are usually written with the reversed
-(round) end of the stylus.'' [TODO(egg): also mention Krebernik 1998 p. 303 \withnote~686.]
+(round) end of the stylus.''
 Powell does not elaborate on the specifics of this mixed use of numerals,
 but a cursory search in CDLI finds many occurrences\footnote{A search for
 curviform numerals followed by some number of reeds counted in (\emph{tenû})
 cuneiform numerals currently finds 125 occurrences
 across 47 tablets.}, such as:
-\begin{itemize}[nosep] % TODO(egg): Check the photos while adding them to the bibliography.
+\begin{itemize}[nosep]
   \item \cite[\obverse~1, 4]{P221305}\footnote{CDLI only has a copy, but a photo may be found in
   \cite[82]{Lecompte2012}. On that photo the {\xsuxfont 𒋗𒆕𒀀𒑊} is not visible.
   Lecompte notes that the copy is faithful;
@@ -782,14 +876,52 @@ can be summarized by the following factor diagram:
 \end{equation}
 \footnotetext{TODO(egg): Note that one unit may be omitted if the other is present}
 
-\subsubsection{Grain in Ŋirsu}
+\subsubsection{Cheese and wheat in Ŋirsu}
+A similar mixture of cuneiform and curviform numerals may be observed with the capacity system;
+indeed, the previously described {\xsuxfont 𒄥𒊕𒅅} system uses {\xsuxfont 𒀹} numerals for {\xsuxfont 𒋡} \cites[43]{Friberg1978}{Lecompte2016}:
+\begin{equation}
+\underbrace{
+\text{\oneŊešʾuC} \xleftarrow{10}\text{\oneŊešTwoC}
+\xleftarrow{6}\text{\oneUC}
+\xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒄥𒊕𒅅}}
+\xleftarrow{4}{\text{\oneDišC}}
+\xleftarrow{6}{\text{\oneBanTwoC}}
+\xleftarrow{6}{\text{\xsuxfont 𒀹𒋡}}\text,
+\tag{$C_{\text{\xsuxfont 𒄥𒊕𒅅}}$}
+\label{systemCgursaŋŋal}
+\end{equation}
+as in \cites[\reverse~1, 4]{P020016}{P020065}[\obverse~1, 3;\reverse~2, 1]{P020090}[\reverse~3,1]{P020092}[\obverse~1, 2]{P020137} and others,
+where ban₂ counted with \oneBanTwoC{} numerals are followed by sila₃ counted with {\xsuxfont 𒀹} numerals.
+Curviform numerals are also used to count sila₃, but not\footnote{As of this writing,
+the single occurrence of (ban2@c) followed by curviform numerals and sila3 in CDLI,
+4(ban2@c) 3(asz@c) sila3 in \cite[\obverse~4, 7]{P221815}, is incorrect: it should be 4(ban2@c) 3(disz@t) sila3.}
+in combination with larger units. This contrast can be seen in \cite{P220927},
+which counts butter ({\xsuxfont 𒉌}, i₃) in {\xsuxfont 𒂁\sixAšC 𒋡}, {\xsuxfont 𒂁\eightAšC 𒉌𒋡}, and {\xsuxfont 𒂁\oneUC\twoAšC 𒋡}, pots of six, eight, and twelve sila₃,
+themselves counted using the discrete counting system\footnote{Including the fraction {\xsuxfont 𒑞}, and with subtractive notation, \exempligratia,
+{\xsuxfont\twoAšC 𒂁𒇲𒑞} ``two pots (of one sila₃) minus one third (pot)'',
+or in the total, {\xsuxfont\oneUC 𒇲\oneAšC 𒂁\sixAšC 𒋡} ten minus one pots of six sila₃.
+Such subtractive notation is common in most of the metrological systems discussed here; it appears in the ED IIIa period \cite[77]{Robson2008}.},
+but counts cheese ({\xsuxfont 𒓻}, gaʾar) using the {\xsuxfont 𒄥𒊕𒅅} capacity system, with {\xsuxfont 𒀹} numerals for the sila₃.
+% FIXCDLI P221815 4(ban2@c) 3(asz@c) sila3 should be 4(ban2@c) 3(disz@t) sila3.
 
-TODO note the {\xsuxfont 𒄥𒑊𒌌}.
-Also cite Friberg1978 p.~43 and reproduce its factor diagram.
+It is not only pots that come in multiple sizes in ED IIIb Ŋirsu, but also {\xsuxfont 𒄥}.
+Another capacity system is the {\xsuxfont 𒄥𒑊𒌌}, the gur of two ul:
+\begin{equation}
+\underbrace{\text{\oneUC}
+\xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒄥𒑊𒌌}}
+\xleftarrow{2}{\text{\oneDišC}}
+\xleftarrow{6}{\text{\oneBanTwoC}}
+\xleftarrow{6}{\text{\xsuxfont 𒀹𒋡}}\text.
+\tag{$C_{\text{\xsuxfont 𒄥𒑊𒌌}}$}
+\label{systemCgurTwoUL}
+\end{equation}
+Here the {\xsuxfont \oneAšC}-{\xsuxfont 𒀹}-{\xsuxfont \oneDišC} contrast occurs not only within the numerals of the system,
+but with its units; this is perhaps best illustrated by the expressions {\xsuxfont 𒊺 𒍼 𒍩 \oneUC\oneDišC\threeBanTwoC 𒑋𒋡 𒄥𒑊𒌌}
+in \cite[\reverse~2, 2]{P221746} and {\xsuxfont 𒊺 𒍩 \oneUC\threeBanTwoC 𒑌𒋡 𒄥𒑊𒌌}
+in \cite[\reverse~1, 5]{P221814}.
 
 \subsubsection{Grain in Ebla}
-Lengths of Early Dynastic IIIb dykes from Ŋirsu are far from the
-only numeric expressions that mix curviform and cuneiform numerals.
+The mixing of curviform and cuneiform numerals within a metrological system is not specific to Ŋirsu.
 
 The system of grain\footnote{Liquid capacities use a different system \cite[\pno~229 \withnote~12]{Archi2015}:\begin{equation*}
   \underset{\text{la-ḫa}}{\text{\xsuxfont 𒆷𒄩}}
@@ -936,6 +1068,15 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-6.png}
   \caption{TODO \cite[6]{Chambon2003}\label{chambon6}}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.375\textwidth]{proust-9a.png}
+  \includegraphics[width=0.375\textwidth]{proust-9.png}
+  \caption{Discussion of Old Babylonian and fourth millenium area measures in \cite[9]{Proust2020}.
+  The cuneiform text is Unicode-encoded.\label{proust9}}
   \end{center}
 \end{figure}
 
@@ -1288,6 +1429,8 @@ Instead, they represent systematic contrasts between metrological
 systems, between individual units within metrological system, and
 between numeric usage and phonetic or logographic usage.
 This contrastive usage is reflected in modern publications.
+The contrast frequently applies to individual numerals,
+rather than to the span of entire numeric expressions.
 
 While it would be technically possible to handle this contrast as
 a stylistic distinction, this approach has no real benefit, and
@@ -1342,12 +1485,12 @@ thus $5N_1$ is \fiveAšC, and $5N_{14}$ is \fiveUC.
 
 In contrast with the use of parenthetical unit names,
 this approach does not require interpreting the quantity being counted.
-This is valuable in contexts where the exact meaning of the choice of numeral type
-is not fully understood, as the transliterations can otherwise force a dubious interpretation.
+This is valuable in contexts where numerals are being used atypically,
+as conventional transliterations can otherwise force a dubious interpretation.
 For instance, the CDLI transliteration of \threeAšC\threeDišC{\xsuxfont 𒌆}  or \sixAšC\sixDišC{} in
 \cite[\reverse~1, 6;2, 2]{P283802} currently uses (barig@c) for the vertical numerals,
-suggesting a capacity measure; but \cite{Gori2023} interprets these instead
-as counting linen textiles.
+since \oneDišC{} numerals are typically capacity measures;
+but \cite{Gori2023} interprets these instead as counting linen textiles.
 As a result, the fourth millenium conventions for numeral transliteration
 are used in Early Dynastic texts, especially those from the ED I--II period,
 even though the Sumerian text uses classical assyriological transliteration conventions.
@@ -1379,10 +1522,7 @@ $\text{\oneNThirtyA}=\frac{1}{6}\text{\oneNTwentyNineA}$.
 Note the disunification of N9 and N10 from 4(ban₂@c) and 5(ban₂@c).]
 
 \section{Characters not included in this proposal}
-\subsection{The fractions $\frac13$ and $\frac23$}
 % FIXCDLI P271238 o ii 6 is 1/3(asz@c), not @v.
-TODO {\xsuxfont 𒑝}, {\xsuxfont 𒑞}. Note the occasional omission of {\xsuxfont 𒋙},
-see citations in email to steve plus https://cdli.mpiwg-berlin.mpg.de/artifacts/274845/reader/51537.
 \subsection{Missing numerals}
 TODO N13 not attested in CDLI 
 TODO ($N_{17}$ not usefully numeric, $12N_{14}$ not encodable, etc.). Cite \cite[147]{DamerowEnglund1987}
