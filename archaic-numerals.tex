@@ -263,6 +263,8 @@
 arrow style=math font,
 }
 
+\renewcommand{\topfraction}{0.9}
+
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
 
@@ -560,7 +562,7 @@ For example, the number $1729=((\textcolor{BrickRed}{2}\times 10 + \textcolor{Da
 would be written {\xsuxfont \textcolor{BrickRed}{𒐟}\textcolor{Dandelion}{𒐜}\textcolor{NavyBlue}{𒐏}\textcolor{Orchid}{𒐎}} in the discrete counting system,
 and {\xsuxfont 𒎙𒐍𒐏𒐎} in the sexagesimal place value system.
 
-\subsubsection{The area system}
+\subsubsection{The area system}\label{areaSystem}
 The discrete counting system was not the only non-positional system in use in the Ur III and Old Babylonian periods; different systems were in use depending on what was being counted or measured.
 For instance, field areas were measured using the following system, where for the named
 units we have provided the name of the unit in transliterated Sumerian, normalized Old Babylonian Akkadian,
@@ -1093,14 +1095,14 @@ There are transliteration conventions that are more explicit about numeral shape
 $4(\text{ašᶜ})$ \emph{ʾa₃-da-um} $4(\text{dišᶜ})$ \emph{aktum} $4(\text{ašᶜ})$ ib₂\textsuperscript*{tu₉}×$3(\text{diš})$ sa₆ gunu₃,
 but the result would be less readable.
 See Section~\ref{transliteration} for a discussion of transliteration conventions for numerals.
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{powell-107.png}
   \caption{Discussion of the readings of proposed {\oneDišC}
   and already-encoded {\xsuxfont 𒁹} in \cite[107]{Powell1971}.\label{powell107}}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{powell-138.png}
   \caption{Discussion of the readings of proposed {\oneThirdCV} and {\twoThirdsCV} as well as
@@ -1108,7 +1110,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
   \end{center}
 \end{figure}
 \afterpage{
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{friberg-15.png}
   \caption[]{The derivation of the factors of the bisexagesimal system in \cite[15]{Friberg1978}\label{FribergEquations}\footnotemark.}
@@ -1146,6 +1148,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
     &1\text{\rotatebox[origin=c]{270}{\oneŊešTwoC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyFourC}}=6\text{\rotatebox[origin=c]{270}{\oneUC}}~2\text{\rotatebox[origin=c]{270}{\oneŊešTwoC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}
     \tag{\text{C 27}}
   \end{empheq}}
+\clearpage
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{friberg-49.png}
@@ -1171,17 +1174,15 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
   discussing an argument from \cite[172]{Powell1972} on the question
   of the language of the Uruk III texts.\label{EnglundTwoUC}}
   \end{center}
-}
-\newpage
-{
 \end{figure}
+\afterpage{
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{englund-113.png}
   \caption[]{Description of the fractions \oneNTwentyFour{} and \oneNTwentyFive{} in \cite[113]{Englund1998}\footnotemark.\label{englund113}}
   \end{center}
 \end{figure}
-\footnotetext{The text erroneously has $N_{34}$ instead of $N_24$.}
+\footnotetext{The text erroneously has $N_{34}$ instead of $N_{24}$.}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{englund-116.png}
@@ -1224,33 +1225,41 @@ with different relations as previously discussed.}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-58.png}
-  \caption{TODO \cite[58]{Chambon2012}\label{chambon58}}
+  \caption{
+    Description of the SPVS in \cite[58]{Chambon2012},
+    using the already-encoded signs {\xsuxfont 𒁹} and {\xsuxfont 𒌋}.\label{chambon58}}
   \end{center}
 \end{figure}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-59.png}
-  \caption[TODO]{TODO \cite[59]{Chambon2012}\label{chambon59}\footnotemark}
+  \caption[]{Discussion of large numbers illustrated by {\xsuxfont 𒃲\threeŠarTwoC}\footnotemark{} in
+                \cite[59]{Chambon2012}\label{chambon59}}
   \end{center}
 \end{figure}
-\footnotetext{TODO(egg): On the order cite TSS 188, Friberg2007 p. 148 and any of the usual suspects on the haphazard order of signs in early texts; contrast P274845, P241764.}
+\footnotetext{Compare {\xsuxfont 𒊹𒃲} discussed in section~\ref{areaSystem}.
+The order is variable in the Early Dynastic period; see \cite{P010773}, also discussed in \cite[148]{Friberg2007},
+for an example of {\xsuxfont 𒃲\oneŠarTwoC},
+and \cites{P274845}{P241764} for examples of {\xsuxfont 𒃲$n$\oneŠarTwoC}.
+Sign order can be variable in early texts, see \cite[8]{Foxvog2016}.}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-61.png}
-  \caption{TODO \cite[61]{Chambon2012}\label{chambon61}}
+  \caption{Partial transliteration of \cite0[\href{http://ebda.cnr.it/tablet/view/1322\#57724}{\recto~5, 3}]{P240597}
+  {\xsuxfont\threeAšC 𒊺 𒁇 \oneDišC 𒁀𒌷𒍪} in \cite[61]{Chambon2012}\label{chambon61}.}
   \end{center}
 \end{figure}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-63.png}
-  \caption{TODO \cite[64]{Chambon2012}\label{chambon64}}
+  \caption{Discussion in \cite[64]{Chambon2012} of the relation between \oneBanTwoC--\fourBanTwoC{} and \oneDišC{} in Mesopotamia and in Ebla.\label{chambon64}}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{proust-350.png}
-  \caption{TODO\label{proust350}}
+  \caption{Explanation of the structure of the number {\twoŠarTwoC\oneŊešʾuC\threeUC} in \cite[350]{Proust2020}.\label{proust350}}
   \end{center}
 \end{figure}
 
@@ -1268,7 +1277,8 @@ with different relations as previously discussed.}
   \end{center}
 \end{figure}
 \clearpage
-}
+}}
+\clearpage
 
 \subsection{Non-numeric usage}\label{non-numeric}
 \epigraph{
@@ -1317,7 +1327,7 @@ such non-numeric usage is almost\footnote{Exceptions are discussed in section~\r
     \cites[\obverse~2, 3]{P020006}[\reverse~1, 2]{P020008}[\reverse~1, 2]{P020018}[\obverse~1, 4]{P020024}[\obverse~3, 1]{P020030};
   \item in lexical texts:
   \begin{itemize}[nosep]
-    \item in the divine name {\xsuxfont 𒀭𒎏𒉾𒀸𒁇} in the lexical texts \cites[TODO]{P010570}[\obverse~3, 6]{P010572},
+    \item in the divine name {\xsuxfont 𒀭𒎏𒉾𒀸𒁇} in the lexical texts \cites[\reverse~2, 4]{P010570}[\obverse~3, 6]{P010572},
       where the entries are prefixed with {\oneAšC}.
     \item in the word {\xsuxfont 𒀸} dili, ``small fish'' in
     \cite[\obverse~2, 5]{P010578}, witness to Early Dynastic Fish,
@@ -1365,7 +1375,19 @@ system~\ref{systemGOB}.
 Composite texts rarely have witnesses both from the Early Dynastic period
 and later; the kinds of texts that do, chiefly lexical and literary texts, do not
 contain numbers to the extent that administrative texts do.
-Further, there tend to be changes\footnote{TODO comment on the ED witnesses to the instructions of Šuruppag}
+Further, there tend to be changes\footnote{Compare,
+\exempligratia, in the \emph{Instructions of Šuruppag},
+{\xsuxfont 𒋢𒆳𒊒𒆠 𒌫\oneAšC{} 𒌉𒉌𒊏} / {\xsuxfont 𒈾 𒈾𒈬𒊑𒊑} in
+the ED IIIa witness \cite[\obverse~2, 7]{P222243}, also discussed
+in section~\ref{šar₂}, and
+{\xsuxfont 𒋢𒆳𒊒𒆠𒂊 𒌉𒉌𒊏 𒈾 𒈾𒈬𒌦𒊑𒊑}
+in the OB composite \cite[6]{Q000782} (translated ``Šuruppag gave instructions to his son''
+in \cite{ETCSRI}).
+It does not matter for the construction of a
+composite text whether this is encoded
+{\xsuxfont 𒌫\oneAšC} or {\xsuxfont 𒌫𒀸},
+since that word is absent from other witnesses,
+and since the surrounding words differ.}
 to the text between Early Dynastic
 and later witnesses that prevent a diachronic encoding of such composites.
 For numerals, the switch from {\oneAšC} to {\xsuxfont 𒁹} numerals prevents
@@ -1388,7 +1410,9 @@ characters, the {\oneAšC}-{\xsuxfont 𒀸} unification does not help.
 
 More generally, since numbers are so deeply tied to metrology, and since
 metrological systems change between the Early Dynastic and later
-periods\footnote{TODO cite a few things here.}, there is little opportunity
+periods\footnote{See, \exempligratia, \cite[55]{Robson2008} on the unification of
+metrologies under Sargon, resulting in the systems described in
+section~\ref{metrology}.}, there is little opportunity
 for a diachronic representation of numeric quantities.
 
 In the case of analyses such as
@@ -1429,19 +1453,26 @@ a contrast between non-numeric šar₂ written {\xsuxfont 𒊹}
 and numeric $1$(šar₂ᶜ) written \oneŠarTwoC{} can be observed,
 similar to the contrast between {\xsuxfont 𒀸} and {\oneAšC}
 previously discussed in section~\ref{non-numeric}.
-However, in lexical lists from Šuruppag and Ebla\footnote{TODO Mention other ways in which
-these are archaizing},
+However, in lexical lists from Šuruppag and Ebla\footnote{These are
+archaizing in other ways, \exempligratia, they have a
+{\xsuxfont 𒉇}--{\xsuxfont 𒌆} (NAM₂--TUG₂) split.},
 as well as in the \emph{\textfrench{Stèle des vautours}},
 non-numeric šar₂ is curviform:\begin{itemize}[nosep]
   \item {\originalNoto 𒀭𒂗𒆠𒊹} and {\originalNoto 𒀭𒂗𒊹𒉡𒄄} in \cite[\obverse~10, 10 \& 11]{P010566};
   \item {\originalNoto 𒊹𒄈} and {\originalNoto 𒀭𒊹𒄈} in \cite[\reverse~3, 16 \& 17]{P010576};
   \item {\originalNoto 𒊹𒄷} in \cite[\href{https://oracc.museum.upenn.edu/dcclt/P240986.44}{\recto~3, 3}]{P240986}\footnote{From copy in \cite[No.~397]{ELLes}.};
   \item {\originalNoto 𒊹𒊏𒈾} in \cite[\obverse~17, 9; 18, 11; 22, 12]{P222399}\footnote{Note
-  however {\xsuxfont 𒀭𒉌 𒊹𒊏} on \cite[\obverse~6, 17]{P222399}.
+  however {\xsuxfont 𒀭𒉌 𒊹𒊏} on \cite[\obverse~6, 17]{P222399}, see 
+  Figure~\ref{vultureSquare}.
   Curviform non-numeric šar₂ is clearly archaizing in ED IIIb Ŋirsu;
-  one might suppose that the scribe slipped into their modern ways here.
-  TODO add a photo.}.
+  one might suppose that the scribe slipped into their modern ways here.}.
 \end{itemize}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{vautours.png}
+    \caption{\cite[\obverse~6, 16--17]{P222399} {\xsuxfont 𒃶𒊒𒁉} / {\xsuxfont 𒀭𒉌 𒊹𒊏}.\label{vultureSquare}}      
+  \end{center}
+\end{figure}
 
 It \emph{would} be disruptive to the diachronic representation of text
 if non-numeric šar₂ were to have two different representations.
@@ -1529,7 +1560,7 @@ In metrological systems such as systems~\ref{systemGOB} and~\ref{systemC}
 where some units are indicated by the type of numeral
 rather than an overt unit sign, it is common practice to add the unit in parentheses
 in transliteration; for instance, {\xsuxfont 𒑘𒐃𒀹𒃷𒐌𒊬} from \cite[\obverse~1]{P386847}
-is transliterated ``$1$(eše₃) $5\text{½}$~iku\footnote{TODO say something about this reading} $7$~sar'' in \volcite{2}[176]{Feuerherm2004},
+is transliterated ``$1$(eše₃) $5\text{½}$~iku\footnote{{\xsuxfont 𒃷} interpreted as a unit, as discussed in section~\ref{metrology}.} $7$~sar'' in \volcite{2}[176]{Feuerherm2004},
 and {\xsuxfont 𒑗𒑐𒐌𒈦𒋡} from \cite[\obverse~12]{P307255}
 is transliterated ``$1$(n\footnote{TODO comment on nigida.}) $2$(b) $7~\text{½}$~sila₃'' in \volcite{2}[151]{Feuerherm2004}.
 
@@ -1728,10 +1759,6 @@ contrasts them with the larger \oneŊešTwoC{},
 and inconsistent with actual practice when
 typesetting these numerals, as illustrated in Figure~\ref{EnglundTwoUC}:
 reproducing the layout of tablets is not within the scope of plain text.
-% TODO(egg): Consider using the : layout as the default and switching the example to P010018.
-% Or P010588?
-% P010843?
-%P011099, last case is probably best.
 \begin{figure}
   \newlength{\cheeseWidth}
   \settowidth{\cheeseWidth}{\rotatebox[origin=c]{270}{\LARGE\twoUC}{\LARGE\oneDišC}{\xsuxfont\scriptsize 𒓻}}
