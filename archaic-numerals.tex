@@ -96,6 +96,8 @@
 \newcommand\oneBanTwoC{{\proposalfont\symbol{"12593}}}
 \newcommand\twoBanTwoC{{\proposalfont\symbol{"12594}}}
 \newcommand\threeBanTwoC{{\proposalfont\symbol{"12595}}}
+\newcommand\oneNFiftyOneC{{\proposalfont\symbol{"1259A}}}
+\newcommand\oneNFiftyFourC{{\proposalfont\symbol{"125A3}}}
 \newcommand\fourBanTwoC{{\proposalfont\symbol{"12596}}}
 \newcommand\fiveBanTwoC{{\proposalfont\symbol{"12597}}}
 \newcommand\oneNThirtyA{{\proposalfont\symbol{"125AF}}}
@@ -103,6 +105,8 @@
 \newcommand\oneNTwentyNineA{{\proposalfont\symbol{"125B6}}}
 
 \newcommand{\nhphantom}[1]{\sbox0{#1}\hspace{-\the\wd0}}
+
+\usepackage{afterpage}
 
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
@@ -117,6 +121,20 @@
 \usepackage[style=english/american]{csquotes}
 
 \usepackage{mathtools}
+\usepackage{empheq}
+
+\ExplSyntaxOn
+
+\NewDocumentCommand \FribergFullStopTwentySevenTag { m }
+  {
+    \regex_match:nnTF { 27 } { #1 }
+      { (#1). }
+      { (#1) }
+  }
+
+\ExplSyntaxOff
+\newtagform{fribergFullStopTwentySeven}[\FribergFullStopTwentySevenTag]{}{}
+
 
 \usepackage{unicode-math}
 \setmathfont[Scale=MatchLowercase, math-style=ISO]{Cambria Math}
@@ -1071,13 +1089,47 @@ There are transliteration conventions that are more explicit about numeral shape
 $4(\text{ašᶜ})$ \emph{ʾa₃-da-um} $4(\text{dišᶜ})$ \emph{aktum} $4(\text{ašᶜ})$ ib₂\textsuperscript*{tu₉}×$3(\text{diš})$ sa₆ gunu₃,
 but the result would be less readable.
 See Section~\ref{transliteration} for a discussion of transliteration conventions for numerals.
-
+\afterpage{
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{friberg-15.png}
-  \caption{TODO \cite[15]{Friberg1978}\label{FribergEquations}}
+  \caption[]{The derivation of the factors of the bisexagesimal system in \cite[15]{Friberg1978}\label{FribergEquations}\footnotemark.}
   \end{center}
 \end{figure}
+\footnotetext{
+  The bisexagesimal system is used alike in proto-Elamite and proto-cuneiform texts, see \cite[38]{Friberg1978};
+  the derivation in \cite[15]{Friberg1978} is based on proto-Elamite artefacts.
+  Note that in Friberg’s early works \cites{Friberg1978}{Friberg1979}{Friberg1986}{Friberg1987},
+  copies of fourth millenium and sometimes third millenium tablets are shown as vertical text
+  (which they were for the scribes),
+  and their numerals are written within horizontal text in the same orientation
+  that they have if the tablet is taken as vertical text; in \cite{UAX50} parlance, as
+  if they had Vertical\_Orientation=Upright. In addition, they are listed in these equations in the horizontal order
+  in which they appear as vertical text (thus the rightmost numeral is the most significant, read first).
+  Cuneiform is correctly Vertical\_Orientation=Rotated,
+  consistently both with modern practice and with the rotation between earlier vertical and later horizontal monumental inscriptions.
+  Friberg’s early conventions are not followed in later scholarship,
+  and are abandoned in his own more recent works, such as \cite{Friberg2007}; a more typical way to express the first equations might be
+  \begin{align}
+    5\text{\oneUC}+4\text{\oneAšC}&=3\text{\oneUC}+24\text{\oneAšC}
+    \tag{\text{C 234}}\\
+    1\text{\oneŊešTwoC}+1\text{\oneUC}+5\text{\oneAšC}&=7\text{\oneUC}+5\text{\oneAšC}
+    \tag{\text{C 314}}\\
+    1\text{\oneNFiftyFourC}+1\text{\oneNFiftyOneC}+1\text{\oneŊešTwoC}&=1\text{\oneNFiftyOneC}+2\text{\oneŊešTwoC}+6\text{\oneUC}\text.
+    \tag{\text{C 27}}
+  \end{align}
+  A diplomatic edition of \cite{Friberg1978} could rotate the numerals using a higher-level protocol:\usetagform{fribergFullStopTwentySeven}
+  \begin{empheq}[left=\empheqlbrace]{align}
+    % derived from the above as print('\\\\\n'.join('='.join('~'.join(reversed([term.replace('}','}}').replace(r'\text{',r'\text{\rotatebox[origin=c]{270}{') for term in side.split('+')])) for side in line.strip().split('&=')) for line in s.split(r'\\')))
+    &4\text{\rotatebox[origin=c]{270}{\oneAšC}}~5\text{\rotatebox[origin=c]{270}{\oneUC}}=24\text{\rotatebox[origin=c]{270}{\oneAšC}}~3\text{\rotatebox[origin=c]{270}{\oneUC}}
+    \tag{\text{C 234}}\\
+    &5\text{\rotatebox[origin=c]{270}{\oneAšC}}~1\text{\rotatebox[origin=c]{270}{\oneUC}}~1\text{\rotatebox[origin=c]{270}{\oneŊešTwoC}}=5\text{\rotatebox[origin=c]{270}{\oneAšC}}~7\text{\rotatebox[origin=c]{270}{\oneUC}}
+    \tag{\text{C 314}}\\
+    &1\text{\rotatebox[origin=c]{270}{\oneŊešTwoC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyFourC}}=6\text{\rotatebox[origin=c]{270}{\oneUC}}~2\text{\rotatebox[origin=c]{270}{\oneŊešTwoC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}
+    \tag{\text{C 27}}
+  \end{empheq}}}
+\newpage
+\afterpage{
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{friberg-49.png}
@@ -1176,6 +1228,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
   \caption{Transliteration in \cite[163]{Gori2023} of \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} incorporating untransliterated numerals.\label{GoriTransliteration}}
   \end{center}
 \end{figure}
+}
 
 \subsection{Non-numeric usage}\label{non-numeric}
 \epigraph{
@@ -1519,13 +1572,13 @@ at assigning phonetic values to them.
 
 This is not a mere classification of glyph variants, as contrastive meanings
 of these systematic variants can often be reconstructed,
-with, \exempligratia, signs KAŠ\textsubscript{a}, KAŠ\textsubscript{b}, and
-KAŠ\textsubscript{c}, depicting filled jars with a spout (a), a handle (c),
+with, \exempligratia, signs KAŠ\textsubscript*{a}, KAŠ\textsubscript*{b}, and
+KAŠ\textsubscript*{c}, depicting filled jars with a spout (a), a handle (c),
 or neither (b), being understood as referring to containers of different substances,
 see \cite[34\psq]{Englund2001}.
 However, not all identified systematic variants are understood, and the general
 approach to character identity is closer to that used for undeciphered or
-partially deciphered script.
+partially deciphered scripts.
 
 As part of the development of these conventions,
 a classification of fourth millenium numeric signs was developed; see \cite{DamerowEnglund1987}.
