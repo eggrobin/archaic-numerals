@@ -939,7 +939,7 @@ which measures butter ({\xsuxfont 𒉌}, i₃)
 with a different capacity system, using the {\xsuxfont 𒂁} (dug, ``pot'') of $20$~{\xsuxfont 𒋡},
 with \oneAšC{} and \oneUC{} numerals\footnote{This tablet also uses subtractive notation:
 {\xsuxfont\twoAšC 𒂁𒇲𒑞} ``two pots minus one third (sila₃)'',
-{\xsuxfont\oneUC \rlap{𒇲}\oneAšC 𒂁\sixAšC 𒋡} ``ten minus one pots, six sila₃''.
+{\xsuxfont\oneUC \rlap{𒇲}\hphantom{𒁹}\oneAšC 𒂁\sixAšC 𒋡} ``ten minus one pots, six sila₃''.
 Such subtractive notation is common in most of the metrological systems discussed here;
 it appears in the ED IIIa period \cite[77]{Robson2008}.
 We shall not discuss it further, as presents no complexity for character encoding.
@@ -947,7 +947,11 @@ It is noteworthy that the sign {\xsuxfont 𒇲} (lal₂, ``minus'')
 is often ligated with the following numerals,
 with the subtrahend placed under a sometimes considerably enlarged {\xsuxfont 𒇲},
 similar to the layout of the radical in modern mathematical notation,
-see, \exempligratia, \cite[\reverse~3,1;2]{P020092}.} for both the {\xsuxfont 𒂁} and the {\xsuxfont 𒋡}, thus \cite[504\psq]{Powell1987}\begin{equation}
+see, \exempligratia, \cite[\reverse~3,1;2]{P020092}.
+A good font could handle the very common $-1$ case, perhaps even $-2$ and $-3$;
+setting arbitrary numeric expressions under the {\xsuxfont 𒇲},
+or more generally replicating the layout of Early Dynastic tablets,
+is outside the realm of plain text; see also section~\ref{stackingPatterns}.} for both the {\xsuxfont 𒂁} and the {\xsuxfont 𒋡}, thus \cite[504\psq]{Powell1987}\begin{equation}
   \underbrace{\text{\oneUC}
   \xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒂁}}
   \xleftarrow{2}\underbrace{\text{\oneUC}
@@ -1245,8 +1249,8 @@ Sign order can be variable in early texts, see \cite[8]{Foxvog2016}.}
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-61.png}
-  \caption{Partial transliteration of \cite0[\href{http://ebda.cnr.it/tablet/view/1322\#57724}{\recto~5, 3}]{P240597}
-  {\xsuxfont\threeAšC 𒊺 𒁇 \oneDišC 𒁀𒌷𒍪} in \cite[61]{Chambon2012}\label{chambon61}.}
+  \caption{Partial transliteration of \cite[\href{http://ebda.cnr.it/tablet/view/1322\#57724}{\recto~5, 3}]{P240597}
+  {\xsuxfont\threeAšC{} 𒊺 𒁇 \oneDišC{} 𒁀𒌷𒍪} in \cite[61]{Chambon2012}\label{chambon61}.}
   \end{center}
 \end{figure}
 \begin{figure}
@@ -1562,7 +1566,9 @@ rather than an overt unit sign, it is common practice to add the unit in parenth
 in transliteration; for instance, {\xsuxfont 𒑘𒐃𒀹𒃷𒐌𒊬} from \cite[\obverse~1]{P386847}
 is transliterated ``$1$(eše₃) $5\text{½}$~iku\footnote{{\xsuxfont 𒃷} interpreted as a unit, as discussed in section~\ref{metrology}.} $7$~sar'' in \volcite{2}[176]{Feuerherm2004},
 and {\xsuxfont 𒑗𒑐𒐌𒈦𒋡} from \cite[\obverse~12]{P307255}
-is transliterated ``$1$(n\footnote{TODO comment on nigida.}) $2$(b) $7~\text{½}$~sila₃'' in \volcite{2}[151]{Feuerherm2004}.
+is transliterated ``$1$(n\footnote{short for nigida,
+an older reading of bariga;
+see \cites[376]{Landsberger1950}[181]{Powell1975}[9]{Foxvog2022}.}) $2$(b) $7~\text{½}$~sila₃'' in \volcite{2}[151]{Feuerherm2004}.
 
 This practice has been generalized to systematically indicate numeral shape;
 this is in particular the case in CDLI,
@@ -1594,7 +1600,9 @@ the input syntax used by the new ``Urban Economy Begins'' project as
 {\oneUC\fiveAšC\xsuxfont 𒑖𒑏}, with a c
 indicating that the GUR numerals are curviform, and the parenthetical
 GUR indicating that these are \oneAšC{} rather than \oneDišC{} numerals.
-% TODO cite the rant in Englund 2004.
+The ``tradition of cavalierly dispensing with numerical notations in notations
+of administrative documents'', as \cite[30]{Englund2004} describes it,
+seems to be fading.
 
 \subsection{Conclusions}
 Co-occurences of curviform and cuneiform numerals are not anecdotal
@@ -1618,7 +1626,20 @@ be misinterpreted:
 where {\oneAšC\oneDišC} would be one and a half {\xsuxfont 𒄘𒁇};
 {\xsuxfont 𒀸𒊕} is a personal name, but {\oneAšC\xsuxfont 𒊕} would be ``one slave''.
 
-TODO mention the risk of confusion about character identity.
+In addition, there would be a risk of confusion about character identity should
+fontmakers attempt to treat the curviform and cuneiform numerals as unified.
+A designer concerned about the numeric-syllabic \oneAšC--{\xsuxfont 𒀸},
+and wishing to support diachronic encoding between systems~\ref{systemSOB} and \ref{systemS},
+might give the {\xsuxfont 𒁹} numeral series (which is typically only used numerically
+in the Early Dynastic period) the glyphs of the \oneAšC{} numeral series,
+but this would break capacity measures that use \oneDišC{};
+in an effort to support diachronic use for $1/2$(iku),
+one might be tempted to give {\xsuxfont 𒀹} the glyph
+of \oneDišC{}, thereby rendering the font unusable for quantities measured using
+the {\xsuxfont 𒀹} numeral series;
+an ED I--II Ur font could decide to give {\xsuxfont 𒐴}
+the same glyph as {\xsuxfont 𒐬} (that of the proposed \oneŠarʾuC), according to the older area system,
+making it impossible to represent the newer one.
 
 At the same time, contrary to most disunifications,
 the separate encoding of curviform numerals poses no serious compatibility issues
@@ -1744,10 +1765,11 @@ instead, they should be considered style variants, and an ED IIIb Ŋirsu font sh
 an appropriate glyph for U+\textcsc{12399} {\xsuxfont 𒎙} \textcsc{CUNEIFORM SIGN U U}.
 
 Likewise, many stacking patterns are attested for the curviform numerals proposed in this document,
-and it is not proposed to separately encode them;
-these distinctions would be incompatible with the state of the art in numeric transliterations,
-%TODO(egg): Including those by Englund
-and are not needed to represent reference works.
+and it is not proposed to separately encode them.
+These distinctions would be incompatible with the state of the art in numeric transliterations,
+including those by Englund, who insisted on ``a system of transliteration that reflects in a strict fashion
+the physical realities of the cuneiform inscriptions'' \cite[30]{Englund2004},
+and they are not needed to represent reference works.
 Idiosyncratic stacking patterns are in fact particularly common in Early Dynastic and earlier tablets,
 as they are structured in rectangular cases rather than lines,
 so that numerals may be laid out across the case in whichever way fits the available space;
@@ -1805,8 +1827,8 @@ reproducing the layout of tablets is not within the scope of plain text.
 \end{figure}
 
 The reference glyphs use stacking patterns that are common in the Early Dynastic period,
-but that are also attested in the Uruk period;
-the Uruk period also frequently features numerals that use a more vertical layout,
+but that are also attested in the fourth millenium in the Uruk III period;
+the fourth millenium, especially the Uruk IV period, also frequently features numerals that use a more vertical layout,
 as illustrated in Figure~\ref{9N34StackingPatterns}.
 The later, more horizontal styles were chosen for two reasons:
 for the numerals used in the third and fourth millenium,
