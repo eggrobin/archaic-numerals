@@ -111,6 +111,7 @@
 \newcommand{\nhphantom}[1]{\sbox0{#1}\hspace{-\the\wd0}}
 
 \usepackage{afterpage}
+\usepackage{float}
 
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
@@ -550,7 +551,7 @@ multiples of thirty-six thousand {\xsuxfont 𒐬}–\vphantom{\scalebox{0.8}{\xs
 The relations between the values of the signs in the cuneiform discrete counting system
 may be summarized by the following factor diagram\footnote{These diagrams,
 which have become standard in discussions of Mesopotamian metrology, originate with \cite[10]{Friberg1978},
-where they are called \emph{step-diagrams}.},
+where they are called \emph{step-diagrams}, see Figure~\ref{firstStepDiagram}.},
 where the number over arrow indicates the multiple
 of the preceding sign (right of the arrow) corresponding to the following sign (left).
 \begin{equation}
@@ -1099,22 +1100,27 @@ There are transliteration conventions that are more explicit about numeral shape
 $4(\text{ašᶜ})$ \emph{ʾa₃-da-um} $4(\text{dišᶜ})$ \emph{aktum} $4(\text{ašᶜ})$ ib₂\textsuperscript*{tu₉}×$3(\text{diš})$ sa₆ gunu₃,
 but the result would be less readable.
 See Section~\ref{transliteration} for a discussion of transliteration conventions for numerals.
-\begin{figure}[t]
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{powell-107.png}
   \caption{Discussion of the readings of proposed {\oneDišC}
   and already-encoded {\xsuxfont 𒁹} in \cite[107]{Powell1971}.\label{powell107}}
   \end{center}
 \end{figure}
-\begin{figure}[t]
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{powell-138.png}
   \caption{Discussion of the readings of proposed {\oneThirdCV} and {\twoThirdsCV} as well as
   already-encoded {\xsuxfont 𒑝} and {\xsuxfont 𒑞} in \cite[138]{Powell1971}.}
   \end{center}
 \end{figure}
-\afterpage{
-\begin{figure}[t]
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{friberg-10.png}
+  \caption[]{The first factor diagram, in \cite[10]{Friberg1978}.\label{firstStepDiagram}}
+  \end{center}
+\end{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{friberg-15.png}
   \caption[]{The derivation of the factors of the bisexagesimal system in \cite[15]{Friberg1978}\label{FribergEquations}\footnotemark.}
@@ -1152,26 +1158,25 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
     &1\text{\rotatebox[origin=c]{270}{\oneŊešTwoC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyFourC}}=6\text{\rotatebox[origin=c]{270}{\oneUC}}~2\text{\rotatebox[origin=c]{270}{\oneŊešTwoC}}~1\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}
     \tag{\text{C 27}}
   \end{empheq}}
-\clearpage
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{friberg-49.png}
   \caption{Discussion of proposed fractions
   \oneDišC, \oneQuarterIkuC, \oneEighthIkuC, and \oneThirdCV,
   as well as already-encoded {\xsuxfont 𒑝} and {\xsuxfont 𒑞} in
-  \cite[49]{Friberg1978}\label{FribergFractions}}
+  \cite[49]{Friberg1978}\label{FribergFractions}.}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{damerow-englund-117.png}
   \caption{Discussion in \cite[\pno~117]{DamerowEnglund1987} of the discovery in
-  \cite[9--11]{Friberg1978}
+  \cite[9--11]{Friberg1978} (see Figure~\ref{firstStepDiagram})
   of the different relations between \oneAšC{} and \oneUC{} in systems
   \ref{systemG} and \ref{systemŠ}.}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{englund-132.png}
   \caption{The sign \twoUC{} used in a parallel with IX in \cite[\ppno~131--133 \withnote~9]{Englund1988},
@@ -1179,36 +1184,35 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
   of the language of the Uruk III texts.\label{EnglundTwoUC}}
   \end{center}
 \end{figure}
-\afterpage{
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{englund-113.png}
   \caption[]{Description of the fractions \oneNTwentyFour{} and \oneNTwentyFive{} in \cite[113]{Englund1998}\footnotemark.\label{englund113}}
   \end{center}
 \end{figure}
 \footnotetext{The text erroneously has $N_{34}$ instead of $N_{24}$.}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{englund-116.png}
   \caption{The sign \oneNThirtyNineA{} used as a capacity
            measure within otherwise translated text in \cite[116]{Englund1998}.\label{englund116}}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{krebernik-303.png}
   \caption{Discussion of co-occurrences and contrasts between
-  {\xsuxfont 𒁹}, {\xsuxfont 𒀹}, and \oneDišC{} in \cite[303]{Krebernik1998}\label{krebernik303}}
+  {\xsuxfont 𒁹}, {\xsuxfont 𒀹}, and \oneDišC{} in \cite[303]{Krebernik1998}.\label{krebernik303}}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{englund-15.png}
   \caption{Calculations from \cite{P005468} transcribed in \cite[132]{Englund2001} using modern mathematical
   notation combined with some of the proposed characters.\label{englund15}}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-6.png}
   \caption[]{Discussion of \oneŠarʾuC{} and \oneŠarTwoC{}\footnotemark{} in \cite[6]{Chambon2003}.\label{chambon6}}
@@ -1217,7 +1221,7 @@ See Section~\ref{transliteration} for a discussion of transliteration convention
 \footnotetext{The statement that these do not co-occur refers to the texts from ED I--II Ur;
 these signs co-occur both earlier and later in areas,
 with different relations as previously discussed.}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.375\textwidth]{proust-9a.png}
   \includegraphics[width=0.375\textwidth]{proust-9.png}
@@ -1225,8 +1229,7 @@ with different relations as previously discussed.}
   \end{center}
 \end{figure}
 \footnotetext{The cuneiform text is Unicode-encoded.}
-
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-58.png}
   \caption{
@@ -1234,7 +1237,7 @@ with different relations as previously discussed.}
     using the already-encoded signs {\xsuxfont 𒁹} and {\xsuxfont 𒌋}.\label{chambon58}}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-59.png}
   \caption[]{Discussion of large numbers illustrated by {\xsuxfont 𒃲\threeŠarTwoC}\footnotemark{} in
@@ -1246,43 +1249,40 @@ The order is variable in the Early Dynastic period; see \cite{P010773}, also dis
 for an example of {\xsuxfont 𒃲\oneŠarTwoC},
 and \cites{P274845}{P241764} for examples of {\xsuxfont 𒃲$n$\oneŠarTwoC}.
 Sign order can be variable in early texts, see \cite[8]{Foxvog2016}.}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-61.png}
   \caption{Partial transliteration of \cite[\href{http://ebda.cnr.it/tablet/view/1322\#57724}{\recto~5, 3}]{P240597}
   {\xsuxfont\threeAšC{} 𒊺 𒁇 \oneDišC{} 𒁀𒌷𒍪} in \cite[61]{Chambon2012}\label{chambon61}.}
   \end{center}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-63.png}
   \caption{Discussion in \cite[64]{Chambon2012} of the relation between \oneBanTwoC--\fourBanTwoC{} and \oneDišC{} in Mesopotamia and in Ebla.\label{chambon64}}
   \end{center}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{proust-350.png}
   \caption{Explanation of the structure of the number {\twoŠarTwoC\oneŊešʾuC\threeUC} in \cite[350]{Proust2020}.\label{proust350}}
   \end{center}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{gori-162.png}
   \caption{Discussion of the contrast between {\oneAšC} and {\oneDišC} numerals in \cite[162]{Gori2023}.\label{gori162}}
   \end{center}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{gori-163.png}
   \caption{Transliteration in \cite[163]{Gori2023} of \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} incorporating untransliterated numerals.\label{GoriTransliteration}}
   \end{center}
 \end{figure}
-\clearpage
-}}
-\clearpage
 
 \subsection{Non-numeric usage}\label{non-numeric}
 \epigraph{
