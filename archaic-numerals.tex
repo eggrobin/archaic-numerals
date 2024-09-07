@@ -185,6 +185,7 @@
 \AtEveryBibitem{\clearlist{language}}  % TODO(egg): Why are we doing this?
 
 \newcommand\UTCdoc[1]{\href{https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?#1}{#1}}
+\newcommand\WGtwodoc[1]{\href{http://www.unicode.org/cgi-bin/GetMatchingWG2Docs.pl?#1}{#1}}
 
 \DeclareFieldFormat{doi}{%
   \newline
@@ -198,12 +199,18 @@
     \ifhyperref
       {\href{http://www.cnki.com.cn/Article/CJFDTOTAL-#1.htm}{#1}}
       {#1}}
-      \DeclareFieldFormat{eprint:utc}{%
-        \newline
-        \mkbibacro{UTC}\addcolon\space
-          \ifhyperref
-            {\UTCdoc{#1}}
-            {#1}}
+\DeclareFieldFormat{eprint:utc}{%
+  \newline
+  \mkbibacro{UTC}\addcolon\space
+    \ifhyperref
+      {\UTCdoc{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:wg2}{%
+  \newline
+  \mkbibacro{ISO/IEC JTC~1/SC~2/WG~2}\addcolon\space
+    \ifhyperref
+      {\WGtwodoc{#1}}
+      {#1}}
 \DeclareFieldFormat{eprint:cdli}{%
   \newline
   \mkbibacro{CDLI}\addcolon\space
@@ -223,19 +230,20 @@
       {\href{http://oracc.org/#1}{#1}}
       {#1}}
 \DeclareFieldFormat{eprint:louvre}{%
+  \newline
   Louvre Collections\addcolon\space
     \ifhyperref
       {\href{https://collections.louvre.fr/#1}{#1}}
       {#1}}
 \DeclareFieldFormat{eprint}{%
   \newline
-  eprint\addcolon\space
     \ifhyperref
       {\href{#1}{\nolinkurl{#1}}}
       {\nolinkurl{#1}}}
 \DeclareFieldFormat{isbn}{%
   \newline
   \mkbibacro{ISBN}\addcolon\space#1}
+\renewcommand{\relateddelim}{\newunitpunct}
       
 \newcommand{\idest}{\emph{i.e.}}
 \newcommand{\exempligratia}{\emph{e.g.}}
@@ -662,7 +670,7 @@ after the overt unit sign {\xsuxfont 𒋡} if present, and after the word for ``
 6&\text{sila₃}&
 \text{ of grain.}
 \end{matrix}\]%
-\footnotetext{From \cite[\obverse~1, 1]{P309594}.}%
+\footnotetext{From \cite[\obverse~1~1]{P309594}.}%
 Observe that while large numbers of gur follow\footnote{A larger unit, the guru₇ (\emph{karûm}, grain heap), is sometimes used instead, with {\xsuxfont 𒀸𒄦}={\xsuxfont 𒊹𒄥} ($1~\text{\emph{karûm}}=3600~\text{kurrū}$). See \cites[415]{Friberg2007}{Robson2019}.}
 system \ref{systemSOB},
 the use of horizontal (AŠ) numerals for the gur disambiguates from the vertical bariga,
@@ -736,7 +744,7 @@ these are in turn derived from the sign {\xsuxfont 𒋙} (ŠU₂),
 whose Early dynastic form resembles {\xsuxfont\addfontfeature{StylisticSet=1} 𒋙},
 and \oneDišC{} numerals; see \cite[113; 134]{Powell1971}.
 The {\xsuxfont 𒋙} is sometimes omitted, as in
-\cites[\href{http://ebda.cnr.it/tablet/view/1328\#58364}{\verso~6, 9}]{P240545}{P221530}{P221531}{P271238}{P274845}.
+\cites[\href{http://ebda.cnr.it/tablet/view/1328\#58364}{\verso~6~9}]{P240545}{P221530}{P221531}{P271238}{P274845}.
 
 \subsection{Curviform numerals in early metrologies}
 \label{earlyMetrology}
@@ -814,7 +822,7 @@ may be found by comparing the fractions the Early Dynastic IIIb area system\foot
 \tag{$G_{\text{ED IIIb}}$}
 \label{systemGED}
 \end{equation}%
-\footnotetext{The cuneiform counterpart is {\xsuxfont 𒑟}.}%
+\footnotetext{The (fairly rare) cuneiform counterpart is {\xsuxfont 𒑟}.}%
 with the numerals of a contemporaneous capacity system:
 \begin{equation}
 \underbrace{
@@ -891,14 +899,14 @@ curviform numerals followed by some number of reeds counted in (\emph{tenû})
 cuneiform numerals currently finds 125 occurrences
 across 47 tablets.}, such as:
 \begin{itemize}[nosep]
-  \item \cite[\obverse~1, 4]{P221305}\footnote{CDLI only has a copy, but a photo may be found in
+  \item \cite[\obverse~1~4]{P221305}\footnote{CDLI only has a copy, but a photo may be found in
   \cite[82]{Lecompte2012}. On that photo the {\xsuxfont 𒋗𒆕𒀀𒑊} is not visible.
   Lecompte notes that the copy is faithful;
-  indeed another {\xsuxfont 𒋗𒆕𒀀𒑊} can be seen both on the copy and the photo on \obverse~2, 2.} {\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
-%  \item \cite[\reverse~1, 1]{P221305} {\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
-  \item \cite[\reverse~2, 1]{P020129} {\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
-  \item \cite[\reverse~5, 1]{P221291}\footnote{From copy.} {\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
-  \item \cite[\reverse~2, 1]{P221266} {\oneAšC\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
+  indeed another {\xsuxfont 𒋗𒆕𒀀𒑊} can be seen both on the copy and the photo on \obverse~2~2.} {\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
+%  \item \cite[\reverse~1~1]{P221305} {\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
+  \item \cite[\reverse~2~1]{P020129} {\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
+  \item \cite[\reverse~5~1]{P221291}\footnote{From copy.} {\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
+  \item \cite[\reverse~2~1]{P221266} {\oneAšC\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
 \end{itemize}
 These expressions use an
 explicit sign {\xsuxfont 𒃻𒁺} (counted in multiples of ten) or
@@ -924,7 +932,7 @@ The notation can be summarized by the following factor diagram, where prefix uni
   \label{systemLpED}
 \end{equation}
 \footnotetext{With either unit omitted, as in the examples above, or both, as in
-\cite[\obverse~3, 3]{P020129} {\threeŊešTwoC\fourUC\oneBanTwoC}.}
+\cite[\obverse~3~3]{P020129} {\threeŊešTwoC\fourUC\oneBanTwoC}.}
 
 \subsubsection{Butter, cheese and wheat in Ŋirsu}
 A similar mixture of cuneiform and curviform numerals may be observed with the capacity system;
@@ -940,11 +948,11 @@ indeed, the previously described {\xsuxfont 𒄥𒊕𒅅} system uses {\xsuxfont
 \tag{$C_{\text{\xsuxfont 𒄥𒊕𒅅}}$}
 \label{systemCgursaŋŋal}
 \end{equation}
-as in \cites[\reverse~1, 4]{P020016}{P020065}[\obverse~1, 3;\reverse~2, 1]{P020090}[\reverse~3,1]{P020092}[\obverse~1, 2]{P020137} and others,
+as in \cites[\reverse~1~4]{P020016}{P020065}[\obverse~1~3;\reverse~2~1]{P020090}[\reverse~3,1]{P020092}[\obverse~1~2]{P020137} and others,
 where ban₂ counted with \oneBanTwoC{} numerals are followed by sila₃ counted with {\xsuxfont 𒀹} numerals.
 Curviform numerals are also used to count sila₃, but not\footnote{As of this writing,
 the single occurrence of (ban2@c) followed by curviform numerals and sila3 in ED IIIb Ŋirsu transliterations on CDLI,
-4(ban2@c) 3(asz@c) sila3 in \cite[\obverse~4, 7]{P221815}, is incorrect: it should be 4(ban2@c) 3(disz@t) sila3.}
+4(ban2@c) 3(asz@c) sila3 in \cite[\obverse~4~7]{P221815}, is incorrect: it should be 4(ban2@c) 3(disz@t) sila3.}
 as part of the {\xsuxfont 𒄥} systems.
 This contrast can be seen in \cite{P220927},
 which measures butter ({\xsuxfont 𒉌}, i₃)
@@ -976,7 +984,7 @@ is outside the realm of plain text; see also section~\ref{stackingPatterns}.} fo
 but counts cheese ({\xsuxfont 𒓻}, gaʾar) using the {\xsuxfont 𒄥𒊕𒅅} capacity system, with {\xsuxfont 𒀹} numerals for the {\xsuxfont 𒋡}.
 % FIXCDLI P221815 4(ban2@c) 3(asz@c) sila3 should be 4(ban2@c) 3(disz@t) sila3.
 
-Another capacity system in ED IIIb Ŋirsu is the {\xsuxfont 𒄥𒑊𒌌}, the gur of two ul:
+Another capacity system in ED IIIb Ŋirsu is the {\xsuxfont 𒄥𒑊𒌌}, the gur of two ul \cite{Lecompte2016}:
 \begin{equation}
 \underbrace{\text{\oneUC}
 \xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒄥𒑊𒌌}\curvearrowright}
@@ -988,8 +996,8 @@ Another capacity system in ED IIIb Ŋirsu is the {\xsuxfont 𒄥𒑊𒌌}, the g
 \end{equation}
 Here the {\xsuxfont \oneAšC}--{\xsuxfont 𒀹}--{\xsuxfont \oneDišC} contrast occurs not only within the numerals of the system,
 but with its units; this is perhaps best illustrated by the expressions {\xsuxfont 𒊺 𒍼 𒍩 \oneUC\oneDišC\threeBanTwoC 𒑋𒋡 𒄥𒑊𒌌}
-in \cite[\reverse~2, 2]{P221746} and {\xsuxfont 𒊺 𒍩 \oneUC\threeBanTwoC 𒑌𒋡 𒄥𒑊𒌌}
-in \cite[\reverse~1, 5]{P221814}.
+in \cite[\reverse~2~2]{P221746} and {\xsuxfont 𒊺 𒍩 \oneUC\threeBanTwoC 𒑌𒋡 𒄥𒑊𒌌}
+in \cite[\reverse~1~5]{P221814}.
 
 \subsubsection{Grain in Ebla}
 The mixing of curviform and cuneiform numerals within a metrological system is not specific to Ŋirsu.
@@ -1031,7 +1039,7 @@ and the smaller units using cuneiform {\xsuxfont 𒁹} numerals\footnote{As ment
 the {\xsuxfont 𒂆} is also counted using the \oneBanTwoC{}--\fourBanTwoC{} numeral series.
 Some instances of that usage are found transliterated $n/6$ in EbDA; in some cases the {\xsuxfont 𒂆} sign is omitted, and
 the \oneBanTwoC{} numeral is then written before the {\xsuxfont 𒁇} unit, as in {\xsuxfont\twoAšC\twoBanTwoC 𒊺𒁇}
-from \cite[\href{http://ebda.cnr.it/tablet/view/1328\#58300}{\verso~1, 3}]{P240545}.}
+from \cite[\href{http://ebda.cnr.it/tablet/view/1328\#58300}{\verso~1~3}]{P240545}.}
 % NOTE: EST 061  is a mess,
 % see . 
 Indeed, a search on \cite{EbDA} for co-occurrences of either {\xsuxfont 𒀭𒍡} or {\xsuxfont 𒃻𒋙𒊕} with
@@ -1045,21 +1053,21 @@ Section~\ref{transliteration}, CDLI transliterations indicate numeral shape; how
 as of this writing, they do so incorrectly on the Ebla corpus, claiming that all numerals are curviform,
 so we were not able to rely on them in this specific case.}
 \begin{enumerate}[nosep]
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1324\#58045}{\verso~4, 9}]{P240532} {\oneAšC\xsuxfont 𒊺 𒁀𒊑𒅗\footnote{ba-ri₂-zu₂, a variant spelling.}𒐊𒃻𒋙𒊕}% v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1350\#59630}{\verso~1, 1}]{P240548} {\oneAšC\xsuxfont 𒁀𒊑𒍪 𒐈𒀭𒍡} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7, 9}]{P240655} {\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇}.}𒐊𒃻𒋙𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1364\#60805}{\verso~4, 3}]{P240579} {\fiveAšC\oneDišC\xsuxfont 𒄘𒁇 𒈫𒃻𒋙𒊕}% 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2, 2}]{P240675} {\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒋙𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3, 1}]{P240609} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1324\#58045}{\verso~4~9}]{P240532} {\oneAšC\xsuxfont 𒊺 𒁀𒊑𒅗\footnote{ba-ri₂-zu₂, a variant spelling.}𒐊𒃻𒋙𒊕}% v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1350\#59630}{\verso~1~1}]{P240548} {\oneAšC\xsuxfont 𒁀𒊑𒍪 𒐈𒀭𒍡} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7~9}]{P240655} {\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇}.}𒐊𒃻𒋙𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1364\#60805}{\verso~4~3}]{P240579} {\fiveAšC\oneDišC\xsuxfont 𒄘𒁇 𒈫𒃻𒋙𒊕}% 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2~2}]{P240675} {\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒋙𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3~1}]{P240609} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
   %\item % r.3,3	1 ba-ri₂-zu 8 nig₂-sagšu ninda ARET 09 0064 http://ebda.cnr.it/tablet/view/1378#61586
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P240533} {\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}  % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1381\#61931}{\recto~1, 5}]{P240697} {\oneAšC\oneDišC\footnote{Note the omitted {\xsuxfont 𒄘𒁇}.}\xsuxfont 𒈫𒂆 𒐈𒀭𒍡}% ARET 09 0067 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1382\#62088}{\recto~6, 2}]{P240653} {\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\xsuxfont 𒁹𒃻𒋙𒊕 𒈫𒈦𒀭𒍡} % ARET 09 0068  20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2, 6}]{P240654} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1, 8}]{P240531} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1, 1}]{P241708}\footnote{From CDLI photo.} {\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1, 1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see Section~\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3184\#155353}{\recto~3, 2}]{P240964}\footnote{From
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3~3}]{P240533} {\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}  % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1381\#61931}{\recto~1~5}]{P240697} {\oneAšC\oneDišC\footnote{Note the omitted {\xsuxfont 𒄘𒁇}.}\xsuxfont 𒈫𒂆 𒐈𒀭𒍡}% ARET 09 0067 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1382\#62088}{\recto~6~2}]{P240653} {\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\xsuxfont 𒁹𒃻𒋙𒊕 𒈫𒈦𒀭𒍡} % ARET 09 0068  20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2~6}]{P240654} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1~8}]{P240531} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1~1}]{P241708}\footnote{From CDLI photo.} {\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1~1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see Section~\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/3184\#155353}{\recto~3~2}]{P240964}\footnote{From
   photo in \cite[6]{Archi1989}; see also the CDLI photo and the copy in \cite[17]{Friberg1986}.
   This tablet features unusual usage of vertical numerals---``somewhat unorganized'', as described by \cite[16]{Friberg1986}---,
   such as \smash{\xsuxfont\threeDišC 𒄘𒁇} or \smash{\xsuxfont\eightDišC 𒈪}, but its {\xsuxfont 𒉻𒊕} and {\xsuxfont 𒀭𒍡} are consistently
@@ -1068,7 +1076,7 @@ so we were not able to rely on them in this specific case.}
 Note that higher numbers of {\text{\xsuxfont 𒄘𒁇}} are expressed in hundreds (\emph{mi-at} {\xsuxfont 𒈪𒀜})
 and then thousands (\emph{li-im} {\xsuxfont 𒇷𒅎}),
 as is typical in Ebla \cite[33]{Archi2015},
-\exempligratia, in the last example above or in \cite[\href{https://ebda.cnr.it/tablet/view/1324\#58019}{\verso~2, 3}]{P240532},
+\exempligratia, in the last example above or in \cite[\href{https://ebda.cnr.it/tablet/view/1324\#58019}{\verso~2~3}]{P240532},
 {\oneAšC\xsuxfont 𒈪𒀜\oneŊešTwoC\threeUC\fiveAšC\xsuxfont 𒊺 𒄘𒁇}
 ($100+60+30+5=195$~{\xsuxfont 𒄘𒁇} of grain). %1 mi-at 60-30-5 še gu₂-bar
 These expressions correspond to the following factor diagram:
@@ -1263,7 +1271,7 @@ Sign order can be variable in early texts, see \cite[8]{Foxvog2016}.}
 \begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-61.png}
-  \caption{Partial transliteration of \cite[\href{http://ebda.cnr.it/tablet/view/1322\#57724}{\recto~5, 3}]{P240597}
+  \caption{Partial transliteration of \cite[\href{http://ebda.cnr.it/tablet/view/1322\#57724}{\recto~5~3}]{P240597}
   {\xsuxfont\threeAšC{} 𒊺 𒁇 \oneDišC{} 𒁀𒌷𒍪} in \cite[61]{Chambon2012}\label{chambon61}.}
   \end{center}
 \end{figure}
@@ -1291,7 +1299,7 @@ Sign order can be variable in early texts, see \cite[8]{Foxvog2016}.}
 \begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{gori-163.png}
-  \caption{Transliteration in \cite[163]{Gori2023} of \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} incorporating untransliterated numerals.\label{GoriTransliteration}}
+  \caption{Transliteration in \cite[163]{Gori2023} of \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4~1}]{P242293} incorporating untransliterated numerals.\label{GoriTransliteration}}
   \end{center}
 \end{figure}
 
@@ -1329,25 +1337,25 @@ such non-numeric usage is almost\footnote{Exceptions are discussed in section~\r
   \item in personal names in administrative texts,
   such as the following, which all contain {\oneAšC} numerals:\begin{itemize}[nosep]
   \item {\xsuxfont 𒀸𒊕} in
-  \cites[\reverse~1, 5]{P010424}[\obverse~1, 5]{P010458}[\obverse~2, 5′]{P010459}
+  \cites[\reverse~1~5]{P010424}[\obverse~1~5]{P010458}[\obverse~2~5′]{P010459}
   from ED IIIa \smash{\textarabic{أبو صلابيخ}},
-  \item {\xsuxfont 𒀸𒉌} in \cite[\obverse~2, 5]{P010960} from ED IIIa Šuruppag,
-  % \item {\xsuxfont 𒀸𒁯𒌦𒄷} in \cite[\obverse~7, 18]{P010964} from ED IIIa Šuruppag, % FIXCDLI Nope, 𒀾
-  \item {\xsuxfont 𒆷𒈠𒀸𒁯} in \cite[\obverse~4, 3]{P251641} from ED IIIb Adab,
-  \item {\xsuxfont 𒅤𒊭𒀸𒁯𒈨} in \cite[\reverse~2, 3]{P252866} from ED IIIb Adab,
-  \item {\xsuxfont 𒈗𒋗𒀸𒉌} in \cite[\reverse~2, 4]{P298637} from ED IIIb Umma;
+  \item {\xsuxfont 𒀸𒉌} in \cite[\obverse~2~5]{P010960} from ED IIIa Šuruppag,
+  % \item {\xsuxfont 𒀸𒁯𒌦𒄷} in \cite[\obverse~7~18]{P010964} from ED IIIa Šuruppag, % FIXCDLI Nope, 𒀾
+  \item {\xsuxfont 𒆷𒈠𒀸𒁯} in \cite[\obverse~4~3]{P251641} from ED IIIb Adab,
+  \item {\xsuxfont 𒅤𒊭𒀸𒁯𒈨} in \cite[\reverse~2~3]{P252866} from ED IIIb Adab,
+  \item {\xsuxfont 𒈗𒋗𒀸𒉌} in \cite[\reverse~2~4]{P298637} from ED IIIb Umma;
   \end{itemize}
   \item in the Sumerian word {\xsuxfont 𒌑𒀸} u₂-rum, ``property'' in ED IIIb Ŋirsu administrative texts which contain
     {\oneAšC} numerals, such as
-    \cites[\obverse~2, 3]{P020006}[\reverse~1, 2]{P020008}[\reverse~1, 2]{P020018}[\obverse~1, 4]{P020024}[\obverse~3, 1]{P020030};
+    \cites[\obverse~2~3]{P020006}[\reverse~1~2]{P020008}[\reverse~1~2]{P020018}[\obverse~1~4]{P020024}[\obverse~3~1]{P020030};
   \item in lexical texts:
   \begin{itemize}[nosep]
-    \item in the divine name {\xsuxfont 𒀭𒎏𒉾𒀸𒁇} in the lexical texts \cites[\reverse~2, 4]{P010570}[\obverse~3, 6]{P010572},
+    \item in the divine name {\xsuxfont 𒀭𒎏𒉾𒀸𒁇} in the lexical texts \cites[\reverse~2~4]{P010570}[\obverse~3~6]{P010572},
       where the entries are prefixed with {\oneAšC}.
     \item in the word {\xsuxfont 𒀸} dili, ``small fish'' in
-    \cite[\obverse~2, 5]{P010578}, witness to Early Dynastic Fish,
+    \cite[\obverse~2~5]{P010578}, witness to Early Dynastic Fish,
     \item in the same word with a determinative, {\xsuxfont 𒀸𒄩} dili\textsuperscript*{ku₆},
-    in \cite[\obverse~4, 4 \& 6]{P010586},
+    in \cite[\obverse~4~4; 6]{P010586},
     witness to Early Dynastic Food, which starts with {\oneAšC} numerals.
   \end{itemize}
 \end{itemize}
@@ -1393,11 +1401,11 @@ contain numbers to the extent that administrative texts do.
 Further, there tend to be changes\footnote{Compare,
 \exempligratia, in the \emph{Instructions of Šuruppag},
 {\xsuxfont 𒋢𒆳𒊒𒆠 𒌫\oneAšC{} 𒌉𒉌𒊏} / {\xsuxfont 𒈾 𒈾𒈬𒊑𒊑} in
-the ED IIIa witness \cite[\obverse~2, 7]{P222243}, also discussed
+the ED IIIa witness \cite[\obverse~2~7]{P222243}, also discussed
 in section~\ref{šar₂}, and
 {\xsuxfont 𒋢𒆳𒊒𒆠𒂊 𒌉𒉌𒊏 𒈾 𒈾𒈬𒌦𒊑𒊑}
 in the OB composite \cite[6]{Q000782} (translated ``Šuruppag gave instructions to his son''
-in \cite{ETCSRI}).
+in \cite[\href{https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.5.6.1\&display=Crit\&charenc=gtilde\&lineid=t561.p1\#t561.p1}{t.5.6.1, 1--13}]{ETCSL}).
 It does not matter for the construction of a
 composite text whether this is encoded
 {\xsuxfont 𒌫\oneAšC} or {\xsuxfont 𒌫𒀸},
@@ -1425,8 +1433,8 @@ characters, the {\oneAšC}-{\xsuxfont 𒀸} unification does not help.
 
 More generally, since numbers are so deeply tied to metrology, and since
 metrological systems change between the Early Dynastic and later
-periods\footnote{See, \exempligratia, \cite[55]{Robson2008} on the unification of
-metrologies under Sargon, resulting in the systems described in
+periods\footnote{See, \exempligratia, \cites[493]{Powell1987}[55]{Robson2008} on the unification of
+metrologies in the Old Akkadian period, resulting in the systems described in
 section~\ref{metrology}.}, there is little opportunity
 for a diachronic representation of numeric quantities.
 
@@ -1458,10 +1466,10 @@ The character U+\textcsc{122B9} {\cuneiformComposite 𒊹} \textsc{cuneiform sig
 has a circular reference glyph.
 
 In most texts from the Early Dynastic IIIb and Old Akkadian period\footnote{For example, in personal names:\begin{itemize}[nosep]
-%\item \cite[\reverse~5, 3]{P010263}, ED IIIa literary; % NOTE(egg): Lisman reads that ḫe, so let’s not go there.
-\item {\xsuxfont 𒂗𒆠𒊹𒊏} in \cite[\reverse~1, 2]{P020019} from ED IIIb Ŋirsu;
-\item {\xsuxfont 𒂄𒈨𒊹𒊏𒁺} in \cite[\obverse~2, 9]{P020182}, also from ED IIIb Ŋirsu; 
-\item {\xsuxfont 𒊩𒀭𒊹} in \cite[\obverse~3, 3]{P222186} from ED IIIb Umma;
+%\item \cite[\reverse~5~3]{P010263}, ED IIIa literary; % NOTE(egg): Lisman reads that ḫe, so let’s not go there.
+\item {\xsuxfont 𒂗𒆠𒊹𒊏} in \cite[\reverse~1~2]{P020019} from ED IIIb Ŋirsu;
+\item {\xsuxfont 𒂄𒈨𒊹𒊏𒁺} in \cite[\obverse~2~9]{P020182}, also from ED IIIb Ŋirsu; 
+\item {\xsuxfont 𒊩𒀭𒊹} in \cite[\obverse~3~3]{P222186} from ED IIIb Umma;
 \item {\xsuxfont 𒌨𒀭𒀀𒊹} in \cite[\obverse~16]{P235312} from Old Akkadian Umma.
 \end{itemize}},
 a contrast between non-numeric šar₂ written {\xsuxfont 𒊹}
@@ -1473,11 +1481,11 @@ archaizing in other ways, \exempligratia, they have a
 {\xsuxfont 𒉇}--{\xsuxfont 𒌆} (NAM₂--TUG₂) split.},
 as well as in the \emph{\textfrench{Stèle des vautours}},
 non-numeric šar₂ is curviform:\begin{itemize}[nosep]
-  \item {\originalNoto 𒀭𒂗𒆠𒊹} and {\originalNoto 𒀭𒂗𒊹𒉡𒄄} in \cite[\obverse~10, 10 \& 11]{P010566};
-  \item {\originalNoto 𒊹𒄈} and {\originalNoto 𒀭𒊹𒄈} in \cite[\reverse~3, 16 \& 17]{P010576};
-  \item {\originalNoto 𒊹𒄷} in \cite[\href{https://oracc.museum.upenn.edu/dcclt/P240986.44}{\recto~3, 3}]{P240986}\footnote{From copy in \cite[No.~397]{ELLes}.};
-  \item {\originalNoto 𒊹𒊏𒈾} in \cite[\obverse~17, 9; 18, 11; 22, 12]{P222399}\footnote{Note
-  however {\xsuxfont 𒀭𒉌 𒊹𒊏} on \cite[\obverse~6, 17]{P222399}, see 
+  \item {\originalNoto 𒀭𒂗𒆠𒊹} and {\originalNoto 𒀭𒂗𒊹𒉡𒄄} in \cite[\obverse~10~10; 11]{P010566};
+  \item {\originalNoto 𒊹𒄈} and {\originalNoto 𒀭𒊹𒄈} in \cite[\reverse~3~16; 17]{P010576};
+  \item {\originalNoto 𒊹𒄷} in \cite[\href{https://oracc.museum.upenn.edu/dcclt/P240986.44}{\recto~3~3}]{P240986}\footnote{From copy in \cite[No.~397]{ELLes}.};
+  \item {\originalNoto 𒊹𒊏𒈾} in \cite[\obverse~17~9; 18 11; 22 12]{P222399}\footnote{Note
+  however {\xsuxfont 𒀭𒉌 𒊹𒊏} on \cite[\obverse~6~17]{P222399}, see 
   Figure~\ref{vultureSquare}.
   Curviform non-numeric šar₂ is clearly archaizing in ED IIIb Ŋirsu;
   one might suppose that the scribe slipped into their modern ways here.}.
@@ -1485,7 +1493,7 @@ non-numeric šar₂ is curviform:\begin{itemize}[nosep]
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{vautours.png}
-    \caption{\cite[\obverse~6, 16--17]{P222399} {\xsuxfont 𒃶𒊒𒁉} / {\xsuxfont 𒀭𒉌 𒊹𒊏}.\label{vultureSquare}}      
+    \caption{\cite[\obverse~6~16--17]{P222399} {\xsuxfont 𒃶𒊒𒁉} / {\xsuxfont 𒀭𒉌 𒊹𒊏}.\label{vultureSquare}}      
   \end{center}
 \end{figure}
 
@@ -1511,7 +1519,7 @@ Since system fonts follow the reference glyphs,
 and since extant specialist fonts target styles where U+\textcsc{122B9} is unambiguously cuneiform,
 there are no compatibility issues.
 
-Note that in rare cases, such as \cite[\obverse~2, 7]{P222243} from ED IIIa Adab,
+Note that in rare cases, such as \cite[\obverse~2~7]{P222243} from ED IIIa Adab,
 non-numeric {\xsuxfont 𒀸} (here with the value rum) is written {\oneAšC}.
 It is out of scope for this proposal to decide whether
 such occurrences should be treated as anomalous spellings, encoded as
@@ -1550,7 +1558,7 @@ The numerals may also be transliterated separately,
 but solely by their values in terms of the overt unit,
 as in EbDA transliterations:
 the aforementioned {\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}
-from \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3, 3}]{P240533}
+from \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3~3}]{P240533}
 is transliterated ``$20$-$1$-$1/2$~\emph{gu}₂-\emph{bar} $7$~nig₂-sagšu $2$-$1/2$~an-zamₓ\footnote{As
 of this writing, EbDA actually has an-zamᵪ, with U+\textcsc{1D6A}
 \textcsc{GREEK SUBSCRIPT SMALL LETTER CHI}.} \emph{za}'', reading both
@@ -1560,11 +1568,9 @@ but not distinguishing them.
 In particular, these transliterations do not differentiate between
 {\xsuxfont 𒀸} and {\xsuxfont 𒁹} numerals, nor between
 \oneAšC{} and \oneDišC{} numerals.
-For instance, the aforementioned
+For instance, the aforementioned \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4~1}]{P242293}
 {\fourAšC~\xsuxfont 𒂍𒁕𒌝𒌆𒑊 \fourDišC~\xsuxfont 𒀀𒋢 \fourAšC~\xsuxfont 𒔻
-𒌆 𒊷𒁯}
-from \cite[\href{http://ebda.cnr.it/tablet/view/217\#13705}{\recto~4, 1}]{P242293} is
-transliterated ``$4$~\emph{ʾa}₃-\emph{da}-\emph{um}\textsuperscript*{tug₂}-II $4$~aktum\textsuperscript*{tug₂} $4$~ib₂-III gun₃ sa₆ \textsuperscript*{tug₂}''
+𒌆 𒊷𒁯} is transliterated ``$4$~\emph{ʾa}₃-\emph{da}-\emph{um}\textsuperscript*{tug₂}-II $4$~aktum\textsuperscript*{tug₂} $4$~ib₂-III gun₃ sa₆ \textsuperscript*{tug₂}''
 in EbDA, with no distinction between the \fourAšC{} and \fourDišC.
 Since {\xsuxfont 𒀸} and {\xsuxfont 𒁹} numerals are separately encoded,
 the numeric expressions in such transliterations cannot be transformed
@@ -1590,7 +1596,7 @@ and ``$3$(barig) $2$(ban2) $7$(disz) $1/2$(disz) sila3'' for {\xsuxfont 𒑗𒑐
 CDLI and ePSD2 both distinguish curviform from cuneiform numerals in
 transliteration: the length
 \vphantom{\scalebox{0.85}{\sixŊešTwoC}}{\smash{\sixŊešTwoC}\threeUC\xsuxfont 𒃻𒁺\oneBanTwoC\xsuxfont 𒑌𒄀}
-from \cite[\reverse~2, 1]{P020129} is transliterated
+from \cite[\reverse~2~1]{P020129} is transliterated
 ``$6$(gesz2@c) $3$(u@c) \{ninda\}nindax(DU) $1/2$(asz@c) $4$(disz@t) gi''
 in CDLI, and ``$6$(geš₂ᶜ) $3$(uᶜ) \textsuperscript*{ninda}nindaₓ(DU) $1/2$(ašᶜ) $4$(dišᵗ) gi''
 in ePSD2.
@@ -1697,7 +1703,7 @@ this approach does not require interpreting the quantity being counted.
 This is valuable in contexts where numerals are being used atypically,
 as conventional transliterations can otherwise force a dubious interpretation.
 For instance, the CDLI transliteration of \threeAšC\threeDišC{\xsuxfont 𒌆}  or \sixAšC\sixDišC{} in
-\cite[\reverse~1, 6;2, 2]{P283802} currently uses (barig@c) for the vertical numerals,
+\cite[\reverse~1~6;2~2]{P283802} currently uses (barig@c) for the vertical numerals,
 since \oneDišC{} numerals are typically capacity measures;
 but \cite{Gori2023} interprets these instead as counting linen textiles.
 As a result, the fourth millenium conventions for numeral transliteration
@@ -1746,7 +1752,7 @@ as U+\textcsc{1240E} {\xsuxfont 𒐎}.
 This is in part due to contrastive usage of stacking patterns.
 For instance, besides {\xsuxfont 𒑖} and {\xsuxfont 𒑗} which are characteristic of bariga measures,
 four bariga is written {\xsuxfont 𒐉} even where $4${\xsuxfont 𒁹} is written {\xsuxfont 𒐼}, as in
-\cites[\obverse~2, 3;\reverse~1, 17]{P255010}[\obverse~4;\reverse~5]{P292843}.
+\cites[\obverse~2~3;\reverse~1~17]{P255010}[\obverse~4;\reverse~5]{P292843}.
 Another contrast is that between the stacking patterns used in scratch calculations in the SPVS,
 often {\xsuxfont 𒁹 𒈫 𒐈 𒐼 𒐊 𒐋 𒑂 𒑄 𒑆 𒌋 𒎙 𒌍 𒑩 𒑪}, and results
 in metrological systems,
@@ -1803,7 +1809,7 @@ reproducing the layout of tablets is not within the scope of plain text.
   \smash{\rotatebox[origin=c]{270}{\LARGE\twoUC}{\LARGE\oneDišC}{\xsuxfont \rlap{\raisebox{-0.2em}{\scriptsize 𒓻}}\raisebox{0.5em}{\hspace*{1pt}\small 𒋗}}}\vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\\
   \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\hfill \smash{\xsuxfont\scriptsize 𒋳}\\
   \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\hfill \xsuxfont \smash{\small 𒉌}\nhphantom{{\small 𒉌}𒂵}\smash{\raisebox{0.5em}{𒂵}}\hphantom{{\small 𒉌}\hspace*{1pt}}}
-  \caption{The layout of case \cites[\reverse~2, 3]{P011099}; the numeral \twoUC{} is rotated to fit the rounded corner of the tablet.}
+  \caption{The layout of case \cites[\reverse~2~3]{P011099}; the numeral \twoUC{} is rotated to fit the rounded corner of the tablet.}
   \label{cheese}
 \end{center}
 \end{figure}
@@ -1814,7 +1820,7 @@ reproducing the layout of tablets is not within the scope of plain text.
   {\LARGE\twoUC}\parbox{\twentyTwoOxenWidth}{%
   \linespread{0}\selectfont{}\vphantom{\scalebox{0.6}{\LARGE\twoAšC}}\smash{\scalebox{0.5}[1]{\LARGE\twoAšC}\raisebox{2pt}{\xsuxfont 𒄞}}\\
   \vphantom{\scalebox{0.6}{\LARGE\twoAšC}}{\hfill\smash{\xsuxfont 𒈬}\smash{\xsuxfont 𒀹}}}
-  \caption{The layout of case \cites[\obverse~1, 1]{P020066}; the numeral \twoUC{} is spread across two lines.
+  \caption{The layout of case \cites[\obverse~1~1]{P020066}; the numeral \twoUC{} is spread across two lines.
   The text is read in the order {\twoUC\twoAšC\xsuxfont 𒄞 𒈬𒀹}, ``twenty-two oxen, one year old''.}
   \label{twentyTwoOxen}
 \end{center}
@@ -1828,9 +1834,9 @@ reproducing the layout of tablets is not within the scope of plain text.
 \]
   \caption{Three stacking patterns for U+\textcsc{12573} \textcsc{CUNEIFORM NUMERIC SIGN NINE N34}.
   The one on the left is the reference glyph, used in Uruk III
-  \cites[\obverse~1, 1b]{P003499}[\reverse~1, 2]{P004430}, and widely afterwards, \exempligratia,
+  \cites[\obverse~1~1b]{P003499}[\reverse~1~2]{P004430}, and widely afterwards, \exempligratia,
   ED~IIIa Šuruppag \cite[\obverse~2]{P010678},
-  ED~IIIb Ŋirsu \cite[\obverse~1, 3]{P020057},
+  ED~IIIb Ŋirsu \cite[\obverse~1~3]{P020057},
   Old Akkadian Umma \cite[\obverse~11]{P212464}.
   The ones in the middle and right are used in two Uruk IV tablets
   \cites[\reverse]{P001243}[\reverse~2]{P004500}. All three Uruk examples are transliterated
