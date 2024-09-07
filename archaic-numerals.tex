@@ -229,6 +229,14 @@
     \ifhyperref
       {\href{http://oracc.org/#1}{#1}}
       {#1}}
+\DeclareFieldFormat{eprint:etcsl}{%
+  \newline
+  \mkbibacro{ETCSL}
+    \ifhyperref
+      {transliteration: \href{https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.#1\&display=Crit\&charenc=gtilde}{c.#1}
+       translation: \href{https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.#1\&display=Crit\&charenc=gtilde}{t.#1}}
+      {transliteration: {c.#1}
+       translation: {t.#1}}}
 \DeclareFieldFormat{eprint:louvre}{%
   \newline
   Louvre Collections\addcolon\space
@@ -546,12 +554,12 @@ One should bear in mind, however, that other systems were used;
 the SPVS was primarily used in calculations,
 with results being expressed in non-positional systems \cites[76]{Robson2008}{Robson2022}.
 The digits $1$–$59$ of the SPVS have inner structure which is reflected in the encoding: the digits 1–9 are the individual
-characters {\xsuxfont 𒁹}–{\xsuxfont 𒑆}, the multiples of ten ($10$–$50$) are {\xsuxfont 𒌋}–{\xsuxfont 𒐐},
-but the other digits $11$–$59$ are sequences {\xsuxfont 𒌋𒁹}–{\xsuxfont 𒐐𒑆};
+characters {\xsuxfont 𒁹}–{\xsuxfont 𒐎}, the multiples of ten ($10$–$50$) are {\xsuxfont 𒌋}–{\xsuxfont 𒐐},
+but the other digits $11$–$59$ are sequences {\xsuxfont 𒌋𒁹}–{\xsuxfont 𒐐𒐎};
 in effect the base-sixty digits are themselves written in base ten, with a different set of symbols for the tens place.
 This reflects the origin of the sexagesimal place value system;
 it derives from a \emph{non-positional} system, hereafter the \emph{cuneiform discrete counting system} \ref{systemSOB},
-which had different signs for the units {\xsuxfont 𒁹}–{\xsuxfont 𒑆},
+which had different signs for the units {\xsuxfont 𒁹}–{\xsuxfont 𒐎},
 tens {\xsuxfont 𒌋}–{\xsuxfont 𒐐}, sixties {\xsuxfont 𒐕}–{\xsuxfont 𒐝} (with larger wedges
 than the units), multiples of six hundred {\xsuxfont 𒐞}–{\xsuxfont 𒐢},
 multiples of three thousand six hundreds {\xsuxfont 𒊹}–\vphantom{\scalebox{0.8}{\xsuxfont 𒐫}}\smash{\xsuxfont 𒐫}, and
@@ -607,11 +615,12 @@ with different relations; the sign {\xsuxfont 𒊹} is equal to sixty times {\xs
 in the area system, but to three hundred and sixty times {\xsuxfont 𒌋} in the discrete counting system.
 
 For areas smaller than a quarter \emph{ikûm}, an overt unit is used,
-with $1~\text{sar}=1~\text{\emph{mūšarum}}\approx36~\text{m}^2$ written {\xsuxfont 𒁹𒊬}, equal to one hundredth of an \emph{ikûm},
-then sexigesimally subdivided in $60~\text{\xsuxfont{𒂆}}$ (ŋin₄, \emph{šiqlū}, shekels).
+with one {\xsuxfont 𒊬} (sar, \emph{mūšarum}), approximately $36~\text{m}^2$,
+written {\xsuxfont 𒁹𒊬}, equal to one hundredth of an \emph{ikîm},
+then sexigesimally subdivided in $60~\text{\xsuxfont{𒂆}}$ (giŋ₄, \emph{šiqlum}, ``shekel'').
 For areas greater than $3600~\text{\emph{būr}}$,
 the {\xsuxfont 𒊹} and {\xsuxfont 𒐬} numerals are reused with a suffix {\xsuxfont 𒃲} (gal, ``big''),
-as follows \cites[\pno~295 \withnote~b and c]{Robson2008}[378]{Friberg2007}{Robson2019}: \[\small
+as follows \cites[\pno~295 \withnotes~b, c]{Robson2008}[378]{Friberg2007}{Robson2019}: \[\small
 \underbrace{\underbrace{\text{\xsuxfont 𒐬}
 \xleftarrow{10}\text{\xsuxfont 𒊹}}_{\text{\xsuxfont{𒃲}}}
 \xleftarrow{6}\text{\xsuxfont 𒐬}
@@ -654,7 +663,7 @@ volumes of earthworks instead use system \ref{systemGOB} based on a height of on
 In the above diagram, the numerals for ban₂ are {\xsuxfont 𒑏}, {\xsuxfont 𒑐}, {\xsuxfont 𒑑}, {\xsuxfont 𒑒},
 and {\xsuxfont 𒑔}, and those for bariga are {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, and {\xsuxfont 𒐉} (contrast
 ordinary {\xsuxfont 𒈫} and {\xsuxfont 𒐈} otherwise used with {\xsuxfont 𒁹} numerals).
-Further, we have used the symbol $\curvearrowright$ to express that, as described in \cite[\pno~585 \withnote~(b) and (f)]{Huehnergard2011},
+Further, we have used the symbol $\curvearrowright$ to express that, as described in \cite[\pno~585 \withnotes~(b), (f)]{Huehnergard2011},
 the sign {\xsuxfont 𒄥} GUR, while it is used only with volumes in excess of one gur,
 is written after the whole expression,
 after the overt unit sign {\xsuxfont 𒋡} if present, and after the word for ``grain'' if present, as in
@@ -1030,7 +1039,7 @@ system uses different values for the {\xsuxfont 𒂆} and {\xsuxfont 𒃻𒋙�
 \begin{equation*}
   \underset{\text{gu₂-bar}}{\text{\xsuxfont 𒄘𒁇}}
   \xleftarrow{2}\underset{\text{ba-ri₂-zu}}{\text{\xsuxfont 𒁀𒌷𒍪}}
-  \xleftarrow{\frac{5}{2}}\underset{\text{ŋin₄}}{\text{\xsuxfont 𒂆}}
+  \xleftarrow{\frac{5}{2}}\underset{\text{giŋ₄}}{\text{\xsuxfont 𒂆}}
   \xleftarrow{4}\underset{\text{niŋ₂-saŋšu}}{\text{\xsuxfont 𒃻𒋙𒊕}}
   \xleftarrow{6}\underset{\text{an-zamₓ}}{\text{\xsuxfont 𒀭𒍡}}\text.
 \end{equation*}
