@@ -284,6 +284,12 @@ arrow style=math font,
 
 \renewcommand{\topfraction}{0.9}
 
+\usepackage{luacolor}
+\usepackage{lua-ul}
+\LuaULSetHighLightColor{yellow}
+\newcommand{\removed}[1]{\highLight{\strikeThrough{#1}}}
+\newcommand{\changed}[1]{\highLight{\strikeThrough{#1}}}
+
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
 
@@ -298,7 +304,7 @@ arrow style=math font,
 This document proposes encoding some numerals used in the fourth millenium (Uruk IV and Uruk III) and Early Dynastic period in conjunction
 with the Sumero-Akkadian cuneiform script\footnote{ISO 15924: Xsux, Script property value long name: Cuneiform; encoded since Unicode Version 5.0.}
 and the proto-cuneiform script\footnote{ISO 15924: Pcun, not yet encoded.}.
-The proposed characters are listed in section~\ref{proposal}.
+The proposed characters are listed in §\ref{proposal}.
 Most of them were listed in \cite{L2/23-190}; however,
 the present document provides a more detailed rationale for their encoding
 and additional information about their identity.
@@ -312,7 +318,7 @@ requiring an understanding of the text to correctly encode it.
 
 However, the \emph{numerals} used in proto-cuneiform should be unified with
 ones used in the Early Dynastic period, for the reasons set forth in
-section~\ref{unificationRationale}.
+§\ref{unificationRationale}.
 The proposed ``curved'', or ``curviform'', numerals\footnote{%
 Impressed into clay using cylindrical styli,
 held either perpendicular to the tablet, yielding
@@ -344,11 +350,11 @@ Impressed into clay using a stylus with a trihedral end:
 Since the encoding proposals for the cuneiform script
 twenty years ago provisionally considered the curviform numerals
 to be glyph variants of the cuneiform numerals,
-a detailed rationale is provided in section~\ref{disunificationRationale},
+a detailed rationale is provided in §\ref{disunificationRationale},
 including compatibility considerations in section \ref{compatibility}.
 
 The overall picture of unifications and disunifications over time is illustrated in table~\ref{tableUnificationsDisunifications}.
-The Script\_Extensions property assignments in section~\ref{properties} reflect the overlap.
+The Script\_Extensions property assignments in §\ref{properties} reflect the overlap.
 Many of these numerals are also used in proto-Elamite\footnote{ISO 15924: Pelm, not yet encoded.} texts,
 where they are treated as identical characters in scholarship on proto-Elamite,
 so that they should be unified with the ones proposed in \cite{L2/23-196}.
@@ -376,13 +382,22 @@ or well-attested in proto-Elamite texts but insufficiently attested in Uruk.
 \label{proposal}
 \subsection{Summary of proposed characters}
 % The following characters are proposed;
-% their names follow archaic conventions where possible, see section~\ref{unificationRationale}.
+% their names follow archaic conventions where possible, see §\ref{unificationRationale}.
 % they are ordered roughly according to their function in various metrological systems,
 % so as to facilitate annotation and readability in the character names list.
 \subsection{Properties}
 \label{properties}
 \subsection{Character names list}
 \subsection{Core specification text}
+
+Amend \cite[§24.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-24/\#G8188}{Dashed Box Convention}'']{Unicode16},
+third paragraph, as follows:
+\begin{quotation}
+  In a few cases of very wide \removed{punctuation }characters that do not naturally fit into a code chart cell,
+  the representative glyph may be shown with an artificially narrow shape,
+  displayed inside the dashed box, with or without additional annotation,
+  to indicate this adjustment of shape.
+\end{quotation}
 
 \section{Rationale for curviform--cuneiform disunification}
 \label{disunificationRationale}
@@ -506,7 +521,7 @@ rather than one that should be represented in plain text,
 and insists that the encoding should capture the lineal
 historical descent of those signs, presumably to take
 advantage of the benefits of diachronic encoding described
-in section~\ref{xsuxModel}.
+in §\ref{xsuxModel}.
 
 Although they had been part of the preliminary proposal \cite{L2/03-393R},
 the curviform numerals were therefore removed from \cite{L2/04-036} and \cite{L2/04-189},
@@ -521,10 +536,10 @@ however, the proposal \cite{L2/12-208} stated that
 An expert in the metrology of this period must be consulted before these can be properly included.''}.''
 
 The time has come to revisit this issue.
-As we will see in section~\ref{metrology},
+As we will see in §\ref{metrology},
 numerals can only be interpreted in the context of what they measure, \idest,
 as part of a metrological system.
-In section~\ref{earlyMetrology} we will see that in some periods:
+In §\ref{earlyMetrology} we will see that in some periods:
 \begin{itemize}[nosep]
   \item the functions and use of the numerals vary beyond the mere \oneAšC/{\xsuxfont 𒁹} switch;
   \item the contrast between curviform and cuneiform numerals is commonly used to distinguish metrological systems;
@@ -603,7 +618,7 @@ for the individual units (\emph{ubûm}, \emph{ikûm}, \emph{eblum}, and \emph{b�
 As mentioned in \cite{Robson2019}, the whole numeric expression for the area would be followed by the sign {\xsuxfont 𒃷}
 functioning as punctuation\footnote{This sign is sometimes interpreted as a measurement unit,
 and transliterated iku, see, \exempligratia, \cite[385\psqq]{Proust2020}, or transliterations in
-\cite{Feuerherm2004} discussed in section~\ref{transliteration}.
+\cite{Feuerherm2004} discussed in §\ref{transliteration}.
 Even with this interpretation, the sequence of numerals used, and the interpretation of numerals shared
 with other metrological systems, is specific to system~\ref{systemGOB}.}, but the numerals are tied to the metrology; thus
 a surface of $5~\text{\emph{būr}}$ $1~\text{\emph{ebel}}$ $4~\text{\emph{ikû}}$ ($100~\text{\emph{ikû}}$, $36~\text{ha}$) would be written\footnote{As in the surface of the field of {\xsuxfont 𒀀𒅗𒋡𒆠} (the city of Apisal) reported on \cite[r.~1]{P102305}}
@@ -640,7 +655,7 @@ as follows \cites[\pno~295 \withnotes~b, c]{Robson2008}[378]{Friberg2007}{Robson
 \label{systemGOB}
 \]
 \exempligratia, \smash{\xsuxfont 𒐣𒃲𒐭𒐸𒐔𒐃𒃷𒐊𒈦𒊬𒌋𒐎𒂆}\footnote{From \cite{P213162},
-which has an additional {\xsuxfont 𒑛𒊭}, two thirds (of a shekel), see section~\ref{fractions}.}
+which has an additional {\xsuxfont 𒑛𒊭}, two thirds (of a shekel), see §\ref{fractions}.}
 for $(2\times3600+20\times60+49)$~\emph{būr} $5$~\emph{ikû} $(5+\frac12)$~\emph{mūšar} $19$~\emph{šiqil}.
 Factor diagrams in this document will use bottom curly brackets in this fashion to separate numerals from
 units and other suffixes.
@@ -710,7 +725,7 @@ In the Ur III and Old Babylonian periods, lengths are expressed using overt unit
 Since it does not have any unusual numerals,
 this system would not in itself be of much relevance to character encoding,
 but we present it here as background for
-its Early Dynastic counterpart presented in section~\ref{earlyMetrology}.
+its Early Dynastic counterpart presented in §\ref{earlyMetrology}.
 Metrological tables use the following units\footnote{In this factor diagram and the next,
 we do not include the numerals. The units are no more than a factor of $60$ apart,
 so higher numerals such as {\xsuxfont 𒐞} or {\xsuxfont 𒊹} are not
@@ -787,7 +802,7 @@ of one iku and greater
 \end{equation*}
 mirrors system~\ref{systemGOB}, with consistent use of the numerals: \oneUC{} corresponds to {\xsuxfont 𒌋},
 \oneŠarTwoC{} to {\xsuxfont 𒊹}, and \oneŠarʾuC{} to {\xsuxfont 𒐬}.
-An exception to this correspondence, noted in \cite[4]{L2/04-099} (see section~\ref{oldArgumentsForUnification}),
+An exception to this correspondence, noted in \cite[4]{L2/04-099} (see §\ref{oldArgumentsForUnification}),
 is that the vertical {\xsuxfont 𒁹} from \ref{systemSOB} corresponds to a horizontal {\oneAšC} in system \ref{systemS}.
 This is however far from the only case of such a reallocation of function.
 The earlier form of the area system is \cites[141,165]{DamerowEnglund1987}[378]{Friberg2007}:
@@ -871,7 +886,7 @@ and then in reeds, \emph{with} the sign {\xsuxfont 𒄀}, as follows:
 \end{equation}%
 \footnotetext{The reeds are counted using \emph{tenû} numerals, {\xsuxfont 𒀹}, {\xsuxfont 𒑊}, {\xsuxfont 𒑋}, etc.}%
 This is the system that was used to express the sides of the field in
-\cite{P020054} discussed in section~\ref{oldArgumentsForUnification}.
+\cite{P020054} discussed in §\ref{oldArgumentsForUnification}.
 In that tablet and most others from the same period, such as the ones
 discussed in \cite{Lecompte2020}, areas are expressed in
 system \ref{systemGED}, with curviform numerals\footnote{A \cite{CDLI} search for \texttt{"(bur3)"} ({\xsuxfont 𒌋} numerals used for areas)
@@ -980,7 +995,7 @@ see, \exempligratia, \cite[\reverse~3,1;2]{P020092}.
 A good font could handle the very common $-1$ case, perhaps even $-2$ and $-3$;
 setting arbitrary numeric expressions under the {\xsuxfont 𒇲},
 or more generally replicating the layout of Early Dynastic tablets,
-is outside the realm of plain text; see also section~\ref{stackingPatterns}.} for both the {\xsuxfont 𒂁} and the {\xsuxfont 𒋡}, thus \cite[504\psq]{Powell1987}\begin{equation}
+is outside the realm of plain text; see also §\ref{stackingPatterns}.} for both the {\xsuxfont 𒂁} and the {\xsuxfont 𒋡}, thus \cite[504\psq]{Powell1987}\begin{equation}
   \underbrace{\text{\oneUC}
   \xleftarrow{10}{\text{\oneAšC}}}_{\text{\xsuxfont 𒂁}}
   \xleftarrow{2}\underbrace{\text{\oneUC}
@@ -1058,7 +1073,7 @@ most tablets contain several expressions mixing curviform {\xsuxfont 𒁀𒌷�
 In all cases the transcriptions given here are based on the \cite{EbDA} transliterations, but the
 shape and orientation of the numerals was checked\footnotemark on a photograph (from \cite{EbDA} unless noted otherwise).}:
 \footnotetext{As we will see in
-Section~\ref{transliteration}, \cite{CDLI} transliterations indicate numeral shape; however,
+§\ref{transliteration}, \cite{CDLI} transliterations indicate numeral shape; however,
 as of this writing, they do so incorrectly on the Ebla corpus, claiming that all numerals are curviform,
 so we were not able to rely on them in this specific case.}
 \begin{enumerate}[nosep]
@@ -1075,7 +1090,7 @@ so we were not able to rely on them in this specific case.}
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2~6}]{P240654} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
   \item \cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1~8}]{P240531} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
   \item \cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1~1}]{P241708}\footnote{From \cite{CDLI} photo.} {\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1~1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see Section~\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
+  \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1~1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see §\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
   \item \cite[\href{http://ebda.cnr.it/tablet/view/3184\#155353}{\recto~3~2}]{P240964}\footnote{From
   photo in \cite[6]{Archi1989}; see also the \cite{CDLI} photo and the copy in \cite[17]{Friberg1986}.
   This tablet features unusual usage of vertical numerals---``somewhat unorganized'', as described by \cite[16]{Friberg1986}---,
@@ -1127,7 +1142,7 @@ which would obviously be inadequate in this context.
 There are transliteration conventions that are more explicit about numeral shape, \exempligratia,
 $4(\text{ašᶜ})$ \emph{ʾa₃-da-um} $4(\text{dišᶜ})$ \emph{aktum} $4(\text{ašᶜ})$ ib₂\textsuperscript*{tu₉}×$3(\text{diš})$ sa₆ gunu₃,
 but the result would be less readable.
-See Section~\ref{transliteration} for a discussion of transliteration conventions for numerals.
+See §\ref{transliteration} for a discussion of transliteration conventions for numerals.
 \begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{powell-107.png}
@@ -1339,7 +1354,7 @@ written {\oneAšC} in the Early Dynastic period\footnote{A
 \cite{CDLI} search for \texttt{"(asz@c)"} finds 3296 ED texts,
 while a search for \texttt{"(asz)"} finds 81 ED texts,
 of which 46 also contain \texttt{"(asz@c)"}.},
-such non-numeric usage is almost\footnote{Exceptions are discussed in section~\ref{šar₂}.} always written
+such non-numeric usage is almost\footnote{Exceptions are discussed in §\ref{šar₂}.} always written
 {\xsuxfont 𒀸}, for instance:
 \begin{itemize}[nosep]
   \item in personal names in administrative texts,
@@ -1377,7 +1392,7 @@ a line {\oneAšC\xsuxfont 𒊕} would instead be read as ``one slave''.
 \label{limitedBenefitsOfDiachrony}
 The argument in favour of diachronic encoding is that it facilitates
 interoperability in a variety of use cases,
-as we have outlined in section~\ref{xsuxModel}.
+as we have outlined in §\ref{xsuxModel}.
 While these benefits are real and now visible for cuneiform signs,
 similar considerations are not generally applicable to curviform numerals.
 
@@ -1388,7 +1403,7 @@ For instance, \cite[123 \psqq]{KWU} lists all of {\xsuxfont 𒀸}--{\xsuxfont �
 {\oneAšC}--{\nineAšC},
 while {\xsuxfont 𒀸}, {\xsuxfont 𒐀}, and {\xsuxfont 𒐁}, and only those, appear at the beginning of the sign list,
 since they have non-numeric values\footnote{Non-numeric values of {\xsuxfont 𒀸} were discussed in
-section~\ref{non-numeric};
+§\ref{non-numeric};
 {\xsuxfont 𒐀} has the values man₃ and min₅, and is used for the word didli, ``several, various'';
 {\xsuxfont 𒐁} has the value eš₆.}.
 \cite[58]{PTACE} has the numeric signs {\oneAšC}, {\xsuxfont 𒀹}, {\xsuxfont 𒁹},
@@ -1410,7 +1425,7 @@ Further, there tend to be changes\footnote{Compare,
 \exempligratia, in the \emph{Instructions of Šuruppag},
 {\xsuxfont 𒋢𒆳𒊒𒆠 𒌫\oneAšC{} 𒌉𒉌𒊏} / {\xsuxfont 𒈾 𒈾𒈬𒊑𒊑} in
 the ED IIIa witness \cite[\obverse~2~7]{P222243}, also discussed
-in section~\ref{šar₂}, and
+in §\ref{šar₂}, and
 {\xsuxfont 𒋢𒆳𒊒𒆠𒂊 𒌉𒉌𒊏 𒈾 𒈾𒈬𒌦𒊑𒊑}
 in the OB composite \cite[6]{Q000782} (translated ``Šuruppag gave instructions to his son''
 in \cite[\href{https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.5.6.1\&display=Crit\&charenc=gtilde\&lineid=t561.p1\#t561.p1}{t.5.6.1, 1--13}]{ETCSL}).
@@ -1423,13 +1438,13 @@ to the text between Early Dynastic
 and later witnesses that prevent a diachronic encoding of such composites.
 For numerals, the switch from {\oneAšC} to {\xsuxfont 𒁹} numerals prevents
 diachronic encoding even if {\oneAšC} were unified with {\xsuxfont 𒀸}.
-For instance, the lexical list Early Dynastic Food, already mentioned in section~\ref{non-numeric},
+For instance, the lexical list Early Dynastic Food, already mentioned in §\ref{non-numeric},
 contains some numbers, and has a witness from the Old Akkadian period covering
 these numbers: \cite[\href{https://oracc.museum.upenn.edu/dcclt/P215653.3}{a~1′--6′}]{P215653};
 however, they are written with {\xsuxfont 𒁹} numerals, whereas they are written with
 {\oneAšC} numerals in the Early Dynastic witnesses; since {\xsuxfont 𒁹}
 and {\xsuxfont 𒀸} are distinct\footnote{Besides the contrasts in numeric usage
-mentioned in section~\ref{capacity}, these (already-encoded) characters were clearly
+mentioned in §\ref{capacity}, these (already-encoded) characters were clearly
 not unifiable because of the many contrasts in non-numeric usage between them;
 several values of {\xsuxfont 𒀸} which are not shared with {\xsuxfont 𒁹}
 have already been mentioned, but perhaps most striking is the fact that,
@@ -1443,7 +1458,7 @@ More generally, since numbers are so deeply tied to metrology, and since
 metrological systems change between the Early Dynastic and later
 periods\footnote{See, \exempligratia, \cites[493]{Powell1987}[55]{Robson2008} on the unification of
 metrologies in the Old Akkadian period, resulting in the systems described in
-section~\ref{metrology}.}, there is little opportunity
+§\ref{metrology}.}, there is little opportunity
 for a diachronic representation of numeric quantities.
 
 In the case of analyses such as
@@ -1483,7 +1498,7 @@ In most texts from the Early Dynastic IIIb and Old Akkadian period\footnote{For 
 a contrast between non-numeric šar₂ written {\xsuxfont 𒊹}
 and numeric $1$(šar₂ᶜ) written \oneŠarTwoC{} can be observed,
 similar to the contrast between {\xsuxfont 𒀸} and {\oneAšC}
-previously discussed in section~\ref{non-numeric}.
+previously discussed in §\ref{non-numeric}.
 However, in lexical lists from Šuruppag and Ebla\footnote{These are
 archaizing in other ways, \exempligratia, they have a
 {\xsuxfont 𒉇}--{\xsuxfont 𒌆} (NAM₂--TUG₂) split.},
@@ -1589,7 +1604,7 @@ In metrological systems such as systems~\ref{systemGOB} and~\ref{systemC}
 where some units are indicated by the type of numeral
 rather than an overt unit sign, it is common practice to add the unit in parentheses
 in transliteration; for instance, {\xsuxfont 𒑘𒐃𒀹𒃷𒐌𒊬} from \cite[\obverse~1]{P386847}
-is transliterated ``$1$(eše₃) $5\text{½}$~iku\footnote{{\xsuxfont 𒃷} interpreted as a unit, as discussed in section~\ref{metrology}.} $7$~sar'' in \volcite{2}[176]{Feuerherm2004},
+is transliterated ``$1$(eše₃) $5\text{½}$~iku\footnote{{\xsuxfont 𒃷} interpreted as a unit, as discussed in §\ref{metrology}.} $7$~sar'' in \volcite{2}[176]{Feuerherm2004},
 and {\xsuxfont 𒑗𒑐𒐌𒈦𒋡} from \cite[\obverse~12]{P307255}
 is transliterated ``$1$(n\footnote{short for nigida,
 an older reading of bariga;
@@ -1614,7 +1629,7 @@ depending on reading, etc.
 The literature on the Uruk and Early Dynastic I--II periods uses
 a different set of transliteration conventions that also
 disambiguate numeral shapes,
-as will be discussed in section~\ref{unificationRationale}.
+as will be discussed in §\ref{unificationRationale}.
 
 While there exist transliterations that distinguish {\xsuxfont 𒀸} from {\xsuxfont 𒁹}
 but not \fourAšC{} from {\xsuxfont 𒀸}, such as the ones used in \cite{DCCMT},
@@ -1724,7 +1739,7 @@ the metrological systems used in the fourth millenium are well understood,
 as can be seen in \cite[165]{DamerowEnglund1987}.
 As a result, contrary to the non-numeric proto-cuneiform conventions,
 these numeric transliteration conventions are compatible with the classical ones described in
-section~\ref{transliteration}; they are indeed used interchangeably, as in \cite{P011104} % https://oracc.museum.upenn.edu/epsd2/admin/ed12/P011104
+§\ref{transliteration}; they are indeed used interchangeably, as in \cite{P011104} % https://oracc.museum.upenn.edu/epsd2/admin/ed12/P011104
 which uses the notation u@f in \cite{ePSD2}, but N14@f in \cite{CDLI}.
 Indeed, the numerals are used similarly in Early Dynastic metrological systems,
 and are visually identical.
@@ -1876,7 +1891,7 @@ in lines of non-cuneiform text, as most modern scholarship is.
 Indeed, the absolute size of the indents \oneAšC, \oneŊešTwoC, \oneUC, and \oneŠarTwoC{}
 must remain consistent across the numeral series, lest a \oneŊešTwoC{} numeral be confused with
 an \oneAšC{} numeral. Since the single indents are frequently used in running text,
-as illustrated in section~\ref{modernUsage}, they need to be large enough that
+as illustrated in §\ref{modernUsage}, they need to be large enough that
 the vertical stacking patterns are impractical.
 
 Variant stacking patterns, if needed, may be handled
