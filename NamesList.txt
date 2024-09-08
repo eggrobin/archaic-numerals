@@ -1,5 +1,5 @@
 ; charset=UTF-8
-@@	12550	Archaic Cuneiform Numbers	125E9
+@@	12550	Archaic Cuneiform Numbers	1268F
 @		Common Numerals
 @+		Used in the sexagesimal discrete counting system and other metrological systems
 12550	CUNEIFORM NUMERIC SIGN ONE N01
