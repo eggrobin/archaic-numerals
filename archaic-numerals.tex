@@ -3,6 +3,7 @@
 \usepackage{realscripts}
 \setmainfont[
   BoldFont=CambriaB,
+  BoldItalicFont=CambriaZ,
   Numbers={OldStyle, Proportional}, 
   Ligatures={TeX, Common}, 
   SmallCapsFeatures={Letters=SmallCaps},
@@ -290,7 +291,7 @@ arrow style=math font,
 \usepackage{lua-ul}
 \LuaULSetHighLightColor{yellow}
 \newcommand{\removed}[1]{\highLight{\strikeThrough{#1}}}
-\newcommand{\changed}[1]{\highLight{\strikeThrough{#1}}}
+\newcommand{\changed}[1]{\highLight{#1}}
 
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
@@ -303,13 +304,18 @@ arrow style=math font,
 
 \section{Summary}
 
-This document proposes encoding some numerals used in the fourth millenium (Uruk IV and Uruk III) and Early Dynastic period in conjunction
+This document proposes encoding some numerals used in the fourth millennium (Uruk IV and Uruk III) and Early Dynastic period in conjunction
 with the Sumero-Akkadian cuneiform script\footnote{ISO 15924: Xsux, Script property value long name: Cuneiform; encoded since Unicode Version 5.0.}
 and the proto-cuneiform script\footnote{ISO 15924: Pcun, not yet encoded.}.
 The proposed characters are listed in §\ref{proposal}.
-Most of them were listed in \cite{L2/23-190}; however,
-the present document provides a more detailed rationale for their encoding
-and additional information about their identity.
+Most of them were listed in \cite{L2/23-190}.
+The present document provides a more detailed rationale for their encoding
+and additional information about their identity. Some characters have been
+removed, in some cases because they are non-encodable variants,
+in others because their encodability should be considered as part of the proto-cuneiform proposal;
+these are discussed in §\ref{notIncluded}.
+The glyphs have also been reworked, and
+additional characters used in the Early Dynastic period have been added.
 
 The non-numeric signs of proto-cuneiform will be the subject of a separate proposal;
 we need only note here that the divergence between the approaches to character identity
@@ -353,7 +359,7 @@ Since the encoding proposals for the cuneiform script
 twenty years ago provisionally considered the curviform numerals
 to be glyph variants of the cuneiform numerals,
 a detailed rationale is provided in §\ref{disunificationRationale},
-including compatibility considerations in section \ref{compatibility}.
+including compatibility considerations in §\ref{compatibility}.
 
 The overall picture of unifications and disunifications over time is illustrated in table~\ref{tableUnificationsDisunifications}.
 The Script\_Extensions property assignments in §\ref{properties} reflect the overlap.
@@ -392,6 +398,55 @@ or well-attested in proto-Elamite texts but insufficiently attested in Uruk.
 \subsection{Character names list}
 \subsection{Core specification text}
 
+Amend \cite[§11.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/\#G26965}{Cuneiform Numerals}'']{Unicode16}, as follows:
+\begin{quotation}
+  \noindent\textbf{\textit{Cuneiform Numerals.}} In general, numerals \changed{
+  that also have a phonetic, logographic, or determinative value are encoded in the
+  main Cuneiform block; as a result, some series of numerals, such as
+  \smash{\cuneiformComposite 𒁹}--\smash{\cuneiformComposite 𒐎} $1$(diš)--$9$(diš) or
+  \smash{\cuneiformComposite 𒌋}--\smash{\cuneiformComposite 𒐔} $1$(u)--$9$(u),
+  are split across the two blocks.
+  Numerals} have been encoded separately
+  from signs that are visually identical but\removed{ semantically different}\changed{ etymologically unrelated}
+  (for example, U+\textcsc{1244F} {\cuneiformComposite 𒑏} \textcsc{CUNEIFORM NUMERIC SIGN ONE BAN2},
+  U+\textcsc{12450} {\cuneiformComposite 𒑐} \textcsc{CUNEIFORM NUMERIC SIGN TWO BAN2},
+  and so on,
+  versus U+\textcsc{12226} {\cuneiformComposite 𒑏} \textcsc{CUNEIFORM SIGN MASH},
+  U+\textcsc{1227A} {\cuneiformComposite 𒑐} \textcsc{CUNEIFORM SIGN PA}, and so on).
+
+  \changed{The relation between series of numerals depends on the metrological system;
+  for instance, when counting talents, written \smash{\cuneiformComposite 𒄘} (a unit of weight, approximately $30$~kg),
+  \smash{\cuneiformComposite 𒀸𒄘} is used for ``one talent'', and \smash{\cuneiformComposite 𒌋𒄘} for ``ten talents''.
+  However, when measuring areas, the area \smash{\cuneiformComposite 𒌋𒃷} (one \emph{būrum}) is eighteen times
+  \smash{\cuneiformComposite 𒀸𒃷} (one \emph{ikûm}, approximately $3600~\mathrm{m}^2$).
+  The Numeric\_Value property assignment of a cuneiform numeral therefore reflects only
+  its relation to the first numeral in its series,
+  rather than the absolute numeric value that it might represent.
+  For instance, the number ``fifty'' is written \smash{\cuneiformComposite 𒐐},
+  but U+\textcsc{12410} \smash{\cuneiformComposite 𒐐} \textcsc{CUNEIFORM NUMERIC SIGN FIVE U}
+  has Numeric\_Value=$5$, as it is $5\times\text{\cuneiformComposite 𒌋}$.}
+
+  \changed{In the third millennium, and especially in the Early Dynastic period,
+  some numerals are written using a cylindrical tool, rather than the cuneiform stylus,
+  forming curved rather than cuneiform numerals (\oneAšC{} rather than {\cuneiformComposite 𒀸}).
+  The cuneiform numerals are descended from these curved numerals.
+  However, in the Early Dynastic period, the curved numerals contrast with the cuneiform ones,
+  and are used together with them in several metrological systems; they are therefore separately encoded.
+  Most curved numerals are encoded in the Archaic Cuneiform Numerals block, with the exception of two fractions
+  in the Cuneiform Numbers and Punctuation block:
+  U+\textcsc{1245D} \smash{\cuneiformComposite 𒑝} \textcsc{CUNEIFORM NUMERIC SIGN ONE THIRD VARIANT FORM A}
+  and U+\textcsc{1245E} \smash{\cuneiformComposite 𒑞} \textcsc{CUNEIFORM NUMERIC SIGN TWO THIRDS VARIANT FORM A},
+  the curved counterparts of U+\textcsc{1245A} \smash{\cuneiformComposite 𒑚} \textcsc{CUNEIFORM NUMERIC SIGN ONE THIRD DISH}
+  and U+\textcsc{1245B} \smash{\cuneiformComposite 𒑛} \textcsc{CUNEIFORM NUMERIC SIGN TWO THIRDS DISH}.}
+\end{quotation}
+Add after \cite[\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/\#G27840}§11.1.3]{Unicode16}:
+\begin{quotation}
+\noindent{\large\textbf{\textit{11.1.4 Archaic Cuneiform Numerals: U+12550–U+TODO}}}
+
+\noindent TODO something about consistent size 
+
+\noindent\textbf{\textit{The sign ŠAR₂.}} 
+\end{quotation}
 Amend \cite[§24.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-24/\#G8188}{Dashed Box Convention}'']{Unicode16},
 third paragraph, as follows:
 \begin{quotation}
@@ -420,7 +475,7 @@ For instance, the sign IM
 may resemble {\cuneiformComposite 𒅎} in texts from Early Dynastic IIIa Šuruppag as in the character code
 charts,
 {\cuneiformComposite 𒉎} % TODO(egg): Do something clever so the underlying text is 𒅎.
-later in the third millenium\footnote{Merging with U+\textcsc{1224E} \textcsc{CUNEIFORM SIGN NI2}.},
+later in the third millennium\footnote{Merging with U+\textcsc{1224E} \textcsc{CUNEIFORM SIGN NI2}.},
 {\obfont 𒅎} in Old Babylonian cursive,
 {\nafont 𒅎} in Neo-Assyrian, but is always encoded as U+\textcsc{1214E} \textcsc{CUNEIFORM SIGN IM}.
 
@@ -566,7 +621,7 @@ Ur III and Old Babylonian periods.
 
 As is well known\footnote{See, \exempligratia, \cite[§22.3.3,
 \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/\#G42894}{Cuneiform Numerals}'']{Unicode16}.}
-a sexagesimal place value system (SPVS) was used in Meso\-potamia from the late third millenium onwards.
+a sexagesimal place value system (SPVS) was used in Meso\-potamia from the late third millennium onwards.
 One should bear in mind, however, that other systems were used;
 the SPVS was primarily used in calculations,
 with results being expressed in non-positional systems \cites[76]{Robson2008}{Robson2022}.
@@ -778,7 +833,7 @@ The {\xsuxfont 𒋙} is sometimes omitted, as in
 At first sight, the metrological systems from the Early Dynastic period
 resemble the ones previously mentioned.
 In particular, the discrete counting system used in the Early Dynastic period
-(and earlier in the fourth millenium) clearly mirrors system \ref{systemSOB}
+(and earlier in the fourth millennium) clearly mirrors system \ref{systemSOB}
 \cites[374]{Friberg2007}[127,165]{DamerowEnglund1987}:
 \begin{equation}
 \text{\oneŠarʾuC}
@@ -819,7 +874,7 @@ The earlier form of the area system is \cites[141,165]{DamerowEnglund1987}[378]{
 \end{equation}
 Observe that, as noted in \cites[142]{DamerowEnglund1987},
 {\oneŠarʾuC} changes meaning from $10 \text{\oneUC}$ in system \ref{systemG} to $600 \text{\oneUC}$ in system \ref{systemGED}.
-System \ref{systemG} is used in the fourth millenium, but also
+System \ref{systemG} is used in the fourth millennium, but also
 in the ED I–II period (it is the ``area 2'' system in \cite{Chambon2003},
 whereas \ref{systemGED} is the ``area 1'' system).
 
@@ -1125,7 +1180,7 @@ These expressions correspond to the following factor diagram:
 
 \subsubsection{Use in modern publications}
 \label{modernUsage}
-Because of their prevalence in the fourth millenium and Early Dynastic period,
+Because of their prevalence in the fourth millennium and Early Dynastic period,
 the proposed numerals are widely used in modern publications discussing metrology
 in those periods, as illustrated in Figures \ref{powell107}--\ref{GoriTransliteration}.
 
@@ -1175,7 +1230,7 @@ See §\ref{transliteration} for a discussion of transliteration conventions for 
   The bisexagesimal system is used alike in proto-Elamite and proto-cuneiform texts, see \cite[38]{Friberg1978};
   the derivation in \cite[15]{Friberg1978} is based on proto-Elamite artefacts.
   Note that in Friberg’s early works \cites{Friberg1978}{Friberg1979}{Friberg1986}{Friberg1987},
-  copies of fourth millenium and sometimes third millenium tablets are shown as vertical text
+  copies of fourth millennium and sometimes third millennium tablets are shown as vertical text
   (which they were for the scribes),
   and their numerals are written within horizontal text in the same orientation
   that they have if the tablet is taken as vertical text; in \cite{UAX50} parlance, as
@@ -1270,7 +1325,7 @@ with different relations as previously discussed.}
   \begin{center}
   \includegraphics[width=0.375\textwidth]{proust-9a.png}
   \includegraphics[width=0.375\textwidth]{proust-9.png}
-  \caption[]{Discussion of Old Babylonian\footnotemark{} capacity and fourth millenium area measures in \cite[9]{Proust2009}.\label{proust9}}
+  \caption[]{Discussion of Old Babylonian\footnotemark{} capacity and fourth millennium area measures in \cite[9]{Proust2009}.\label{proust9}}
   \end{center}
 \end{figure}
 \footnotetext{The cuneiform text is Unicode-encoded.}
@@ -1292,7 +1347,7 @@ with different relations as previously discussed.}
 \footnotetext{Compare {\xsuxfont 𒊹𒃲} in system~\ref{systemGOB}.
 Sign order can be variable in early texts, see \cite[8]{Foxvog2016}. See \cite{P010773}, also discussed in \cite[148]{Friberg2007},
 for an example of {\xsuxfont 𒃲\oneŠarTwoC},
-and \cites{P274845}{P241764} for examples of {\xsuxfont 𒃲$n$\oneŠarTwoC}.}
+and \cites{P274845}{P241764} for examples of {\xsuxfont $n$\oneŠarTwoC 𒃲}.}
 \begin{figure}[H]
   \begin{center}
   \includegraphics[width=0.75\textwidth]{chambon-61.png}
@@ -1429,7 +1484,7 @@ Further, there tend to be changes\footnote{Compare,
 the ED IIIa witness \cite[\obverse~2~7]{P222243}, also discussed
 in §\ref{šar₂}, and
 {\xsuxfont 𒋢𒆳𒊒𒆠𒂊 𒌉𒉌𒊏 𒈾 𒈾𒈬𒌦𒊑𒊑}
-in the OB composite \cite[6]{Q000782} (translated ``Šuruppag gave instructions to his son''
+in the OB composite \cite[\nopp6]{Q000782} (translated ``Šuruppag gave instructions to his son''
 in \cite[\href{https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.5.6.1\&display=Crit\&charenc=gtilde\&lineid=t561.p1\#t561.p1}{t.5.6.1, 1--13}]{ETCSL}).
 It does not matter for the construction of a
 composite text whether this is encoded
@@ -1635,7 +1690,7 @@ as will be discussed in §\ref{unificationRationale}.
 
 While there exist transliterations that distinguish {\xsuxfont 𒀸} from {\xsuxfont 𒁹}
 but not \fourAšC{} from {\xsuxfont 𒀸}, such as the ones used in \cite{DCCMT},
-the trend, especially in more recent works in third millenium studies, seems to be to
+the trend, especially in more recent works in third millennium studies, seems to be to
 represent numeral shape; for example, \cite{Maiocchi2024} gave an example of
 the input syntax used by the new ``Urban Economy Begins'' project as
 ``$10+5\text{c}(\text{GUR})+2(\text{BARIGA})+1(\text{BAN2})$'' for
@@ -1688,7 +1743,7 @@ At the same time, contrary to most disunifications,
 the separate encoding of curviform numerals poses no serious compatibility issues
 for existing fonts or encoded corpora,
 nor does it, in general,
-introduce new issues with transliterated third millenium corpora.
+introduce new issues with transliterated third millennium corpora.
 The oddity of {\originalNoto 𒊹} requires some explanation,
 but does not pose any architectural issues,
 and is not fundamentally different from the other mergers and splits
@@ -1697,10 +1752,10 @@ encountered in the cuneiform script.
 \section{Rationale for ED–Uruk numeral unification}
 \label{unificationRationale}
 A complete rationale for disunification between the non-numeric signs used
-in the fourth millenium and the already-encoded cuneiform signs will
+in the fourth millennium and the already-encoded cuneiform signs will
 be given in the forthcoming proto-cuneiform encoding proposal.
 The core issue with extending the cuneiform script further back in time
-is that, since 1987, fourth millenium studies have used a different model
+is that, since 1987, fourth millennium studies have used a different model
 of character identity and associated transliteration conventions,
 with names being given to structurally different glyphs, and no attempt being made
 at assigning phonetic values to them.
@@ -1716,7 +1771,7 @@ approach to character identity is closer to that used for undeciphered or
 partially deciphered scripts.
 
 As part of the development of these conventions,
-a classification of fourth millenium numeric signs was developed; see \cite{DamerowEnglund1987}.
+a classification of fourth millennium numeric signs was developed; see \cite{DamerowEnglund1987}.
 This classification assigns to each unit numerals an identifier formed by the letter $N$ with a numeric subscript
 (sometimes with an additional alphabetic subscript):
 $N_1$ is \oneAšC, $N_{14}$ is \oneUC, $N_{34}$ is \oneŊešTwoC, etc.
@@ -1731,13 +1786,13 @@ For instance, the \cite{CDLI} transliteration of \threeAšC\threeDišC{\xsuxfont
 \cite[\reverse~1~6;2~2]{P283802} currently uses (barig@c) for the vertical numerals,
 since \oneDišC{} numerals are typically capacity measures;
 but \cite{Gori2023} interprets these instead as counting linen textiles.
-As a result, the fourth millenium conventions for numeral transliteration
+As a result, the fourth millennium conventions for numeral transliteration
 are used in Early Dynastic texts, especially those from the ED I--II period,
 even though the Sumerian text uses classical assyriological transliteration conventions;
 see \cite[\pno~6 \withnote~27]{Chambon2003}.
 
 While the non-numeric signs are treated as undeciphered,
-the metrological systems used in the fourth millenium are well understood,
+the metrological systems used in the fourth millennium are well understood,
 as can be seen in \cite[165]{DamerowEnglund1987}.
 As a result, contrary to the non-numeric proto-cuneiform conventions,
 these numeric transliteration conventions are compatible with the classical ones described in
@@ -1746,13 +1801,13 @@ which uses the notation u@f in \cite{ePSD2}, but N14@f in \cite{CDLI}.
 Indeed, the numerals are used similarly in Early Dynastic metrological systems,
 and are visually identical.
 
-A disunification of numerals between the third and fourth millenium would
-therefore induce confusion as to which numerals should be used in third millenium
+A disunification of numerals between the third and fourth millennium would
+therefore induce confusion as to which numerals should be used in third millennium
 studies, and would needlessly duplicate the encoding of at least seventy characters;
 by splitting the attestations, these separate encoding proposals would run into additional
 difficulties to supply evidence for encoding.
 
-Note that the structural variants designated by letters in fourth millenium notation have systematically
+Note that the structural variants designated by letters in fourth millennium notation have systematically
 been encoded, as they have occasionally be found to carry distinct numeric meaning.
 For instance, \oneNThirtyC{} $N_{30c}$ is listed as a variant of \oneNThirtyA{} $N_{30a}$ in
 \cite[166]{DamerowEnglund1987}, where the numeric value of either in relation to \oneNThirtyNineA{} $N_{39a}$  is still unknown,
@@ -1883,12 +1938,12 @@ reproducing the layout of tablets is not within the scope of plain text.
 \end{figure}
 
 The reference glyphs use stacking patterns that are common in the Early Dynastic period,
-but that are also attested in the fourth millenium in the Uruk III period;
-the fourth millenium, especially the Uruk IV period, also frequently features numerals that use a more vertical layout,
+but that are also attested in the fourth millennium in the Uruk III period;
+the fourth millennium, especially the Uruk IV period, also frequently features numerals that use a more vertical layout,
 as illustrated in Figure~\ref{9N34StackingPatterns}.
 The later, more horizontal styles were chosen for two reasons:
-for the numerals used in the third and fourth millenium,
-usage in third millenium scholarship will be more frequent;
+for the numerals used in the third and fourth millennium,
+usage in third millennium scholarship will be more frequent;
 and the horizontal layout poses fewer layout difficulties when set
 in lines of non-cuneiform text, as most modern scholarship is.
 Indeed, the absolute size of the indents \oneAšC, \oneŊešTwoC, \oneUC, and \oneŠarTwoC{}
