@@ -293,6 +293,8 @@ arrow style=math font,
 \newcommand{\removed}[1]{\highLight{\strikeThrough{#1}}}
 \newcommand{\changed}[1]{\highLight{#1}}
 
+\usepackage{pdfpages}
+
 \title{Archaic cuneiform numbers}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
 
@@ -306,8 +308,8 @@ arrow style=math font,
 
 This document proposes encoding, at U+12550--U+12585, 310 numerals
 used in the fourth millennium (Uruk IV and Uruk III periods) and Early Dynastic period in conjunction
-with the Sumero-Akkadian cuneiform script\footnote{ISO 15924: Xsux, Script property value long name: Cuneiform; encoded since Unicode Version 5.0.}
-and the proto-cuneiform script\footnote{ISO 15924: Pcun, not yet encoded.}.
+with the Sumero-Akkadian cuneiform script\footnote{\cite{ISO15924}: Xsux, Script property value long name: Cuneiform; encoded since Unicode Version 5.0.}
+and the proto-cuneiform script\footnote{\cite{ISO15924}: Pcun, not yet encoded.}.
 The proposed characters are listed in §\ref{proposal}.
 Most of them were listed in \cite{L2/23-190}.
 The present document provides a more detailed rationale for their encoding
@@ -365,7 +367,7 @@ including compatibility considerations in §\ref{compatibility}.
 
 The overall picture of unifications and disunifications over time is illustrated in table~\ref{tableUnificationsDisunifications}.
 The Script\_Extensions property assignments in §\ref{properties} reflect the overlap.
-Many of these numerals are also used in proto-Elamite\footnote{ISO 15924: Pelm, not yet encoded.} texts,
+Many of these numerals are also used in proto-Elamite\footnote{\cite{ISO15924}: Pelm, not yet encoded.} texts,
 where they are treated as identical characters in scholarship on proto-Elamite,
 so that they should be unified with the ones proposed in \cite{L2/23-196}.
 However, in the interest of time, we do not provide a detailed rationale for this unification in this document,
@@ -388,13 +390,6 @@ or well-attested in proto-Elamite texts but insufficiently attested in Uruk---th
 
 \section{Proposed changes to the Standard}
 \label{proposal}
-\subsection{Code charts}
-% The following characters are proposed;
-% their names follow archaic conventions where possible, see §\ref{unificationRationale}.
-% they are ordered roughly according to their function in various metrological systems,
-% so as to facilitate annotation and readability in the character names list.
-\subsection{Properties}
-\label{properties}
 \subsection{Core specification text}
 
 Amend \cite[§11.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/\#G26965}{Cuneiform Numerals}'']{Unicode16}, as follows:
@@ -438,9 +433,9 @@ Amend \cite[§11.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicod
   the curved counterparts of U+\textcsc{1245A} \smash{\cuneiformComposite 𒑚} \textcsc{CUNEIFORM NUMERIC SIGN ONE THIRD DISH}
   and U+\textcsc{1245B} \smash{\cuneiformComposite 𒑛} \textcsc{CUNEIFORM NUMERIC SIGN TWO THIRDS DISH}.}
 \end{quotation}
-Add after \cite[\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/\#G27840}§11.1.3]{Unicode16}:
+Add after \cite[§\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/\#G27840}{11.1.3}]{Unicode16}:
 \begin{quotation}
-\noindent{\large\textbf{\textit{11.1.4 Archaic Cuneiform Numerals: U+12550–U+TODO}}}
+\noindent{\large\textbf{\textit{11.1.4 Archaic Cuneiform Numerals: U+12550–U+1268F}}}
 
 \noindent TODO something about consistent size 
 
@@ -454,7 +449,16 @@ third paragraph, as follows:
   displayed inside the dashed box, with or without additional annotation,
   to indicate this adjustment of shape.
 \end{quotation}
-
+\subsection{Code charts}
+The code charts for the proposed block,
+including the character names list with proposed informative aliases, cross references, and informative notes,
+are shown on the following pages.
+\vspace{0pt plus 0.5fill}
+\begin{center}This space for rent.\end{center}
+\vfill
+\includepdf[pages=-]{chart.pdf}
+\subsection{Properties}
+\label{properties}
 \section{Rationale for curviform--cuneiform disunification}
 \label{disunificationRationale}
 The numbering systems that use cuneiform numerals are descended from the ones that use curviform numerals,
@@ -1228,6 +1232,10 @@ See §\ref{transliteration} for a discussion of transliteration conventions for 
 \footnotetext{
   The bisexagesimal system is used alike in proto-Elamite and proto-cuneiform texts, see \cite[38]{Friberg1978};
   the derivation in \cite[15]{Friberg1978} is based on proto-Elamite artefacts.
+  There is a typo in the equation for C~27:
+  the right-hand side should have $10\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}$
+  rather than $1\text{\rotatebox[origin=c]{270}{\oneNFiftyOneC}}$,
+  otherwise nothing could be deduced about \rotatebox[origin=c]{270}{\oneNFiftyOneC}.
   Note that in Friberg’s early works \cites{Friberg1978}{Friberg1979}{Friberg1986}{Friberg1987},
   copies of fourth millennium and sometimes third millennium tablets are shown as vertical text
   (which they were for the scribes),
@@ -1244,7 +1252,7 @@ See §\ref{transliteration} for a discussion of transliteration conventions for 
     \tag{\text{C 234}}\\
     1\text{\oneŊešTwoC}+1\text{\oneUC}+5\text{\oneAšC}&=7\text{\oneUC}+5\text{\oneAšC}
     \tag{\text{C 314}}\\
-    1\text{\oneNFiftyFourC}+1\text{\oneNFiftyOneC}+1\text{\oneŊešTwoC}&=1\text{\oneNFiftyOneC}+2\text{\oneŊešTwoC}+6\text{\oneUC}\text.
+    1\text{\oneNFiftyFourC}+1\text{\oneNFiftyOneC}+1\text{\oneŊešTwoC}&=10\text{\oneNFiftyOneC}+2\text{\oneŊešTwoC}+6\text{\oneUC}\text.
     \tag{\text{C 27}}
   \end{align}
   A diplomatic edition of \cite{Friberg1978} could rotate the numerals using a higher-level protocol:\usetagform{fribergFullStopTwentySeven}
@@ -1973,7 +1981,7 @@ an even wider glyphic range as shown in \cite{Englund2001}.
 TODO(egg): Something about the Vanséveren fonts
 \printbibheading[heading=bibintoc]
 \printbibliography[heading=subbibintoc,title={Artefacts},type=artwork]
-\printbibliography[heading=subbibintoc,title={Unicode documents},nottype=artwork,keyword=unicode]
+\printbibliography[heading=subbibintoc,title={ISO and Unicode documents},nottype=artwork,keyword=unicode]
 \printbibliography[heading=subbibintoc,title={Online corpora and related projects},nottype=artwork,keyword=reference]
 \printbibliography[heading=subbibintoc,title={Other documents},nottype=artwork,notkeyword=unicode,notkeyword=reference]
 \end{document}
