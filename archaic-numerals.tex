@@ -436,19 +436,71 @@ Amend \cite[§11.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicod
 Add after \cite[§\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/\#G27840}{11.1.3}]{Unicode16}:
 \begin{quotation}
 \noindent{\large\textbf{\textit{11.1.4 Archaic Cuneiform Numerals: U+12550–U+1268F}}}
+This block contains numerals used in the fourth millennium and third millennium.
+The numerals that are used in the fourth millennium and Early Dynastic I--II period
+(2900--2700 \textcsc{BCE}) are named according to the conventions
+of the Berlin \emph{Archaische Texte aus Uruk} (ATU) project, with names such as
+U+12550 \oneAšC{} \textcsc{CUNEIFORM NUMERIC SIGN ONE N01} or
+U+\textcsc{125B6} \oneNThirtyNineA{} \textcsc{CUNEIFORM NUMERIC SIGN ONE N39A}.
+For the signs that are also used in the third millennium,
+informative aliases provide correspondences to more common third millennium conventions,
+such as ``1 aš curved'' for U+12550 \oneAšC{} \textcsc{CUNEIFORM NUMERIC SIGN ONE N01}.
+The numerals that are only used starting in the Early Dynastic III period,
+where the ATU notation is not used, are named in the same fashion as
+the numerals of the Cuneiform Numbers and Punctation block.
 
-\noindent TODO something about consistent size 
+The curved numerals are produced using cylindrical tools of two different sizes,
+producing small curved indents (\oneAšC{}, \oneDišC{}, and \oneUC),
+and large ones (\oneŊešTwoC{}, \oneNThirtyNineA{}, and \oneŠarTwoC).
+These can be combined, as in U+12574 \oneŊešTwoC{} \textcsc{CUNEIFORM NUMERIC SIGN ONE N48}
+or U+12582 \oneŠarʾuC{} \textcsc{CUNEIFORM NUMERIC SIGN ONE N50}.
+Consistent sizing is important to identifying these characters, as there is
+no visual distinction other than size between, for instance,
+U+\textcsc{12566} \fiveUC{} \textcsc{CUNEIFORM NUMERIC SIGN FIVE N14},
+ U+\textcsc{1257D} \fiveŠarTwoC{} \textcsc{CUNEIFORM NUMERIC SIGN FIVE N45},
+ or U+\textcsc{125A3} \oneNFiftyOneC{} \textcsc{CUNEIFORM NUMERIC SIGN ONE N54}.
+The reference glyphs of some of the larger signs have been resized to fit
+in the code charts cells, but fonts for these characters should retain consistent size
+across the numeral series.
 
-\noindent\textbf{\textit{The sign ŠAR₂.}} 
+\begin{quote}
+\textit{Editor's note: I have not yet done that resizing.
+The dashed-box convention for wide dashes, see \cite[§24.1.2, \emph{sub}
+``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-24/\#G8188}{Dashed Box Convention}'']{Unicode16}
+should probably not be extended to these,
+since numbers enclosed in a real dashed box are a thing in proto-Elamite texts.}
+\end{quote}
+
+The Numeric\_Value assignments follow the same principles as in the Cuneiform Numbers and Punctuation block.
+Numerals used in the third millennium have the Cuneiform script property value;
+numerals used only in the fourth millennium have the Proto-Cuneiform script property value.
+Numerals used in both the fourth and third millennium have both scripts in their Script\_Extensions values.
+
+\noindent\textbf{\textit{The sign ŠAR₂.}} When used logographically, the sign
+ŠAR₂ has the same (cuneiform) appearance as U+\textcsc{1212D} {\cuneiformComposite 𒄭}
+\textcsc{CUNEIFORM SIGN HI} in all but the most archaizing Early Dynastic texts.
+The character U+\textcsc{122B9} \textsc{cuneiform sign shar2} should be used for logographic šar₂,
+whether cuneiform or curved. Most period-specific fonts will have the same cuneiform
+glyph for U+\textcsc{122B9} and U+\textcsc{1212D}.
+In the Early Dynastic period, numeric 1 šar₂ is typically written with a curved glyph,
+contrasting with logographic šar₂. U+\textcsc{12579} \oneŠarTwoC{} \textcsc{CUNEIFORM
+NUMERIC SIGN ONE N45} should be used for curved 1 šar₂.
+In later periods, long after ŠAR₂ and ḪI have merged, even numeric 1 šar₂ has a cuneiform glyph.
+U+\textcsc{122B9} \textsc{cuneiform sign shar2} should be used for cuneiform 1 šar₂.
+
+The reference glyph for U+\textcsc{122B9} {\cuneiformComposite 𒊹} \textsc{cuneiform sign shar2}
+is curved, reflecting the rarer and more archaic practice, instead of cuneiform as it would
+be in the Ur III period, so as to distinguish it from
+U+\textcsc{1212D} {\cuneiformComposite 𒄭} \textcsc{CUNEIFORM SIGN HI}.
 \end{quotation}
-Amend \cite[§24.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-24/\#G8188}{Dashed Box Convention}'']{Unicode16},
-third paragraph, as follows:
-\begin{quotation}
-  In a few cases of very wide \removed{punctuation }characters that do not naturally fit into a code chart cell,
-  the representative glyph may be shown with an artificially narrow shape,
-  displayed inside the dashed box, with or without additional annotation,
-  to indicate this adjustment of shape.
-\end{quotation}
+% Amend \cite[§24.1.2, \emph{sub} ``\href{https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-24/\#G8188}{Dashed Box Convention}'']{Unicode16},
+% third paragraph, as follows:
+% \begin{quotation}
+%   In a few cases of very wide \removed{punctuation }characters that do not naturally fit into a code chart cell,
+%   the representative glyph may be shown with an artificially narrow shape,
+%   displayed inside the dashed box, with or without additional annotation,
+%   to indicate this adjustment of shape.
+% \end{quotation}
 \subsection{Code charts}
 The code charts for the proposed block,
 including the character names list with proposed informative aliases, cross references, and informative notes,
@@ -1988,7 +2040,7 @@ TODO(egg): Something about the Vanséveren fonts
 \printbibheading[heading=bibintoc]
 \AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
 \printbibliography[heading=subbibintoc,title={Artefacts},type=artwork]
-\AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
+%\AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
 \printbibliography[heading=subbibintoc,title={ISO and Unicode documents},nottype=artwork,keyword=unicode]
 \printbibliography[heading=subbibintoc,title={Online corpora and related projects},nottype=artwork,keyword=reference]
 \printbibliography[heading=subbibintoc,title={Other documents},nottype=artwork,notkeyword=unicode,notkeyword=reference]
