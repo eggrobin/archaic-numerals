@@ -259,8 +259,8 @@
 \newcommand{\idest}{\emph{i.e.}}
 \newcommand{\exempligratia}{\emph{e.g.}}
 \newcommand{\obverse}{obv.}
-\newcommand{\reverse}{rev.}
-\newcommand{\recto}{\emph{recto}}
+\newcommand{\reverse}{\IfFontFeatureActiveTF{Numbers=Tabular}{\rlap{rev.}\hphantom{obv.}}{rev.}}
+\newcommand{\recto}{\emph{\IfFontFeatureActiveTF{Numbers=Tabular}{\rlap{recto}\hphantom{verso}}{recto}}}
 \newcommand{\verso}{\emph{verso}}
 \newcommand{\withnote}{n.}
 \newcommand{\withnotes}{nn.}
@@ -304,14 +304,15 @@ arrow style=math font,
 
 \section{Summary}
 
-This document proposes encoding, at U+12550--U+12586, 311 numerals
+This document proposes encoding, at U+12550--U+12585, 310 numerals
 used in the fourth millennium (Uruk IV and Uruk III periods) and Early Dynastic period in conjunction
 with the Sumero-Akkadian cuneiform script\footnote{ISO 15924: Xsux, Script property value long name: Cuneiform; encoded since Unicode Version 5.0.}
 and the proto-cuneiform script\footnote{ISO 15924: Pcun, not yet encoded.}.
 The proposed characters are listed in §\ref{proposal}.
 Most of them were listed in \cite{L2/23-190}.
 The present document provides a more detailed rationale for their encoding
-and additional information about their identity. Some characters have been
+and additional information about their identity and usage,
+both as part of the rationale and in §\ref{extraIdentity}. Some characters have been
 removed, in some cases because they are non-encodable variants,
 in others because their encodability should be considered as part of the proto-cuneiform proposal;
 these are discussed in §\ref{notIncluded}.
@@ -322,8 +323,8 @@ The non-numeric signs of proto-cuneiform will be the subject of a separate propo
 we need only note here that the divergence between the approaches to character identity
 in modern scholarship requires that proto-cuneiform be disunified from cuneiform:
 proto-cuneiform is effectively treated as an undeciphered script.
-In contrast, the cuneiform encoding model is semantic,
-requiring an understanding of the text to correctly encode it.
+In contrast, the cuneiform encoding model requires that the language
+of a text be understood to correctly encode it.
 
 However, the \emph{numerals} used in proto-cuneiform should be unified with
 ones used in the Early Dynastic period, for the reasons set forth in
@@ -370,9 +371,7 @@ so that they should be unified with the ones proposed in \cite{L2/23-196}.
 However, in the interest of time, we do not provide a detailed rationale for this unification in this document,
 and we are not proposing that the numerals be given the corresponding Script\_Extensions property value for now.
 Neither do we propose encoding any numerals that are solely attested in proto-Elamite texts,
-or well-attested in proto-Elamite texts but insufficiently attested in Uruk.
-
-[TODO(egg): Mention the other sections here too.]
+or well-attested in proto-Elamite texts but insufficiently attested in Uruk---those are discussed in §\ref{proposal}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -980,14 +979,14 @@ curviform numerals followed by some number of reeds counted in (\emph{tenû})
 cuneiform numerals currently finds 125 occurrences
 across 47 tablets.}, such as:
 \begin{itemize}[nosep]
-  \item \cite[\obverse~1~4]{P221305}\footnote{\cite{CDLI} only has a copy, but a photo may be found in
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\obverse~1~4]{P221305}}\footnote{\cite{CDLI} only has a copy, but a photo may be found in
   \cite[82]{Lecompte2012}. On that photo the {\xsuxfont 𒋗𒆕𒀀𒑊} is not visible.
   Lecompte notes that the copy is faithful;
   indeed another {\xsuxfont 𒋗𒆕𒀀𒑊} can be seen both on the copy and the photo on \obverse~2~2.} {\twoAšC\xsuxfont 𒂠𒑍𒄀𒌑𒑌𒋗𒆕𒀀𒑊}% 2(asz@c) esz2 5(disz@t) gi kusz3 4(disz@t) szu-du3-a 2(disz@t)
-%  \item \cite[\reverse~1~1]{P221305} {\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
-  \item \cite[\reverse~2~1]{P020129} {\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
-  \item \cite[\reverse~5~1]{P221291}\footnote{From copy.} {\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
-  \item \cite[\reverse~2~1]{P221266} {\oneAšC\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
+%  \item {\addfontfeatures{Numbers=Tabular}\cite[\reverse~1~1]{P221305}} {\oneŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒑍𒄀} % 1(gesz2@c) 4(u@c) 1/2(asz@c) esz2 5(disz@t) gi
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\reverse~2~1]{P020129}} {\sixŊešTwoC\threeUC\xsuxfont 𒃻𒁺\oneBanTwoC\xsuxfont 𒑌𒄀} % 6(gesz2@c) 3(u@c) {ninda}nindax(DU) 1/2(asz@c) 4(disz@t) gi
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\reverse~5~1]{P221291}}\footnote{From copy.} {\oneŊešʾuC\twoŊešTwoC\fourUC\oneBanTwoC\xsuxfont 𒂠𒃻𒁺𒑊𒄀𒌑𒑋} % 1(gesz'u@c) 2(gesz2@c) 4(u@c) 1/2(asz@c) esz2 {ninda}nindax(DU) 2(disz@t) gi kusz3 3(disz@t)
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\reverse~2~1]{P221266}} {\oneAšC\oneBanTwoC\xsuxfont 𒂠𒑋𒄀} % 1(asz@c) 1/2(asz@c) esz2 3(disz@t) gi
 \end{itemize}
 These expressions use an
 explicit sign {\xsuxfont 𒃻𒁺} (counted in multiples of ten) or
@@ -1134,21 +1133,21 @@ shape and orientation of the numerals was checked\footnotemark on a photograph (
 as of this writing, they do so incorrectly on the Ebla corpus, claiming that all numerals are curviform,
 so we were not able to rely on them in this specific case.}
 \begin{enumerate}[nosep]
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1324\#58045}{\verso~4~9}]{P240532} {\oneAšC\xsuxfont 𒊺 𒁀𒊑𒅗\footnote{ba-ri₂-zu₂, a variant spelling.}𒐊𒃻𒋙𒊕}% v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1350\#59630}{\verso~1~1}]{P240548} {\oneAšC\xsuxfont 𒁀𒊑𒍪 𒐈𒀭𒍡} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7~9}]{P240655} {\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇}.}𒐊𒃻𒋙𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1364\#60805}{\verso~4~3}]{P240579} {\fiveAšC\oneDišC\xsuxfont 𒄘𒁇 𒈫𒃻𒋙𒊕}% 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2~2}]{P240675} {\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒋙𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3~1}]{P240609} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1324\#58045}{\verso~4~9}]{P240532}} {\oneAšC\xsuxfont 𒊺 𒁀𒊑𒅗\footnote{ba-ri₂-zu₂, a variant spelling.}𒐊𒃻𒋙𒊕}% v.4,9 1 še ba-ri₂-zu₂ 5 nig₂-sagšu % ARET 09 0010 
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1350\#59630}{\verso~1~1}]{P240548}} {\oneAšC\xsuxfont 𒁀𒊑𒍪 𒐈𒀭𒍡} % ARET 09 0036 1 ba-ri₂-zu 3 an-zamᵪ
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1358\#60317}{\recto~7~9}]{P240655}} {\twoAšC\xsuxfont 𒊺𒁇\footnote{Short for {\xsuxfont 𒄘𒁇}.}𒐊𒃻𒋙𒊕} % r.7,9	2 še bar 5 nig₂-sagšu ARET 09 0044
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1364\#60805}{\verso~4~3}]{P240579}} {\fiveAšC\oneDišC\xsuxfont 𒄘𒁇 𒈫𒃻𒋙𒊕}% 5-1/2 gu₂-bar 2 nig₂-sagšu ARET 09 0050
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1371\#61227}{\verso~2~2}]{P240675}} {\oneAšC\xsuxfont 𒊺 𒁀𒌷𒍪 𒐊𒃻𒋙𒊕}% v.2,2  1 še ba-ri₂-zu 5 nig₂-sagšu ARET 09 0057
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1378\#61605}{\verso~3~1}]{P240609}} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐈𒀭𒍡}% ARET 09 0064 1 ba-ri₂-zu 3 an-zamᵪ
   %\item % r.3,3	1 ba-ri₂-zu 8 nig₂-sagšu ninda ARET 09 0064 http://ebda.cnr.it/tablet/view/1378#61586
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3~3}]{P240533} {\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}  % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1381\#61931}{\recto~1~5}]{P240697} {\oneAšC\oneDišC\footnote{Note the omitted {\xsuxfont 𒄘𒁇}.}\xsuxfont 𒈫𒂆 𒐈𒀭𒍡}% ARET 09 0067 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1382\#62088}{\recto~6~2}]{P240653} {\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\xsuxfont 𒁹𒃻𒋙𒊕 𒈫𒈦𒀭𒍡} % ARET 09 0068  20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2~6}]{P240654} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1~8}]{P240531} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1~1}]{P241708}\footnote{From \cite{CDLI} photo.} {\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1~1}]{P241904}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see §\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
-  \item \cite[\href{http://ebda.cnr.it/tablet/view/3184\#155353}{\recto~3~2}]{P240964}\footnote{From
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1379\#61615}{\recto~3~3}]{P240533}} {\twoUC\oneAšC\oneDišC\xsuxfont 𒄘𒁇 𒐌𒃻𒋙𒊕 𒈫𒈦𒀭𒍡𒍝}  % ARET 09 0065 #61615 20-1-1/2 gu₂-bar 7 nig₂-sagšu 2-1/2 an-zamᵪ za
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1381\#61931}{\recto~1~5}]{P240697}} {\oneAšC\oneDišC\footnote{Note the omitted {\xsuxfont 𒄘𒁇}.}\xsuxfont 𒈫𒂆 𒐈𒀭𒍡}% ARET 09 0067 r.1,5	1-1/2 ❮gu₂-bar❯ 2 GIN₂ 3 an-zamᵪ
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1382\#62088}{\recto~6~2}]{P240653}} {\twoUC\threeAšC\oneDišC\xsuxfont 𒄘𒁇\xsuxfont 𒁹𒃻𒋙𒊕 𒈫𒈦𒀭𒍡} % ARET 09 0068  20-3-1/2 gu₂-bar 1 nig₂-sagšu 2-1/2 an-zamᵪ  (also has 1 ba-ri₂-zu₂ 1 GIN₂ elsewhere)
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1383\#62337}{\recto~2~6}]{P240654}} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒋡\footnote{Instead of the expected {\xsuxfont 𒃻𒋙𒊕}.} 𒐈𒀭𒍡\footnote{{\xsuxfont 𒐈𒀭𒍡} not legible on the EbDA photo.}}% 1 ba-ri₂-zu 6 sila₃ 3 an-zamᵪ % ARET 09 0069
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/1415\#63792}{\recto~1~8}]{P240531}} {\oneAšC\xsuxfont 𒁀𒌷𒍪 𒐋𒃻𒋙𒊕 𒊺𒍥𒄖}% r.1,8	1 ba-ri₂-zu 6 nig₂-sagšu še-zid₂-gu ARET 09 101 
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/3173\#154945}{\recto~1~1}]{P241708}}\footnote{From \cite{CDLI} photo.} {\twoAšC\oneDišC\xsuxfont 𒆗 𒄘𒁇 𒐌𒃻𒋙𒊕}% 2 1/2 sig₁₅ gu₂-bar 7 nig₂-sagšu  EST 50 https://cdli.mpiwg-berlin.mpg.de/artifacts/241708/reader/133004
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/3183\#155340}{\recto~1~1}]{P241904}}\footnote{From photo in \cite[6]{Archi1989}.} {\fourAšC\xsuxfont 𒄘𒁇 𒐉\footnote{Laid out as {\xsuxfont 𒁹𒁹𒁹𒁹}; on stacking patterns see §\ref{stackingPatterns}.}𒃻𒋙𒊕}% EST 60 = RA 083, 001, fig. 1
+  \item {\addfontfeatures{Numbers=Tabular}\cite[\href{http://ebda.cnr.it/tablet/view/3184\#155353}{\recto~3~2}]{P240964}}\footnote{From
   photo in \cite[6]{Archi1989}; see also the \cite{CDLI} photo and the copy in \cite[17]{Friberg1986}.
   This tablet features unusual usage of vertical numerals---``somewhat unorganized'', as described by \cite[16]{Friberg1986}---,
   such as \smash{\xsuxfont\threeDišC 𒄘𒁇} or \smash{\xsuxfont\eightDišC 𒈪}, but its {\xsuxfont 𒉻𒊕} and {\xsuxfont 𒀭𒍡} are consistently
@@ -1813,7 +1812,7 @@ For instance, \oneNThirtyC{} $N_{30c}$ is listed as a variant of \oneNThirtyA{} 
 \cite[166]{DamerowEnglund1987}, where the numeric value of either in relation to \oneNThirtyNineA{} $N_{39a}$  is still unknown,
 but their values are found in \cite[33]{Englund2004} to be $\text{\oneNThirtyC}=\frac{1}{10}\text{\oneNThirtyNineA}$, whereas
 $\text{\oneNThirtyA}=\frac{1}{6}\text{\oneNThirtyNineA}$.
-\section{Considerations on individual numeral series}
+\section{Considerations on individual numeral series}\label{extraIdentity}
 [TODO Document to the extent possible the metrological systems in which each sign is used.
 Note the disunification of N9 and N10 from 4(ban₂@c) and 5(ban₂@c).]
 
