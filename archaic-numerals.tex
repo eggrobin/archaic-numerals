@@ -181,7 +181,7 @@
 \setcounter{biburlnumpenalty}{100}
 \setcounter{biburllcpenalty}{500}
 \setcounter{biburlucpenalty}{100}
-\renewcommand\UrlFont{\rmfamily}
+\renewcommand\UrlFont{}
 
 \AtEveryBibitem{\clearlist{language}}  % TODO(egg): Why are we doing this?
 
@@ -1219,6 +1219,12 @@ See §\ref{transliteration} for a discussion of transliteration conventions for 
 \end{figure}
 \begin{figure}[H]
   \begin{center}
+  \includegraphics[width=0.75\textwidth]{powell-216.png}
+  \caption{A transliteration system for the fractions of the iku in \cite[216]{Powell1972}.}
+  \end{center}
+\end{figure}
+\begin{figure}[H]
+  \begin{center}
   \includegraphics[width=0.75\textwidth]{friberg-10.png}
   \caption[]{The first factor diagram, in \cite[10]{Friberg1978}.\label{firstStepDiagram}}
   \end{center}
@@ -1980,7 +1986,9 @@ an even wider glyphic range as shown in \cite{Englund2001}.
 
 TODO(egg): Something about the Vanséveren fonts
 \printbibheading[heading=bibintoc]
+\AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
 \printbibliography[heading=subbibintoc,title={Artefacts},type=artwork]
+\AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
 \printbibliography[heading=subbibintoc,title={ISO and Unicode documents},nottype=artwork,keyword=unicode]
 \printbibliography[heading=subbibintoc,title={Online corpora and related projects},nottype=artwork,keyword=reference]
 \printbibliography[heading=subbibintoc,title={Other documents},nottype=artwork,notkeyword=unicode,notkeyword=reference]
