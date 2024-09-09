@@ -1,5 +1,5 @@
 ; charset=UTF-8
-@@	12550	Archaic Cuneiform Numbers	1268F
+@@	12550	Archaic Cuneiform Numerals	1268F
 @@+
 @+		Many of the reference glyphs for the higher numbers (THREE and above) have been rescaled to fit the code chart cells. They should be sized consistently with the corresponding ONE numerals.
 @		Common Numerals
