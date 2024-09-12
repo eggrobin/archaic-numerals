@@ -109,6 +109,12 @@
 \newcommand\oneNThirtyC{{\proposalfont\symbol{"125B0}}}
 \newcommand\oneNThirtyNineA{{\proposalfont\symbol{"125B6}}}
 \newcommand\oneNFour{{\proposalfont\symbol{"12605}}}
+\newcommand\threeNThirtyFive{{\proposalfont\symbol{"125CE}}}
+\newcommand\fourNThirtyFive{{\proposalfont\symbol{"125CF}}}
+\newcommand\fiveNThirtyFive{{\proposalfont\symbol{"125D0}}}
+\newcommand\oneNFortyOne{{\proposalfont\symbol{"12601}}}
+\newcommand\oneNTwentySix{{\proposalfont\symbol{"125AB}}}
+\newcommand\oneNTwentyNineA{{\proposalfont\symbol{"125AD}}}
 
 \newcommand{\nhphantom}[1]{\sbox0{#1}\hspace{-\the\wd0}}
 
@@ -825,7 +831,7 @@ This intertwining of units and numerals explains the large number of already-enc
 \item {\xsuxfont 𒐬}–{\xsuxfont 𒐱} used in \ref{systemSOB} and \ref{systemGOB};
 \item {\xsuxfont 𒀸}–{\xsuxfont 𒐇} used in \ref{systemC} as well as with overt units of the weight system;
 \item {\xsuxfont 𒑏}, {\xsuxfont 𒑐}, {\xsuxfont 𒑑}, {\xsuxfont 𒑒}, {\xsuxfont 𒑔} used in \ref{systemC};
-\item {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, {\xsuxfont 𒐉} used in \ref{systemC}—note the overlap with {\xsuxfont 𒁹}–{\xsuxfont 𒑆};
+\item {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, {\xsuxfont 𒐉} used in \ref{systemC}—note the overlap with {\xsuxfont 𒁹}–{\xsuxfont 𒐎};
 \item {\xsuxfont 𒑘} and 	{\xsuxfont 𒑙} used in \ref{systemGOB}.
 \end{itemize}
 Only in the SPVS did numerals exist truly independently of metrology; to quote \cite[78]{Robson2008}:
@@ -1884,7 +1890,8 @@ Note the disunification of N9 and N10 from 4(ban₂@c) and 5(ban₂@c).]
 
 \section{Characters not included in this proposal}
 \label{notIncluded}
-Some numerals previously proposed in \cite{L2/23-190}
+Some numerals previously proposed in \cite{L2/23-190},
+as well as some other numerals known to exist in the third millennium,
 are not included in this proposal.
 Some should be proposed at a later date; others
 are likely not encodable.
@@ -1945,12 +1952,68 @@ In addition, the following are not included:
   \item $N_{59}$. Possibly a variant of \oneNFour{} according to \cite[147]{DamerowEnglund1987}.
 \end{itemize}
 
-The following numeral series from \cite{L2/23-190}
+The well-understood U₄ numerals, documented in \cite[136\psqq]{Englund1988}
+and listed in \cites{archsigns}{L2/23-190},
+have not been included as they are likewise dependent on the disunification of proto-cuneiform,
+and should be encoded in a different block to avoid confusion with {\xsuxfont 𒌓}.
+Some additional numeral series from \cites{archsigns}{L2/23-190} are not included
+due to lack of documentation on their usage.
+In general, only numerals that are part of a well-understood metrological system have been included.
+In particular, numerals such as $12\text{\oneUC}$ (attested in \cite{P200010})
+have not been encoded, since the metrological systems involving \oneUC{} numerals
+should allow for a numeral beyond
+\nineUC{} ($9\text{\oneUC}$).
 
-TODO $12N_{14}$ not encodable, etc. Cite \cite[147]{DamerowEnglund1987}
-N30C\~b not attested
-\subsection{Missing numerals}
-7 and 8(diš \emph{tenû}) encodable, but not today; want to go into the Cuneiform Numbers and Punctuation block for sanity.
+In addition, numerals that are not attested have not been included, unless
+they are part of a series where higher numerals in the metrological system are
+attested; thus the unattested \smash{\threeNThirtyFive{}} and \smash{\fourNThirtyFive{}},
+which are not in \cite{archsigns}, are included,
+because \smash{\fiveNThirtyFive{}} is attested in \cite{P006365},
+in a context where it is clearly used as part of system~\ref{systemSprime}.
+However, \texttt{1(N30C\textasciitilde{}b)}, which is in \cite{archsigns},
+and is the obvious counterpart of \texttt{\oneNThirtyC} in system~\ref{systemŠsecond},
+therefore presumably equal to $\frac{1}{10}\text{\oneNFortyOne}$, is not included,
+as it is not attested in \cite{CDLI} transliterations at this time.
+
+\subsection{Third millennium numerals}
+The metrological systems from Early Dynastic IIIb Ŋirsu discussed in §\ref{earlyMetrology}
+require the numerals $7\text{\xsuxfont 𒀹}$, $8\text{\xsuxfont 𒀹}$, and $9\text{\xsuxfont 𒀹}$,
+whereas only {\xsuxfont 𒀹}--{\xsuxfont 𒑎} are encoded.
+{\xsuxfont 𒀹} numerals are also used in dates.
+The higher numerals are less frequent, as subtractive notation 
+is often used instead, \exempligratia,
+{\xsuxfont 𒌋𒇲𒀹} rather than $9\text{\xsuxfont 𒀹}$,
+or {\xsuxfont \oneAšC 𒂠𒇲𒑊𒄀} rather than {\xsuxfont\oneBanTwoC 𒂠$8$𒀹𒄀},
+which is presumably why they are not yet encoded.
+However, they are clearly attested and understood enough to be encodable.
+They should be encoded in the Cuneiform Numbers and Punctuation block.
+
+Early Dynastic IIIb Ŋirsu regnal years use {\xsuxfont 𒀸}×{\xsuxfont 𒀹} numerals ($1$--$9$).
+these are extremely well attested: a \cite{CDLI} search for \texttt{"(|ASZxDISZ@t|)"}
+finds 1482 artefacts, all ED IIIb, of which 1447 are from Ŋirsu.
+These could be encoded in the Cuneiform Numbers and Punctuation block; together with
+$7$--$9\text{\xsuxfont 𒀹}$, this would fill the block.
+There are three attestations of {\xsuxfont 𒁁}×{\xsuxfont 𒀹} numerals
+for regnal years of {\xsuxfont 𒈗𒍠𒄀𒋛}, one of which is damaged,
+and none of which have photographs. Absent further evidence,
+these seem unifiable with {\xsuxfont 𒀸}×{\xsuxfont 𒀹}.
+
+Some Old Akkadian artefacts have \oneŊešʾuC×{\xsuxfont 𒆜} (LAK~824)
+or {\xsuxfont 𒐞}×{\xsuxfont 𒆜}, which has recently been found to
+mean $6000$.
+The \cite{CDLI} transliterations do not appear to distinguist the curviform and cuneiform
+versions of these signs.
+These signs appear to be associated with $6$\oneŊešʾuC{} or $6${\xsuxfont 𒐞}.
+Further collation\footnote{In the assyriological sense, not the Unicode sense.}
+is needed to understand exactly what needs to be encoded.
+
+\cites[5]{Chambon2003}[61]{Chambon2012} mention a sign resembling a mirrored and rotated
+\oneBanTwoC, thus \rotatebox[origin=c]{90}{\reflectbox{\oneBanTwoC}}.
+It is transliterated $N_{1'}$ in \cite[5]{Chambon2003}, which documents a metrological system that uses it.
+However, we have not been able to locate this sign in the ED I--II Ur corpus
+nor in the Ebla corpus, as it is unclear how it is transliterated in \cite{CDLI}
+or \cite{EbDA}.  Once found, it will likely be proposed for encoding
+in the Archaic Cuneiform Numerals block.
 \subsection{Stacking patterns}
 \label{stackingPatterns}
 The already-encoded numerals in the Cuneiform Numbers and Punctuation block
@@ -2080,8 +2143,21 @@ in both cases preserving the plain text backing.
 %https://cdli.mpiwg-berlin.mpg.de/artifacts/101087
 
 \subsection{Other glyph variants not reflected in transliteration}
-TODO Comment on the nameless variant glyphs from L2/23-190 and note that they are illustrating
-an even wider glyphic range as shown in \cite{Englund2001}.
+\begin{figure}
+  \includegraphics[width=0.375\textwidth]{englund-1(N26).png}
+  \includegraphics[width=0.375\textwidth]{englund-1(N29a).png}
+  \caption{Variants of \oneNTwentySix{} and \oneNTwentyNineA{} from \cite[31]{Englund2001}.}\label{N26-N29a-variants}
+\end{figure}
+In addition to stacking patterns proper, \cite[128\psq]{L2/23-190} proposes separately
+encoding variant glyphs that are not distinguished in transliteration, but listed
+but listed together in \cite{archsigns},
+thus proposing two characters for \oneNTwentySix{} and two characters for \oneNTwentyNineA{}.
+These are merely illustrative of a wide continuum of attested glyphs;
+there are additional variants, as shown in Figure~\ref{N26-N29a-variants},
+and a cursory search on \cite{CDLI} will find many attestations with further variation in the same vein.
+They should not be encoded.
+Only the systematic structural variants, which have been distinguished in transliteration
+based on a suspicion of distinct semantics, should be encoded.
 
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
