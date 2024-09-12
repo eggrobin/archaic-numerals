@@ -108,6 +108,7 @@
 \newcommand\oneNThirtyA{{\proposalfont\symbol{"125AF}}}
 \newcommand\oneNThirtyC{{\proposalfont\symbol{"125B0}}}
 \newcommand\oneNThirtyNineA{{\proposalfont\symbol{"125B6}}}
+\newcommand\oneNFour{{\proposalfont\symbol{"12605}}}
 
 \newcommand{\nhphantom}[1]{\sbox0{#1}\hspace{-\the\wd0}}
 
@@ -1883,22 +1884,72 @@ Note the disunification of N9 and N10 from 4(ban₂@c) and 5(ban₂@c).]
 
 \section{Characters not included in this proposal}
 \label{notIncluded}
+Some numerals previously proposed in \cite{L2/23-190}
+are not included in this proposal.
+Some should be proposed at a later date; others
+are likely not encodable.
 % FIXCDLI P271238 o ii 6 is 1/3(asz@c), not @v.
-\subsection{Missing numerals}
-TODO ``Ten of the sixty numerical signs contained in the list in figure 27,
+\subsection{Fourth millennium numerals}
+The following eight numeral series
+from \cite[166]{DamerowEnglund1987} are not included;
+they are all listed as under \emph{\textgerman{Nichteinordenbare Zahlzeichen}} in \cite[147]{DamerowEnglund1987}.
+On these (and two others, possibly $N_{57}$ and $N_{58}$), \cite[27]{NissenDamerowEnglund1993} write
+``Ten of the sixty numerical signs contained in the list in figure 27,
 moreover, do not belong to any of the identified systems. Three of
 them were apparently scribbled by an awkward pupil. As to four
 of those remaining, we are not sure whether they constitute
 derivations of other, as yet unknown numerical signs or whether
 they are in fact numerical signs at all. For at least two of the ten
-signs, txi and we can affirm that each formed part of two
+signs, [$N_{23}$] and [$N_{43}$], we can affirm that each formed part of two
 additional systems, about which we know nothing due to the fact
 that no informative texts have been unearthed with notations in
-these systems.'' \cite[27]{NissenDamerowEnglund1993}
-TODO N10 described as coming from P001319 which does not have it anymore.
-TODO N13 not attested in CDLI 
-TODO ($N_{17}$ not usefully numeric, $12N_{14}$ not encodable, etc.). Cite \cite[147]{DamerowEnglund1987}
+these systems.''
+\begin{itemize}
+  \item $N_{13}$ \rotatebox[origin=c]{90}{\oneNFour}.
+  \cite[147]{DamerowEnglund1987} mentions \cite{P002551} as the only attestation.
+  \cite{CDLI} now transliterates this \texttt{2(N04)},
+  not in \cite{archsigns}. Presumably representable as a rotated \oneNFour, as here.
+  \item $N_{16}$ and $N_{17}$.
+  Described as ``\emph{\textgerman{vermutlich mit ideographischer Funktion}}'' in \cite[147]{DamerowEnglund1987}.
+  $N_{17}$ is only attested in a witness to \cite{Q000028}.
+  $N_{16}$ is attested in similar context in the same witness to \cite{Q000028},
+  but also in \cite{P283918} and \cite{P283919}
+  where notes by Englund in the \cite{CDLI} transliteration suggest it is numeric,
+  equal to $\frac{1}{20}\text{\oneNThirtyNineA}$.
+  \item $N_{23}$. In the current transliterated
+  \cite{CDLI} corpus, attested in one Uruk~V artefact,
+  and four Uruk~IV artefacts.
+  Similar in shape to proto-Elamite $N_{23}$,
+  which is well-attested (53~artefacts) and well-understood (part of a decimal system, where it means $100$).
+  Best encoded as part of a proto-Elamite proposal,
+  where we would clearly have $1$--$9$,
+  and given appropriate Script\_Extensions.
+  \item $N_{43}$; according to \cite[147]{DamerowEnglund1987},
+  probably part of a variant of system~\ref{systemŠ}.
+  \item $N_{44}$, $N_{53}$, and $N_{55}$: Only
+  attested in \cite{P003855}, which contains no other text.
+  Presumably these are the ``awkward pupil'' signs.
+\end{itemize}
+In addition, the following are not included:
+\begin{itemize}
+  \item $N_{10}$. Only attested in \cite{P001319} according to
+  \cite[143]{DamerowEnglund1987},
+  but that text now has $N_{11}$ in its \cite{CDLI} transliteration.
+  Not in \cite{archsigns}.
+  \item $N_{57}$ and $N_{58}$:
+        dependent on the main proto-cuneiform proposal, whose rationale
+        will justify the disunification from {\xsuxfont 𒀸} and {\xsuxfont 𒁹}.
+        These should be encoded in a different block to avoid confusion with
+        {\xsuxfont 𒀸} and {\xsuxfont 𒁹}, since the Archaic Numerals block
+        contains numerals unifiable between Pcun and Xsux.
+  \item $N_{59}$. Possibly a variant of \oneNFour{} according to \cite[147]{DamerowEnglund1987}.
+\end{itemize}
+
+The following numeral series from \cite{L2/23-190}
+
+TODO $12N_{14}$ not encodable, etc. Cite \cite[147]{DamerowEnglund1987}
 N30C\~b not attested
+\subsection{Missing numerals}
 7 and 8(diš \emph{tenû}) encodable, but not today; want to go into the Cuneiform Numbers and Punctuation block for sanity.
 \subsection{Stacking patterns}
 \label{stackingPatterns}
