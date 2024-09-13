@@ -120,7 +120,7 @@
 12592	CUNEIFORM NUMERIC SIGN FIVE BURU CURVED
 @		Early Dynastic capacity measures
 12593	CUNEIFORM NUMERIC SIGN ONE BAN2 CURVED
-	* 1244F cuneiform numeric sign one ban2
+	x 1244F cuneiform numeric sign one ban2
 	= 1/2 aš curved
 	* used for one half in multiple metrological systems
 	x 12226 cuneiform sign mash
