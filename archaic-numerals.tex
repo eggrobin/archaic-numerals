@@ -376,6 +376,9 @@ arrow style=math font,
 
 \usepackage{pdfpages}
 
+\usepackage{fvextra}
+\usepackage[color=Periwinkle]{attachfile2}
+
 \title{Archaic cuneiform numerals}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
 
@@ -585,12 +588,35 @@ U+\textcsc{1212D} {\cuneiformComposite 𒄭} \textcsc{CUNEIFORM SIGN HI}.
 The code charts for the proposed block,
 including the character names list with proposed informative aliases, cross references, and informative notes,
 are shown on the following pages.
+A plain text file containing the
+\textattachfile{NamesList.txt}{NamesList.txt} lines is
+attached to this document.
 \vspace{0pt plus 0.5fill}
 \begin{center}This space for rent.\end{center}
 \vfill
 \includepdf[pages=-]{chart.pdf}
 \subsection{Properties}
 \label{properties}
+Add to the respective UCD files the lines given in this section.
+Changes to derived files are not listed.
+These changes are available as plain text files attached to this document.
+\fvset{fontsize=\scriptsize,breaklines,breaksymbol=\tiny\ensuremath{\textcolor{red}{\hookrightarrow}}}
+\subsubsection{Name, General\_Category, Numeric\_Value, etc.}
+Attached: \textattachfile[ucfilespec={UnicodeData.txt}]{dUnicodeData.txt}{UnicodeData.txt}.
+\VerbatimInput{dUnicodeData.txt}
+\subsubsection{Line\_Break}
+Attached: \textattachfile[ucfilespec={LineBreak.txt}]{dLineBreak.txt}{LineBreak.txt}.
+\VerbatimInput{dLineBreak.txt}
+\subsubsection{Script}
+Attached: \textattachfile[ucfilespec={Scripts.txt}]{dScripts.txt}{Scripts.txt}.
+\VerbatimInput{dScripts.txt}
+\subsubsection{Script\_Extensions}
+Attached: \textattachfile[ucfilespec={ScriptExtensions.txt}]{dScriptExtensions.txt}{ScriptExtensions.txt}.
+\VerbatimInput{dScriptExtensions.txt}
+\subsubsection{Block}
+Attached: \textattachfile[ucfilespec={Blocks.txt}]{dBlocks.txt}{Blocks.txt}.
+\VerbatimInput{dBlocks.txt}
+
 \section{Rationale for curviform--cuneiform disunification}
 \label{disunificationRationale}
 The numbering systems that use cuneiform numerals are descended from the ones that use curviform numerals,
