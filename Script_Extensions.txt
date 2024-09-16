@@ -1,3 +1,3 @@
-12550..12586; Cuneiform Proto_Cuneiform
-1258C..1258D; Cuneiform Proto_Cuneiform
-1259A..125A7; Cuneiform Proto_Cuneiform
+12550..12586  ; Pcun Xsux                      # Nl [55] CUNEIFORM NUMERIC SIGN ONE N01..CUNEIFORM NUMERIC SIGN FIVE N50
+1258C..1258D  ; Pcun Xsux                      # Nl  [2] CUNEIFORM NUMERIC SIGN ONE N22..CUNEIFORM NUMERIC SIGN TWO N22
+1259A..125A7  ; Pcun Xsux                      # Nl [14] CUNEIFORM NUMERIC SIGN ONE N51..CUNEIFORM NUMERIC SIGN FIVE N54
