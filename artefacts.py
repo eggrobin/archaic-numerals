@@ -1,6 +1,27 @@
 import html.parser
+import re
 from typing import Optional
 import urllib.request
+from TexSoup import TexSoup, TexNode
+from TexSoup.data import BraceGroup
+
+with open('archaic-numerals.tex', encoding='utf-8') as f:
+   source = f.read()
+
+citations : list[TexNode] = []
+
+soup = TexSoup(source, tolerance=1)
+for command in ('cite', 'cites'):
+  for node in soup.find_all(command):
+    if any(isinstance(arg, BraceGroup) and re.match(r'^[PQ][0-9]+$', arg.string) for arg in node.args):
+      citations.append(node)
+
+print(citations)
+
+#with open('archaic-numerals.tex', 'w', encoding='utf-8') as f:
+#   f.write(str(soup))
+
+exit()
 
 with urllib.request.urlopen('https://oracc.museum.upenn.edu/etcsri/Q001056') as f:
   page = f.read().decode('utf-8')
