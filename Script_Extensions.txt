@@ -1,0 +1,3 @@
+12550..12586; Cuneiform Proto_Cuneiform
+1258C..1258D; Cuneiform Proto_Cuneiform
+1259A..125A7; Cuneiform Proto_Cuneiform
