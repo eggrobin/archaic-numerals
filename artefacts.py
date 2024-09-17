@@ -84,7 +84,7 @@ for citation in citations:
         artefact = arg.string
         if artefact == 'P222399':
           artefact = 'Q001056'
-        location_sources = location_arg.string.split(';')
+        location_sources = [s.strip() for s in location_arg.string.split(';')]
         locations = []
         for location in location_sources:
           parts = tuple('o' if part == r'\obverse' else
@@ -99,6 +99,8 @@ for citation in citations:
         for project in 'etcsri', 'dccmt', 'dcclt', 'epsd2':
           line_to_id = get_line_to_id_map(project, artefact)
           for i, location in enumerate(locations):
+            if 'href' in location_sources[i]:
+              raise NameError(location_arg, artefact)
             if location in line_to_id:
               location_sources[i] = r'\href{http://oracc.org/' + project + '/' + line_to_id[location] + '}{' + location_sources[i] + '}'
             else:
@@ -112,8 +114,8 @@ for citation in citations:
 substitutions = sorted(substitutions, key=lambda s: -s[0].position)
 
 for arg, replacement in substitutions:
-  if source[arg.position+1:arg.position+len(arg.string)] != arg.string:
-    raise ValueError(source[arg.position:arg.position+len(arg.string)], arg.string)
+  if source[arg.position+1:arg.position+1+len(arg.string)] != arg.string:
+    raise ValueError(source[arg.position+1:arg.position+1+len(arg.string)], arg.string)
   source = source[:arg.position+1] + replacement + source[arg.position+1 + len(arg.string):]
 
 with open('archaic-numerals.tex', 'w', encoding='utf-8') as f:
