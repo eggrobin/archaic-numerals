@@ -5,38 +5,6 @@ import urllib.request
 from TexSoup import TexSoup
 from TexSoup.data import TexNode, BraceGroup, BracketGroup
 
-with open('archaic-numerals.tex', encoding='utf-8') as f:
-   source = f.read()
-
-citations : list[TexNode] = []
-
-soup = TexSoup(source, tolerance=1)
-for command in ('cite', 'cites'):
-  for node in soup.find_all(command):
-    if any(isinstance(arg, BraceGroup) and re.match(r'^[PQ][0-9]+$', arg.string) for arg in node.args):
-      citations.append(node)
-
-location = []
-href_in_location = False
-
-for citation in citations:
-  for arg in citation.args:
-   if isinstance(arg, BracketGroup):
-      if r'\href' in arg.string:
-         href_in_location = True
-      location = arg.string.split('~')
-   if isinstance(arg, BraceGroup):
-    if location and not href_in_location and re.match(r'^[PQ][0-9]+$', arg.string):
-      print(arg.string, location)
-    location = []
-    href_in_location = False
-
-exit()
-
-with urllib.request.urlopen('https://oracc.museum.upenn.edu/etcsri/Q001056') as f:
-  page = f.read().decode('utf-8')
-
-line_to_id : dict[tuple[str, ...], Optional[str]] = {}
 
 def deromanize(s: str) -> int:
   numerals = {'i': 1, 'v': 5, 'x': 10, 'l': 50, 'c': 100, 'd': 500, 'm': 1000}
@@ -58,6 +26,11 @@ def deromanize(s: str) -> int:
 class Parser(html.parser.HTMLParser):
     line_id : Optional[str] = None
     xlabel_start : Optional[str] = None
+
+    def __init__(self, *, convert_charrefs: bool = True) -> None:
+      self.line_to_id: dict[tuple[str, ...], Optional[str]] = {}
+      super().__init__(convert_charrefs=convert_charrefs)
+
     def handle_starttag(self, tag : str, attrs : list[tuple[str, Optional[str]]]):
         attributes = dict(attrs)
         if 'class' in attributes and attributes['class']:
@@ -77,10 +50,71 @@ class Parser(html.parser.HTMLParser):
 
     def handle_data(self, data : str):
         if self.xlabel_start:
-           line_to_id[tuple(data.split())] = self.line_id
+           self.line_to_id[tuple(str(deromanize(s)) if re.match(r'^[ivxlcdm]+$', s) else s for s in data.split())] = self.line_id
 
-parser = Parser()
-parser.feed(page)
+def get_line_to_id_map(project: str, artefact):
+  with urllib.request.urlopen('https://oracc.museum.upenn.edu/' + project + '/' + artefact) as f:
+    page = f.read().decode('utf-8')
+  parser = Parser()
+  parser.feed(page)
+  return parser.line_to_id
 
-for line, id in line_to_id.items():
-   print(line[0], [deromanize(i) if i.isalpha() else i for i in line[1:]], '\t', id)
+with open('archaic-numerals.tex', encoding='utf-8') as f:
+   source = f.read()
+
+citations : list[TexNode] = []
+
+soup = TexSoup(source, tolerance=1)
+for command in ('cite', 'cites'):
+  for node in soup.find_all(command):
+    if any(isinstance(arg, BraceGroup) and re.match(r'^[PQ][0-9]+$', arg.string) for arg in node.args):
+      citations.append(node)
+
+location_arg = None
+
+substitutions = []
+
+for citation in citations:
+  for arg in citation.args:
+    if isinstance(arg, BracketGroup):
+      if not r'\href' in arg.string:
+        location_arg = arg
+    if isinstance(arg, BraceGroup):
+      if location_arg and re.match(r'^[PQ][0-9]+$', arg.string):
+        artefact = arg.string
+        if artefact == 'P222399':
+          artefact = 'Q001056'
+        location_sources = location_arg.string.split(';')
+        locations = []
+        for location in location_sources:
+          parts = tuple('o' if part == r'\obverse' else
+                        'r' if part == r'\reverse' else
+                        part.split('--')[0] for part in location.split('~'))
+          if not locations or len(parts) >= len(locations[-1]):
+            locations.append(parts)
+          else:
+            locations.append(locations[-1][:-len(parts)]+parts)
+        print(arg.string, locations, location_arg)
+        print(locations)
+        for project in 'etcsri', 'dccmt', 'dcclt', 'epsd2':
+          line_to_id = get_line_to_id_map(project, artefact)
+          for i, location in enumerate(locations):
+            if location in line_to_id:
+              location_sources[i] = r'\href{http://oracc.org/' + project + '/' + line_to_id[location] + '}{' + location_sources[i] + '}'
+            else:
+              break
+          else:
+            break
+        substitutions.append((location_arg, ';'.join(location_sources)))
+        print(location_arg.string, '->', ';'.join(location_sources), ' at ', location_arg.position)
+      location_arg = None
+
+substitutions = sorted(substitutions, key=lambda s: -s[0].position)
+
+for arg, replacement in substitutions:
+  if source[arg.position+1:arg.position+len(arg.string)] != arg.string:
+    raise ValueError(source[arg.position:arg.position+len(arg.string)], arg.string)
+  source = source[:arg.position+1] + replacement + source[arg.position+1 + len(arg.string):]
+
+with open('archaic-numerals.tex', 'w', encoding='utf-8') as f:
+   f.write(source)
