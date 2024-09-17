@@ -2,8 +2,8 @@ import html.parser
 import re
 from typing import Optional
 import urllib.request
-from TexSoup import TexSoup, TexNode
-from TexSoup.data import BraceGroup
+from TexSoup import TexSoup
+from TexSoup.data import TexNode, BraceGroup, BracketGroup
 
 with open('archaic-numerals.tex', encoding='utf-8') as f:
    source = f.read()
@@ -16,8 +16,20 @@ for command in ('cite', 'cites'):
     if any(isinstance(arg, BraceGroup) and re.match(r'^[PQ][0-9]+$', arg.string) for arg in node.args):
       citations.append(node)
 
-with open('archaic-numerals.tex', 'w', encoding='utf-8') as f:
-   f.write(''.join(str(n for n in soup.all)))
+location = []
+href_in_location = False
+
+for citation in citations:
+  for arg in citation.args:
+   if isinstance(arg, BracketGroup):
+      if r'\href' in arg.string:
+         href_in_location = True
+      location = arg.string.split('~')
+   if isinstance(arg, BraceGroup):
+    if location and not href_in_location and re.match(r'^[PQ][0-9]+$', arg.string):
+      print(arg.string, location)
+    location = []
+    href_in_location = False
 
 exit()
 
