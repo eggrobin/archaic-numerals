@@ -16,10 +16,8 @@ for command in ('cite', 'cites'):
     if any(isinstance(arg, BraceGroup) and re.match(r'^[PQ][0-9]+$', arg.string) for arg in node.args):
       citations.append(node)
 
-print(citations)
-
-#with open('archaic-numerals.tex', 'w', encoding='utf-8') as f:
-#   f.write(str(soup))
+with open('archaic-numerals.tex', 'w', encoding='utf-8') as f:
+   f.write(''.join(str(n for n in soup.all)))
 
 exit()
 
