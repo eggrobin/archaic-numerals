@@ -94,6 +94,7 @@
 \newcommand\oneHalfIkuCV{{\proposalfont\symbol{"1258B}}}
 \newcommand\oneEšeThreeC{{\proposalfont\symbol{"1258C}}}
 \newcommand\oneBurʾuC{{\proposalfont\symbol{"1258E}}}
+\newcommand\fiveBurʾuC{{\proposalfont\symbol{"12592}}}
 \newcommand\oneBanTwoC{{\proposalfont\symbol{"12593}}}
 \newcommand\twoBanTwoC{{\proposalfont\symbol{"12594}}}
 \newcommand\threeBanTwoC{{\proposalfont\symbol{"12595}}}
@@ -379,13 +380,26 @@ arrow style=math font,
 
 \usepackage{fvextra}
 \usepackage[color=Periwinkle]{attachfile2}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\newcommand{\thisDocumentNumber}{L2/24-210}
+\newcommand{\thisDocumentTitle}{Archaic cuneiform numerals}
+\fancyfoot{}
+\fancyhead{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[CO]{\thisDocumentNumber}
+\fancyhead[CE]{\thisDocumentTitle}
+\renewcommand{\headrulewidth}{0pt}
 
-\title{Archaic cuneiform numerals}
+\title{\thisDocumentTitle}
 \author{Robin Leroy, Anshuman Pandey, and Steve Tinney}
 
 \begin{document}
 
 \maketitle
+\begin{tikzpicture}[overlay, remember picture]
+  \path (current page.north east) ++(-1,-1) node[below left] {\Large\thisDocumentNumber};
+\end{tikzpicture}
 
 \tableofcontents
 
@@ -453,7 +467,7 @@ The overall picture of unifications and disunifications over time is illustrated
 The Script\_Extensions property assignments in §\ref{properties} reflect the overlap.
 Many of these numerals are also used in proto-Elamite\footnote{\cite{ISO15924}: Pelm, not yet encoded.} texts,
 where they are treated as identical characters in scholarship on proto-Elamite,
-so that they should be unified with the ones proposed in \cite{L2/23-196}.
+so that they should be unified with those that were proposed (but not yet accepted) in \cite{L2/23-196}.
 However, in the interest of time, we do not provide a detailed rationale for this unification in this document,
 and we are not proposing that the numerals be given the corresponding Script\_Extensions property value for now.
 Neither do we propose encoding any numerals that are solely attested in proto-Elamite texts,
@@ -1597,13 +1611,13 @@ such non-numeric usage is almost\footnote{Exceptions are discussed in §\ref{ša
 \begin{itemize}[nosep]
   \item in personal names in administrative texts,
   such as the following, which all contain {\oneAšC} numerals:\begin{itemize}[nosep]
-  \item {\xsuxfont 𒀸𒊕} in
+  \item {\xsuxfont 𒀸𒊕}\footnote{Possibly a toponym, see \cite[195]{Postgate2024}.} in
   \cites[\href{http://oracc.org/epsd2/P010424.29}{\reverse~1~5}]{P010424}[\href{http://oracc.org/epsd2/P010458.8}{\obverse~1~5}]{P010458}[\href{http://oracc.org/epsd2/P010459.15}{\obverse~2~5′}]{P010459}
   from ED IIIa \smash{\textarabic{أبو صلابيخ}},
   \item {\xsuxfont 𒀸𒉌} in \cite[\href{http://oracc.org/epsd2/P010960.15}{\obverse~2~5}]{P010960} from ED IIIa Šuruppag,
   % \item {\xsuxfont 𒀸𒁯𒌦𒄷} in \cite[\href{http://oracc.org/epsd2/P010964.123}{\obverse~7~18}]{P010964} from ED IIIa Šuruppag, % FIXCDLI Nope, 𒀾
   \item {\xsuxfont 𒆷𒈠𒀸𒁯} in \cite[\href{http://oracc.org/epsd2/P251641.44}{\obverse~4~3}]{P251641} from ED IIIb Adab,
-  \item {\xsuxfont 𒅤𒊭𒀸𒁯𒈨} in \cite[\reverse~2~3]{P252866} from ED IIIb Adab,
+  \item {\xsuxfont 𒅤𒊭𒀸𒁯} in \cite[\reverse~2~3]{P252866} from ED IIIb Adab,
   \item {\xsuxfont 𒈗𒋗𒀸𒉌} in \cite[\href{http://oracc.org/epsd2/P298637.48}{\reverse~2~4}]{P298637} from ED IIIb Umma;
   \end{itemize}
   \item in the Sumerian word {\xsuxfont 𒌑𒀸} u₂-rum, ``property'' in ED IIIb Ŋirsu administrative texts which contain
@@ -1761,7 +1775,7 @@ non-numeric šar₂ is curviform:\begin{itemize}[nosep]
 It \emph{would} be disruptive to the diachronic representation of text
 if non-numeric šar₂ were to have two different representations.
 The character U+\textcsc{122B9} \textsc{cuneiform sign shar2} should therefore be used
-in those cases, with its curviform glyph {\xsuxfont 𒊹},
+in those cases, with its curviform glyph {\originalNoto 𒊹},
 identical to the glyph of the proposed U+\textcsc{12579} \oneŠarTwoC{} \textcsc{CUNEIFORM
 NUMERIC SIGN ONE N45}.
 Since the archaizing style of texts wherein non-numeric šar₂ is curviform
@@ -2522,8 +2536,33 @@ based on a suspicion of distinct semantics, should be encoded.
 
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
-TODO(egg): Something about the Vanséveren fonts; acknowledge the reviewers and whoever referred me to relevant literature;
-something about the proposal font.
+Peter Constable and Karljürgen Feuerherm provided useful feedback on the wording.
+Robin Leroy authored the bulk of the text.
+Rick McGowan suggested including a note in the character names list to clarify the identity of shrunk numerals in the code charts.
+Erica Scarpa brought the need for encoding the curviform numerals to our attention on multiple occasions and
+suggested several crucial references, most importantly \cite{Gori2023}, which clearly demonstrates contrastive textual
+usage of curviform and cuneiform numerals in modern publications.
+Steve Tinney provided essential assistance on the interpretation of the Sumerian texts and suggested useful references.
+Ken Whistler gave important advice on matters of encodability, roadmapping, code point choice, and names list editing.
+
+The reference glyphs for most of the proposed characters whose Script\_Extensions contains Pcun are based on a font
+made by Anshuman Pandey for \cite{L2/23-190}, itself based on designs by Bob Englund in \cite{archsigns}.
+The reference glyphs for \oneEighthIkuC{}, \oneBurʾuC{}--\fiveBurʾuC{}, and \oneBanTwoC{}--\fiveBanTwoC{}
+are based on designs by Steve Tinney.
+The glyphs were adjusted by Robin Leroy as described in §\ref{extraIdentity} and §\ref{stackingPatterns}.
+
+The Old Babylonian and Neo-Assyrian fonts used in §\ref{xsuxModel} and in the epigraphs in §\ref{metrology} and
+§\ref{non-numeric}
+are \emph{Santakku} and \emph{Assurbanipal},
+fonts created by Sylvie Vanséveren,
+available on the Hethitologie Portal Mainz \cite{Vanséveren2021}.
+The \emph{CuneiformComposite} font by Steve Tinney is used when referring to the reference glyphs for already-encoded cuneiform.
+\emph{Noto Sans Cuneiform}, by Monotype Imaging,
+is used to for most of the cuneiform text in this document, with modifications (cuneiform glyph for {\xsuxfont 𒊹} ŠAR₂,
+corrected glyps for {\xsuxfont 𒌦} UN and {\xsuxfont 𒌧} KALAM per \cite{Unicode16},
+alternate glyph {\xsuxfont\addfontfeature{StylisticSet=1} 𒋙} for {\xsuxfont 𒋙}).
+Arabic text is set in \emph{Scheherazade New} by SIL International.
+The remainder of the text is set in \emph{Cambria} and \emph{Cambria Math} by Monotype Imaging and Tiro Typeworks.
 \nocite{DCCLT}
 \printbibheading[heading=bibintoc]
 \AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
