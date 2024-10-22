@@ -131,11 +131,11 @@
 @		Early Dynastic weight fractions
 12598	CUNEIFORM NUMERIC SIGN NINDA2 TIMES SHE PLUS ONE ASH CURVED
 	= 1/3 aš curved variant form
-	x 1245D cuneiform numeric sign one third dish variant form a
+	x 1245D cuneiform numeric sign one third variant form a
 	x 1245A cuneiform numeric sign one third dish
 12599	CUNEIFORM NUMERIC SIGN NINDA2 TIMES SHE PLUS TWO ASH CURVED
 	= 2/3 aš curved variant form
-	x 1245E cuneiform numeric sign two thirds dish variant form a
+	x 1245E cuneiform numeric sign two thirds variant form a
 	x 1245B cuneiform numeric sign two thirds dish
 @		Numerals used in the bisexagesimal system
 @+		Together with N08, N01, N14, and N34
