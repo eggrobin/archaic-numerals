@@ -1,0 +1,482 @@
+\documentclass[10pt, a4paper, twoside]{article}
+\usepackage{fontspec}
+\usepackage{realscripts}
+\setmainfont[
+  BoldFont=CambriaB,
+  BoldItalicFont=CambriaZ,
+  Numbers={OldStyle, Proportional}, 
+  Ligatures={TeX, Common}, 
+  SmallCapsFeatures={Letters=SmallCaps},
+  %Contextuals=WordFinal,
+            ]{Cambria}
+\setmonofont[Scale=MatchLowercase]{Consolas}
+\newcommand{\textcsc}[1]{{\addfontfeature{Letters=UppercaseSmallCaps}#1}}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{accsupp}
+\newfontfamily\cuneiformComposite{CuneiformComposite.ttf}
+\newfontfamily\originalNoto{NotoSansCuneiform-UN-Swapped.ttf}
+\newfontfamily\xsuxfont{NotoSansCuneiform-egg.ttf}
+\newfontfamily\obfont{Santakku.ttf}
+\newfontfamily\nafont{Assurbanipal.ttf}
+\newfontfamily\nbfont{Esagil.ttf}
+\newfontfamily\hantfont{NotoSerifTC-Regular.ttf}
+%\usepackage{arabluatex}
+
+\newfontfamily\arabicfont[Script=Arabic]{ScheherazadeNew-Regular.ttf}
+%\newcommand{\textarabic}[1]{%\BeginAccSupp{method=pdfstringdef,unicode,ActualText={#1}}%
+%\bgroup\textdir TRT%
+%\arabfont #1%
+%\egroup%\EndAccSupp{}
+%}
+
+\newfontfamily\proposalfont{Archaic-Cuneiform-Numerals.ttf}
+
+\newcommand\oneAšC{{\proposalfont\symbol{"12550}}} % 𒀸
+\newcommand\twoAšC{{\proposalfont\symbol{"12551}}} % 𒐀
+\newcommand\threeAšC{{\proposalfont\symbol{"12552}}} % 𒐁
+\newcommand\fourAšC{{\proposalfont\symbol{"12553}}} % 𒐂
+\newcommand\fiveAšC{{\proposalfont\symbol{"12554}}} % 𒐃
+\newcommand\sixAšC{{\proposalfont\symbol{"12555}}} % 𒐄
+\newcommand\sevenAšC{{\proposalfont\symbol{"12556}}} % 𒐅
+\newcommand\eightAšC{{\proposalfont\symbol{"12557}}} % 𒐆
+\newcommand\nineAšC{{\proposalfont\symbol{"12558}}} % 𒐇
+\newcommand\oneDišC{{\proposalfont\symbol{"12559}}}
+\newcommand\twoDišC{{\proposalfont\symbol{"1255A}}}
+\newcommand\threeDišC{{\proposalfont\symbol{"1255B}}}
+\newcommand\fourDišC{{\proposalfont\symbol{"1255C}}}
+\newcommand\fiveDišC{{\proposalfont\symbol{"1255D}}}
+\newcommand\sixDišC{{\proposalfont\symbol{"1255E}}}
+\newcommand\sevenDišC{{\proposalfont\symbol{"1255F}}}
+\newcommand\eightDišC{{\proposalfont\symbol{"12560}}}
+\newcommand\nineDišC{{\proposalfont\symbol{"12561}}}
+\newcommand\oneUC{{\proposalfont\symbol{"12562}}}
+\newcommand\twoUC{{\proposalfont\symbol{"12563}}}
+\newcommand\threeUC{{\proposalfont\symbol{"12564}}}
+\newcommand\fourUC{{\proposalfont\symbol{"12565}}}
+\newcommand\fiveUC{{\proposalfont\symbol{"12566}}}
+\newcommand\sixUC{{\proposalfont\symbol{"12567}}}
+\newcommand\sevenUC{{\proposalfont\symbol{"12568}}}
+\newcommand\eightUC{{\proposalfont\symbol{"12569}}}
+\newcommand\nineUC{{\proposalfont\symbol{"1256A}}}
+\newcommand\oneŊešTwoC{{\proposalfont\symbol{"1256B}}}
+\newcommand\twoŊešTwoC{{\proposalfont\symbol{"1256C}}}
+\newcommand\threeŊešTwoC{{\proposalfont\symbol{"1256D}}}
+\newcommand\fourŊešTwoC{{\proposalfont\symbol{"1256E}}}
+\newcommand\fiveŊešTwoC{{\proposalfont\symbol{"1256F}}}
+\newcommand\sixŊešTwoC{{\proposalfont\symbol{"12570}}}
+\newcommand\sevenŊešTwoC{{\proposalfont\symbol{"12571}}}
+\newcommand\eightŊešTwoC{{\proposalfont\symbol{"12572}}}
+\newcommand\nineŊešTwoC{{\proposalfont\symbol{"12573}}}
+\newcommand\oneŊešʾuC{{\proposalfont\symbol{"12574}}}
+\newcommand\twoŊešʾuC{{\proposalfont\symbol{"12575}}}
+\newcommand\threeŊešʾuC{{\proposalfont\symbol{"12576}}}
+\newcommand\fourŊešʾuC{{\proposalfont\symbol{"12577}}}
+\newcommand\fiveŊešʾuC{{\proposalfont\symbol{"12578}}}
+\newcommand\oneŠarTwoC{{\proposalfont\symbol{"12579}}}
+\newcommand\twoŠarTwoC{{\proposalfont\symbol{"1257A}}}
+\newcommand\threeŠarTwoC{{\proposalfont\symbol{"1257B}}}
+\newcommand\fourŠarTwoC{{\proposalfont\symbol{"1257C}}}
+\newcommand\fiveŠarTwoC{{\proposalfont\symbol{"1257D}}}
+\newcommand\sixŠarTwoC{{\proposalfont\symbol{"1257E}}}
+\newcommand\seveŠarTwoC{{\proposalfont\symbol{"1257F}}}
+\newcommand\eightŠarTwoC{{\proposalfont\symbol{"12580}}}
+\newcommand\nineŠarTwoC{{\proposalfont\symbol{"12581}}}
+\newcommand\oneŠarʾuC{{\proposalfont\symbol{"12582}}}
+\newcommand\twoŠarʾuC{{\proposalfont\symbol{"12583}}}
+\newcommand\threeŠarʾuC{{\proposalfont\symbol{"12584}}}
+\newcommand\fourŠarʾuC{{\proposalfont\symbol{"12585}}}
+\newcommand\fiveŠarʾuC{{\proposalfont\symbol{"12586}}}
+\newcommand\oneEighthIkuC{{\proposalfont\symbol{"12587}}}
+\newcommand\oneEighthIkuCV{{\proposalfont\symbol{"12588}}}
+\newcommand\oneQuarterIkuC{{\proposalfont\symbol{"12589}}}
+\newcommand\oneQuarterIkuCV{{\proposalfont\symbol{"1258A}}}
+\newcommand\oneHalfIkuCV{{\proposalfont\symbol{"1258B}}}
+\newcommand\oneEšeThreeC{{\proposalfont\symbol{"1258C}}}
+\newcommand\oneBurʾuC{{\proposalfont\symbol{"1258E}}}
+\newcommand\fiveBurʾuC{{\proposalfont\symbol{"12592}}}
+\newcommand\oneBanTwoC{{\proposalfont\symbol{"12593}}}
+\newcommand\twoBanTwoC{{\proposalfont\symbol{"12594}}}
+\newcommand\threeBanTwoC{{\proposalfont\symbol{"12595}}}
+\newcommand\fourBanTwoC{{\proposalfont\symbol{"12596}}}
+\newcommand\fiveBanTwoC{{\proposalfont\symbol{"12597}}}
+\newcommand\oneThirdCV{{\proposalfont\symbol{"12598}}}
+\newcommand\twoThirdsCV{{\proposalfont\symbol{"12599}}}
+\newcommand\oneNFiftyOne{{\proposalfont\symbol{"1259A}}}
+\newcommand\oneNFiftyFour{{\proposalfont\symbol{"125A3}}}
+\newcommand\threeNFiftyFour{{\proposalfont\symbol{"125A5}}}
+\newcommand\oneNFiftySix{{\proposalfont\symbol{"125A8}}}
+\newcommand\twoNFiftySix{{\proposalfont\symbol{"125A9}}}
+\newcommand\oneNTwentyFour{{\proposalfont\symbol{"125AA}}}
+\newcommand\oneNTwentySix{{\proposalfont\symbol{"125AB}}}
+\newcommand\oneNTwentyEight{{\proposalfont\symbol{"125AC}}}
+\newcommand\oneNTwentyNineA{{\proposalfont\symbol{"125AD}}}
+\newcommand\oneNTwentyNineB{{\proposalfont\symbol{"125AE}}}
+\newcommand\oneNThirtyA{{\proposalfont\symbol{"125AF}}}
+\newcommand\oneNThirtyC{{\proposalfont\symbol{"125B0}}}
+\newcommand\oneNThirtyD{{\proposalfont\symbol{"125B1}}}
+\newcommand\oneNThirtyE{{\proposalfont\symbol{"125B2}}}
+\newcommand\oneNThirtyOne{{\proposalfont\symbol{"125B3}}}
+\newcommand\oneNThirtyTwo{{\proposalfont\symbol{"125B4}}}
+\newcommand\oneNThirtyThree{{\proposalfont\symbol{"125B5}}}
+\newcommand\oneNThirtyNineA{{\proposalfont\symbol{"125B6}}}
+\newcommand\oneNThirtyNineB{{\proposalfont\symbol{"125BA}}}
+\newcommand\threeNThirtyFive{{\proposalfont\symbol{"125CE}}}
+\newcommand\fourNThirtyFive{{\proposalfont\symbol{"125CF}}}
+\newcommand\fiveNThirtyFive{{\proposalfont\symbol{"125D0}}}
+\newcommand\oneNSix{{\proposalfont\symbol{"125D1}}}
+\newcommand\oneNTwentyOne{{\proposalfont\symbol{"125DA}}}
+\newcommand\oneNThirtyEight{{\proposalfont\symbol{"125DF}}}
+\newcommand\oneNFiftyTwo{{\proposalfont\symbol{"125E0}}}
+\newcommand\twoNFiftyTwo{{\proposalfont\symbol{"125E1}}}
+\newcommand\fourNFiftyTwo{{\proposalfont\symbol{"125E3}}}
+\newcommand\oneNSixty{{\proposalfont\symbol{"125E9}}}
+\newcommand\oneNTwentyFourA{{\proposalfont\symbol{"125EA}}}
+\newcommand\oneNForty{{\proposalfont\symbol{"125EB}}}
+\newcommand\fourNForty{{\proposalfont\symbol{"125EE}}}
+\newcommand\oneNThree{{\proposalfont\symbol{"125EF}}}
+\newcommand\twoNThree{{\proposalfont\symbol{"125F0}}}
+\newcommand\oneNEighteen{{\proposalfont\symbol{"125F4}}}
+\newcommand\twoNEighteen{{\proposalfont\symbol{"125F5}}}
+\newcommand\oneNFortyFiveA{{\proposalfont\symbol{"125FD}}}
+\newcommand\oneNTwentyFourB{{\proposalfont\symbol{"125FE}}}
+\newcommand\oneNTwentySixB{{\proposalfont\symbol{"125FF}}}
+\newcommand\oneNTwentyEightB{{\proposalfont\symbol{"12600}}}
+\newcommand\oneNTwentyNineAB{{\proposalfont\symbol{"12601}}}
+\newcommand\oneNFortyOne{{\proposalfont\symbol{"12602}}}
+\newcommand\oneNFour{{\proposalfont\symbol{"12606}}}
+\newcommand\oneNNineteen{{\proposalfont\symbol{"1260B}}}
+\newcommand\sevenNNineteen{{\proposalfont\symbol{"12611}}}
+\newcommand\oneNFortySix{{\proposalfont\symbol{"12614}}}
+\newcommand\oneNThirtySix{{\proposalfont\symbol{"12616}}}
+\newcommand\twoNThirtySix{{\proposalfont\symbol{"12617}}}
+\newcommand\oneNFortyNine{{\proposalfont\symbol{"1261F}}}
+\newcommand\fourNFortyNine{{\proposalfont\symbol{"12622}}}
+\newcommand\oneNTwentyFive{{\proposalfont\symbol{"12623}}}
+\newcommand\oneNTwentySeven{{\proposalfont\symbol{"12624}}}
+\newcommand\oneNTwentyEightC{{\proposalfont\symbol{"12625}}}
+\newcommand\oneNTwentyNineAC{{\proposalfont\symbol{"12626}}}
+\newcommand\oneNThirtyAC{{\proposalfont\symbol{"12627}}}
+\newcommand\oneNThirtyCC{{\proposalfont\symbol{"12628}}}
+\newcommand\oneNFortyTwoA{{\proposalfont\symbol{"12629}}}
+\newcommand\oneNFortyTwoB{{\proposalfont\symbol{"1262D}}}
+\newcommand\oneNFive{{\proposalfont\symbol{"12631}}}
+\newcommand\fourNFive{{\proposalfont\symbol{"12634}}}
+\newcommand\oneNTwenty{{\proposalfont\symbol{"12636}}}
+\newcommand\eightNTwenty{{\proposalfont\symbol{"1263D}}}
+\newcommand\oneNFortySeven{{\proposalfont\symbol{"1263F}}}
+\newcommand\oneNThirtySeven{{\proposalfont\symbol{"12641}}}
+\newcommand\twoNThirtySeven{{\proposalfont\symbol{"12642}}}
+\newcommand\oneNTwo{{\proposalfont\symbol{"125BE}}}
+\newcommand\sixNTwo{{\proposalfont\symbol{"125C3}}}
+\newcommand\oneNFifteen{{\proposalfont\symbol{"125C7}}}
+\newcommand\oneNThirtyFive{\proposalfont\symbol{"125CC}}
+\newcommand\oneNNine{{\proposalfont\symbol{"12643}}}
+\newcommand\oneNEleven{{\proposalfont\symbol{"12644}}}
+\newcommand\oneNTwelve{{\proposalfont\symbol{"12645}}}
+\newcommand\oneNSevenB{{\proposalfont\symbol{"12649}}}
+\newcommand\oneNOneF{{\proposalfont\symbol{"1264C}}}
+\newcommand\oneNEightFlat{{\proposalfont\symbol{"12655}}}
+\newcommand\oneNFourteenFlat{{\proposalfont\symbol{"12656}}}
+\newcommand\oneNThirtyFourFlat{{\proposalfont\symbol{"1265F}}}
+\newcommand\oneNFortyFiveFlat{{\proposalfont\symbol{"12668}}}
+\newcommand\oneNTwentyTwoFlat{{\proposalfont\symbol{"1266A}}}
+\newcommand\oneNFiftyOneFlat{{\proposalfont\symbol{"1266C}}}
+\newcommand\oneNThirtyFourFlatTenu{{\proposalfont\symbol{"12675}}}
+\newcommand\oneNFourFlat{{\proposalfont\symbol{"12676}}}
+\newcommand\twoNFourFlat{{\proposalfont\symbol{"12677}}}
+\newcommand\fourNFourFlat{{\proposalfont\symbol{"12679}}}
+\newcommand\oneNNineteenFlat{{\proposalfont\symbol{"1267B}}}
+\newcommand\twoNNineteenFlat{{\proposalfont\symbol{"1267C}}}
+\newcommand\oneNFortySixFlat{{\proposalfont\symbol{"12684}}}
+\newcommand\twoNFortySixFlat{{\proposalfont\symbol{"12685}}}
+\newcommand\oneNThirtySixFlat{{\proposalfont\symbol{"12686}}}
+
+\newcommand{\nhphantom}[1]{\sbox0{#1}\hspace{-\the\wd0}}
+
+\usepackage{afterpage}
+\usepackage{float}
+
+\usepackage{tikz-cd}
+\usetikzlibrary{babel}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=british]{english}
+\setotherlanguages{greek,german,russian,french,arabic}
+\usepackage{luabidi}
+% We use the english/american quote style, i.e., outer double quotes and inner
+% single quotes, but british typographic rules (punctuation after the quotation
+% marks).
+\usepackage[style=english/american]{csquotes}
+
+\usepackage{mathtools}
+\usepackage{empheq}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase, math-style=ISO]{Cambria Math}
+\setmathfontface\unifrak{UnifrakturMaguntia.ttf}[Scale=MatchLowercase]
+
+\usepackage[colorlinks,allcolors=Periwinkle]{hyperref}
+\usepackage[backend=biber,giveninits=true,maxnames=100,style=alphabetic,maxalphanames=4,doi=true,url=false,eprint=true,labelalpha=true,dateusetime=true]{biblatex}
+\addbibresource{artefacts.bib}
+\addbibresource{bibliography.bib}
+\addbibresource{unicode.bib}
+\DeclareSourcemap{
+  \maps{
+    \map{
+      \step[fieldsource=keywords, match=\regexp{reference}, final]
+      \step[fieldsource=entrykey, final]
+      \step[fieldset=shorthand, origfieldval]
+    }
+    \map{
+      \step[fieldsource=keywords, match=\regexp{unicode}, final]
+      \step[fieldsource=eprint, final]
+      \step[fieldset=shorthand, origfieldval]
+    }
+    \map{
+      \pertype{artwork}
+      \step[fieldsource=eprint, final]
+      \step[fieldset=shorthand, origfieldval]
+    }
+  }
+}
+
+% Allow breaking in numbers and after lower and upper case letters in bibliography
+% URLs, see https://tex.stackexchange.com/a/134281.
+% We use fairly low values to avoid unsightly spacing:
+% http : / / example . com is not an improvement over http://ex-
+% ample.com.  We prefer breaking in numbers and uppercase letters, which are often
+% IDs, rather than lowercase letters, which sometimes form meaningful words, or at
+% least tokens that are not customarily broken, e.g. the protocol.
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburllcpenalty}{500}
+\setcounter{biburlucpenalty}{100}
+\renewcommand\UrlFont{}
+
+\AtEveryBibitem{\clearlist{language}}  % TODO(egg): Why are we doing this?
+
+\DeclareBibliographyAlias{artwork}{report}
+
+\newcommand\UTCdoc[1]{\href{https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?#1}{#1}}
+\newcommand\WGtwodoc[1]{\href{http://www.unicode.org/cgi-bin/GetMatchingWG2Docs.pl?#1}{#1}}
+
+\DeclareFieldFormat{doi}{%
+  \newline
+  \mkbibacro{DOI}\addcolon\space
+    \ifhyperref
+      {\href{https://doi.org/#1}{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:cnki}{%
+  \newline
+  \mkbibacro{CNKI}\addcolon\space
+    \ifhyperref
+      {\href{http://www.cnki.com.cn/Article/CJFDTOTAL-#1.htm}{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:utc}{%
+  \newline
+  \mkbibacro{UTC}\addcolon\space
+    \ifhyperref
+      {\UTCdoc{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:wg2}{%
+  \newline
+  \mkbibacro{ISO/IEC JTC~1/SC~2/WG~2}\addcolon\space
+    \ifhyperref
+      {\WGtwodoc{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:cdli}{%
+  \newline
+  \mkbibacro{CDLI}\addcolon\space
+    \ifhyperref
+      {\href{https://cdli.ucla.edu/#1}{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:ebda}{%
+  \newline
+  Eb\textsc{da}\addcolon\space
+    \ifhyperref
+      {\href{http://ebda.cnr.it/tablet/view/#1}{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:oracc}{%
+  \newline
+  \mkbibacro{ORACC}\addcolon\space
+    \ifhyperref
+      {\href{http://oracc.org/#1}{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint:etcsl}{%
+  \newline
+  \mkbibacro{ETCSL}
+    \ifhyperref
+      {transliteration: \href{https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.#1\&display=Crit\&charenc=gtilde}{c.#1};
+       translation: \href{https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.#1\&display=Crit\&charenc=gtilde}{t.#1}}
+      {transliteration: {c.#1}
+       translation: {t.#1}}}
+\DeclareFieldFormat{eprint:louvre}{%
+  \newline
+  Louvre Collections\addcolon\space
+    \ifhyperref
+      {\href{https://collections.louvre.fr/#1}{#1}}
+      {#1}}
+\DeclareFieldFormat{eprint}{%
+  \newline
+    \ifhyperref
+      {\href{#1}{\nolinkurl{#1}}}
+      {\nolinkurl{#1}}}
+\DeclareFieldFormat{isbn}{%
+  \newline
+  \mkbibacro{ISBN}\addcolon\space#1}
+\renewcommand{\relateddelim}{\newunitpunct}
+      
+\newcommand{\idest}{\emph{i.e.}}
+\newcommand{\exempligratia}{\emph{e.g.}}
+\newcommand{\obverse}{obv.}
+\newcommand{\reverse}{\IfFontFeatureActiveTF{Numbers=Tabular}{\rlap{rev.}\hphantom{obv.}}{rev.}}
+\newcommand{\recto}{\emph{\IfFontFeatureActiveTF{Numbers=Tabular}{\rlap{recto}\hphantom{verso}}{recto}}}
+\newcommand{\verso}{\emph{verso}}
+\newcommand{\withnote}{n.}
+\newcommand{\withnotes}{nn.}
+
+\usepackage{multirow}
+
+\usepackage{epigraph}
+\renewcommand{\epigraphsize}{\footnotesize}
+\renewcommand{\textflush}{flushepinormal}
+%\setlength\epigraphrule{0pt}
+\epigraphnoindent
+
+\usepackage{enumitem}
+\renewcommand\labelitemi{---}
+\renewcommand\labelitemii{---}
+
+\usepackage[style=iso]{datetime2}
+
+\hyphenation{cunei-form}
+\usepackage{microtype}
+\tikzcdset{
+arrow style=math font,
+}
+
+\renewcommand{\topfraction}{0.9}
+
+\usepackage{luacolor}
+\usepackage{lua-ul}
+\LuaULSetHighLightColor{yellow}
+\newcommand{\removed}[1]{\highLight{\strikeThrough{#1}}}
+\newcommand{\changed}[1]{\highLight{#1}}
+
+\usepackage{pdfpages}
+
+\usepackage{fvextra}
+\usepackage[color=Periwinkle]{attachfile2}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\newcommand{\thisDocumentNumber}{L2/24-TODO}
+\newcommand{\thisDocumentTitle}{Numeric annotations and property assignments for cuneiform signs}
+\fancyfoot{}
+\fancyhead{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[CO]{\thisDocumentNumber}
+\fancyhead[CE]{\thisDocumentTitle}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\thisDocumentTitle}
+\author{Robin Leroy}
+
+\begin{document}
+
+\maketitle
+\begin{tikzpicture}[overlay, remember picture]
+  \path (current page.north east) ++(-1,-1) node[below left] {\Large\thisDocumentNumber};
+\end{tikzpicture}
+
+\tableofcontents
+
+\section{Summary}
+This document proposes Numeric\_Value property assignments for eight characters in the Cuneiform block.
+It also proposes informative aliases, cross references, and informative notes,
+as well as some adjustments to subheadings, for the character names
+lists for the Cuneiform, Cuneiform Numbers and Punctuation, and Early Dynastic Cuneiform blocks.
+
+\section{Rationale}
+As noted in text proposed for the core specification in \cite[3]{L2/24-210}, several series
+of cuneiform numerals are split between the Cuneiform Numbers and Punctuation block and the main
+Cuneiform block, whereas other numeric characters have separately encoded unrelated lookalikes in the
+Cuneiform block.
+
+There are however no cross-references between these blocks, so that it can be difficult to locate
+the appropriate character to use for a given number.
+In some cases, the conventions used in ATF transliteration  of numeric notation \cite{inlineATF} 
+do not match the character names; this can make it difficult to identify characters and locate their attestations.
+For example, it recently took the author of this document and Steve Tinney\footnote{Who was a co-author of
+the proposals \cites{L2/12-002}{L2/12-207R} to encode {\xsuxfont 𒑣} and {\xsuxfont 𒑤}!} a couple of days to figure out where
+U+\textcsc{12463} {\xsuxfont 𒑣} \textcsc{CUNEIFORM SIGN ONE QUARTER GUR} and U+\textcsc{12464} {\xsuxfont 𒑤} \textcsc{CUNEIFORM SIGN ONE HALF GUR} came from,
+initially suspecting they might be used in Achæmenid Persepolis;
+they turned out to be from Ur III Umma, 700~km and 1500~years away,
+see \cites{P429599}{P429605}[283\psq]{SigristGabbay2014},
+but are described in digital corpora as numbers of bariga rather than fractions of a gur (of four bariga).
+
+Further, the characters in the Cuneiform block, which rightfully have General\_Category=Other\_Letter on account of their non-numeric
+usage, do not have Numeric\_Value assignments.
+This is inconvenient when handling these numerals programmatically:
+whereas \smash{\xsuxfont 𒐗} has Numeric\_Value=$3$ because it is $̀3\times\text{\xsuxfont 𒐕}$,
+and \text{\xsuxfont 𒐕} accordingly has Numeric\_Value=$1$,
+{\xsuxfont 𒐈} has Numeric\_Value=$3$ because it is $3\times\text{\xsuxfont 𒁹}$,
+but \text{\xsuxfont 𒁹} has Numeric\_Value=NaN.
+Note that there is precedent for assigning non-NaN Numeric\_Value
+to characters with General\_Category=Other\_Letter; many such characters
+are CJK unified ideographs, which get their Numeric\_Value from the Unihan database,
+but eight are compatibility ideographs, which get their Numeric\_Value from UnicodeData.txt,
+as is proposed here.
+
+Some characters, such as U+\textcsc{121F9} \textcsc{CUNEIFORM SIGN LIMMU2}, are not merely lookalikes of numeric signs
+(in this case U+\textcsc{12402} {\xsuxfont 𒐂} \textcsc{CUNEIFORM NUMERIC SIGN FOUR ASH}),
+but are effectively duplicate encodings (limmu is the Sumerian word for ``four'').
+No annotations nor changes to properties are proposed for those characters at the moment.
+A separate proposal will be submitted at a later date to add them to DoNotEmit.txt and to add notes discouraging their use,
+consistently with existing practice in the \cite{OSL}.
+
+\fvset{fontsize=\scriptsize,breaklines,breaksymbol=\tiny\ensuremath{\textcolor{red}{\hookrightarrow}}}
+\section{Proposed changes to the Standard}
+\label{proposal}
+\subsection{Immediate character names list changes}
+The following changes to NamesList.txt are proposed.
+The affected characters are highlighted in blue in the charts appended to this document.
+Note that these charts also incorporate the names list changes contingent on \cite{L2/24-210} below.
+Cross references between unrelated lookalike characters are only proposed from non-numeric characters
+to numeric characters, not in the other direction: since the Cuneiform block contains both numeric and
+non-numeric signs, a user could be looking there for a numeric sign and pick the wrong character,
+such as ZA {\xsuxfont 𒍝} for the number $4(\text{diš})=\text{\xsuxfont 𒐉}$;
+on the other hand, a user is unlikely to be looking in the Cuneiform Numbers and Punctation block for
+the syllable /za/.
+The annotations on the sign \text{\xsuxfont 𒁹} reflect its status as the first of two different numeral series:
+the (diš) discrete counting numerals {\xsuxfont 𒁹}, {\xsuxfont 𒈫}, {\xsuxfont 𒐈}, {\xsuxfont 𒐉}, {\xsuxfont 𒐊},
+{\xsuxfont 𒐋}, {\xsuxfont 𒐌}, {\xsuxfont 𒐍}, {\xsuxfont 𒐍}, and the (barig) capacity measures {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, {\xsuxfont 𒐉}.
+Attached: \textattachfile{xsux-numeric-ucd/NamesList-1.patch}{NamesList-1.patch}.
+\VerbatimInput{xsux-numeric-ucd/NamesList-1.patch}
+
+
+\subsection{Contingent character names list changes}
+Once the additions proposed in \cite{L2/24-210} are approved, cross-references to them should be added, as follows.
+The affected characters are highlighted in green in the charts appended to this document.
+Attached: \textattachfile{xsux-numeric-ucd/NamesList-2.txt}{NamesList-2.patch}.
+\VerbatimInput{xsux-numeric-ucd/NamesList-2.patch}
+
+\subsection{Properties}
+\label{properties}
+Change eight lines of UnicodeData.txt, adding numeric values, as follows.
+The eight affected characters are highlighted in pink in the charts appended to this document;
+note that these are exactly those characters in the Cuneiform block for which
+informative aliases are proposed.
+Attached: \textattachfile{xsux-numeric-ucd/UnicodeData.txt}{UnicodeData.txt}.
+\VerbatimInput{xsux-numeric-ucd/UnicodeData.txt}
+
+%\section*{Acknowledgements}
+%\addcontentsline{toc}{section}{Acknowledgements}
+\printbibheading[heading=bibintoc]
+\AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
+\printbibliography[heading=subbibintoc,title={Artefacts},type=artwork]
+%\AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
+\printbibliography[heading=subbibintoc,title={ISO and Unicode documents},nottype=artwork,keyword=unicode]
+\printbibliography[heading=subbibintoc,title={Online corpora and related projects},nottype=artwork,keyword=reference]
+\printbibliography[heading=subbibintoc,title={Other documents},nottype=artwork,notkeyword=unicode,notkeyword=reference]
+\includepdf[pages=-]{xsux-numeric-chart.pdf}
+\end{document}
