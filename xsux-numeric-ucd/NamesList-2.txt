@@ -1128,7 +1128,7 @@
 12460	CUNEIFORM NUMERIC SIGN ONE QUARTER ASH
 	= 1/4 iku
 	x (cuneiform numeric sign one n01 reversed - 12589)
-	x (cuneiform numeric sign one quarter iku variant form - 1258A)
+	x (cuneiform numeric sign one quarter iku curved variant form - 1258A)
 12461	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE SIXTH
 12462	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE QUARTER
 @	Capacity measures
