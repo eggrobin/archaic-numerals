@@ -369,7 +369,7 @@ arrow style=math font,
 \usepackage[color=Periwinkle]{attachfile2}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\newcommand{\thisDocumentNumber}{L2/24-TODO}
+\newcommand{\thisDocumentNumber}{L2/24-239}
 \newcommand{\thisDocumentTitle}{Numeric annotations and properties for cuneiform signs}
 \fancyfoot{}
 \fancyhead{}
@@ -411,13 +411,13 @@ the proposals \cites{L2/12-002}{L2/12-207R} to encode {\xsuxfont 𒑣} and {\xsu
 U+\textcsc{12463} {\xsuxfont 𒑣} \textcsc{CUNEIFORM SIGN ONE QUARTER GUR} and U+\textcsc{12464} {\xsuxfont 𒑤} \textcsc{CUNEIFORM SIGN ONE HALF GUR} came from,
 initially suspecting they might be used in Achæmenid Persepolis;
 they turned out to be from Ur III Umma, 700~km and 1500~years away,
-see \cites{P429599}{P429605}[283\psq]{SigristGabbay2014},
+see \cites{P429599}{P429605}{Sigrist1996}[283\psq]{SigristGabbay2014},
 but are described in digital corpora as numbers of bariga rather than fractions of a gur (of four bariga).
 
 Further, the characters in the Cuneiform block, which rightfully have General\_Category=Other\_Letter on account of their non-numeric
 usage, do not have Numeric\_Value assignments.
 This is inconvenient when handling these numerals programmatically:
-whereas \smash{\xsuxfont 𒐗} has Numeric\_Value=$3$ because it is $̀3\times\text{\xsuxfont 𒐕}$,
+whereas \smash{\xsuxfont 𒐗} has Numeric\_Value=$3$ because it is $3\times\text{\xsuxfont 𒐕}$,
 and \text{\xsuxfont 𒐕} accordingly has Numeric\_Value=$1$,
 {\xsuxfont 𒐈} has Numeric\_Value=$3$ because it is $3\times\text{\xsuxfont 𒁹}$,
 but \text{\xsuxfont 𒁹} has Numeric\_Value=NaN.
