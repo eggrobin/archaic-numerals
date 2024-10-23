@@ -137,7 +137,7 @@
 	= 1 diš
 	x (cuneiform numeric sign three dish - 12408)
 	x (cuneiform numeric sign one n08 - 12559)
-	x (cuneiform sign one n01 - 12550)
+	x (cuneiform numeric sign one n01 - 12550)
 	= 1 bariga
 	x (cuneiform numeric sign nigidamin - 12456)
 	x (cuneiform numeric sign nigidaesh - 12457)
@@ -728,9 +728,9 @@
 	* merges with 1212D in logographic use in all but the most archaizing texts
 	* the archaic reference glyph is formed by making a circular indentation with the end of the stylus
 	= 1 šar₂
-	x (cuneiform sign two shar2 - 12423)
+	x (cuneiform numeric sign two shar2 - 12423)
 	* 12579 should be used for numeric 1 šar₂ curved
-	x (cuneiform sign one n45 - 12579)
+	x (cuneiform numeric sign one n45 - 12579)
 122BA	CUNEIFORM SIGN SHE
 122BB	CUNEIFORM SIGN SHE HU
 122BC	CUNEIFORM SIGN SHE OVER SHE GAD OVER GAD GAR OVER GAR
