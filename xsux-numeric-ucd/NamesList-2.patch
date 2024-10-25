@@ -1,176 +1,102 @@
 --- a/xsux-numeric-ucd/NamesList-1.txt
 +++ b/xsux-numeric-ucd/NamesList-1.txt
-@@ -36750,11 +36750,15 @@ FFFF	<not a character>
- 12038	CUNEIFORM SIGN ASH
- 	= 1 aš
+@@ -36752,2 +36752,4 @@ FFFF	<not a character>
  	x (cuneiform numeric sign two ash - 12400)
 +	x (cuneiform numeric sign one n01 - 12550)
 +	x (cuneiform numeric sign one n01 flat - 1264C)
  12039	CUNEIFORM SIGN ASH ZIDA TENU
- 	= 1 aš tenû
- 	= 1 diš tenû
- 	= 1/2 iku
+@@ -36757,2 +36759,4 @@ FFFF	<not a character>
  	x (cuneiform numeric sign two ash tenu - 1244A)
 +	x (cuneiform numeric sign one n08 - 12559)
 +	x (cuneiform numeric sign one half iku curved variant form - 1258B)
  1203A	CUNEIFORM SIGN ASH KABA TENU
- 1203B	CUNEIFORM SIGN ASH OVER ASH TUG2 OVER TUG2 TUG2 OVER TUG2 PAP
- 1203C	CUNEIFORM SIGN ASH OVER ASH OVER ASH
-@@ -36822,6 +36826,8 @@ FFFF	<not a character>
- 12079	CUNEIFORM SIGN DISH
- 	= 1 diš
- 	= 1 bariga
+@@ -36825,2 +36829,4 @@ FFFF	<not a character>
  	x (cuneiform numeric sign three dish - 12408)
 +	x (cuneiform numeric sign one n08 - 12559)
 +	x (cuneiform numeric sign one n01 - 12550)
  	x (cuneiform numeric sign nigidamin - 12456)
- 	x (cuneiform numeric sign nigidaesh - 12457)
-@@ -37256,6 +37262,8 @@ FFFF	<not a character>
- 12226	CUNEIFORM SIGN MASH
- 	= 1/2 diš
+@@ -37258,2 +37264,4 @@ FFFF	<not a character>
  	x (cuneiform numeric sign one ban2 - 1244F)
 +	* 12593 should be used for 1/2 aš curved
 +	x (cuneiform numeric sign one ban2 curved - 12593)
  12227	CUNEIFORM SIGN MASH2
- 12228	CUNEIFORM SIGN ME
- 12229	CUNEIFORM SIGN MES
-@@ -37263,6 +37271,7 @@ FFFF	<not a character>
- 1222B	CUNEIFORM SIGN MIN
- 	= 2 diš
+@@ -37265,2 +37273,3 @@ FFFF	<not a character>
  	x (cuneiform numeric sign three dish - 12408)
 +	x (cuneiform numeric sign two n08 - 1255A)
  1222C	CUNEIFORM SIGN MU
- 1222D	CUNEIFORM SIGN MU OVER MU
- 1222E	CUNEIFORM SIGN MUG
-@@ -37410,9 +37419,11 @@ FFFF	<not a character>
- 122B9	CUNEIFORM SIGN SHAR2
- 	= 1 šar₂
- 	* same glyph as 1212D HI in all but the most archaizing texts
- 	* the archaic reference glyph is formed by making a circular indentation with the end of the stylus
+@@ -37412,3 +37421,5 @@ FFFF	<not a character>
  	* used for logographic šar₂ and cuneiform 1 šar₂
 +	* 12579 should be used for numeric 1 šar₂ curved
  	x (cuneiform numeric sign two shar2 - 12423)
 +	x (cuneiform numeric sign one n45 - 12579)
  122BA	CUNEIFORM SIGN SHE
- 122BB	CUNEIFORM SIGN SHE HU
- 122BC	CUNEIFORM SIGN SHE OVER SHE GAD OVER GAD GAR OVER GAR
-@@ -37497,11 +37508,15 @@ FFFF	<not a character>
- 	= 1 u
- 	= 1 bur₃
+@@ -37500,2 +37511,4 @@ FFFF	<not a character>
  	x (cuneiform numeric sign four u - 1240F)
 +	x (cuneiform numeric sign one n14 - 12562)
 +	x (cuneiform numeric sign one n14 flat - 12656)
  1230C	CUNEIFORM SIGN U GUD
- 1230D	CUNEIFORM SIGN U U U
- 	= 3 u
- 	= 3 bur₃
+@@ -37505,2 +37518,4 @@ FFFF	<not a character>
  	x (cuneiform numeric sign four u - 1240F)
 +	x (cuneiform numeric sign three n14 - 12564)
 +	x (cuneiform numeric sign three n14 flat - 12658)
  1230E	CUNEIFORM SIGN U OVER U PA OVER PA GAR OVER GAR
- 1230F	CUNEIFORM SIGN U OVER U SUR OVER SUR
- 12310	CUNEIFORM SIGN U OVER U U REVERSED OVER U REVERSED
-@@ -37652,12 +37667,16 @@ FFFF	<not a character>
- 	= 2 u
- 	= 2 bur₃
+@@ -37655,2 +37670,4 @@ FFFF	<not a character>
  	x (cuneiform numeric sign four u - 1240F)
 +	x (cuneiform numeric sign two n14 - 12563)
 +	x (cuneiform numeric sign two n14 flat - 12657)
  @@	12400	Cuneiform Numbers and Punctuation	1247F
- @		Common numeric signs
- @+	Used in multiple metrological systems
- 12400	CUNEIFORM NUMERIC SIGN TWO ASH
- 	= 2 iku
+@@ -37661,2 +37678,4 @@ FFFF	<not a character>
  	x (cuneiform sign ash - 12038)
 +	x (cuneiform numeric sign two n01 - 12551)
 +	x (cuneiform numeric sign two n01 flat - 1264D)
  12401	CUNEIFORM NUMERIC SIGN THREE ASH
- 12402	CUNEIFORM NUMERIC SIGN FOUR ASH
- 12403	CUNEIFORM NUMERIC SIGN FIVE ASH
-@@ -37668,6 +37687,7 @@ FFFF	<not a character>
- 12408	CUNEIFORM NUMERIC SIGN THREE DISH
- 	x (cuneiform sign dish - 12079)
+@@ -37671,2 +37690,3 @@ FFFF	<not a character>
  	x (cuneiform sign min - 1222B)
 +	x (cuneiform numeric sign three n08 - 12559)
  12409	CUNEIFORM NUMERIC SIGN FOUR DISH
- 	= 4 bariga
- 1240A	CUNEIFORM NUMERIC SIGN FIVE DISH
-@@ -37680,12 +37700,15 @@ FFFF	<not a character>
- 	x (cuneiform sign u - 1230B)
- 	x (cuneiform sign u u - 12399)
+@@ -37683,2 +37703,4 @@ FFFF	<not a character>
  	x (cuneiform sign u u u - 1230D)
 +	x (cuneiform numeric sign four n14 - 12565)
 +	x (cuneiform numeric sign four n14 flat - 12659)
  12410	CUNEIFORM NUMERIC SIGN FIVE U
- 12411	CUNEIFORM NUMERIC SIGN SIX U
- 12412	CUNEIFORM NUMERIC SIGN SEVEN U
- 12413	CUNEIFORM NUMERIC SIGN EIGHT U
- 12414	CUNEIFORM NUMERIC SIGN NINE U
+@@ -37689,2 +37711,3 @@ FFFF	<not a character>
  12415	CUNEIFORM NUMERIC SIGN ONE GESH2
 +	x (cuneiform numeric sign one n34 - 1256B)
  12416	CUNEIFORM NUMERIC SIGN TWO GESH2
- 12417	CUNEIFORM NUMERIC SIGN THREE GESH2
- 12418	CUNEIFORM NUMERIC SIGN FOUR GESH2
-@@ -37695,12 +37718,14 @@ FFFF	<not a character>
- 1241C	CUNEIFORM NUMERIC SIGN EIGHT GESH2
- 1241D	CUNEIFORM NUMERIC SIGN NINE GESH2
+@@ -37698,2 +37721,3 @@ FFFF	<not a character>
  1241E	CUNEIFORM NUMERIC SIGN ONE GESHU
 +	x (cuneiform numeric sign one n48 - 12574)
  1241F	CUNEIFORM NUMERIC SIGN TWO GESHU
- 12420	CUNEIFORM NUMERIC SIGN THREE GESHU
- 12421	CUNEIFORM NUMERIC SIGN FOUR GESHU
- 12422	CUNEIFORM NUMERIC SIGN FIVE GESHU
- 12423	CUNEIFORM NUMERIC SIGN TWO SHAR2
+@@ -37704,2 +37728,3 @@ FFFF	<not a character>
  	x (cuneiform sign shar2 - 122B9)
 +	x (cuneiform numeric sign two n45 - 12579)
  12424	CUNEIFORM NUMERIC SIGN THREE SHAR2
- 12425	CUNEIFORM NUMERIC SIGN THREE SHAR2 VARIANT FORM
- 12426	CUNEIFORM NUMERIC SIGN FOUR SHAR2
-@@ -37710,6 +37735,7 @@ FFFF	<not a character>
- 1242A	CUNEIFORM NUMERIC SIGN EIGHT SHAR2
- 1242B	CUNEIFORM NUMERIC SIGN NINE SHAR2
+@@ -37713,2 +37738,3 @@ FFFF	<not a character>
  1242C	CUNEIFORM NUMERIC SIGN ONE SHARU
 +	x (cuneiform numeric sign one n50 - 12582)
  1242D	CUNEIFORM NUMERIC SIGN TWO SHARU
- 1242E	CUNEIFORM NUMERIC SIGN THREE SHARU
- 1242F	CUNEIFORM NUMERIC SIGN THREE SHARU VARIANT FORM
-@@ -37719,6 +37745,8 @@ FFFF	<not a character>
- 12433	CUNEIFORM NUMERIC SIGN SHAR2 TIMES GAL PLUS MIN
- @	Area measures
+@@ -37722,2 +37748,4 @@ FFFF	<not a character>
  12434	CUNEIFORM NUMERIC SIGN ONE BURU
 +	x (cuneiform numeric sign one buru curved - 1258E)
 +	x (cuneiform numeric sign one n50 - 12582)
  12435	CUNEIFORM NUMERIC SIGN TWO BURU
- 12436	CUNEIFORM NUMERIC SIGN THREE BURU
- 12437	CUNEIFORM NUMERIC SIGN THREE BURU VARIANT FORM
-@@ -37754,6 +37782,7 @@ FFFF	<not a character>
- 1244F	CUNEIFORM NUMERIC SIGN ONE BAN2
- 	* 12226 should be used for 1/2 diš
+@@ -37757,2 +37785,3 @@ FFFF	<not a character>
  	x (cuneiform sign mash - 12226)
 +	x (cuneiform numeric sign one ban2 curved - 12593)
  12450	CUNEIFORM NUMERIC SIGN TWO BAN2
- 12451	CUNEIFORM NUMERIC SIGN THREE BAN2
- 12452	CUNEIFORM NUMERIC SIGN FOUR BAN2
-@@ -37763,10 +37792,12 @@ FFFF	<not a character>
- 12456	CUNEIFORM NUMERIC SIGN NIGIDAMIN
- 	= 2 bariga
+@@ -37766,2 +37795,3 @@ FFFF	<not a character>
  	x (cuneiform sign dish - 12079)
 +	x (cuneiform numeric sign two n08 - 1255A)
  12457	CUNEIFORM NUMERIC SIGN NIGIDAESH
- 	= 3 bariga
- @	Area measures
+@@ -37770,2 +37800,3 @@ FFFF	<not a character>
  12458	CUNEIFORM NUMERIC SIGN ONE ESHE3
 +	x (cuneiform numeric sign one n22 - 1258C)
  12459	CUNEIFORM NUMERIC SIGN TWO ESHE3
- @		Fractions
- 1245A	CUNEIFORM NUMERIC SIGN ONE THIRD DISH
-@@ -37775,13 +37806,19 @@ FFFF	<not a character>
- 1245D	CUNEIFORM NUMERIC SIGN ONE THIRD VARIANT FORM A
- 	= 1/3 aš curved
+@@ -37778,2 +37809,3 @@ FFFF	<not a character>
  	= 1/3 diš curved
 +	x (cuneiform numeric sign ninda2 times she plus one ash curved - 12598)
  1245E	CUNEIFORM NUMERIC SIGN TWO THIRDS VARIANT FORM A
- 	= 2/3 aš curved
+@@ -37781,6 +37813,11 @@ FFFF	<not a character>
  	= 2/3 diš curved
 +	x (cuneiform numeric sign ninda2 times she plus two ash curved - 12599)
  1245F	CUNEIFORM NUMERIC SIGN ONE EIGHTH ASH
@@ -182,11 +108,7 @@
 +	x (cuneiform numeric sign one n01 reversed - 12589)
 +	x (cuneiform numeric sign one quarter iku curved variant form - 1258A)
  12461	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE SIXTH
- 12462	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE QUARTER
- @	Capacity measures
-@@ -38008,4 +38045,5 @@ FFFF	<not a character>
- 1253F	CUNEIFORM SIGN URU TIMES LAK-668
- 12540	CUNEIFORM SIGN URU TIMES LU3
+@@ -38011,2 +38048,3 @@ FFFF	<not a character>
  12541	CUNEIFORM SIGN ZA7
 +	x (cuneiform numeric sign two n08 - 1255A)
  12542	CUNEIFORM SIGN ZU OVER ZU PLUS SAR
