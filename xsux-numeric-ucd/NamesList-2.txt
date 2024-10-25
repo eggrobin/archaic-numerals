@@ -65,8 +65,8 @@
 12039	CUNEIFORM SIGN ASH ZIDA TENU
 	= 1 aš tenû
 	= 1 diš tenû
-	x (cuneiform numeric sign two ash tenu - 1244A)
 	= 1/2 iku
+	x (cuneiform numeric sign two ash tenu - 1244A)
 	x (cuneiform numeric sign one n08 - 12559)
 	x (cuneiform numeric sign one half iku curved variant form - 1258B)
 1203A	CUNEIFORM SIGN ASH KABA TENU
@@ -135,10 +135,10 @@
 12078	CUNEIFORM SIGN DIN KASKAL U GUNU DISH
 12079	CUNEIFORM SIGN DISH
 	= 1 diš
+	= 1 bariga
 	x (cuneiform numeric sign three dish - 12408)
 	x (cuneiform numeric sign one n08 - 12559)
 	x (cuneiform numeric sign one n01 - 12550)
-	= 1 bariga
 	x (cuneiform numeric sign nigidamin - 12456)
 	x (cuneiform numeric sign nigidaesh - 12457)
 1207A	CUNEIFORM SIGN DU

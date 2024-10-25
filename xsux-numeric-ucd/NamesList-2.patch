@@ -1,5 +1,5 @@
---- a/unicodetools/data/ucd/dev/NamesList.txt
-+++ b/unicodetools/data/ucd/dev/NamesList.txt
+--- a/xsux-numeric-ucd/NamesList-1.txt
++++ b/xsux-numeric-ucd/NamesList-1.txt
 @@ -36750,11 +36750,15 @@ FFFF	<not a character>
  12038	CUNEIFORM SIGN ASH
  	= 1 aš
@@ -9,8 +9,8 @@
  12039	CUNEIFORM SIGN ASH ZIDA TENU
  	= 1 aš tenû
  	= 1 diš tenû
- 	x (cuneiform numeric sign two ash tenu - 1244A)
  	= 1/2 iku
+ 	x (cuneiform numeric sign two ash tenu - 1244A)
 +	x (cuneiform numeric sign one n08 - 12559)
 +	x (cuneiform numeric sign one half iku curved variant form - 1258B)
  1203A	CUNEIFORM SIGN ASH KABA TENU
@@ -19,10 +19,10 @@
 @@ -36822,6 +36826,8 @@ FFFF	<not a character>
  12079	CUNEIFORM SIGN DISH
  	= 1 diš
+ 	= 1 bariga
  	x (cuneiform numeric sign three dish - 12408)
 +	x (cuneiform numeric sign one n08 - 12559)
 +	x (cuneiform numeric sign one n01 - 12550)
- 	= 1 bariga
  	x (cuneiform numeric sign nigidamin - 12456)
  	x (cuneiform numeric sign nigidaesh - 12457)
 @@ -37256,6 +37262,8 @@ FFFF	<not a character>
@@ -42,7 +42,7 @@
  1222C	CUNEIFORM SIGN MU
  1222D	CUNEIFORM SIGN MU OVER MU
  1222E	CUNEIFORM SIGN MUG
-@@ -37410,6 +37419,8 @@ FFFF	<not a character>
+@@ -37410,9 +37419,11 @@ FFFF	<not a character>
  122B9	CUNEIFORM SIGN SHAR2
  	= 1 šar₂
  	* same glyph as 1212D HI in all but the most archaizing texts
@@ -184,11 +184,9 @@
  12461	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE SIXTH
  12462	CUNEIFORM NUMERIC SIGN OLD ASSYRIAN ONE QUARTER
  @	Capacity measures
-@@ -38008,6 +38045,7 @@ FFFF	<not a character>
+@@ -38008,4 +38045,5 @@ FFFF	<not a character>
  1253F	CUNEIFORM SIGN URU TIMES LAK-668
  12540	CUNEIFORM SIGN URU TIMES LU3
  12541	CUNEIFORM SIGN ZA7
 +	x (cuneiform numeric sign two n08 - 1255A)
  12542	CUNEIFORM SIGN ZU OVER ZU PLUS SAR
- 12543	CUNEIFORM SIGN ZU5 TIMES THREE DISH TENU
- @@	12F90	Cypro-Minoan	12FFF
