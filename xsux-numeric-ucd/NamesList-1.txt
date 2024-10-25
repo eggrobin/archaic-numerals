@@ -63,8 +63,8 @@
 12039	CUNEIFORM SIGN ASH ZIDA TENU
 	= 1 aš tenû
 	= 1 diš tenû
-	x (cuneiform numeric sign two ash tenu - 1244A)
 	= 1/2 iku
+	x (cuneiform numeric sign two ash tenu - 1244A)
 1203A	CUNEIFORM SIGN ASH KABA TENU
 1203B	CUNEIFORM SIGN ASH OVER ASH TUG2 OVER TUG2 TUG2 OVER TUG2 PAP
 1203C	CUNEIFORM SIGN ASH OVER ASH OVER ASH
@@ -131,8 +131,8 @@
 12078	CUNEIFORM SIGN DIN KASKAL U GUNU DISH
 12079	CUNEIFORM SIGN DISH
 	= 1 diš
-	x (cuneiform numeric sign three dish - 12408)
 	= 1 bariga
+	x (cuneiform numeric sign three dish - 12408)
 	x (cuneiform numeric sign nigidamin - 12456)
 	x (cuneiform numeric sign nigidaesh - 12457)
 1207A	CUNEIFORM SIGN DU
@@ -716,9 +716,10 @@
 122B7	CUNEIFORM SIGN SHA6
 122B8	CUNEIFORM SIGN SHAB6
 122B9	CUNEIFORM SIGN SHAR2
-	* merges with 1212D in logographic use in all but the most archaizing texts
-	* the archaic reference glyph is formed by making a circular indentation with the end of the stylus
 	= 1 šar₂
+	* same glyph as 1212D HI in all but the most archaizing texts
+	* the archaic reference glyph is formed by making a circular indentation with the end of the stylus
+	* used for logographic šar₂ and cuneiform 1 šar₂
 	x (cuneiform numeric sign two shar2 - 12423)
 122BA	CUNEIFORM SIGN SHE
 122BB	CUNEIFORM SIGN SHE HU

@@ -43,10 +43,13 @@
  1222D	CUNEIFORM SIGN MU OVER MU
  1222E	CUNEIFORM SIGN MUG
 @@ -37410,6 +37419,8 @@ FFFF	<not a character>
- 	* the archaic reference glyph is formed by making a circular indentation with the end of the stylus
+ 122B9	CUNEIFORM SIGN SHAR2
  	= 1 šar₂
- 	x (cuneiform numeric sign two shar2 - 12423)
+ 	* same glyph as 1212D HI in all but the most archaizing texts
+ 	* the archaic reference glyph is formed by making a circular indentation with the end of the stylus
+ 	* used for logographic šar₂ and cuneiform 1 šar₂
 +	* 12579 should be used for numeric 1 šar₂ curved
+ 	x (cuneiform numeric sign two shar2 - 12423)
 +	x (cuneiform numeric sign one n45 - 12579)
  122BA	CUNEIFORM SIGN SHE
  122BB	CUNEIFORM SIGN SHE HU
