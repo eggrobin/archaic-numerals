@@ -409,7 +409,7 @@ do not match the character names; this can make it difficult to identify charact
 For example, it recently took the author of this document and Steve Tinney\footnote{Who was a co-author of
 the proposals \cites{L2/12-002}{L2/12-207R} to encode {\xsuxfont 𒑣} and {\xsuxfont 𒑤}!} a couple of days to figure out where
 U+\textcsc{12463} {\xsuxfont 𒑣} \textcsc{CUNEIFORM SIGN ONE QUARTER GUR} and U+\textcsc{12464} {\xsuxfont 𒑤} \textcsc{CUNEIFORM SIGN ONE HALF GUR} came from,
-initially suspecting they might be used in Achæmenid Persepolis;
+initially suspecting they might be used in Achæmenid Persepolis like the neighbouring Elamite fractions;
 they turned out to be from Ur III Umma, 700~km and 1500~years away,
 see \cites{P429599}{P429605}{Sigrist1996}[283\psq]{SigristGabbay2014},
 but are described in digital corpora as numbers of bariga rather than fractions of a gur (of four bariga).
@@ -449,7 +449,7 @@ on the other hand, a user is unlikely to be looking in the Cuneiform Numbers and
 the syllable /za/.
 The annotations on the sign \text{\xsuxfont 𒁹} reflect its status as the first of two different numeral series:
 the (diš) discrete counting numerals {\xsuxfont 𒁹}, {\xsuxfont 𒈫}, {\xsuxfont 𒐈}, {\xsuxfont 𒐉}, {\xsuxfont 𒐊},
-{\xsuxfont 𒐋}, {\xsuxfont 𒐌}, {\xsuxfont 𒐍}, {\xsuxfont 𒐍}, and the (barig) capacity measures {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, {\xsuxfont 𒐉};
+{\xsuxfont 𒐋}, {\xsuxfont 𒐌}, {\xsuxfont 𒐍}, {\xsuxfont 𒐎}, and the (barig) capacity measures {\xsuxfont 𒁹}, {\xsuxfont 𒑖}, {\xsuxfont 𒑗}, {\xsuxfont 𒐉};
 see also \cites{L2/12-328}[21]{L2/24-210}.
 Attached: \textattachfile{xsux-numeric-ucd/NamesList-1.patch}{NamesList-1.patch}.
 \VerbatimInput{xsux-numeric-ucd/NamesList-1.patch}
@@ -472,6 +472,8 @@ Attached: \textattachfile{xsux-numeric-ucd/UnicodeData.txt}{UnicodeData.txt}.
 
 %\section*{Acknowledgements}
 %\addcontentsline{toc}{section}{Acknowledgements}
+\nocite{CDLI}
+\nocite{ePSD2}
 \printbibheading[heading=bibintoc]
 \AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
 \printbibliography[heading=subbibintoc,title={Artefacts},type=artwork]
