@@ -332,6 +332,7 @@
       
 \newcommand{\idest}{\emph{i.e.}}
 \newcommand{\exempligratia}{\emph{e.g.}}
+\newcommand{\confer}{\emph{cf.}}
 \newcommand{\obverse}{obv.}
 \newcommand{\reverse}{\IfFontFeatureActiveTF{Numbers=Tabular}{\rlap{rev.}\hphantom{obv.}}{rev.}}
 \newcommand{\recto}{\emph{\IfFontFeatureActiveTF{Numbers=Tabular}{\rlap{recto}\hphantom{verso}}{recto}}}
@@ -456,10 +457,15 @@ This section discusses the following proposed characters:
 The existing numerals in the {\cuneiformComposite 𒀹} series are
 named {\cuneiformComposite 𒀹} \textcsc{CUNEIFORM SIGN ASH ZIDA TENU} for the first one
 and \textcsc{CUNEIFORM NUMERIC SIGN $n$ ASH TENU} for {\cuneiformComposite 𒑊}–{\cuneiformComposite 𒑎}.
+
 Some\footnote{TODO also note gunû but contrast CROSSING rather than gi-li-mu-u, SQUARED rather than li-mu-bu i-gi-gu-ub-bu-u2} technical terms used in cuneiform character names are derived originate from the structural descriptions of
-cuneiform signs by Akkadian-speaking scribes in late second and first millennium lexical texts. In particular, the word \emph{tenû}
-is used to describe slanted signs or parts of signs:
-thus {\xsuxfont\addfontfeature{StylisticSet=1} 𒋙} is described as {\xsuxfont 𒁇} \emph{tenû} in \cite[\reverse i 46′]{P365233},
+cuneiform signs by Akkadian-speaking scribes in late second and first millennium lexical texts.
+[TODO(egg): Cite Yushu Gong on tenu itself]
+In particular, the word \emph{tenû} is used to describe slanted signs or parts of signs:
+thus {\xsuxfont 𒋙} is described as {\xsuxfont 𒁇} \emph{tenû} in \cite[\reverse i 46′]{P365233}\footnote{Note that
+while the third millennium {\xsuxfont\addfontfeature{StylisticSet=1} 𒋙} and {\xsuxfont 𒁇} are related by a 45° rotation,
+in the Neo-Assyrian style used by this list, these signs look like {\nafont 𒋙} and {\nafont 𒁇},
+so that only one wedge is slanted, as noted in \cite[TODO]{Gong00}.},
 {\xsuxfont 𒃸} as {\xsuxfont 𒃷} \emph{tenû} in \cites[\reverse ii 47]{P391514}[\obverse ii 80]{P467315},
 {\xsuxfont 𒄪} as {\xsuxfont 𒄩} \emph{tenû} in \cite[ii 33]{P391514},
 {\xsuxfont 𒆿} as {\xsuxfont 𒆸} (containing) {\xsuxfont 𒀸} \emph{tenû} in \cite[\obverse 16′]{P365267}\footnote{TODO
@@ -469,17 +475,78 @@ The terms \emph{kaba tenû} and \emph{zida tenû}, from Sumerian {\xsuxfont �
 are used in \cite{P345960}, which contrasts {\xsuxfont 𒀺} described as \emph{kaba tenû} and {\xsuxfont 𒀹} described as \emph{zida tenû}.
 
 In modern transliteration, {\cuneiformComposite 𒀹} numerals are described as {\cuneiformComposite 𒀸} \emph{tenû} (ATF: \texttt{asz@t}) or {\cuneiformComposite 𒁹} \emph{tenû} (ATF: \texttt{disz@t}),
-the latter being more common.  Informative aliases using \emph{diš tenû} have been recommended for the existing characters in \cite{L2/24-239}.
-The proposed names use ASH TENU for consistency with the already-encoded characters, and the proposed annotations include informative aliases with \emph{diš tenû}.
+the latter being more common\footnote{For an example of a transliteration using aš tenû, see
+\cite[§5.1.8 \reverse~1~4]{Greco2021}; note that only the HTML version uses aš tenû, the PDF uses diš.}.% https://cdli.mpiwg-berlin.mpg.de/articles/cdlj/2021-2
+Informative aliases using \emph{diš tenû} have been recommended for the existing characters in \cite{L2/24-239}.
+The proposed names use ASH TENU for consistency with the already-encoded characters,
+and the proposed annotations include informative aliases with \emph{diš tenû}.
 
-\subsection{Usage}
+\subsection{Ur III usage}
+As described in \cite[135]{KWU} (see Figure~\ref{fig-KWU-135}),
+slanted signs are used in Ur III economic texts primarily in
+subtractive notation with {\xsuxfont 𒇲} lal\footnote{Also transliterated la₂, as in \cite{CDLI}.
+In the transliterated Ur III corpus on \cite{CDLI}, out of 3304 occurrences of \texttt{(disz@t)},
+1971 are in {\xsuxfont 𒇲$n$𒀹} \texttt{la2 $n$(disz@t)}.},
+as well as for ordinals\footnote{1583 out of 3304 occurrences are {\xsuxfont $n$𒀹𒄰}
+\texttt{$n$(disz@t)-kam}, including 647 after {\xsuxfont 𒇲}}
+and for ages of animals in years\footnote{203 occurrences of
+\texttt{gu4}, \texttt{ab2}, \texttt{ansze}, or \texttt{dur3} \texttt{$n$(disz@t)}}.
 
-\subsection{}
+Accounts of animals giving their ages in years
+rarely go beyond three-year old animals.
+Subtractive notation, which appears in the ED IIIa period \cite[77]{Robson2008},
+is used to compactly express numbers close to a larger round number, \exempligratia,
+{\xsuxfont 𒌋𒇲𒀹} $10-1$ instead of {\xsuxfont 𒐎} for $9$,
+{\xsuxfont 𒌍𒇲𒑊} $30-2$ instead of {\xsuxfont 𒎙𒐍} for $28$,
+or {\xsuxfont 𒐕𒇲𒀹} $60-1$ instead of {\xsuxfont 𒐐𒐎} for $59$;
+\confer{} IX instead of VIIII in Roman numerals.
+It is therefore usually limited to small
+subtrahends\footnote{Of the 1971 Ur III occurrences of
+\texttt{lal $n$(disz@t)}, 1930 are with $n\leq2$,
+of which 1823 with $n=1$.}.
+Larger subtrahends do occur for quantities close to a much larger unit;
+however in Ur III, they are often written {\xsuxfont 𒁹} numerals, as in
+\cite[\obverse~2~15]{P109346}
+
+Some ordinals are also limited to small numbers:
+many of the attestations of {\xsuxfont $n$𒀹𒄰} ``$n$th''
+are in year names\footnote{430 occurrences of \texttt{$n$(disz@t)-kam}
+are on lines starting with \texttt{mu}.}, such as
+𒈬 𒃸𒄯𒆠 𒀀𒁺 𒑊𒄰𒀸 𒁀𒅆𒌨
+mu kar₂-ḫar\textsuperscript{ki} a-ra₂ 2{\xsuxfont 𒀹}-kam-aš ba-ḫul
+``year Karhar was destroyed for the second time'' (31st year of Šulgi’s reign),
+𒈬 𒋛𒈬𒊒𒌝𒆠 𒀀𒁺 𒑋𒄰𒀸 𒁀𒅆𒌨 mu si-mu-ru-um\textsuperscript{ki} a-ra₂ 3{\xsuxfont 𒀹}-kam-aš ba-ḫul
+``year Simurrum was destroyed for the third time'' (32nd year of Šulgi’s reign).
+Others are not: 
+
+
+The rarity of the higher {\xsuxfont 𒀹} numerals in the Ur III corpus
+likely explains the absence of $7${\xsuxfont 𒀹}--$9${\xsuxfont 𒀹}
+from the répertoire of Unicode Version 5.0,
+which was aiming to encode a répertoire appropriate for the Ur III period
+and later.
+
+\subsection{Early Dynastic usage}
+However, $7${\xsuxfont 𒀹}--$9${\xsuxfont 𒀹} are well attested in 
+
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{kwu-p-135.png}
+  \caption{\cite[135]{KWU} \label{fig-KWU-135}}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{kwu-p-132.png}
+  \caption{\cite[132]{KWU} \label{fig-KWU-132}}
+\end{figure}
+
+\subsection{Stacking patterns}
 
 \section{AŠ×(DIŠ \emph{tenû}) numerals}
 
 https://cdli.mpiwg-berlin.mpg.de/artifacts/452986/reader/209489
 https://cdli.mpiwg-berlin.mpg.de/artifacts/467743/reader/213564
+
+\subsection{Stacking patterns}
 
 \begin{figure}[H]
   \begin{center}
