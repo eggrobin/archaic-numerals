@@ -536,32 +536,48 @@ and later.
 \subsection{Early Dynastic usage}
 The situation is different in the Early Dynastic corpus.
 As described in \cite{L2/24-210R}, {\xsuxfont 𒀹} numerals are used in many
-Early Dynastic metrological systems, and in particular in the length systems
-\begin{alignat}{3}
-  \text{\xsuxfont 𒐕}
-  \xleftarrow{\ \ \ 6\ \ \ }
-  {\text{\xsuxfont 𒌋}}&
-  \xleftarrow{\ \ \ 2\ \ \ }\text{\xsuxfont 𒈦}&
-  \xleftarrow{10}&\underbrace{\text{\xsuxfont 𒀹}}_{\text{\xsuxfont 𒄀}}
-  \tag{$L_{\text{ED IIIb}}$}
-  \label{systemLED}\\
-  \underbrace{
+Early Dynastic metrological systems, and in particular in the Early Dynastic IIIb
+length system
+\newlength{\rodRopeWidth}
+\settowidth{\rodRopeWidth}{$\underbrace{
   \text{\oneŊešʾuC}
   \xleftarrow{10}\text{\oneŊešTwoC}
-  \xleftarrow{6}\text{\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}=&
+  \xleftarrow{6}\text{\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}=
+  \underbrace{\text{\oneAšC}
+  \xleftarrow{2}\text{\oneBanTwoC}}_{\text{\xsuxfont 𒂠}}$}
+\begin{equation}
+\begin{tikzcd}[row sep=tiny]
+  \hspace*{\rodRopeWidth}
+  \mathllap{\text{\xsuxfont 𒐕}
+  \xleftarrow{\ \ \ 6\ \ \ }
+  {\text{\xsuxfont 𒌋}}
+  \xleftarrow{\ \ \ 2\ \ \ }\text{\xsuxfont 𒈦}}&
+  \\
+  &\arrow[lu, "10" above right, start anchor={west}, end anchor={east}]
+  \arrow[ld, "10", start anchor={west}, end anchor={east}]\smash{\underset{\substack{\text{gi}\\\text{reed}\\3~\text{m}}}{\underbrace{\text{\xsuxfont 𒀹}}_{\text{\xsuxfont 𒄀}}}}
+  \xleftarrow{6}\smash{\underbrace{\text{\xsuxfont 𒀹}}_{\text{\xsuxfont 𒌑}\mathrlap{*}}}
+  \xleftarrow{\ 3\ }\smash{\underbrace{\text{\xsuxfont 𒀹}}_{\mathclap{\text{\xsuxfont 𒋗𒆕𒀀}*}}}
+  \\
+  \underset{\substack{\text{nindan}\\\text{rod}\\6~\text{m}}}{\underbrace{
+  \text{\oneŊešʾuC}
+  \xleftarrow{10}\text{\oneŊešTwoC}
+  \xleftarrow{6}\text{\oneUC}}_{\text{\xsuxfont 𒃻𒁺}}}=
   \underbrace{\text{\oneAšC}
   \xleftarrow{2}\text{\oneBanTwoC}}_{\text{\xsuxfont 𒂠}}&
-  \xleftarrow{10}&\underset{\substack{\text{gi}\\\text{reed}\\3~\text{m}}}{\underbrace{\text{\xsuxfont 𒀹}}_{\text{\xsuxfont 𒄀}}}
-  \xleftarrow{6}\underbrace{\text{\xsuxfont 𒀹}}_{\text{\xsuxfont 𒌑}\mathrlap{*}}
-  \xleftarrow{\ 3\ }\underbrace{\text{\xsuxfont 𒀹}}_{\mathclap{\text{\xsuxfont 𒋗𒆕𒀀}*}}
-  \tag{$L'_{\text{ED IIIb}}$}
-  \label{systemLpED}
-\end{alignat}
-While these systems have a unit $1~\text{\xsuxfont 𒃻𒁺}=5~\text{\xsuxfont 𒄀}$,
-lengths are only expressed in {\xsuxfont 𒂠}, or equivalently in tens of {\xsuxfont 𒃻𒁺}, or in
-half-{\xsuxfont 𒂠} equal to $10~{\xsuxfont 𒄀}$.
-Lengths of $5$--$9~{\xsuxfont 𒄀}$ therefore frequently occur, and are expressed using
+\end{tikzcd}
+\end{equation}
+While these systems have a unit $1~\text{\xsuxfont 𒃻𒁺}=2~\text{\xsuxfont 𒄀}$,
+lengths above $1~\text{\xsuxfont 𒄀}$ are only expressed in {\xsuxfont 𒂠},
+or equivalently in tens of {\xsuxfont 𒃻𒁺}, and in
+half-{\xsuxfont 𒂠} equal to $10~\text{\xsuxfont 𒄀}$.
+We can therefore expect $7$--$9~{\xsuxfont 𒄀}$ to occur, expressed using
 {\xsuxfont 𒀹} numerals.
+Indeed, 37 texts in the transliterated ED IIIb corpus on \cite{CDLI}
+contain undamaged attestations of either $7${\xsuxfont 𒀹𒄀} or
+$8${\xsuxfont 𒀹𒄀}\footnote{Of those, 34 have $7${\xsuxfont 𒀹𒄀} and 9 have $8${\xsuxfont 𒀹𒄀}.}.
+However, $9${\xsuxfont 𒀹𒄀} is not attested, since instead subtractive notation is used, as in
+{\xsuxfont\threeŊešTwoC\fourUC\oneBanTwoC 𒇲𒀹𒄀} in \cite[\obverse~3~3]{P020129},
+{\xsuxfont\oneŊešTwoC\fiveUC 𒃻𒁺𒇲𒀹𒄀𒌑𒑋} in \cite[\reverse~2~2]{P221272}.
 
 $7${\xsuxfont 𒀹}--$9${\xsuxfont 𒀹} are well attested in 
 
