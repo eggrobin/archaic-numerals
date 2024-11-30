@@ -200,6 +200,7 @@
 
 \usepackage{afterpage}
 \usepackage{float}
+\usepackage{caption}
 
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
@@ -455,8 +456,8 @@ This section discusses the following proposed characters:
 \end{itemize}
 \subsection{Name}
 The existing numerals in the {\xsuxfont 𒀹} series are
-named {\cuneiformComposite 𒀹} \textcsc{CUNEIFORM SIGN ASH ZIDA TENU} for the first one
-and \textcsc{CUNEIFORM NUMERIC SIGN $n$ ASH TENU} for {\cuneiformComposite 𒑊}–{\cuneiformComposite 𒑎}.
+named U+12039 {\cuneiformComposite 𒀹} \textcsc{CUNEIFORM SIGN ASH ZIDA TENU} for the first one
+and U+\textcsc{1244A}–U+\textcsc{1244E} {\cuneiformComposite 𒑊}–{\cuneiformComposite 𒑎} \textcsc{CUNEIFORM NUMERIC SIGN $n$ ASH TENU} for the others.
 
 Some\footnote{TODO also note gunû but contrast CROSSING rather than gi-li-mu-u, SQUARED rather than li-mu-bu i-gi-gu-ub-bu-u2} technical terms used in cuneiform character names are derived originate from the structural descriptions of
 cuneiform signs by Akkadian-speaking scribes in late second and first millennium lexical texts.
@@ -465,7 +466,7 @@ In particular, the word \emph{tenû} is used to describe slanted signs or parts
 thus {\xsuxfont 𒋙} is described as {\xsuxfont 𒁇} \emph{tenû} in \cite[\reverse i 46′]{P365233}\footnote{Note that
 while the third millennium {\xsuxfont\addfontfeature{StylisticSet=1} 𒋙} and {\xsuxfont 𒁇} are related by a 45° rotation,
 in the Neo-Assyrian style used by this list, these signs look like {\nafont 𒋙} and {\nafont 𒁇},
-so that only one wedge is slanted, as noted in \cite[TODO]{Gong00}.},
+so that only one wedge is slanted, as noted in \cite[TODO]{Gong2000}.},
 {\xsuxfont 𒃸} as {\xsuxfont 𒃷} \emph{tenû} in \cites[\reverse ii 47]{P391514}[\obverse ii 80]{P467315},
 {\xsuxfont 𒄪} as {\xsuxfont 𒄩} \emph{tenû} in \cite[ii 33]{P391514},
 {\xsuxfont 𒆿} as {\xsuxfont 𒆸} (containing) {\xsuxfont 𒀸} \emph{tenû} in \cite[\obverse 16′]{P365267}\footnote{TODO
@@ -483,6 +484,18 @@ The proposed names use ASH TENU for consistency with the already-encoded charact
 and the proposed annotations include informative aliases with \emph{diš tenû}.
 
 \subsection{Ur III usage}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{kwu-p-135.png}
+  \end{center}
+  \caption{\cite[135]{KWU} \label{fig-KWU-135}}
+\end{figure}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{kwu-p-132.png}
+  \end{center}
+  \caption{\cite[132]{KWU} \label{fig-KWU-132}}
+\end{figure}
 As described in \cite[135]{KWU} (see Figure~\ref{fig-KWU-135}),
 slanted signs are used in Ur III economic texts primarily in
 subtractive notation with {\xsuxfont 𒇲}\footnote{As noted in \cite[\pno~25 \withnote~40]{L2/24-210R},
@@ -593,8 +606,8 @@ We can therefore expect $7$--$9~{\xsuxfont 𒄀}$ to occur, expressed using
 {\xsuxfont 𒀹} numerals.
 Indeed, 37 texts in the transliterated ED IIIb corpus on \cite{CDLI}
 contain undamaged attestations of either $7${\xsuxfont 𒀹𒄀} or
-$8${\xsuxfont 𒀹𒄀}\footnote{Of those, 34 have $7${\xsuxfont 𒀹𒄀} and 9 have $8${\xsuxfont 𒀹𒄀}.}.
-TODO(egg): Figures.
+$8${\xsuxfont 𒀹𒄀}\footnote{Of those, 34 have $7${\xsuxfont 𒀹𒄀} and 9 have $8${\xsuxfont 𒀹𒄀}.};
+some of these attestations are shown in Figures~\ref{figSevenReedsFirst}--\ref{figEightReedsLast}.
 However, $9${\xsuxfont 𒀹𒄀} is not attested, since instead subtractive notation is used, as in
 {\xsuxfont\threeŊešTwoC\fourUC\oneBanTwoC 𒇲𒀹𒄀} in \cite[\obverse~3~3]{P020129},
 {\xsuxfont\oneŊešTwoC\fiveUC 𒃻𒁺𒇲𒀹𒄀𒌑𒑋} in \cite[\reverse~2~2]{P221272},
@@ -619,19 +632,34 @@ In particular, \cite[129\psq]{Gori2024} cites occurrences of {\xsuxfont 𒇲$9$�
 and {\xsuxfont \twoAšC 𒇲\nineAshTenu{} 𒈠𒈾 𒆬𒌓} ``$1$~mina and $51$~shekels of silver''
 in \cite[\href{http://ebda.cnr.it/tablet/view/30\#6246}{\verso~3~2}]{P241325}.
 
-\begin{figure}
-  \includegraphics[width=0.75\textwidth]{kwu-p-135.png}
-  \caption{\cite[135]{KWU} \label{fig-KWU-135}}
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=0.32\textwidth]{P221254 o 3 7 copy.png}
+  \includegraphics[width=0.43\textwidth]{P221254 o 3 7.png}
+  \end{center}
+  \caption[]{{\xsuxfont 𒐕𒎙\footnotemark\sevenAshTenu{}𒄀𒊕} ``$501$~m'' (first width of a field) in \cite[\obverse~3~7]{P221254}, dated to the reign of {\xsuxfont 𒌷𒅗𒄀𒈾}. Left: Copy from \cite{AllottedelaFuÿe1920}.}\label{figSevenReedsFirst}
+  Right: \cite{CDLI} photograph.
 \end{figure}
-
-\begin{figure}
-  \includegraphics[width=0.75\textwidth]{kwu-p-132.png}
-  \caption{\cite[132]{KWU} \label{fig-KWU-132}}
+\footnotetext{TODO something about rhomboidal numerals, cite \cite{Gori2024}.}
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=0.32\textwidth]{P221266 o 1 1 copy.png}
+  \includegraphics[width=0.43\textwidth]{P221266 o 1 1.png}
+  \end{center}
+  \caption{{\xsuxfont \sevenAshTenu{}𒄀 𒂊 𒆹} ``$21$~m of reed-bed dyke'' (attributed to {\xsuxfont 𒌨𒁮} the farmer) in \cite[\obverse~1~1]{P221266}, dated to the reign of {\xsuxfont 𒂗𒇷𒋻𒍣}. Left: Copy from \cite{AllottedelaFuÿe1920}.
+  Right: \cite{LouvreCollections} photograph.}\label{figSevenReedsLast}
 \end{figure}
-
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=0.38\textwidth]{P020303 o 2 2 copy.png}
+  \includegraphics[width=0.37\textwidth]{P020303 o 2 2.png}
+  \end{center}
+  \caption{{\xsuxfont\threeŊešTwoC\fourUC 𒃻𒁺\eightAshTenu 𒄀 𒃴𒁉 𒌑𒑌} ``$1344$~m, its height $2$~m'' (dimensions of a dyke on the river {\xsuxfont 𒊊𒌉𒁕𒈿𒀀𒀭}) in \cite[\obverse~2~2]{P020303}, dated to the reign of {\xsuxfont 𒈗𒀭𒁕}. Left: Copy from \cite{Marzahn1991}.
+  Right: \cite{CDLI} photograph.}\label{figEightReedsLast}
+\end{figure}
 \subsection{Stacking patterns}
 
-\section{AŠ×(DIŠ \emph{tenû}) numerals}
+\section{AŠ×(DIŠ \emph{tenû}) numerals}\label{aš×dištenû}
 
 https://cdli.mpiwg-berlin.mpg.de/artifacts/452986/reader/209489
 https://cdli.mpiwg-berlin.mpg.de/artifacts/467743/reader/213564
