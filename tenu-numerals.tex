@@ -35,6 +35,15 @@
 \newcommand\sevenAshTenu{{\symbol{"1246F}}}
 \newcommand\eightAshTenu{{\symbol{"12475}}}
 \newcommand\nineAshTenu{{\symbol{"12476}}}
+\newcommand\oneAshTimesDishTenu{{\symbol{"12477}}}
+\newcommand\twoAshTimesDishTenu{{\symbol{"12478}}}
+\newcommand\threeAshTimesDishTenu{{\symbol{"12479}}}
+\newcommand\fourAshTimesDishTenu{{\symbol{"1247A}}}
+\newcommand\fiveAshTimesDishTenu{{\symbol{"1247B}}}
+\newcommand\sixAshTimesDishTenu{{\symbol{"1247C}}}
+\newcommand\sevenAshTimesDishTenu{{\symbol{"1247D}}}
+\newcommand\eightAshTimesDishTenu{{\symbol{"1247E}}}
+\newcommand\nineAshTimesDishTenu{{\symbol{"1247F}}}
 
 \newcommand\oneAšC{{\proposalfont\symbol{"12550}}} % 𒀸
 \newcommand\twoAšC{{\proposalfont\symbol{"12551}}} % 𒐀
@@ -407,10 +416,17 @@ where $1\text{\xsuxfont 𒀹}=\text{\xsuxfont 𒀹}$ through
 $6\text{\xsuxfont 𒀹}=\text{\xsuxfont 𒑎}$ are already encoded.
 Their glyphic range and usage, as well as possible reasons for their absence in the
 current version of the Standard, are discussed in §\ref{dištenû}.
-
 The other proposed characters constitute a new series of numerals,
 formed by {\xsuxfont 𒀹} numerals crossing an {\xsuxfont 𒀸} wedge.
 They are discussed in §\ref{aš×dištenû}.
+
+These characters are extensively used in Early Dynastic administrative corpus,
+which is published online\footnote{See, \exempligratia, the transcription of \cite{P220703} in
+\url{http://oracc.org/epsd2/P220703/cuneified}.
+Note that the proposed characters, as well as the provisionally assigned ones proposed in \cite{L2/24-210R},
+are missing from that text; \confer{} \url{http://oracc.org/epsd2/P131747/cuneified}
+for the Ur~III \cite{P131747}, which does not have this issue.}
+using Unicode cuneiform as part of the \cite{ePSD2} project.
 
 \section{Proposed changes to the Standard}
 \label{proposal}
@@ -741,7 +757,7 @@ shown in Figure~\ref{figEblaLalNine}.
   \includegraphics[height=17mm]{P452986 r 1 1.png}
   }
   \end{center}
-  \caption{{\xsuxfont 𒌗𒌓\nineAshTenu{}𒉌𒆷} ``ninth day passed'' in \cite[\obverse~1~1]{P452986}.
+  \caption{{\xsuxfont 𒌗𒌓\nineAshTenu{}𒉌𒆷} ``ninth day passed'' in \cite[\obverse~1~1]{P452986}, dated to the ED IIIa period.
   \cite{CDLI} photograph.}\label{figNinthDay}
 \end{figure}
 \begin{figure}[H]
@@ -751,7 +767,7 @@ shown in Figure~\ref{figEblaLalNine}.
   \includegraphics[height=17mm]{P222129 o 1 2.png}
   }
   \end{center}
-  \caption{{\xsuxfont 𒌓\nineAshTenu{}𒆛} ``ninth day'' in \cite[\obverse~1~2]{P222129} from Šuruppag.
+  \caption{{\xsuxfont 𒌓\nineAshTenu{}𒆛} ``ninth day'' in \cite[\obverse~1~2]{P222129} from Šuruppag, dated to the ED IIIa period.
   Left: Copy from \cite{Martin2001}. 
   Right: \cite{CDLI} photograph.}\label{figNinthDay}
 \end{figure}
@@ -763,22 +779,54 @@ shown in Figure~\ref{figEblaLalNine}.
   }
   \end{center}
   \caption{
-    Left: {\xsuxfont\oneUC 𒇲\nineAshTenu{} 𒈠𒈾 𒆬𒌓} ``$9$~minas and $51$~shekels of silver'' in
+    Left: {\xsuxfont\oneUC 𒇲\nineAshTenu{} 𒈠𒈾 𒌓𒆬} ``$9$~minas and $51$~shekels of silver'' in
     \cite[\href{http://ebda.cnr.it/tablet/view/1227\#47825}{\recto~1~1}]{P241283};
-    right: {\xsuxfont \twoAšC 𒇲\nineAshTenu{} 𒈠𒈾 𒆬𒌓} ``$1$~mina and $51$~shekels of silver''
+    right: {\xsuxfont \twoAšC 𒇲\nineAshTenu{} 𒈠𒈾 𒌓𒆬} ``$1$~mina and $51$~shekels of silver''
     in \cite[\href{http://ebda.cnr.it/tablet/view/30\#6246}{\verso~3~2}]{P241325}, both from Ebla.
     Photographs from \cite{EbDA}.}\label{figEblaLalNine}
 \end{figure}
 
 
-\subsection{Stacking patterns}
+\subsection{Glyphic range}
+As illustrated in the above figures, the angle of the {\xsuxfont 𒀹}
+varies, and is not always faithfully reproduced in copies.
+The representative glyphs retain the same angle used for the already-encoded numerals.
+
+The stacking patterns for the proposed characters do not vary among the attestations cited above.
+Note that stacking patterns are known to vary for other numerals in this series;
+for instance, {\xsuxfont 𒑌} and {\xsuxfont 𒑍} sometimes appear with all wedges in a row in ED~IIIa
+tablets, as in \cites{P010787}{P010896}{P010928}.
+As discussed in \cite[45\psqq]{L2/24-210R},
+the disunification of variant stacking patterns poses problems when producing
+cuneiform text from transliterated corpora, as the stacking patterns are not normally
+indicated in transliteration, and the default stacking pattern varies over time:
+{\xsuxfont 𒐌} in Ur~III,
+{\xsuxfont 𒑂} in Neo-Assyrian.
+While {\xsuxfont 𒁹} and {\xsuxfont 𒀸} numerals needed to have their
+stacking patterns disunified for compatibility with \cite{MZL}, this practice
+should not be extended to {\xsuxfont 𒀹} numerals.
 
 \section{AŠ×(DIŠ \emph{tenû}) numerals}\label{aš×dištenû}
+This section discusses the following proposed characters:
+\begin{itemize}[nosep]
+  \item U+\textcsc{12477} {\cuneiformComposite\oneAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES ONE DISH TENU}
+  \item U+\textcsc{12478} {\cuneiformComposite\twoAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES TWO DISH TENU}
+  \item U+\textcsc{12479} {\cuneiformComposite\threeAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES THREE DISH TENU}
+  \item U+\textcsc{1247A} {\cuneiformComposite\fourAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES FOUR DISH TENU}
+  \item U+\textcsc{1247B} {\cuneiformComposite\fiveAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES FIVE DISH TENU}
+  \item U+\textcsc{1247C} {\cuneiformComposite\sixAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES SIX DISH TENU}
+  \item U+\textcsc{1247D} {\cuneiformComposite\sevenAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES SEVEN DISH TENU}
+  \item U+\textcsc{1247E} {\cuneiformComposite\eightAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES EIGHT DISH TENU}
+  \item U+\textcsc{1247F} {\cuneiformComposite\nineAshTimesDishTenu} \textcsc{CUNEIFORM NUMERIC SIGN ASH TIMES NINE DISH TENU}
+\end{itemize}
+\subsection{Name}
+This section discusses the following characters:
+
 
 https://cdli.mpiwg-berlin.mpg.de/artifacts/452986/reader/209489
 https://cdli.mpiwg-berlin.mpg.de/artifacts/467743/reader/213564
 
-\subsection{Stacking patterns}
+\subsection{Glyphic range}
 
 \begin{figure}[H]
   \begin{center}
