@@ -386,7 +386,7 @@ arrow style=math font,
 \usepackage[color=Periwinkle]{attachfile2}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\newcommand{\thisDocumentNumber}{L2/24-\changed{\phantom{888}}}
+\newcommand{\thisDocumentNumber}{L2/24-\changed{\phantom{888} {\xsuxfont 𒉡 𒀠𒌀}}}
 \newcommand{\thisDocumentTitle}{Twelve cuneiform \emph{tenû} numerals}
 \fancyfoot{}
 \fancyhead{}
@@ -448,7 +448,10 @@ are shown on the following pages.
 A plain text file containing the
 \textattachfile{tenu-numerals-ucd/NamesList.txt}{NamesList.txt} lines is
 attached to this document.
-%\includepdf[pages=-]{tenu-numerals-chart.pdf}
+\vspace{0pt plus 0.5fill}
+\begin{center}{}\end{center}
+\vfill
+\includepdf[pages=-]{tenu-numerals-chart.pdf}
 \subsection{Properties}
 \label{properties}
 Add to the respective UCD files the lines given in this section.
@@ -456,14 +459,14 @@ These are available as plain text files attached to this document.
 Changes to derived files are not listed.
 \fvset{fontsize=\scriptsize,breaklines,breaksymbol=\tiny\ensuremath{\textcolor{red}{\hookrightarrow}}}
 \subsubsection{Name, General\_Category, Numeric\_Value, etc.}
-%Attached: \textattachfile{tenu-numerals-ucd/UnicodeData.txt}{UnicodeData.txt}.
-%\VerbatimInput{tenu-numerals-ucd/UnicodeData.txt}
+Attached: \textattachfile{tenu-numerals-ucd/UnicodeData.txt}{UnicodeData.txt}.
+\VerbatimInput{tenu-numerals-ucd/UnicodeData.txt}
 \subsubsection{Line\_Break}
-%Attached: \textattachfile{tenu-numerals-ucd/LineBreak.txt}{LineBreak.txt}.
-%\VerbatimInput{tenu-numerals-ucd/LineBreak.txt}
+Attached: \textattachfile{tenu-numerals-ucd/LineBreak.txt}{LineBreak.txt}.
+\VerbatimInput{tenu-numerals-ucd/LineBreak.txt}
 \subsubsection{Script}
-%Attached: \textattachfile{tenu-numerals-ucd/Scripts.txt}{Scripts.txt}.
-%\VerbatimInput{tenu-numerals-ucd/Scripts.txt}
+Attached: \textattachfile{tenu-numerals-ucd/Scripts.txt}{Scripts.txt}.
+\VerbatimInput{tenu-numerals-ucd/Scripts.txt}
 
 \section{DIŠ \emph{tenû} numerals}\label{dištenû}
 This section discusses the following proposed characters:
