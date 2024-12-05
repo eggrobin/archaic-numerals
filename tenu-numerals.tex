@@ -414,7 +414,7 @@ twelve cuneiform numerals used in the third millennium.
 Three of those are additional numerals in the AŠ (or DIŠ) \emph{tenû} series,
 $7${\xsuxfont 𒀹}\footnote{We follow \cites{Gori2023}{Gori2024} and use unit numerals
 rather than sign names in transliterations to indicate the type of numeral.
-Contrary to Gori, we use write the multiplicity of the sign rather than its value,
+Contrary to Gori, we write the multiplicity of the sign rather than its value,
 as in ATF; thus $3${\xsuxfont 𒌋} for both $3$(bur₃) and $3$(u),
 rather than $30${\xsuxfont 𒌋} for the latter.}--$9${\xsuxfont 𒀹},
 where $1\text{\xsuxfont 𒀹}=\text{\xsuxfont 𒀹}$ through
@@ -426,10 +426,12 @@ They are discussed in §\ref{aš×dištenû}.
 
 These characters are extensively used in Early Dynastic administrative corpus,
 which is published online\footnote{See, \exempligratia, the transcription of \cite{P220703} in
-\url{http://oracc.org/epsd2/P220703/cuneified}.
-Note that the proposed characters, as well as the provisionally assigned ones proposed in \cite{L2/24-210R},
-are missing from that text; \confer{} \url{http://oracc.org/epsd2/P131747/cuneified}
-for the Ur~III \cite{P131747}, which does not have this issue.}
+\url{https://build-oracc.museum.upenn.edu/epsd2/P220703/cuneify}.
+Note that as of this writing, the proposed characters use the private use area in that text,
+and the provisionally assigned ones proposed in \cite{L2/24-210R} are unportable until these
+are assigned—web fonts are used for both—\confer{}
+\url{https://build-oracc.museum.upenn.edu/epsd2/P131747/cuneify}
+for the Ur~III \cite{P131747}, which only uses assigned code points.}
 using Unicode cuneiform as part of the \cite{ePSD2} project.
 They are also used in publications discussing third millennium administrative texts.
 Their absence from the Standard can be explained by the initial scope going back only
@@ -480,18 +482,31 @@ The existing numerals in the {\xsuxfont 𒀹} series are
 named U+12039 {\cuneiformComposite 𒀹} \textcsc{CUNEIFORM SIGN ASH ZIDA TENU} for the first one
 and U+\textcsc{1244A}–U+\textcsc{1244E} {\cuneiformComposite 𒑊}–{\cuneiformComposite 𒑎} \textcsc{CUNEIFORM NUMERIC SIGN $n$ ASH TENU} for the others.
 
-Some\footnote{TODO also note gunû but contrast CROSSING rather than gi-li-mu-u, SQUARED rather than li-mu-bu i-gi-gu-ub-bu-u2} technical terms used in cuneiform character names are derived originate from the structural descriptions of
+Some\footnote{Besides \emph{tenû},
+the terms \emph{gunû} ``speckled'' (with wedges),
+\emph{nutillû} ``unfinished'', and \emph{šeššig} (filled with {\xsuxfont 𒊺} ŠE) are used.
+Contrast however the use of \textcsc{CROSSING} rather than
+\emph{gilimû}, \textcsc{OPPOSING} rather than\emph{igi-gubû}, or
+\textcsc{SQUARED} rather than \emph{limmubi igi-gubû}.} technical terms used in cuneiform character names are derived from the structural descriptions of
 cuneiform signs by Akkadian-speaking scribes in late second and first millennium lexical texts.
-[TODO(egg): Cite Yushu Gong on tenu itself]
-In particular, the word \emph{tenû} is used to describe slanted signs or parts of signs:
-thus {\xsuxfont 𒋙} is described as {\xsuxfont 𒁇} \emph{tenû} in \cite[\reverse i 46′]{P365233}\footnote{Note that
+In particular, the word \emph{tenû} \cites[66\psq]{Gong1993}[32\psqq]{Gong2000}[12\psq]{Gong2003}
+is used to describe slanted signs or parts of signs: thus {\xsuxfont 𒋙} is described as {\xsuxfont 𒁇} \emph{tenû} in \cite[\reverse i 46′]{P365233}\footnote{Note that
 while the third millennium {\xsuxfont\addfontfeature{StylisticSet=1} 𒋙} and {\xsuxfont 𒁇} are related by a 45° rotation,
 in the Neo-Assyrian style used by this list, these signs look like {\nafont 𒋙} and {\nafont 𒁇},
-so that only one wedge is slanted, as noted in \cite[TODO]{Gong2000}.},
-{\xsuxfont 𒃸} as {\xsuxfont 𒃷} \emph{tenû} in \cites[\reverse ii 47]{P391514}[\obverse ii 80]{P467315},
+so that only one wedge is slanted, as noted in \cites[66]{Gong1993}[34]{Gong2000}[12]{Gong2003}.},
+{\xsuxfont 𒃸} as {\xsuxfont 𒃷} \emph{tenû} in \cites[\reverse ii 47]{P391514}
+and as {\xsuxfont 𒂠} \emph{tenû} [\obverse ii 80]{P467315},
 {\xsuxfont 𒄪} as {\xsuxfont 𒄩} \emph{tenû} in \cite[ii 33]{P391514},
-{\xsuxfont 𒆿} as {\xsuxfont 𒆸} (containing) {\xsuxfont 𒀸} \emph{tenû} in \cite[\obverse 16′]{P365267}\footnote{TODO
-something on spelling out names {\nafont 𒂵𒈾𒋼𒉡𒌑} \emph{ga-na te-nu-u₂} and {\nafont 𒊺𒋼𒉡𒌑} \emph{še te-nu-u}; \emph{ku te-nu-u}, etc.}.
+{\xsuxfont 𒆿} as {\xsuxfont 𒆸} (containing) {\xsuxfont 𒀸} \emph{tenû} in \cite[\obverse 16′]{P365267}\footnote{These
+descriptions also spell out the names of the component signs;
+as today, they are named after one of their values:
+{\xsuxfont 𒃷} \emph{tenû} is written
+{\nafont 𒂵𒈾𒋼𒉡𒌑} \emph{ga-na te-nu-u₂} after the value gan₂,
+{\xsuxfont 𒂠} \emph{tenû} as {\nafont 𒊺𒋼𒉡𒌑} \emph{še te-nu-u} after the value še₃.
+As today, these names are not unique, see \cites[52\psqq]{Gong2000}[17\psq]{Gong2003}, with,
+\exempligratia, 𒃻 being known today as NINDA, GAR (its character name), and NIG₂,
+and by the scribes as {\nafont 𒎏𒁕𒆪} \emph{nin-da-ku}, {\nbfont 𒂵𒊏𒆪} \emph{ga-ra-ku},
+and {\nafont 𒉌𒅅} \emph{ni-ig}.}.
 In most cases, the direction of the slant not explicitly specified.
 The terms \emph{kaba tenû} and \emph{zida tenû}, from Sumerian {\xsuxfont 𒆏} gab₂ ``left'' and {\xsuxfont 𒍣} zid ``right'' respectively,
 are used in \cite{P345960}, which contrasts {\xsuxfont 𒀺} described as \emph{kaba tenû} and {\xsuxfont 𒀹} described as \emph{zida tenû}.
@@ -548,7 +563,7 @@ subtrahends\footnote{Of the 1971 Ur III occurrences of
 \texttt{lal $n$(disz@t)}, 1930 are with $n\leq2$,
 of which 1823 with $n=1$.}.
 Larger subtrahends do occur for quantities close to a much larger unit;
-however in Ur III, they are often written {\xsuxfont 𒁹} numerals, as in
+however in Ur III, they are often written using {\xsuxfont 𒁹} numerals, as in
 \cite[\obverse~2~15]{P109346} \smash{\xsuxfont 𒐉𒂆𒇲𒐌𒊺𒆬𒄀} ``$4$~shekels minus $7$~grains of gold'',
 a weight which would otherwise be written
 \smash{\xsuxfont 𒐈𒑛𒂆𒐐𒐈𒊺} ``$3+\frac{2}{3}$~shekels and $53$~grains'',
@@ -926,7 +941,7 @@ Figures~\ref{figArrears}--\ref{figRegnalNine} show these numerals used in ancien
   \includegraphics[height=17mm]{P221034 r 2 5.png}
   }
   \end{center}
-  \caption{{\xsuxfont 𒉌𒁺 \sevenAshTimesDishTenu 𒄰}
+  \caption{TODO also include one that is clearly 4-3 rather than 2-2-3. {\xsuxfont 𒉌𒁺 \sevenAshTimesDishTenu 𒄰}
   ``delivered, 7th (year of Lugalanda)'' in \cite[\reverse~2~5]{P221034},
   dated to the 1st year of {\xsuxfont 𒌷𒅗𒄀𒈾}.
   Left: Copy from \cite{AllottedelaFuÿe1918}. 
@@ -1046,7 +1061,7 @@ for the reference glyphs of already-encoded cuneiform;
 the proposed reference glyphs were produced by Robin Leroy based on
 \emph{CuneiformComposite}.
 A modified version of \emph{Noto Sans Cuneiform}, by Monotype Imaging,
-is used to for most of the cuneiform text in this document; it incorporates glyphs
+is used for most of the cuneiform text in this document; it incorporates glyphs
 by Steve Tinney for the characters proposed in this document.
 The font used for the characters proposed in \cite{L2/24-210R}
 is the one used in that proposal, by Robin Leroy, Anshuman Pandey, and Steve Tinney.
