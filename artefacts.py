@@ -123,7 +123,9 @@ for citation in citations:
         for location in location_sources:
           parts = tuple('o' if part == r'\obverse' else
                         'r' if part == r'\reverse' else
-                        part.split('--')[0].replace('′',"'") for part in location.split('~'))
+                        part.split('--')[0].replace('′',"'")
+                        for part in location.split('~')
+                        if part not in (r"\psq", r"\psqq"))
           if not locations or len(parts) >= len(locations[-1]):
             locations.append(parts)
           else:
