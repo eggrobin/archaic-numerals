@@ -2,6 +2,7 @@ import html.parser
 import re
 from typing import Literal, Optional
 import urllib.request
+import sys
 
 def deromanize(s: str) -> int:
   numerals = {'i': 1, 'v': 5, 'x': 10, 'l': 50, 'c': 100, 'd': 500, 'm': 1000}
@@ -59,7 +60,7 @@ def get_line_to_id_map(project: str, artefact: str):
   parser.feed(page)
   return parser.line_to_id
 
-with open('archaic-numerals.tex', encoding='utf-8') as f:
+with open(f'{sys.argv[1]}.tex', encoding='utf-8') as f:
    source = f.read()
 
 class Argument:
@@ -153,5 +154,5 @@ for arg, replacement in substitutions:
     raise ValueError(source[arg.position+1:arg.position+1+len(arg.string)], arg.string)
   source = source[:arg.position+1] + replacement + source[arg.position+1 + len(arg.string):]
 
-with open('archaic-numerals.tex', 'w', encoding='utf-8') as f:
+with open(f'{sys.argv[1]}.tex', 'w', encoding='utf-8') as f:
    f.write(source)
