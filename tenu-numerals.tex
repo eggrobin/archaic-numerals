@@ -380,19 +380,29 @@ arrow style=math font,
 \newcommand{\removed}[1]{\highLight{\strikeThrough{#1}}}
 \newcommand{\changed}[1]{\highLight{#1}}
 
+\newcommand{\thirdAngle}{
+  \begin{tikzpicture}[scale=.2]
+    \draw [thick] (0,0) circle [radius=0.5cm];
+    \draw [thick] (0,0) circle [radius=1cm];
+    \draw [thick] (1.5,0.5) -- (3.5,1) -- (3.5,-1) -- (1.5,-0.5) -- cycle;
+    \draw [dash=on 2.4mm off 0.25mm on 0.1mm off 0.25mm phase 1.2mm] (-1.5,0) -- (4,0);
+    \draw [dash=on 2.4mm off 0.25mm on 0.1mm off 0.25mm phase 1.2mm] (0,1.5) -- (0,-1.5);
+  \end{tikzpicture}
+}
+
 \usepackage{pdfpages}
 
 \usepackage{fvextra}
 \usepackage[color=Periwinkle]{attachfile2}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\newcommand{\thisDocumentNumber}{L2/24-\changed{\phantom{888} {\xsuxfont 𒉡 𒀠𒌀}}}
+\newcommand{\thisDocumentNumber}{L2/24-\changed{\phantom{888}}}
 \newcommand{\thisDocumentTitle}{Twelve cuneiform \emph{tenû} numerals}
 \fancyfoot{}
 \fancyhead{}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[CO]{\thisDocumentNumber}
-\fancyhead[CE]{\thisDocumentTitle}
+\fancyhead[CE]{\thisDocumentTitle \changed{{\xsuxfont 𒉡 𒀠𒌀}}}
 \renewcommand{\headrulewidth}{0.4pt}
 
 \title{\thisDocumentTitle}
@@ -408,7 +418,6 @@ arrow style=math font,
 \tableofcontents
 
 \section{Summary}
-
 This document proposes filling the Cuneiform Numbers and Punctuation block with
 twelve cuneiform numerals used in the third millennium.
 Three of those are additional numerals in the AŠ (or DIŠ) \emph{tenû} series,
@@ -715,7 +724,7 @@ face of the stylus opposite the right face: three edges of the left face are imp
   Right: \cite{CDLI} photograph.}
 \end{figure}
 {This sign contains some hatching ({\xsuxfont 𒃴}×{\xsuxfont 𒆜} or {\xsuxfont 𒃴}×{\xsuxfont 𒊺}).
-  A contrast is made in \cite{aBZL} between SUKUD (containnig {\xsuxfont 𒊺}) and GALAM
+  A contrast is made in \cite{aBZL} between SUKUD (containing {\xsuxfont 𒊺}) and GALAM
   It is unclear at this time whether this should be addressed in the encoding.}
 \begin{figure}[H]
   \begin{center}
@@ -733,13 +742,19 @@ face of the stylus opposite the right face: three edges of the left face are imp
     \resizebox{.75\textwidth}{!}{
   \includegraphics[height=17mm]{P020182 r 3 5-7 copy.png}
   \includegraphics[height=17mm]{P020182 r 3 5-7.png}
-  }
+  }\rlap{\thirdAngle}
   \end{center}
-  \caption{{\xsuxfont \oneAšC 𒃻𒌉𒁕 \sevenAshTenu 𒋡 𒉌} / {\xsuxfont 𒀹𒋡 𒂶} / {\xsuxfont\sevenAshTenu 𒋡 𒅗𒈝} ``$1$~niŋbanda $7$ sila of butter, $1$ sila of cream, $7$ sila of dates''
+  \caption[]{{\xsuxfont \oneAšC 𒃻𒌉𒁕 \sevenAshTenu 𒋡 𒉌} / {\xsuxfont 𒀹𒋡 𒂶} / {\xsuxfont\sevenAshTenu 𒋡 𒅗𒈝} ``$1$~niŋbanda $7$ sila of butter, $1$ sila of cream, $7$ sila of dates''
   in \cite[\reverse~3~5--7]{P020182} from ED~IIIb Ŋirsu.
   Left: Copy from \cite{VS14}.
-  Right: \cite{CDLI} photograph.}\label{figSevenSila3}
+  Right: \cite{CDLI} photograph\footnotemark.}\label{figSevenSila3}
 \end{figure}
+\footnotetext{Where photographs of the
+same object from multiple angle are shown,
+the third angle projection method is used,
+as it puts the views in the direction of reading.
+This is indicated in this document by the use of
+the symbol defined in \cite[Subclause~5.2]{ISO5456-2:1996}.}
 \begin{figure}[H]
   \begin{center}
     \resizebox{.75\textwidth}{!}{
@@ -768,7 +783,7 @@ face of the stylus opposite the right face: three edges of the left face are imp
     \resizebox{.75\textwidth}{!}{
   \includegraphics[height=17mm]{P221590 o 2 3 copy.png}
   \includegraphics[height=17mm]{P221590 o 2 3.png}
-  }
+  }\rlap{\thirdAngle}
   \end{center}
   \caption{{\xsuxfont 𒌓\sevenAshTenu{}𒉌𒆷} ``seventh day passed'' in \cite[\obverse~2~3]{P221590} from ED~IIIb Nippur.
   Left: Copy from \cite{Westenholz1975}. 
@@ -787,9 +802,7 @@ face of the stylus opposite the right face: three edges of the left face are imp
 \end{figure}
 \begin{figure}[H]
   \begin{center}
-    \resizebox{.75\textwidth}{!}{
-  \includegraphics[height=17mm]{P452986 r 1 1.png}
-  }
+  \includegraphics[width=.75\textwidth]{P452986 r 1 1.png}\rlap{\thirdAngle}
   \end{center}
   \caption{{\xsuxfont 𒌗𒌓\nineAshTenu{}𒉌𒆷} ``ninth day passed'' in \cite[\obverse~1~1]{P452986} (ED~IIIa).
   \cite{CDLI} photograph.}
@@ -799,7 +812,7 @@ face of the stylus opposite the right face: three edges of the left face are imp
     \resizebox{.75\textwidth}{!}{
   \includegraphics[height=17mm]{P222129 o 1 2 copy.png}
   \includegraphics[height=17mm]{P222129 o 1 2.png}
-  }
+  }\rlap{\thirdAngle}
   \end{center}
   \caption{{\xsuxfont 𒌓\nineAshTenu{}𒆛} ``ninth day'' in \cite[\obverse~1~2]{P222129} from ED~IIIa Šuruppag.
   Left: Copy from \cite{Martin2001}. 
@@ -884,7 +897,7 @@ and \cite{P221783} from Lagaš to the reign of {\xsuxfont 𒂗𒀭𒈾𒁺} the 
 
 Where attested\footnote{The length of the reign of {\xsuxfont 𒈗𒀭𒁕} (6 years and 1 month)
 and the dearth of documents dated to the reign of {\xsuxfont 𒌷𒅗𒄀𒈾} after his defeat by
-{\xsuxfont 𒈗𒍠𒄀𒋛} mean that these are quite rare; see
+{\xsuxfont 𒈗𒍠𒄀𒋛} (Lugalzagesi) mean that these are quite rare; see
 \cite[\pno~71;\pno~74 \withnote~176]{SallabergerSchrakamp2015}.},
 regnal years beyond the ninth are written differently:
 {\xsuxfont 𒌋} for the 10th year of {\xsuxfont 𒌷𒅗𒄀𒈾} in \cite{P222640},
@@ -926,7 +939,7 @@ Figures~\ref{figArrears}--\ref{figRegnalNine} show these numerals used in ancien
     \resizebox{.75\textwidth}{!}{
   \includegraphics[height=17mm]{P020133 r copy.png}
   \includegraphics[height=17mm]{P020133 r 1 2 sqq.png}
-  }
+  }\rlap{\thirdAngle}
   \end{center}
   \caption{{\xsuxfont 𒋢 𒀲 𒌑𒀸} / {\xsuxfont 𒂗𒇷𒋻𒍣} / {\xsuxfont 𒉺𒋼𒋛} / {\xsuxfont 𒉢𒁓𒆷𒆠𒅗} /
   {\xsuxfont \oneAshTimesDishTenu\twoAshTimesDishTenu\threeAshTimesDishTenu\fourAshTimesDishTenu
@@ -942,7 +955,7 @@ Figures~\ref{figArrears}--\ref{figRegnalNine} show these numerals used in ancien
     \resizebox{.75\textwidth}{!}{
   \includegraphics[height=17mm]{P221169 r 3 2 copy.png}
   \includegraphics[height=17mm]{P221169 r 3 2.png}
-  }
+  }\rlap{\thirdAngle}
   \end{center}
   \caption{{\xsuxfont 𒆬 𒁇𒂀𒁀 \fiveAshTimesDishTenu\sixAshTimesDishTenu 𒄰}
   ``Silver payment 5th and 6th (years of Lugalanda)'' in \cite[\reverse~3~2]{P221169},
@@ -968,7 +981,7 @@ Figures~\ref{figArrears}--\ref{figRegnalNine} show these numerals used in ancien
     \resizebox{.75\textwidth}{!}{
   \includegraphics[height=17mm]{P386436 o 2 4 sqq copy.png}
   \includegraphics[height=17mm]{P386436 o 2 4 sqq.png}
-  }
+  }\rlap{\thirdAngle}
   \end{center}
   \caption{{\xsuxfont 𒌷𒅗𒄀𒈾} / {\xsuxfont 𒈗} / {\xsuxfont 𒉢𒁓𒆷𒆠} / {\xsuxfont \sevenAshTimesDishTenu}
   ``Irikaginak king of Lagaš, year 7'' in \cite[\obverse~2~4~\psqq]{P386436}.
@@ -981,7 +994,7 @@ Figures~\ref{figArrears}--\ref{figRegnalNine} show these numerals used in ancien
     \resizebox{.75\textwidth}{!}{
   \includegraphics[height=17mm]{P221075 o 3 6 copy.png}
   \includegraphics[height=17mm]{P221075 o 3 6.png}
-  }
+  }\rlap{\thirdAngle}
   \end{center}
   \caption{{\xsuxfont 𒁀𒁺 \sevenAshTimesDishTenu}
   ``carried off, (year) 7 (of Lugalanda)'' in \cite[\reverse~3~6]{P221075},
