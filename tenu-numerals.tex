@@ -396,13 +396,13 @@ arrow style=math font,
 \usepackage[color=Periwinkle]{attachfile2}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\newcommand{\thisDocumentNumber}{L2/24-\changed{\phantom{888}}}
+\newcommand{\thisDocumentNumber}{L2/24-270}
 \newcommand{\thisDocumentTitle}{Twelve cuneiform \emph{tenû} numerals}
 \fancyfoot{}
 \fancyhead{}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[CO]{\thisDocumentNumber}
-\fancyhead[CE]{\thisDocumentTitle{} \changed{{\xsuxfont 𒉡 𒀠𒌀}}}
+\fancyhead[CE]{\thisDocumentTitle{}}
 \renewcommand{\headrulewidth}{0.4pt}
 
 \title{\thisDocumentTitle}
@@ -1129,8 +1129,6 @@ is the one used in that proposal, by Robin Leroy, Anshuman Pandey, and Steve Tin
 Arabic text is set in \emph{Scheherazade New} by SIL International;
 monospace text is set in \emph{Consolas} by Luc(as) de Groot;
 the remainder of the text is set in \emph{Cambria} and \emph{Cambria Math} by Monotype Imaging and Tiro Typeworks.
-%{\hspace*{\fill}\changed{\xsuxfont 𒉡~𒀠𒌀}}
-%\vfill
 \hspace*{\fill}{\xsuxfont 𒀭𒊺𒉀 𒍠𒊩}
 
 \nocite{DCCLT}
@@ -1138,9 +1136,13 @@ the remainder of the text is set in \emph{Cambria} and \emph{Cambria Math} by Mo
 \AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
 \printbibliography[heading=subbibintoc,title={Artefacts},type=artwork]
 %\AtNextBibliography{\addfontfeatures{Numbers=Tabular}}
+\begin{sloppypar}
 \printbibliography[heading=subbibintoc,title={ISO and Unicode documents},nottype=artwork,keyword=unicode]
+\end{sloppypar}
 \printbibliography[heading=subbibintoc,title={Online corpora and related projects},nottype=artwork,keyword=reference]
+\begin{sloppypar}
 \printbibliography[heading=subbibintoc,title={Other documents},nottype=artwork,notkeyword=unicode,notkeyword=reference]
+\end{sloppypar}
 \includepdf[pages=-2]{tenu-numerals-summary-form.pdf}
 
 \end{document}
